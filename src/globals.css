@@ -15,7 +15,7 @@ text-align: center;
 }
 
 .homeBackground{
-  background-image: url('./assets/treeBackground.svg');
+  background-image: url('/assets/treeBackground.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
