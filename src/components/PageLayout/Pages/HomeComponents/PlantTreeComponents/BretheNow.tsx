@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const BretheNow = () => {
   return (
     <div className="flex flex-col">
-        <div className="bg-white rounded-[24px] w-[455px] drop-shadow-2xl ">
+        <div className="bg-white rounded-[24px] w-[455px] shadow-md ">
             <div className="flex items-center flex-col space-y-9 justify-center bg-[#F8F9F8] p-5">
                 <p className="text-[24px] text-center text-bgGreen font-bold w-[360px]">How many trees do you want to plant in the forest?</p>
                 <div className="flex flex-row space-x-3">

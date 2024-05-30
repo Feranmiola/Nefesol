@@ -1,5 +1,6 @@
 import BretheNow from "./PlantTreeComponents/BretheNow"
 import TakeAction from "./PlantTreeComponents/TakeAction"
+import TreePack from "./PlantTreeComponents/TreePack"
 
 
 const PlantTreesSection = () => {
@@ -8,6 +9,9 @@ const PlantTreesSection = () => {
         <div className="flex flex-row justify-center space-x-14 ">
             <TakeAction/>
             <BretheNow/>
+        </div>
+        <div>
+          <TreePack/>
         </div>
     </div>
   )
