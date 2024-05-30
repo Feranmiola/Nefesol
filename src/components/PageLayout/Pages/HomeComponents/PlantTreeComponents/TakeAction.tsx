@@ -1,0 +1,45 @@
+
+
+const TakeAction = () => {
+  return (
+    <div className="flex flex-col items-center">
+        
+        <p className="text-[#0A4519] text-[64px] w-[495px] leading-tight">Take Action for a green future</p>
+
+        <div className="flex flex-col mt-10 space-y-8">
+            <div className="flex flex-row space-x-4 ">
+                <div className="w-[44px] h-[44px] rounded-full ring-[1px] px-[16px] py-[8px] flex items-center justify-center  ring-[#009444]">
+                    <p className="text-[24px] text-[#009444]">1</p>
+                </div>
+                <div className="flex flex-col space-y-4">
+                    <p className="text-[28px] text-bgGreen">Choose Forest</p>
+                    <p className="text-[16px] text-bgGreen w-[437px]">We plant across various forests in Turkey, you can select any of the forest of your choice.</p>
+                </div>
+            </div>
+
+            <div className="flex flex-row space-x-4 ">
+                <div className="w-[44px] h-[44px] rounded-full ring-[1px] px-[16px] py-[8px] flex items-center justify-center  ring-[#009444]">
+                    <p className="text-[24px] text-[#009444]">2</p>
+                </div>
+                <div className="flex flex-col space-y-4">
+                    <p className="text-[28px] text-bgGreen">Determine preferred quantity</p>
+                    <p className="text-[16px] text-bgGreen w-[437px]">If you are not sure, take a look at our information on CO2 emissions. There are also packages that correspond to the typical annual CO2 emissions of consumers in </p>
+                </div>
+            </div>
+
+            <div className="flex flex-row space-x-4 ">
+                <div className="w-[44px] h-[44px] rounded-full ring-[1px] px-[16px] py-[8px] flex items-center justify-center  ring-[#009444]">
+                    <p className="text-[24px] text-[#009444]">3</p>
+                </div>
+                <div className="flex flex-col space-y-4">
+                    <p className="text-[28px] text-bgGreen">We Plant</p>
+                    <p className="text-[16px] text-bgGreen w-[437px]">If you are not sure, take a look at our information on CO2 emissions. There are also packages that correspond to the typical annual CO2 emissions of consumers in </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  )
+}
+
+export default TakeAction
