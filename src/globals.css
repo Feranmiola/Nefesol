@@ -7,6 +7,11 @@ p{
 
 h1{
   font-family: Julius Sans One;
+font-size: 150px;
+font-weight: 400;
+line-height: 141px;
+text-align: center;
+
 }
 
 .homeBackground{
@@ -32,6 +37,16 @@ html {
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+}
+
+.takeAction{
+  font-family: Inter;
+font-size: 24px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.27em;
+text-align: center;
+
 }
 
 

@@ -4,9 +4,11 @@ import { Outlet } from "react-router-dom"
 
 const PageLayout = () => {
   return (
-    <div>
+    <div className="flex flex-col">
       <TopBar/>
-      <Outlet/>
+      <div>
+        <Outlet/>
+      </div>
       <Footer/>
     </div>
   )
