@@ -35,6 +35,14 @@ text-align: center;
   background-size: cover;
 }
 
+.karbonBG{
+  background-color: black;
+  background-image: url('/assets/dotBackground.svg');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

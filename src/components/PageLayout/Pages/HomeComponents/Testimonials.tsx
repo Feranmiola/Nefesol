@@ -22,7 +22,7 @@ const Testimonials = () => {
      
     
   return (
-    <div className="flex flex-row space-x-5 items-center justify-center">
+    <div className="flex flex-row space-x-5 items-center justify-center py-20">
         <div className="testimonialBG flex flex-col justify-between rounded-[24px] w-[453px] h-[584px] py-8 px-10">
             <p className="text-white text-[48px] text-left w-[292px] leading-tight">What people have been saying about us.</p>
             <img

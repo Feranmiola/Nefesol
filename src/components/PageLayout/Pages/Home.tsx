@@ -3,6 +3,7 @@ import LandingSection from "./HomeComponents/LandingSection"
 import PlantTreesSection from "./HomeComponents/PlantTreesSection"
 import Services from "./HomeComponents/Services"
 import Testimonials from "./HomeComponents/Testimonials"
+import TrustedSection from "./HomeComponents/TrustedSection"
 
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <GreeningPolicy/>
       <Services/>
       <Testimonials/>
+      <TrustedSection/>
     </div>
   )
 }
