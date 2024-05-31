@@ -28,6 +28,13 @@ text-align: center;
   background-size: cover;
 }
 
+.testimonialBG{
+  background-image: url('/assets/gardenImageVertical.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

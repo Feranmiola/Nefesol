@@ -2,8 +2,8 @@ import { motion } from "framer-motion"
 
 const Services = () => {
   return (
-    <div>
-        <p className="ml-[168px] py-20 font-medium text-bgGreen text-[40px]">Our Services</p>
+    <div className="py-20">
+        <p className="ml-[168px] pb-20 font-medium text-bgGreen text-[40px]">Our Services</p>
         <div className="flex flex-col space-y-10 items-center justify-center">
             <div className="flex flex-row space-x-10">
                 <div className="flex flex-col items-start space-y-4">
