@@ -71,6 +71,7 @@ const TreePack = () => {
               <img
               src="./assets/largeTrees.svg"
               alt="largeTrees"
+              className="rounded-t-[24px]"
               />
             </div>
             <div className="px-5 mt-4">

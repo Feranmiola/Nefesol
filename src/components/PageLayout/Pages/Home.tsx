@@ -1,3 +1,4 @@
+import GreeningPolicy from "./GreeningPolicy"
 import LandingSection from "./HomeComponents/LandingSection"
 import PlantTreesSection from "./HomeComponents/PlantTreesSection"
 
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
       <LandingSection/>
       <PlantTreesSection/>
+      <GreeningPolicy/>
     </div>
   )
 }

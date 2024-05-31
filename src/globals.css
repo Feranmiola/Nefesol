@@ -21,6 +21,13 @@ text-align: center;
   background-size: cover;
 }
 
+.greeningBG{
+  background-image: url('/assets/greeningImage.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
