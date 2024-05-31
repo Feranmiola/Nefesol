@@ -31,10 +31,10 @@ const BretheNow = () => {
                         <p className="text-bgGreen ">Examples</p>
                     </motion.div>
                 </div>
-                <div>
+                <div className="w-[100%] flex items-center justify-center">
                     <Slider
                       defaultValue={[33]} max={100} step={1} 
-                      className=" w-full"
+                      className=" w-[80%]"
                     />
                 </div>
             </div>
