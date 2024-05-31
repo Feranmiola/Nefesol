@@ -3,7 +3,7 @@ import { motion } from "framer-motion"
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-10 pb-10 ">
+    <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row  justify-between w-[1179.5px] ">
         <div className="flex flex-col space-y-10">
           <img

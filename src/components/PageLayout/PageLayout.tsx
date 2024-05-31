@@ -6,7 +6,7 @@ const PageLayout = () => {
   return (
     <div className="flex flex-col">
       <TopBar/>
-      <div>
+      <div className="bg-white">
         <Outlet/>
       </div>
       <Footer/>
