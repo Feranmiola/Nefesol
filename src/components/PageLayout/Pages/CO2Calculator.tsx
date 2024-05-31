@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import Vehicle from "./C02Calculator Components/Vehicle";
+import Food from "./C02Calculator Components/Food";
 
 const CO2Calculator = () => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -142,6 +143,11 @@ const CO2Calculator = () => {
               <div className="p-5">
                 {tabIndex === 1 && (
                   <Vehicle/>
+                )}
+
+
+              {tabIndex === 4 && (
+                  <Food/>
                 )}
 
                 <div className="flex flex-row space-x-4">

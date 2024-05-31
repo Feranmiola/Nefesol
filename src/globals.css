@@ -157,3 +157,42 @@ text-align: center;
       @apply bg-background text-foreground;
     }
   }
+
+  @layer components {
+    /* SHADCN COMPONENTS */
+    /* Form */
+    .shad-form_label {
+      @apply text-black !important; /* Adjusted for light mode */
+    }
+  
+    .shad-form_message {
+      @apply text-red !important;
+    }
+  
+    .shad-input {
+      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+
+    .shad-select {
+      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+  
+  
+    .shad-textarea {
+      @apply h-36 bg-gray-100 rounded-xl border border-gray-300 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-300 !important;
+    }
+  
+    /* Button */
+    .shad-button_primary {
+      @apply bg-blue-500 hover:bg-blue-600 text-white flex gap-2 !important; /* Adjusted for light mode */
+    }
+  
+    .shad-button_dark_4 {
+      @apply h-12 bg-gray-400 px-5 text-white flex gap-2 !important; /* Adjusted for light mode */
+    }
+  
+    .shad-button_ghost {
+      @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-black !important; /* Adjusted for light mode */
+    }
+  
+  }
