@@ -3,6 +3,7 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
+import Vehicle from "./C02Calculator Components/Vehicle";
 
 const CO2Calculator = () => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -11,9 +12,24 @@ const CO2Calculator = () => {
 
   const handleTabs = (inital: number, current: number) =>{
     setInitial(inital);
-    setTabIndex(current)
+    setTabIndex(current);
 
   }
+
+  const handlePageChange = (index: number) =>{
+    if(index === 0){
+      console.log("0 hit")
+    }else{
+      if(index === 5){
+        console.log("5 hit")
+      }else{
+        setInitial(25 * index);
+        setTabIndex(index);
+      }
+    }
+  }
+
+  
 
   React.useEffect(() => {
     const timer = setTimeout(() => setProgress(initial), (initial + 25))
@@ -121,9 +137,43 @@ const CO2Calculator = () => {
               </div>
 
               <div>
-                <Progress value={progress} className=" w-full h-1"/>
+                <Progress value={progress} className=" w-full h-[1px]"/>
               </div>
               <div className="p-5">
+                {tabIndex === 1 && (
+                  <Vehicle/>
+                )}
+
+                <div className="flex flex-row space-x-4">
+                  <motion.div
+                  whileHover={{ scale: 1.06 }}
+                  whileTap={{ scale: 0.9 }} 
+                  onClick={() => handlePageChange(tabIndex - 1)}
+                  className={tabIndex === 1 ? 'cursor-not-allowed opacity-25 flex flex-row items-center space-x-1' : "cursor-pointer flex flex-row items-center space-x-1"}
+                  >
+                    <img
+                    src="./assets/prev.svg"
+                    />
+                    <p className="text-[16px] text-linkGreen font-semibold">Prev</p>
+
+                  </motion.div>
+
+                  <motion.div
+                  whileHover={{ scale: 1.06 }}
+                  whileTap={{ scale: 0.9 }} 
+                  onClick={() => handlePageChange(tabIndex + 1)}
+                  className={tabIndex === 4 ? 'cursor-not-allowed opacity-25 flex flex-row items-center space-x-1' : "cursor-pointer flex flex-row items-center space-x-1"}
+                  >
+                    
+                    <p className="text-[16px] text-linkGreen font-semibold">Next Category</p>
+
+                    <img
+                    src="./assets/next.svg"
+                    />
+
+                  </motion.div>
+
+                </div>
 
               </div>
 
