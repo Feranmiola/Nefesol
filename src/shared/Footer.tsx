@@ -36,6 +36,7 @@ const Footer = () => {
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
+            href="/co2-calculator"
             className="text-[16px] text-bgGreen cursor-pointer"
             >CO2 Calculation</motion.a>
 
