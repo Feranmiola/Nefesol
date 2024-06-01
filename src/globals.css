@@ -80,6 +80,14 @@ html {
   width: 100%; /* Full width */
 }
 
+.servicesIndex{
+  z-index: 9998;
+}
+
+.section {
+  padding-top: 250px; /* Adjust this value to match the height of your fixed elements */
+}
+
 .takeAction{
   font-family: Inter;
 font-size: 24px;

@@ -1,15 +1,24 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom"
+
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const toHome = () =>{
+    navigate('/')
+  }
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row  justify-between w-[1179.5px] ">
         <div className="flex flex-col space-y-10">
-          <img
-          src="./assets/topBarLogo.svg"
-          alt="logo"
-          />
+          <div className=" cursor-pointer" onClick={toHome}>
+            <img
+            src="./assets/topBarLogo.svg"
+            alt="logo"
+            />
+          </div>
           <div className="flex flex-col">
             <p className="w-[267px] text-bgGreen text-[14px] leading-tight">Gaziantep Üniversitesi Teknopark Çamtepe Mah. Mahmut Tevfik Atay Bul. A Blok No:4</p>
             <p className="w-[267px] text-bgGreen text-[14px] leading-tight">Gaziantep/Türkiye</p>

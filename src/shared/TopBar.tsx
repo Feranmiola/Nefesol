@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const TopBar = () => {
+  const navigate = useNavigate();
+
+  const toHome = () =>{
+    navigate('/')
+  }
   return (
-    <div className="bg-white h-[73px] px-10 justify-between items-center flex navbar ">
-      <div>
+    <div className="bg-white h-[73px] px-10 justify-between items-center flex navbar border-b-[1px] ">
+      <div className=" cursor-pointer" onClick={toHome}>
         <img
         src="./assets/topBarLogo.svg"
         alt="logo"
