@@ -1,4 +1,3 @@
-import React from 'react'
 import Testimonials from './HomeComponents/Testimonials'
 import TrestedGroup from './HomeComponents/TrestedGroup'
 
@@ -7,7 +6,7 @@ const AboutUs = () => {
     <div className='py-20'>
 
         <div className='items-center justify-center flex flex-col py-20 space-y-5'>
-            <p className=' text-linkGreen text-[16px]'>ABOUT US</p>
+            <p className=' text-linkGreen font-semibold text-[16px]'>ABOUT US</p>
             <p className='text-bgGreen text-[40px] text-center font-medium w-[645px]'>We are building an environmentally friendly future</p>
 
         </div>

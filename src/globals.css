@@ -67,6 +67,7 @@ Input {
 }
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
+  @apply scroll-smooth;
   scrollbar-width: none; /* For Firefox */
   -ms-overflow-style: none; /* For Internet Explorer and Edge */
 }
@@ -87,6 +88,18 @@ line-height: 24px;
 letter-spacing: 0.27em;
 text-align: center;
 
+}
+
+ul li{
+  list-style-type: disc;
+}
+
+li::marker {
+  color: #0A4519;
+}
+
+li{
+  color: #0A4519;
 }
 
 
