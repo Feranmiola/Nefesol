@@ -45,6 +45,13 @@ text-align: center;
   background-size: cover;
 }
 
+.aboutUsBG{
+  background-image: url('/assets/aboutUsTree.svg');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
