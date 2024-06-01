@@ -5,6 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import Vehicle from "./C02Calculator Components/Vehicle";
 import Food from "./C02Calculator Components/Food";
+import House from "./C02Calculator Components/House";
 
 const CO2Calculator = () => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -144,6 +145,10 @@ const CO2Calculator = () => {
                 {tabIndex === 1 && (
                   <Vehicle/>
                 )}
+                
+                {tabIndex === 3 && (
+                  <House/>
+                )}                
 
 
               {tabIndex === 4 && (
