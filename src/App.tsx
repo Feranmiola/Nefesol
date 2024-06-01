@@ -34,7 +34,6 @@ function App() {
             <Route path="/plant-trees-verifyemail" element={<VerifyEmail />} />
             <Route path="/plant-trees-thankyou" element={<ThankYou />} />
             <Route path="/plant-trees-tracking" element={<Tracking />} />
-            <Route path="/plant-trees-tracking-info" element={<Tracking />} />
           </Route>
         </Route>
 
