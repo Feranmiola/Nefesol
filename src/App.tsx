@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Blog from './components/PageLayout/Pages/Blog'
 import Home from './components/PageLayout/Pages/Home'
 import CO2Calculator from './components/PageLayout/Pages/CO2Calculator'
+import TreePacksPage from './components/PageLayout/Pages/TreePacksPage'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route element={<PageLayout />}>
           <Route index element={<Home />} />
           <Route path="/co2-calculator" element={<CO2Calculator />} />
+          <Route path="/treePacks" element={<TreePacksPage />} />
           <Route path="/blog" element={<Blog />} />
         </Route>
 
