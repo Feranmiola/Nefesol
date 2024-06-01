@@ -52,6 +52,13 @@ text-align: center;
   background-size: cover;
 }
 
+.trackingInfo{
+  background-image: url('/assets/trackingPlantBg.svg');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -203,8 +210,25 @@ li{
       @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
 
+    
+    .shad-input-bare {
+      @apply  bg-white placeholder:text-[#B7B7BD] focus:bg-white text-bgGreen font-medium text-[32px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px]  !important;
+    }
+
+    .shad-input-plant {
+      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+
+    .shad-input-plant-width {
+      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px]  focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+
     .shad-select {
       @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+    }
+  
+    .shad-select-plant {
+      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
   
   

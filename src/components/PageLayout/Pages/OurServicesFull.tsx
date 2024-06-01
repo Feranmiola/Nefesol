@@ -53,6 +53,40 @@ const OurServicesFull = () => {
         };
       }, []);
 
+    //   useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //       entries => {
+    //         entries.forEach(entry => {
+    //           if (entry.isIntersecting) {
+    //             const tabIndexMap: { [key: string]: number } = {
+    //               'carbonConsultancy': 1,
+    //               'certification': 2,
+    //               'digitalMarketing': 3,
+    //               'carbonFootprintOptimisation': 4,
+    //               'greenTechnologyInscentives': 5,
+    //               'techSupport': 6
+    //             };
+    //             handleTabs(100, tabIndexMap[entry.target.id]);
+    //           }
+    //         });
+    //       },
+    //       { threshold: 0.25 }
+    //     );
+      
+    //     const elements = ['carbonConsultancy', 'certification', 'digitalMarketing', 'carbonFootprintOptimisation', 'greenTechnologyInscentives', 'techSupport'].map(id => document.getElementById(id));
+      
+    //     elements.forEach(el => {
+    //       if (el) observer.observe(el);
+    //     });
+      
+    //     return () => {
+    //       elements.forEach(el => {
+    //         if (el) observer.unobserve(el);
+    //       });
+    //     };
+    //   }, []);
+      
+
 
   return (
     <div className="">

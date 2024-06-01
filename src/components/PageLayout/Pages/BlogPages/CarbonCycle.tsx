@@ -8,11 +8,10 @@ const CarbonCycle = () => {
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        const progressBar = document.getElementById('progress-bar');
-      
-        if (progressBar) {
-          const progressBarWidth = progressBar.offsetWidth;
-          const progressPercentage = (scrollPosition / progressBarWidth) * 100;
+        const totalHeight = document.body.scrollHeight - window.innerHeight;
+        
+        if (totalHeight > 0) {
+          const progressPercentage = (scrollPosition / totalHeight) * 100;
           setProgress(progressPercentage);
         }
       };
@@ -23,6 +22,7 @@ const CarbonCycle = () => {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
+
       
       
   return (
