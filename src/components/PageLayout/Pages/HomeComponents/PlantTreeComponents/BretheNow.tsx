@@ -1,9 +1,12 @@
 import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
 import { motion } from "framer-motion"
+import { useState } from "react"
 
 
 const BretheNow = () => {
+
+    const [sliderValue, setSliderValue] = useState([0]);
   return (
     <div className="flex flex-col">
         <div className="bg-white rounded-[24px] w-[455px] shadow-md ">
@@ -33,8 +36,9 @@ const BretheNow = () => {
                 </div>
                 <div className="w-[100%] flex items-center justify-center">
                     <Slider
-                      defaultValue={[33]} max={100} step={1} 
+                      defaultValue={[0]} max={100} step={1} 
                       className=" w-[80%]"
+                      onValueChange={(i) => setSliderValue(i)}
                     />
                 </div>
             </div>
@@ -43,8 +47,14 @@ const BretheNow = () => {
                 src="./assets/treeGroup.svg"
                 />
                 <div className="flex flex-col ">
-                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">35</span>Trees</p>
-                    <p className=" text-bgGreen text-[12px]">You're doing great!</p>
+                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">{sliderValue}</span>Trees</p>
+                    {(sliderValue[0] > 20 && sliderValue[0] < 70)  && (
+                        <p className=" text-bgGreen text-[12px]">You're doing great!</p>
+                    )}
+                    
+                    {sliderValue[0] > 70 && (
+                        <p className=" text-linkGreen text-[16px]">You're Awesome</p>
+                    )}
                 </div>
 
             </div>
