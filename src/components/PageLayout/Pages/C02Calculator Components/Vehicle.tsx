@@ -36,7 +36,7 @@ const Vehicle = () => {
             <div className="flex flex-row items-center justify-start w-[293px] space-x-4">
                 <div className="w-[186px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                     <div className="flex items-center h-full justify-between">
-                        <input type="number" value={Liters} min={0} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                        <input type="number" value={Liters} onChange={(e) => setLiters(Number(e.target.value))} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                         <div className="pr-2 space-y-1">
                             <motion.div
                             whileHover={{ scale: 1.06 }}
@@ -74,7 +74,7 @@ const Vehicle = () => {
             <div className="flex flex-row items-center justify-start w-[293px] space-x-4">
                 <div className="w-[186px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                     <div className="flex items-center h-full justify-between">
-                        <input type="number" value={kilometer} min={0} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                        <input type="number" value={kilometer} onChange={(e) => setkilometer(Number(e.target.value))} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                         <div className="pr-2 space-y-1">
                             <motion.div
                             whileHover={{ scale: 1.06 }}

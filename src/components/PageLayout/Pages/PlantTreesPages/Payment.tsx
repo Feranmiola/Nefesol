@@ -9,9 +9,19 @@ import {
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useNavigate } from "react-router-dom"
+import { useState } from "react"
 
 const Payment = () => {
     const navigate = useNavigate();
+    const [checked, setChecked ] = useState(false);
+
+    const handleChecked = () =>{
+        if(checked){
+            setChecked(false);
+        }else{
+            setChecked(true);
+        }
+    }
 
     const handleNext = () => {
         navigate('/plant-trees-verifyemail')
@@ -164,7 +174,7 @@ const Payment = () => {
                     </div>
                 </div>
                 <div className="flex flex-row space-x-1 mt-2 items-center py-5 px-8">
-                    <Checkbox id="terms" />
+                    <Checkbox id="terms" onClick={handleChecked}/>
                     <label
                         htmlFor="terms"
                         className="text-bgGreen text-[16px]"
@@ -174,14 +184,16 @@ const Payment = () => {
                 </div>
 
                 <div className="flex items-center justify-center pb-5">
-                    <motion.a
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
-                    onClick={handleNext}
-                    className="w-[85%] h-[56px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
-                    >
-                        <p className="text-white text-[16px] font-medium">Proceed to Payment</p>
-                    </motion.a>
+                    {checked && (
+                        <motion.a
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }} 
+                        onClick={handleNext}
+                        className="w-[85%] h-[56px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                        >
+                            <p className="text-white text-[16px] font-medium">Proceed to Payment</p>
+                        </motion.a>
+                    )}
                 </div>
 
             </div>

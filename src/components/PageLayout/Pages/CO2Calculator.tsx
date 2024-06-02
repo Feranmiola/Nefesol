@@ -7,8 +7,10 @@ import Vehicle from "./C02Calculator Components/Vehicle";
 import Food from "./C02Calculator Components/Food";
 import House from "./C02Calculator Components/House";
 import Airplane from "./C02Calculator Components/Airplane";
+import { useNavigate } from "react-router-dom";
 
 const CO2Calculator = () => {
+  const navigate = useNavigate();
   const [tabIndex, setTabIndex] = useState(1);
   const [progress, setProgress] = React.useState(13)
   const [initial, setInitial] = useState(25)
@@ -40,6 +42,11 @@ const CO2Calculator = () => {
   }, [initial])
 
 
+
+  const toPayment = () =>{
+    navigate('/plant-trees-payment');
+  }
+  
 
 
   return (
@@ -259,6 +266,7 @@ const CO2Calculator = () => {
                   <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }} 
+                  onClick={toPayment}
                   className="w-[254px] h-[48px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                   >
                     <img

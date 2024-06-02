@@ -1,6 +1,12 @@
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom"
 
 const Services = () => {
+    const navigate = useNavigate()
+
+    const handleServices = () =>{
+        navigate('/ourservices');
+    }
   return (
     <div className="py-20">
         <p className="ml-[168px] pb-20 font-medium text-bgGreen text-[40px]">Our Services</p>
@@ -15,7 +21,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">While we are providing carbon equalization services to our individual and corporate customers</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -28,7 +35,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">We offer our customers the opportunity to reduce their environmental impact and</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -41,7 +49,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">Web Site and SEO Optimization To strengthen your business's digital presence, you need an impressive website</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
 
@@ -56,7 +65,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">Today, it is of great importance to manage the environmental impacts</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -68,7 +78,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">Today, sustainability is among the primary objectives of businesses</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -80,7 +91,8 @@ const Services = () => {
                     <p className=" text-linkTextGreen text-[16px] w-[356px]">Technology plays a critical role in increasing the efficiency of businesses and gaining competitive advantage.</p>
                     <motion.a
                     whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }} 
+                    whileTap={{ scale: 0.9 }}
+                    onClick = {handleServices} 
                     className=" text-linkGreen text-[16px] cursor-pointer">Learn More</motion.a>
                 </div>
 

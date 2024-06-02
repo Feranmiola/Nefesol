@@ -69,7 +69,7 @@ const House = () => {
                     <div className="w-[370px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
                             <div className="flex flex-row items-center">
-                                <input type="number" value={houseSize} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <input type="number" value={houseSize} onChange={(e) => setHouseSize(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                                 <div className="h-[20px] flex flex-row ml-2">
                                     <p className=" text-[16px] text-bgGreen ">m</p>
                                     <span className="text-[10px] text-bgGreen top-0">2</span>
@@ -111,7 +111,7 @@ const House = () => {
                     <div className="w-[370px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
                             <div className="flex flex-row items-center">
-                                <input type="number" value={bedroomNumber} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <input type="number" value={bedroomNumber} onChange={(e) => setBedroomNumber(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                             </div>
                             <div className="pr-2 space-y-1">
                                 <motion.div
@@ -155,7 +155,7 @@ const House = () => {
                     <div className="w-[370px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
                             <div className="flex flex-row items-center">
-                                <input type="number" value={electricity} className="w-[15%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <input type="number" value={electricity} onChange={(e) => setElectricity(Number(e.target.value))} className="w-[15%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                                 <div className="h-[20px] flex flex-row ml-2">
                                     <p className=" text-[16px] text-bgGreen ">KWh per year</p>
                                 </div>

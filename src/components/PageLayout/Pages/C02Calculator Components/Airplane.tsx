@@ -267,7 +267,7 @@ const Airplane = () => {
                         <div className="w-[370px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                             <div className="flex items-center h-full justify-between w-full">
                                 <div className="flex flex-row items-center w-full">
-                                    <input type="number" value={averageFlightTimes} className="w-[95%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                    <input type="number" value={averageFlightTimes} onChange={(e) => setAverageFlightTimes(Number(e.target.value))} className="w-[95%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                                 </div>
                                 <div className="pr-2 space-y-1">
                                     <motion.div

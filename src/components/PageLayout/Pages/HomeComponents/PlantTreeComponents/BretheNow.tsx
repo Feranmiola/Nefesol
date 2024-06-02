@@ -2,11 +2,17 @@ import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 
 const BretheNow = () => {
 
     const [sliderValue, setSliderValue] = useState([0]);
+    const navigate = useNavigate();
+    const toPayment = () =>{
+        navigate('/plant-trees-payment');
+      }
+
   return (
     <div className="flex flex-col">
         <div className="bg-white rounded-[24px] w-[455px] shadow-md ">
@@ -88,6 +94,7 @@ const BretheNow = () => {
                 <motion.a
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }} 
+                onClick={toPayment}
                 className="w-[212px] h-[56px] bg-[#25B567] flex items-center justify-center rounded-[56px] cursor-pointer"
                 >
                     <p className="text-white text-[16px] font-medium">Breathe Now</p>
