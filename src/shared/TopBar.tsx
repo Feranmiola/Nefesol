@@ -79,6 +79,9 @@ const TopBar = () => {
   
   useEffect(() => {
     const changeColor = () => {
+      if(location.pathname === '/'){
+        setTriggerHeight(200);
+      }
       if(window.scrollY >= triggerHeight){
         setColor(true);
       } else {
