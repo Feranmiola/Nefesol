@@ -139,8 +139,8 @@ const CO2Calculator = () => {
                   </motion.div>
               </div>
 
-              <div>
-                <Progress value={progress} className=" w-full h-[1px]"/>
+              <div className="progressindex">
+                <Progress value={progress} className=" w-full z-10 h-[1px]"/>
               </div>
               <div className="p-5">
                 {tabIndex === 1 && (

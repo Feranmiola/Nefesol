@@ -16,6 +16,11 @@ text-align: center;
 
 }
 
+.navDropdownBreathPack{
+  font-family: Inter; 
+}
+
+
 .homeBackground{
   background-image: url('/assets/treeBackground.svg');
   background-position: center;
@@ -88,7 +93,11 @@ html {
 }
 
 .servicesIndex{
-  z-index: 9998;
+  z-index: 8000;
+}
+
+.progressindex{
+  z-index: 1;
 }
 
 .section {

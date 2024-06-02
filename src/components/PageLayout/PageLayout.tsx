@@ -5,7 +5,9 @@ import { Outlet } from "react-router-dom"
 const PageLayout = () => {
   return (
     <div className="flex flex-col">
-      <TopBar/>
+      <div className="w-full">
+        <TopBar/>
+      </div>
       <div className="bg-white">
         <Outlet/>
       </div>
