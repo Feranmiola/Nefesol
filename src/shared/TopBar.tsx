@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 const TopBar = () => {
@@ -58,42 +58,60 @@ const TopBar = () => {
 
   const [color, setColor] = useState(false);
 
-  const[triggerHeight, setTriggerHeight] = useState(0);
 
-  useEffect(() => {
-    if(location.pathname !== '/') {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  }, [location.pathname]);
   
-  useEffect(() => {
-    if(!color) {
-      setTriggerHeight(200);
-    }else{
-      setTriggerHeight(0);
-    }
-  }, [color]);
-  
-  
+  // useEffect(() => {
+  //   if(location.pathname !== '/') {
+  //     setColor(true);
+  //   } else {
+  //     setColor(false);
+  //   }
+
+  //   if(!color) {
+  //     setTriggerHeight(200);
+  //   }else{
+  //     setTriggerHeight(0);
+  //   }
+
+  //   const changeColor = () => {
+  //     if(window.scrollY >= triggerHeight){
+  //       setColor(true);
+  //     } else {
+  //       setColor(false);
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', changeColor);
+
+  //   // Cleanup function to remove the event listener
+  //   return () => window.removeEventListener('scroll', changeColor);
+  // }, [window.location.pathname, window.scrollY]);
+
+
   useEffect(() => {
     const changeColor = () => {
       if(location.pathname === '/'){
-        setTriggerHeight(200);
-      }
-      if(window.scrollY >= triggerHeight){
-        setColor(true);
+        if(window.scrollY >=200){
+          setColor(true);
+        } else {
+          setColor(false);
+        }
       } else {
-        setColor(false);
+        setColor(true);
       }
-    };
-
+    }
+  
+    // Call the function directly to update the color immediately
+    changeColor();
+  
     window.addEventListener('scroll', changeColor);
-
+  
     // Cleanup function to remove the event listener
-    return () => window.removeEventListener('scroll', changeColor);
-  }, [triggerHeight]);
+    return () => {
+      window.removeEventListener('scroll', changeColor);
+    };
+  }, [location, window.scrollY, window.location]);
+  
 
 
   return (
