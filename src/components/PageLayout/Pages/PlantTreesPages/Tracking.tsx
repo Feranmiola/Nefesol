@@ -38,7 +38,7 @@ const Tracking = () => {
                                 className="text-[16px] text-linkGreen cursor-pointer mr-5">Track</motion.div>
                             </div>
                         </div>
-                        <div className="flex flex-row space-x-1 opacity-60">
+                        <div className="flex flex-row space-x-1 opacity-40">
                             <img
                             src="./assets/infoIcon.svg"
                             />
@@ -107,25 +107,25 @@ const Tracking = () => {
 
                                 <div className="flex flex-row items-center justify-between px-5 pb-5">
                                     <div className="flex  flex-col">
-                                        <p className="text-bgGreen opacity-60 text-[12px]">Date Bought:</p>
+                                        <p className="text-bgGreen opacity-60 text-[8px]">Date Bought:</p>
                                         <p className="text-bgGreen text-[12px] font-medium">21 June, 2024</p>
 
                                     </div>
 
                                     <div className="flex  flex-col">
-                                        <p className="text-bgGreen opacity-60 text-[12px]">Date Planted:</p>
+                                        <p className="text-bgGreen opacity-60 text-[8px]">Date Planted:</p>
                                         <p className="text-bgGreen text-[12px] font-medium">21 June, 2024</p>
 
                                     </div>
 
                                     <div className="flex  flex-col">
-                                        <p className="text-bgGreen opacity-60 text-[12px]">Bought By:</p>
+                                        <p className="text-bgGreen opacity-60 text-[8px]">Bought By:</p>
                                         <p className="text-bgGreen text-[12px] font-medium">James John</p>
 
                                     </div>
 
                                     <div className="flex  flex-col">
-                                        <p className="text-bgGreen opacity-60 text-[12px]">Certificate:</p>
+                                        <p className="text-bgGreen opacity-60 text-[8px]">Certificate:</p>
                                         <p className="text-bgGreen text-[12px] font-medium">Issued</p>
 
                                     </div>

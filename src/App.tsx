@@ -13,6 +13,7 @@ import Payment from './components/PageLayout/Pages/PlantTreesPages/Payment'
 import VerifyEmail from './components/PageLayout/Pages/PlantTreesPages/VerifyEmail'
 import ThankYou from './components/PageLayout/Pages/PlantTreesPages/ThankYou'
 import Tracking from './components/PageLayout/Pages/PlantTreesPages/Tracking'
+import CarbonFootprint from './components/PageLayout/Pages/CarbonFootprint'
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ourservices" element={<OurServicesFull />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/carbon-cycle" element={<CarbonCycle />} />
+          <Route path="/carbon-footprint" element={<CarbonFootprint />} />
 
           <Route element={<PlantTreesLayout />}>
             <Route path="/plant-trees-payment" element={<Payment />} />
