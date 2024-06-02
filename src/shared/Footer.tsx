@@ -6,14 +6,15 @@ import { useNavigate } from "react-router-dom"
 const Footer = () => {
   const navigate = useNavigate();
 
-  const toHome = () =>{
-    navigate('/')
+  const handleNavigate = (link:string) =>{
+    navigate(link)
   }
+
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row  justify-between w-[1179.5px] ">
         <div className="flex flex-col space-y-10">
-          <div className=" cursor-pointer" onClick={toHome}>
+          <div className=" cursor-pointer" onClick={()=> handleNavigate('/')}>
             <img
             src="./assets/topBarLogo.svg"
             alt="logo"
@@ -40,19 +41,21 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             className="text-[16px] text-bgGreen cursor-pointer"
+            onClick={()=> handleNavigate('/carbon-footprint')}
             >Carbon Footprint</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/co2-calculator"
             className="text-[16px] text-bgGreen cursor-pointer"
+            onClick={()=> handleNavigate('/co2-calculator')}
             >CO2 Calculation</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             className="text-[16px] text-bgGreen cursor-pointer"
+            onClick={()=> handleNavigate('/treePacks')}
             >Tree Packs</motion.a>
 
           </div>
@@ -63,19 +66,22 @@ const Footer = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             className="text-[16px] text-bgGreen cursor-pointer"
+            onClick={()=> handleNavigate('/about-us')}
             >About Us</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             className="text-[16px] text-bgGreen cursor-pointer"
+            onClick={()=> handleNavigate('/blog')}
             >Blog</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             className="text-[16px] text-bgGreen cursor-pointer"
-            >Communication</motion.a>
+            onClick={()=> handleNavigate('/ourservices')}
+            >Our Services</motion.a>
 
           </div>
 

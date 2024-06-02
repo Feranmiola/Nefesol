@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const TopBar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showCo2, setshowCo2] = useState(false);
   const [showFootprint, setshowFootPrint] = useState(false);
@@ -22,7 +23,7 @@ const TopBar = () => {
   }
 
   const dropdownVariants = {
-    hidden: { opacity: 0, scale: 0.8, y: "-100%" },
+    hidden: { opacity: 0, scale: 0.8, y: "-20%" },
     visible: { opacity: 1, scale: 1, y: "0%" },
   };
 
@@ -33,7 +34,7 @@ const TopBar = () => {
   };
 
   const itemVariantsX = {
-    hidden: { opacity: 0, x: "-5%" },
+    hidden: { opacity: 1, x: "-5%" },
     visible: (custom:any) => ({
       opacity: 1,
       x: "0%",
@@ -53,17 +54,61 @@ const TopBar = () => {
       },
     }),
   };
+
+
+  const [color, setColor] = useState(false);
+
+  const[triggerHeight, setTriggerHeight] = useState(0);
+
+  useEffect(() => {
+    if(location.pathname !== '/') {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  }, [location.pathname]);
   
+  useEffect(() => {
+    if(!color) {
+      setTriggerHeight(200);
+    }else{
+      setTriggerHeight(0);
+    }
+  }, [color]);
+  
+  
+  useEffect(() => {
+    const changeColor = () => {
+      if(window.scrollY >= triggerHeight){
+        setColor(true);
+      } else {
+        setColor(false);
+      }
+    };
+
+    window.addEventListener('scroll', changeColor);
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener('scroll', changeColor);
+  }, [triggerHeight]);
 
 
   return (
     <div className="navbar" onMouseLeave={() => setShowDropdown(false)}>
-      <div className="bg-white h-[73px] px-10 justify-between items-center flex navbar border-b-[1px] " >
+       <div className={`bg-transparent h-[73px] px-10 justify-between items-center transition ease-in-out flex navbar ${color ? 'bg-white border-b-[1px]' : ''}`}>
       <div className=" cursor-pointer" onClick={()=>handleNavigate('/')}>
-        <img
-        src="./assets/topBarLogo.svg"
-        alt="logo"
-        />
+        {color ? (
+          <img
+          src="./assets/topBarLogo.svg"
+          alt="logo"
+          />
+        ):(
+          <img
+          src="./assets/logoWhite.svg"
+          alt="logo"
+          className="pt-2"
+          />
+        )}
       </div>
       <div className="flex flex--row space-x-14">
         <div className="flex flex-col">
@@ -72,10 +117,17 @@ const TopBar = () => {
           whileTap={{ scale: 0.9 }} 
           onMouseEnter={() => setShowDropdown(true)}
           className="flex flex-row cursor-pointer items-center space-x-1">
-            <p className="text-[#1F2721] hover:text-linkGreen text-[14px]">Breath Pack</p>
-            <img
-            src="./assets/down.svg"
-            />
+            <p className={`text-[14px] ${!color ? 'text-white' : 'text-[#1F2721]'} hover:text-linkGreen`}>Breath Pack</p>
+            {color ? (
+              <img
+              src="./assets/down.svg"
+              />
+            ):(
+              <img
+              src="./assets/dropdownWhite.svg"
+              />
+            )}
+
           </motion.div>
         </div>
         
@@ -83,25 +135,28 @@ const TopBar = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}   
         onClick={()=>handleNavigate('/about-us')}
-        onMouseEnter={() => setShowDropdown(false)}><p className="text-[#1F2721] hover:text-linkGreen text-[14px]">About Us</p></motion.div>
+        onMouseEnter={() => setShowDropdown(false)}>
+          <p className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}>About Us</p></motion.div>
         
         <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} 
         onClick={()=>handleNavigate('/blog')}
-        onMouseEnter={() => setShowDropdown(false)}><p className="text-[#1F2721] hover:text-linkGreen text-[14px]">Blog</p></motion.div>
+        onMouseEnter={() => setShowDropdown(false)}>
+          <p className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}>Blog</p></motion.div>
         
         <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} 
-        onClick={()=>handleNavigate('/')}
-        onMouseEnter={() => setShowDropdown(false)}><p className="text-[#1F2721] hover:text-linkGreen text-[14px]">Communication</p></motion.div>
+        onClick={()=>handleNavigate('/ourservices')}
+        onMouseEnter={() => setShowDropdown(false)}>
+          <p className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}>Our Services</p></motion.div>
         
         <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} 
-        onClick={()=>handleNavigate('/')}
-        onMouseEnter={() => setShowDropdown(false)}><p className="text-[#1F2721] hover:text-linkGreen text-[14px]">EN</p></motion.div>
+        onMouseEnter={() => setShowDropdown(false)}>
+          <p className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}>EN</p></motion.div>
 
       </div>
       <motion.a
@@ -111,6 +166,7 @@ const TopBar = () => {
         className="w-[163px] h-[48px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
         >
           <p className="text-white text-[16px] font-medium">Breathe Now</p>
+          
           <img
           src="./assets/ButtonArrow.svg"
           alt="arrow"
