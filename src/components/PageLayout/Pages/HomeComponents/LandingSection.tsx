@@ -1,6 +1,12 @@
 import { motion } from "framer-motion"
+import { useNavigate } from "react-router-dom";
 
 const LandingSection = () => {
+  const navigate = useNavigate()
+
+  const handleNext=(path:string)=>{
+    navigate(path);
+  }
   return (
     <div className="homeBackground ">
       <div className=" py-60 flex items-center justify-center flex-col space-y-10">
@@ -15,6 +21,7 @@ const LandingSection = () => {
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
+          onClick={()=> handleNext('/co2-calculator')}
           className="w-[280px] h-[64px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
           >
             <p className="text-white text-[16px] font-medium">Breathe Now</p>
@@ -27,6 +34,7 @@ const LandingSection = () => {
           <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
+            onClick={()=> handleNext('/ourservices')}
             className="w-[280px] h-[64px] bg-transparent ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
             >
               <p className="text-white text-[16px] font-medium">Get Information</p>
