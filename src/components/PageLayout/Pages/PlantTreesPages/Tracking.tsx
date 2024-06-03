@@ -36,7 +36,7 @@ const Tracking = () => {
             />
           </div>
         );
-  }else{
+  }
     return (
         <div className="py-20 mt-10 items-center justify-center flex">
             <div className="w-[600px]  flex   bg-white rounded-[24px]">
@@ -164,7 +164,4 @@ const Tracking = () => {
         </div>
       )
   }
-
-}
-
 export default Tracking

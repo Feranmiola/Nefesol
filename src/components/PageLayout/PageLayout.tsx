@@ -10,7 +10,7 @@ const PageLayout = () => {
   useLayoutEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Delay of 2 seconds
+    }, 1500); // Delay of 2 seconds
   }, []);
 
   if(loading){
@@ -28,7 +28,7 @@ const PageLayout = () => {
             />
           </div>
         );
-  }else{
+  }
 
     return (
       <div className="flex flex-col">
@@ -41,8 +41,6 @@ const PageLayout = () => {
         <Footer/>
       </div>
     )
-
-  }
 }
 
 export default PageLayout

@@ -17,7 +17,7 @@ const Blog = () => {
   useLayoutEffect(() => {
       setTimeout(() => {
         setLoading(false);
-      }, 500); // Delay of 2 seconds
+      }, 1500); // Delay of 2 seconds
   }, []);
 
   const blogPosts: BlogPost[] = [
@@ -77,7 +77,7 @@ const Blog = () => {
         />
       </div>
     );
-  }else{
+  }
     return (
       <div className="pt-40 pb-20">
         <p className="ml-[159px] text-bgGreen text-[40px]">Learn more about contribution to the ecosystem</p>
@@ -99,6 +99,4 @@ const Blog = () => {
       </div>
     )
   }
-}
-
 export default Blog

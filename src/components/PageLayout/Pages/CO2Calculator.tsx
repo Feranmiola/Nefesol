@@ -55,7 +55,7 @@ const CO2Calculator = () => {
   useLayoutEffect(() => {
       setTimeout(() => {
         setLoading(false);
-      }, 500); // Delay of 2 seconds
+      }, 1500); // Delay of 2 seconds
   }, []);
 
   if (loading) {
@@ -73,7 +73,7 @@ const CO2Calculator = () => {
         />
       </div>
     );
-  }else{
+  }
 
     return (
       <div className="mt-32" onLoad={() => setLoading(false)}>
@@ -317,6 +317,5 @@ const CO2Calculator = () => {
     )
 
   }
-}
 
 export default CO2Calculator

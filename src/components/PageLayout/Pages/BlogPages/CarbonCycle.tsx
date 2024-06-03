@@ -29,12 +29,12 @@ const CarbonCycle = () => {
       useLayoutEffect(() => {
         setTimeout(() => {
           setLoading(false);
-        }, 500); // Delay of 2 seconds
+        }, 1500); // Delay of 2 seconds
     }, []);
 
     if(loading){
         return (
-            <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
+            <div className='w-screen h-screen bg-white flex items-center transition ease-in-out justify-center minw-[100vh]'>
               <ThreeDots
               visible={true}
               height="80"
@@ -47,7 +47,7 @@ const CarbonCycle = () => {
               />
             </div>
           );
-    }else{
+    }
         return (
             <div className="py-[4.5rem]">
                 <div className="w-full fixed">
@@ -105,6 +105,5 @@ const CarbonCycle = () => {
             </div>
           )
     }
-}
 
 export default CarbonCycle

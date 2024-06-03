@@ -9,7 +9,7 @@ const TreePacksPage = () => {
   useLayoutEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Delay of 2 seconds
+    }, 1500); // Delay of 2 seconds
 }, []);
 
 if(loading){
@@ -27,7 +27,7 @@ if(loading){
           />
         </div>
       );
-}else{
+}
   return (
     <div>
         <p className=" text-[40px] text-bgGreen ml-[168px] mt-40 font-medium">Tree Packs</p>
@@ -37,7 +37,6 @@ if(loading){
         </div>
     </div>
   )
-}
 }
 
 export default TreePacksPage

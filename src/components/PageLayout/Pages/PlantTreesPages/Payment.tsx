@@ -44,7 +44,7 @@ const Payment = () => {
             />
           </div>
         );
-  }else{
+  }
     return (
         <div className="py-20 mt-10 flex items-center justify-center">
             <div className="w-[600px]  bg-white rounded-[24px]">
@@ -219,6 +219,4 @@ const Payment = () => {
         </div>
       )
   }
-}
-
 export default Payment

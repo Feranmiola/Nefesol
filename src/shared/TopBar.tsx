@@ -183,7 +183,7 @@ const TopBar = () => {
       <motion.a
         whileTap={{ scale: 0.9 }} 
         onClick={()=>handleNavigate('/co2-calculator')}
-        className="w-[163px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+        className={`w-[163px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer ${!color ? 'bg-transparent ring-[1px] ring-white hover:ring-transparent' : 'text-[#1F2721]'} hover:text-linkGreen`}
         >
           <p className="text-white text-[16px] font-medium">Breathe Now</p>
           

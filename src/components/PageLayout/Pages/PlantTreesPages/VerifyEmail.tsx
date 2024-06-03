@@ -35,7 +35,7 @@ const VerifyEmail = () => {
             />
           </div>
         );
-  }else{
+  }
     return (
         <div className="py-28 flex items-center justify-center">
     
@@ -138,6 +138,5 @@ const VerifyEmail = () => {
         </div>
       )
   }
-}
 
 export default VerifyEmail

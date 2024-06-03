@@ -42,7 +42,7 @@ const OurServicesFull = () => {
     useLayoutEffect(() => {
         setTimeout(() => {
           setLoading(false);
-        }, 500); // Delay of 2 seconds
+        }, 1500); // Delay of 2 seconds
     }, []);
 
     const handleScroll = () => {
@@ -110,8 +110,6 @@ const OurServicesFull = () => {
               />
             </div>
           );
-    }else{
-        
     }
 
   return (

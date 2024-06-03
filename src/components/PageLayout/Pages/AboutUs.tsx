@@ -9,7 +9,7 @@ const AboutUs = () => {
     useLayoutEffect(() => {
         setTimeout(() => {
           setLoading(false);
-        }, 500); // Delay of 2 seconds
+        }, 1500); // Delay of 2 seconds
     }, []);
 
 
@@ -28,7 +28,7 @@ const AboutUs = () => {
               />
             </div>
           );
-    }else{
+    }
 
         return (
             <div className='py-20'>
@@ -71,6 +71,5 @@ const AboutUs = () => {
           )
 
     }
-}
 
 export default AboutUs

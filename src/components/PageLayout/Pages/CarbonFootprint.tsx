@@ -8,7 +8,7 @@ const CarbonFootprint = () => {
   useLayoutEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 500); // Delay of 2 seconds
+    }, 1500); // Delay of 2 seconds
 }, []);
 
 if(loading){
@@ -26,7 +26,7 @@ if(loading){
           />
         </div>
       );
-  }else{  
+  }
     return (
     <div className="py-20 mt-10">
         <div className="flex flex-row space-x-10 justify-center">
@@ -37,6 +37,6 @@ if(loading){
     </div>
   )
   }
-}
+
 
 export default CarbonFootprint

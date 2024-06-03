@@ -31,7 +31,7 @@ if(loading){
           />
         </div>
       );
-}else{
+}
   return (
     <div>
       <LandingSection/>
@@ -43,6 +43,6 @@ if(loading){
     </div>
   )
 }
-}
+
 
 export default Home

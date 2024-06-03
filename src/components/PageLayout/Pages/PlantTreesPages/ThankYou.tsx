@@ -32,7 +32,7 @@ const ThankYou = () => {
             />
           </div>
         );
-  }else{
+  }
     return (
         <div className="py-20 mt-10 flex items-center justify-center">
             <div className="w-[600px]  bg-white py-20 rounded-[24px]">
@@ -69,7 +69,5 @@ const ThankYou = () => {
         </div>
       )
   }
-
-}
 
 export default ThankYou
