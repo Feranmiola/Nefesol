@@ -7,6 +7,8 @@ const LandingSection = () => {
   const handleNext=(path:string)=>{
     navigate(path);
   }
+
+  
   return (
     <div className="homeBackground ">
       <div className=" py-60 flex items-center justify-center flex-col space-y-10">

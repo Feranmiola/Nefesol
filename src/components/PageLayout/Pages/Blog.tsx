@@ -1,5 +1,7 @@
 
+import { useLayoutEffect, useState } from "react";
 import BlogCard from "./BlogCard";
+import { ThreeDots } from 'react-loader-spinner'
 
 interface BlogPost {
   imageUrl: string;
@@ -9,6 +11,14 @@ interface BlogPost {
 }
 
 const Blog = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  useLayoutEffect(() => {
+      setTimeout(() => {
+        setLoading(false);
+      }, 500); // Delay of 2 seconds
+  }, []);
 
   const blogPosts: BlogPost[] = [
     {
@@ -52,28 +62,43 @@ const Blog = () => {
     },
   ];
 
-  
-
-  return (
-    <div className="pt-40 pb-20">
-      <p className="ml-[159px] text-bgGreen text-[40px]">Learn more about contribution to the ecosystem</p>
-      <div className="flex items-center justify-center py-10">        
-        <div className="flex flex-row flex-wrap items-center w-[1240px] justify-center px-5">
-          {blogPosts.map((post, index) => (
-            <div className="w-1/3 pb-10 -mx-2.5" key={index}>
-              <BlogCard
-                imageUrl={post.imageUrl}
-                title={post.title}
-                description={post.description}
-                readMoreUrl={post.readMoreUrl}
-              />
-            </div>
-          ))}
-        </div>
+  if(loading){
+    return (
+      <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
+        <ThreeDots
+        visible={true}
+        height="80"
+        width="80"
+        color="#0A4519"
+        radius="9"
+        ariaLabel="three-dots-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        />
       </div>
-
-    </div>
-  )
+    );
+  }else{
+    return (
+      <div className="pt-40 pb-20">
+        <p className="ml-[159px] text-bgGreen text-[40px]">Learn more about contribution to the ecosystem</p>
+        <div className="flex items-center justify-center py-10">        
+          <div className="flex flex-row flex-wrap items-center w-[1240px] justify-center px-5">
+            {blogPosts.map((post, index) => (
+              <div className="w-1/3 pb-10 -mx-2.5" key={index}>
+                <BlogCard
+                  imageUrl={post.imageUrl}
+                  title={post.title}
+                  description={post.description}
+                  readMoreUrl={post.readMoreUrl}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+  
+      </div>
+    )
+  }
 }
 
 export default Blog

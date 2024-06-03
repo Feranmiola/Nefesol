@@ -1,8 +1,33 @@
+import { ThreeDots } from "react-loader-spinner";
 import GreeningPolicy from "./GreeningPolicy"
 import TreePackGroup from "./HomeComponents/PlantTreeComponents/TreePackGroup"
+import { useLayoutEffect, useState } from "react";
 
 
 const TreePacksPage = () => {
+  const [loading, setLoading] = useState(true);
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 500); // Delay of 2 seconds
+}, []);
+
+if(loading){
+    return (
+        <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
+          <ThreeDots
+          visible={true}
+          height="80"
+          width="80"
+          color="#0A4519"
+          radius="9"
+          ariaLabel="three-dots-loading"
+          wrapperStyle={{}}
+          wrapperClass=""
+          />
+        </div>
+      );
+}else{
   return (
     <div>
         <p className=" text-[40px] text-bgGreen ml-[168px] mt-40 font-medium">Tree Packs</p>
@@ -12,6 +37,7 @@ const TreePacksPage = () => {
         </div>
     </div>
   )
+}
 }
 
 export default TreePacksPage
