@@ -92,10 +92,9 @@ const BretheNow = () => {
                     <p className="text-[12px] text-bgGreen">Unit Price 1.20 $/m2</p>
                 </div>
                 <motion.a
-                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }} 
                 onClick={toPayment}
-                className="w-[212px] h-[56px] bg-[#25B567] flex items-center justify-center rounded-[56px] cursor-pointer"
+                className="w-[212px] h-[56px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex items-center justify-center rounded-[56px] cursor-pointer"
                 >
                     <p className="text-white text-[16px] font-medium">Breathe Now</p>
                 </motion.a>

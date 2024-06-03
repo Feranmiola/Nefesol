@@ -264,10 +264,10 @@ const CO2Calculator = () => {
                     <p className="text-[24px] text-linkGreen font-bold">12,000 Trees</p>
                   </div>
                   <motion.div
-                  whileHover={{ scale: 1.1 }}
+                  
                   whileTap={{ scale: 0.9 }} 
                   onClick={toPayment}
-                  className="w-[254px] h-[48px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                  className="w-[254px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                   >
                     <img
                     src="./assets/plant.svg"

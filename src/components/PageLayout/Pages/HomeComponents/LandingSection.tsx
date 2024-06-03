@@ -19,10 +19,10 @@ const LandingSection = () => {
         </div>
         <div className="flex flex-row space-x-4">
           <motion.a
-          whileHover={{ scale: 1.1 }}
+
           whileTap={{ scale: 0.9 }} 
           onClick={()=> handleNext('/co2-calculator')}
-          className="w-[280px] h-[64px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+          className="w-[280px] h-[64px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
           >
             <p className="text-white text-[16px] font-medium">Breathe Now</p>
             <img
@@ -32,10 +32,9 @@ const LandingSection = () => {
 
           </motion.a>
           <motion.a
-            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             onClick={()=> handleNext('/ourservices')}
-            className="w-[280px] h-[64px] bg-transparent ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+            className="w-[280px] h-[64px] bg-transparent hover:bg-slate-900 hover:bg-opacity-30 hover:ring-bgGreen hover:ring-2 ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
             >
               <p className="text-white text-[16px] font-medium">Get Information</p>
           </motion.a>

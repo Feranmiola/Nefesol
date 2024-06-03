@@ -90,10 +90,9 @@ const VerifyEmail = () => {
 
                 <div className="flex items-center justify-center pb-5">
                     <motion.a
-                    whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }} 
                     onClick={handleNext}
-                    className="w-[85%] h-[56px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                    className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                     >
                         <p className="text-white text-[16px] font-medium">Verify Email</p>
                     </motion.a>

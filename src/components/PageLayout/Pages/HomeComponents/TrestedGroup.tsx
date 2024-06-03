@@ -51,9 +51,8 @@ const TrestedGroup = () => {
                         <p className="text-white text-[20px] w-[307px] leading-none font-light">Karbon is harnessing the power of blockchain to address real-world challenges!</p>
 
                         <motion.a
-                            whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }} 
-                            className="w-[159px] h-[48px] bg-transparent ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                            className="w-[159px] h-[48px] bg-transparent hover:bg-slate-800 hover:bg-opacity-20 hover:ring-1 hover:ring-linkGreen transition ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                             >
                             <p className="text-white text-[16px] font-medium">Learn More</p>
                             <img

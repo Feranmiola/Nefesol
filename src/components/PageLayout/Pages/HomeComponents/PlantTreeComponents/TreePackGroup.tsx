@@ -5,7 +5,7 @@ const TreePackGroup = () => {
   return (
     <div>
                 <div className="flex flex-row items-center justify-center space-x-5 mt-16">
-          <div className="w-[320px] h-[371px] rounded-[24px] hover:border-[2px] hover:border-linkGreen shadow-md">
+          <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
               src="./assets/smallTrees.svg"
@@ -35,7 +35,7 @@ const TreePackGroup = () => {
             </div>
           </div>
 
-          <div className="w-[320px] h-[371px] rounded-[24px] hover:border-[2px] hover:border-linkGreen shadow-md">
+          <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
               src="./assets/mediumTrees.svg"
@@ -65,7 +65,7 @@ const TreePackGroup = () => {
             </div>
           </div>
 
-          <div className="w-[320px] h-[371px] rounded-[24px] hover:border-[2px] hover:border-linkGreen shadow-md">
+          <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
               src="./assets/largeTrees.svg"

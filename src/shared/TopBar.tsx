@@ -181,10 +181,9 @@ const TopBar = () => {
 
       </div>
       <motion.a
-        whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }} 
         onClick={()=>handleNavigate('/co2-calculator')}
-        className="w-[163px] h-[48px] bg-[#25B567] flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+        className="w-[163px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
         >
           <p className="text-white text-[16px] font-medium">Breathe Now</p>
           
@@ -197,7 +196,7 @@ const TopBar = () => {
     </div>
 
     {showDropdown && (
-      <div className=" fixed pt-[10.6srem] top-[4.55rem] h-[340px] ml-[28rem] flex flex-row rounded-[4px]">
+      <div className=" fixed pt-[10.6srem] top-[4.55rem] h-[340px] ml-[28rem] flex shadow-2xl flex-row rounded-[4px]">
       
       <motion.div
       variants={dropdownVariants}
