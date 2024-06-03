@@ -14,35 +14,11 @@ import VerifyEmail from './components/PageLayout/Pages/PlantTreesPages/VerifyEma
 import ThankYou from './components/PageLayout/Pages/PlantTreesPages/ThankYou'
 import Tracking from './components/PageLayout/Pages/PlantTreesPages/Tracking'
 import CarbonFootprint from './components/PageLayout/Pages/CarbonFootprint'
-import { ThreeDots } from 'react-loader-spinner'
-import { useLayoutEffect, useState } from 'react'
 
 
 function App() {
+  
 
-  const [loading, setLoading] = useState(true);
-  useLayoutEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 500); // Delay of 2 seconds
-}, []);
-
-if(loading){
-    return (
-        <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
-          <ThreeDots
-          visible={true}
-          height="80"
-          width="80"
-          color="#0A4519"
-          radius="9"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          />
-        </div>
-      );
-}else{
   return (
     <Routes>
         <Route element={<PageLayout />}>
@@ -65,7 +41,6 @@ if(loading){
 
       </Routes>
   )
-}
 }
 
 export default App
