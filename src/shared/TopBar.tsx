@@ -115,7 +115,7 @@ const TopBar = () => {
 
 
   return (
-    <div className="navbar" onMouseLeave={() => setShowDropdown(false)}>
+    <div className="navbar max-sm:hidden" onMouseLeave={() => setShowDropdown(false)}>
        <div className={`bg-transparent h-[73px] px-10 justify-between items-center transition ease-in-out flex navbar ${color ? 'bg-white border-b-[1px]' : ''}`}>
       <div className=" cursor-pointer" onClick={()=>handleNavigate('/')}>
         {color ? (

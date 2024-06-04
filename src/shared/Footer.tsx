@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
-      <div className="flex flex-row  justify-between w-[1179.5px] ">
+      <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:space-y-5 justify-between md:w-[1179.5px] ">
         <div className="flex flex-col space-y-10">
           <div className=" cursor-pointer" onClick={()=> handleNavigate('/')}>
             <img
@@ -34,8 +34,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-row justify-between w-[786px]">
-          <div className="flex flex-col justify-between">
+        <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:space-y-5 max-sm:items-center justify-between md:w-[786px]">
+          <div className="flex flex-col justify-between max-sm:justify-center max-sm:items-center max-sm:space-y-2">
             <p className="text-[12px] font-bold text-linkGreen">BREATH PACK</p>
             <motion.a
             whileHover={{ scale: 1.1 }}
@@ -60,7 +60,7 @@ const Footer = () => {
 
           </div>
 
-          <div className="flex flex-col ml-[1.5rem] justify-between">
+          <div className="flex flex-col md:ml-[1.5rem] justify-between max-sm:justify-center max-sm:items-center max-sm:space-y-2">
             <p className="text-[12px] font-bold text-linkGreen">READ</p>
             <motion.a
             whileHover={{ scale: 1.1 }}
@@ -85,7 +85,7 @@ const Footer = () => {
 
           </div>
 
-          <div className="flex flex-col mr-[2.2rem] justify-between">
+          <div className="flex flex-col md:mr-[2.2rem] justify-between max-sm:justify-center max-sm:items-center max-sm:space-y-2">
             <p className="text-[12px] font-bold text-linkGreen">LINKS</p>
             <motion.a
             whileHover={{ scale: 1.1 }}
@@ -110,15 +110,15 @@ const Footer = () => {
       
       </div>
 
-      <div className="w-[1179.5px] py-8">
+      <div className="md:w-[1179.5px] max-sm:w-screen py-8">
           <Separator className="w-[100%]"/>
       </div>
 
-      <div className="w-[1179.5px] flex flex-row items-center justify-between">
-        <div className="w-[366 px]">
+      <div className="w-[1179.5px] flex flex-row items-center max-sm:justify-center justify-between">
+        <div className="md:w-[366px]">
           <p  className="text-[#0A4519] text-[12px]">2024 © Nefesol.com</p>
         </div>
-        <div className="w-[786px] flex flex-row items-center justify-between">
+        <div className="w-[786px] flex flex-row items-center justify-between max-sm:hidden">
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
