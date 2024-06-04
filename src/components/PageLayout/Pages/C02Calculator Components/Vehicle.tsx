@@ -29,7 +29,7 @@ const Vehicle = () => {
         }
     }
   return (
-    <div className="flex  flex-col space-y-10 ">
+    <div className="flex  flex-col max-sm:items-center max-sm:justify-center space-y-10 ">
 
         <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[400px] w-full px-5">
             <p className="text-[20px] max-sm:text-[16px] text-bgGreen">Every 100km of use</p>
@@ -107,14 +107,14 @@ const Vehicle = () => {
         </div>
 
 
-        <div className="flex  flex-row items-center justify-between w-full px-5">
+        <div className="flex  flex-row max-sm:flex-col items-center justify-between w-full px-5">
             <p className="text-[20px] text-bgGreen">Therefore every year, you use</p>
-            <div className="flex items-center justify-end pr-3 rounded-[8px] h-[48px] w-[293px] bg-[#E1EAE5] ">
+            <div className="flex items-center justify-end pr-3 rounded-[8px] h-[48px] max-sm:w-[200px] md:w-[293px] bg-[#E1EAE5] ">
                 <p className="text-bgGreen text-[16px]"><span className="text-[20px] font-bold">120</span> Litre per year</p>
             </div>
         </div>
 
-        <p className="text-bgGreen text-[12px] w-[822px] pb-10 px-5">The calculated data was made according to personal carbon calculation. Personal accounts must be balanced according to the tree account. The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree. This balancing is within the scope of the Afforestation Offset Project.</p>
+        <p className="text-bgGreen text-[12px] max-sm:text-center max-sm:w-[370px] md:w-[822px] pb-10 px-5">The calculated data was made according to personal carbon calculation. Personal accounts must be balanced according to the tree account. The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree. This balancing is within the scope of the Afforestation Offset Project.</p>
 
 
 
