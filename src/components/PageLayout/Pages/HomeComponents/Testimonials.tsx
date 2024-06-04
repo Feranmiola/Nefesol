@@ -37,16 +37,16 @@ const Testimonials = () => {
     }, [currentIndex]);
 
   return (
-    <div className="flex flex-row space-x-5 items-center justify-center py-20">
-        <div className="testimonialBG flex flex-col justify-between rounded-[24px] w-[453px] h-[584px] py-8 px-10">
-            <p className="text-white text-[48px] text-left w-[292px] leading-tight">What people have been saying about us.</p>
+    <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 md:space-x-5 items-center justify-center py-20">
+        <div className="testimonialBG flex flex-col justify-between rounded-[24px] w-[453px] h-[584px] max-sm:w-[353px] max-sm:h-[484px] py-8 px-10">
+            <p className="text-white text-[48px] max-sm:text-[40px] text-left w-[292px] leading-tight">What people have been saying about us.</p>
             <img
                 src="./assets/whiteTree.svg"
                 alt="white tree"
                 className="w-[30.07px] h-[28.27px]"
             />
         </div>
-        <div className=" bg-testimonialGreen flex items-center justify-center w-[662px] h-[584px] rounded-[24px]">
+        <div className=" bg-testimonialGreen flex items-center justify-center w-[662px] h-[584px] max-sm:w-[362px] max-sm:h-[484px] rounded-[24px]">
             <div className="flex flex-col items-center justify-center w-[100%]">
                 
                     <motion.div
@@ -57,18 +57,18 @@ const Testimonials = () => {
                          transition={{ duration: 0.5 }}
                     >
                         <div className="">
-                            <div className="flex items-center space-x-[21rem] flex-row">
-                                <img src={slidesData[currentIndex].quote} alt="quote" />
-                                <img src={slidesData[currentIndex].stars} alt="rating stars" />
+                            <div className="flex items-center md:space-x-[21rem] max-sm:space-x-[10.5rem] flex-row">
+                                <img src={slidesData[currentIndex].quote} alt="quote" className=" max-sm:w-[40px] max-sm:h-[40px]" />
+                                <img src={slidesData[currentIndex].stars} alt="rating stars" className=" max-sm:w-[80px] max-sm:h-[80px]" />
                             </div>
-                            <div className="flex mt-10">
-                                <p className="text-bgGreen text-[24px] w-[534px] leading-tight">{slidesData[currentIndex].text}</p>
+                            <div className="flex md:mt-10 max-sm:mt-5 max-sm:items-center max-sm:justify-center">
+                                <p className="text-bgGreen text-[24px] max-sm:text-[14px] w-[334px] max-sm:w-[300px] leading-tight">{slidesData[currentIndex].text}</p>
                             </div>
                             <div className="flex flex-row mt-16 space-x-3 items-center">
-                                <img src={slidesData[currentIndex].avatar} alt="avatar" className="rounded-[14px]" />
+                                <img src={slidesData[currentIndex].avatar} alt="avatar" className="rounded-[14px] max-sm:rounded-[8px] max-sm:w-[60px] max-sm:h-[60px]" />
                                 <div>
-                                    <p className="text-bgGreen text-[20px]">{slidesData[currentIndex].name}</p>
-                                    <p className="text-[20px] font-light text-bgGreen">{slidesData[currentIndex].title}</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]">{slidesData[currentIndex].name}</p>
+                                    <p className="text-[20px] max-sm:text-[16px] font-light text-bgGreen">{slidesData[currentIndex].title}</p>
                                 </div>
                             </div>
                         </div>
