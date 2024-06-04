@@ -8,10 +8,10 @@ const Services = () => {
         navigate('/ourservices');
     }
   return (
-    <div className="py-20">
-        <p className="ml-[168px] pb-20 font-medium text-bgGreen text-[40px]">Our Services</p>
+    <div className="py-20 max-sm:flex max-sm:flex-col max-sm:space-y-5 max-sm:items-center max-sm:justify-center">
+        <p className="md:ml-[168px] pb-20 font-medium text-bgGreen text-[40px]">Our Services</p>
         <div className="flex flex-col space-y-10 items-center justify-center">
-            <div className="flex flex-row space-x-10">
+            <div className="flex flex-row max-sm:flex-col md:space-x-10 max-sm:space-y-10">
                 <div className="flex flex-col items-start space-y-4">
                     <img
                     src="./assets/carbonConsulatancyLogo.svg"
@@ -56,7 +56,7 @@ const Services = () => {
 
             </div>
 
-            <div className="flex flex-row space-x-10">
+            <div className="flex flex-row max-sm:flex-col md:space-x-10 max-sm:space-y-10">
                 <div className="flex flex-col items-start space-y-4">
                     <img
                     src="./assets/carbonFootprintLogoServices.svg"
