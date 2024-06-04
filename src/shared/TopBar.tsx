@@ -507,8 +507,8 @@ const TopBar = () => {
       )}
       </div>
       <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 navbar transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
-        <div className="w-full items-center flex flex-row justify-between">
-          <div>
+        <div className="w-full items-center flex flex-row justify-between" >
+          <div onClick={() => handleNavigate('/')} className=" cursor-pointer">
             {color ? (
               <img
               src="./assets/greenTree.svg"
