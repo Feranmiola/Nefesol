@@ -80,7 +80,7 @@ const CO2Calculator = () => {
         <p className="text-[40px] text-bgGreen md:ml-[206px] max-sm:text-center max-sm:text-[28px]">CO<span className=" bottom-0 text-[25px] max-sm:text-[20px] font-medium">2</span>  <span className="">Calculator</span></p>
         
         <div className="flex mt-[-70px] justify-center">
-          <div className="w-[939px] max-sm:w-[390px] mt-20 flex rounded-[24px] ">
+          <div className="w-[939px] max-sm:w-[380px] mt-20 flex rounded-[24px] ">
             <div className="flex flex-col shadow-md items-center justify-center w-full rounded-[24px]">
               <div className="bg-[#F8F9F8]  w-full flex flex-col rounded-t-[24px]">
                 <div className="flex flex-row max-sm:flex-col max-sm:justify-center max-sm:space-y-2 items-center justify-between p-5">
