@@ -31,7 +31,7 @@ const Vehicle = () => {
   return (
     <div className="flex  flex-col max-sm:items-center max-sm:justify-center space-y-10 ">
 
-        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[400px] w-full px-5">
+        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[390px] w-full px-5">
             <p className="text-[20px] max-sm:text-[16px] text-bgGreen">Every 100km of use</p>
             <div className="flex flex-row  items-center justify-start w-[293px] space-x-4">
                 <div className="w-[186px] max-sm:w-[150px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
@@ -69,7 +69,7 @@ const Vehicle = () => {
         </div>
 
 
-        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[400px] px-5">
+        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[390px] px-5">
             <p className="text-[20px] max-sm:text-[16px] text-bgGreen">How many cars do you drive per year (Average)</p>
             <div className="flex flex-row  items-center justify-start md:w-[293px] space-x-4">
                 <div className="w-[186px] max-sm:w-[150px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
