@@ -32,10 +32,10 @@ const PageLayout = () => {
 
     return (
       <div className="flex flex-col">
-        <div className="w-full">
+        <div className="w-screen">
           <TopBar/>
         </div>
-        <div className="bg-white">
+        <div className="bg-white w-screen">
           <Outlet/>
         </div>
         <Footer/>
