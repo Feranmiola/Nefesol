@@ -35,7 +35,7 @@ const LandingSection = () => {
           <motion.a
             whileTap={{ scale: 0.9 }} 
             onClick={()=> handleNext('/ourservices')}
-            className="w-[280px] h-[64px] max-sm:w-[240px] max-sm:h-[62px] bg-transparent hover:bg-slate-900 hover:bg-opacity-30 hover:ring-bgGreen hover:ring-2 ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+            className="w-[280px] h-[64px] max-sm:w-[240px] max-sm:h-[62px] bg-transparent hover:bg-[#25B567] hover:ring-bgGreen hover:ring-2 ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
             >
               <p className="text-white text-[16px] font-medium">Get Information</p>
           </motion.a>
