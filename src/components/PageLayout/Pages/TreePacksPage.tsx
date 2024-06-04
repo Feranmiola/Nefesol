@@ -30,7 +30,7 @@ if(loading){
 }
   return (
     <div>
-        <p className=" text-[40px] text-bgGreen ml-[168px] mt-40 font-medium">Tree Packs</p>
+        <p className=" text-[40px] max-sm:text-[28px] max-sm:text-center text-bgGreen md:ml-[168px] mt-40 font-medium">Tree Packs</p>
         <TreePackGroup/>
         <div className="py-20">
             <GreeningPolicy/>
