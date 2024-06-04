@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 const TreePackGroup = () => {
   return (
     <div>
-                <div className="flex flex-row items-center justify-center space-x-5 mt-16">
+      <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 items-center justify-center md:space-x-5 mt-16">
           <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
