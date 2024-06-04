@@ -264,7 +264,7 @@ const Airplane = () => {
                 <div className="flex  flex-col items-start md:ml-[94px]  space-y-2 ">
                     <p className="text-[16px] text-bgGreen">Average Number of times per year</p>
                     <div className="flex flex-row max-sm:flex-col md:items-center justify-start w-[370px] max-sm:w-[340px] space-x-4">
-                        <div className="w-[370px] max-sm:w-[340px] max-sm:w-[310px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
+                        <div className="w-[370px]  max-sm:w-[310px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                             <div className="flex items-center h-full justify-between w-full">
                                 <div className="flex flex-row items-center w-full">
                                     <input type="number" value={averageFlightTimes} onChange={(e) => setAverageFlightTimes(Number(e.target.value))} className="w-[95%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
@@ -307,7 +307,7 @@ const Airplane = () => {
             <p className="text-[16px] text-bgGreen">Average Calculated Distance</p>
             <div className="flex flex-row  max-sm:flex-col  max-sm:space-y-5 items-center justify-between">
                 <div className="flex flex-col space-y-2">
-                    <div className="bg-[#E1EAE5] w-[370px] max-sm:w-[340px] max-sm:w-[280px] h-[48px] px-[16px] rounded-[8px] flex items-center">
+                    <div className="bg-[#E1EAE5] w-[370px] max-sm:w-[280px] h-[48px] px-[16px] rounded-[8px] flex items-center">
                         <p className="text-[16px] text-bgGreen"><span className="text-[20px] font-bold">1,024</span> KWh per year</p>
                     </div>
                     <div className="flex flex-row space-x-1">
@@ -319,7 +319,7 @@ const Airplane = () => {
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }} 
-                        className="w-[370px] max-sm:w-[340px] h-[48px] max-sm:w-[280px] max-sm:h-[40px] bg-transparent ring-[1px] ring-linkGreen flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                        className="w-[370px] h-[48px] max-sm:w-[280px] max-sm:h-[40px] bg-transparent ring-[1px] ring-linkGreen flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                         >
                             <img
                             src="./assets/plus.svg"
