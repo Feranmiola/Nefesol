@@ -12,8 +12,8 @@ const Footer = () => {
 
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
-      <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:justify-center max-sm:space-y-5 justify-between md:w-[1179.5px] ">
-        <div className="flex flex-col space-y-10">
+      <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:w-[334px] max-sm:space-y-5 justify-between md:w-[1179.5px] ">
+        <div className="flex flex-col max-sm:w-[334px] space-y-10">
           <div className=" cursor-pointer" onClick={()=> handleNavigate('/')}>
             <img
             src="./assets/topBarLogo.svg"
@@ -34,9 +34,9 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:space-y-10 max-sm:items-center justify-between md:w-[786px]">
-          <div className="flex max-sm:flex-row max-sm:space-x-10 max-sm:items-center md:w-[390px] md:justify-between flex-row">
-            <div className="flex flex-col justify-between max-sm:justify-center max-sm:space-y-2">
+        <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:w-[334px] max-sm:space-y-10 max-sm:items-start justify-between md:w-[786px]">
+          <div className="flex max-sm:flex-row max-sm:space-x-10 max-sm:items-start md:w-[390px] md:justify-between flex-row">
+            <div className="flex flex-col justify-between max-sm:justify-start max-sm:space-y-2">
               <p className="text-[12px] font-bold text-linkGreen">BREATH PACK</p>
               <motion.a
               whileHover={{ scale: 1.1 }}

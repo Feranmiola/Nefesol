@@ -1,16 +1,12 @@
 import { motion } from "framer-motion"
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 const TrestedGroup = () => {
-
-    const small = useMediaQuery("(max-width:899px)");
 
   return (
     <div>
         <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 md:space-x-5 items-center mt-10 justify-center">
             <div className="w-[534px] h-[284px] max-sm:w-[334px] max-sm:h-[484px] bg-[#F3F3F3] items-center justify-center rounded-[24px] p-10">
-                {small ? (
-                    <div className="flex flex-col justify-between h-full ">
+                    <div className="flex flex-col justify-between h-full md:hidden ">
                         <div className="flex flex-row justify-between">
                             <img
                             src="./assets/partner1.svg"
@@ -48,8 +44,8 @@ const TrestedGroup = () => {
                         
 
                     </div>
-                ):(
-                    <div className="flex flex-col justify-between space-y-5">
+                
+                    <div className="flex flex-col justify-between max-sm:hidden space-y-5">
                     <div className="flex flex-row items-center justify-between">
                         <img
                         src="./assets/partner1.svg"
@@ -84,7 +80,7 @@ const TrestedGroup = () => {
                         />
                     </div>
                 </div>
-                )}
+                
             </div>
             <div className="karbonBG w-[581px] h-[284px] max-sm:w-[334px] max-sm:h-[484px] rounded-[24px] ">
                 <div className="flex flex-row h-full max-sm:flex-col justify-between ">
