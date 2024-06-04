@@ -56,6 +56,22 @@ const TopBar = () => {
   };
 
 
+  const [showMobileDropdown, setShowMobileDropdown] = useState(false);
+  const [showSubDropdown, setshowsubdropdown] = useState(false);
+
+  const actovatMobileSubdropdown = () =>{
+    if(showSubDropdown){
+      setshowsubdropdown(false);
+    }else{
+      setshowsubdropdown(true);
+    }
+  }
+
+  const setobileDropdown = (newStatus: boolean) =>{
+    setShowMobileDropdown(newStatus);
+  }
+
+
   const [color, setColor] = useState(false);
 
 
@@ -116,7 +132,7 @@ const TopBar = () => {
 
   return (
     <div>
-      <div className="navbar max-md:hidden w-screen" onMouseLeave={() => setShowDropdown(false)}>
+      <div className="navbar max-lg:hidden w-screen" onMouseLeave={() => setShowDropdown(false)}>
        <div className={`bg-transparent h-[73px] px-10 justify-between items-center transition ease-in-out flex navbar ${color ? 'bg-white border-b-[1px]' : ''}`}>
         <div className=" cursor-pointer" onClick={()=>handleNavigate('/')}>
           {color ? (
@@ -506,32 +522,83 @@ const TopBar = () => {
 
       )}
       </div>
-      <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 navbar transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
-        <div className="w-full items-center flex flex-row justify-between" >
-          <div onClick={() => handleNavigate('/')} className=" cursor-pointer">
-            {color ? (
-              <img
-              src="./assets/greenTree.svg"
-              alt="logo"
-              />
-            ):(
-              <img
-              src="./assets/whiteTree.svg"
-              alt="logo"
-              className=""
-              />
-            )}
+      <div className="flex flex-col navbar w-screen">
+        <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
+          <div className="w-full items-center flex flex-row justify-between" >
+            <div onClick={() => handleNavigate('/')} className=" cursor-pointer">
+              {color ? (
+                <img
+                src="./assets/greenTree.svg"
+                alt="logo"
+                />
+              ):(
+                <img
+                src="./assets/whiteTree.svg"
+                alt="logo"
+                className=""
+                />
+              )}
+            </div>
+            <div className=" cursor-pointer" onClick={()=> setobileDropdown(true)}>
+              {color ? (
+                <img
+                src="./assets/menu.svg"
+                />
+              ):(
+                <img
+                src="./assets/menuWHite.svg"
+                />
+              )}
+            </div>
           </div>
-          <div>
-            {color ? (
+        </div>
+      </div>
+      <div className={!showMobileDropdown ? 'hidden' : ''}>
+        <div className=" w-[300px] bg-white md:hidden fixed z-[9999] right-0 mr-6 mt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
+          <div className="flex flex-col space-y-5 py-5 px-7 w-full">
+            <div className="flex flex-row justify-between items-center">
               <img
-              src="./assets/menu.svg"
-              />
-            ):(
+                  src="./assets/greenTree.svg"
+                  alt="logo"
+                  />
+                  <img
+                  src="./assets/close.svg"
+                  className=" cursor-pointer"
+                  onClick={()=> setobileDropdown(false)}
+                  />
+            </div>
+            <div className="flex flex-row space-x-2 cursor-pointer" onClick={actovatMobileSubdropdown}>
+              <p className="text-[16px]">Breath Pack</p>
               <img
-              src="./assets/menuWHite.svg"
-              />
-            )}
+                src="./assets/down.svg"
+                />
+            </div>
+            <div className={ !showSubDropdown ? 'hidden' : ''}>
+              <div className={"ml-5 space-y-5"}>
+                <div>
+                  <p className="text-[14px]">C02 Calculation</p>
+                </div>
+                <div>
+                  <p className="text-[14px]">Carbon footprint</p>
+                </div>
+                <div>
+                  <p className="text-[14px]">Tree Packs</p>
+                </div>
+                <div>
+                  <p className="text-[14px]">Tree Tracking and Verification</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <p className="text-[16px]">About Us</p>
+            </div>
+            <div>
+              <p className="text-[16px]">Blog</p>
+            </div>
+            <div>
+              <p className="text-[16px]">Communication</p>
+            </div>
+
           </div>
         </div>
       </div>
