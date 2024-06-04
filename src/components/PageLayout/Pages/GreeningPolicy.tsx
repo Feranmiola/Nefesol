@@ -7,7 +7,7 @@ const GreeningPolicy = () => {
     <div className="bg-bgGreen py-28 flex flex-col space-y-20 items-center justify-center">
         <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 items-center justify-center md:space-x-10">
             <div className="flex flex-col max-sm:items-center max-sm:justify-center space-y-4">
-                <p className="text-white text-[40px]">Our Greening Policy</p>
+                <p className="text-white text-[40px] max-sm:text-[30px]">Our Greening Policy</p>
                 <p className="text-white text-[16px] md:w-[386px] max-sm:w-[300px] max-sm:text-center">Our aim is to encourage people to conserve natural resources and to contribute to the stabilization of the ecosystem.</p>
                 <motion.a
                 whileHover={{ scale: 1.03 }}
