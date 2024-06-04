@@ -11,7 +11,7 @@ const LandingSection = () => {
   
   return (
     <div className="homeBackground ">
-      <div className=" py-60 max-sm:py-30 flex items-center justify-center flex-col space-y-10">
+      <div className=" py-60 max-sm:py-24 flex items-center justify-center flex-col space-y-10">
         <div className="flex items-center justify-center flex-col">
           <h1 className="text-[150px] max-sm:text-[80px] leading-tight tracking-tight text-white">Every Tree</h1>
           <h1 className="text-[150px] max-sm:text-[80px] leading-tight tracking-tight text-white">One Breath</h1>
