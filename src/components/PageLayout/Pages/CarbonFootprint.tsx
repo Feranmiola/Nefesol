@@ -29,7 +29,7 @@ if(loading){
   }
     return (
     <div className="py-20 mt-10">
-        <div className="flex flex-row space-x-10 justify-center">
+        <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 md:space-x-10 justify-center">
             <TakeAction/>
             <BretheNow/>
         </div>
