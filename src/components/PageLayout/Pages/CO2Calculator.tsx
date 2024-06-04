@@ -77,13 +77,13 @@ const CO2Calculator = () => {
 
     return (
       <div className="mt-32" onLoad={() => setLoading(false)}>
-        <p className="text-[40px] text-bgGreen ml-[206px]">CO<span className=" bottom-0 text-[25px] font-medium">2</span>  <span className="">Calculator</span></p>
+        <p className="text-[40px] text-bgGreen md:ml-[206px] max-sm:text-center max-sm:text-[28px]">CO<span className=" bottom-0 text-[25px] max-sm:text-[20px] font-medium">2</span>  <span className="">Calculator</span></p>
         
         <div className="flex mt-[-70px] justify-center">
-          <div className="w-[939px] mt-20 flex rounded-[24px] ">
+          <div className="w-[939px] max-sm:w-[400px] mt-20 flex rounded-[24px] ">
             <div className="flex flex-col shadow-md items-center justify-center w-full rounded-[24px]">
               <div className="bg-[#F8F9F8]  w-full flex flex-col rounded-t-[24px]">
-                <div className="flex flex-row items-center justify-between p-5">
+                <div className="flex flex-row max-sm:flex-col max-sm:justify-center max-sm:space-y-2 items-center justify-between p-5">
                   <div className="flex flex-row space-x-3">
                         <motion.div
                         whileHover={{ scale: 1.06 }}
@@ -101,7 +101,7 @@ const CO2Calculator = () => {
                               alt="car"
                               />
                             )}
-                            <p className={tabIndex === 1 ? "text-white" : " text-bgGreen"}>Vehicles</p>
+                            <p className={tabIndex === 1 ? "text-white" : " text-bgGreen max-sm:hidden"}>Vehicles</p>
                         </motion.div>
   
                         <motion.div
@@ -121,7 +121,7 @@ const CO2Calculator = () => {
                               alt="plane"
                               />
                             )}
-                            <p className={tabIndex === 2 ? "text-white" : " text-bgGreen"}>Airplane</p>
+                            <p className={tabIndex === 2 ? "text-white" : " text-bgGreen max-sm:hidden"}>Airplane</p>
                         </motion.div>
   
                         <motion.div
@@ -140,7 +140,7 @@ const CO2Calculator = () => {
                               alt="Home"
                               />
                             )}
-                            <p className={tabIndex === 3 ? "text-white" : " text-bgGreen"}>Home</p>
+                            <p className={tabIndex === 3 ? "text-white" : " text-bgGreen max-sm:hidden"}>Home</p>
                         </motion.div>
   
                         <motion.div
@@ -160,7 +160,7 @@ const CO2Calculator = () => {
                               />
                             )}
                             
-                            <p className={tabIndex === 4 ? "text-white" : " text-bgGreen"}>Food</p>
+                            <p className={tabIndex === 4 ? "text-white" : " text-bgGreen max-sm:hidden"}>Food</p>
                         </motion.div>
                     </div>
                     <motion.div
@@ -230,53 +230,58 @@ const CO2Calculator = () => {
               <div className="w-full bg-white border-t-[1px] border-b-[1px] rounded-b-[24px] flex flex-col py-5 px-10 ">
                 <div className="flex flex-col space-y-3">
                   <p className="text-[16px] text-bgGreen">Total CO2 you produce across your usage</p>
-                  <div className="  flex flex-row items-center">
+                  <div className="  flex flex-row max-sm:flex-col max-sm:justify-center items-center">
                     <div>
-                      <p className="text-bgGreen text-[24px] font-bold">12,000 KgCO<span className="bottom-0 text-[16px]">2</span></p>
+                      <p className="text-bgGreen text-[24px] max-sm:text-[16px] font-bold">12,000 KgCO<span className="bottom-0 text-[16px] max-sm:text-[12px]">2</span></p>
                     </div>
-                    <div className="flex flex-row space-x-3 ml-10">
-                      <div className="flex flex-row space-x-1 items-center">
-                        <img
-                        src="./assets/carGreen.svg"
-                        className="w-[22.5px] h-[17.25px]"
-                        />
-                        <p className="text-[16px] text-bgGreen font-bold">12 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+                    <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 max-sm:mt-5 md:space-x-3 md:ml-10">
+                      <div className="flex flex-row space-x-3">
+                        <div className="flex flex-row space-x-1 items-center">
+                          <img
+                          src="./assets/carGreen.svg"
+                          className="w-[22.5px] h-[17.25px]"
+                          />
+                          <p className="text-[16px] text-bgGreen font-bold">12 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+                        </div>
+
+                        <div>
+                          <Separator className="w-[1px]" orientation="vertical"/>
+                        </div>
+                        
+                        <div className="flex flex-row space-x-1 items-center">
+                          <img
+                          src="./assets/plane.svg"
+                          className="w-[22.5px] h-[17.25px]"
+                          />
+                          <p className="text-[16px] text-bgGreen font-bold">12,000 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+                        </div>
+                        
                       </div>
-                      
-                      <div>
-                        <Separator className="w-[1px]" orientation="vertical"/>
-                      </div>
-                      
-                      <div className="flex flex-row space-x-1 items-center">
-                        <img
-                        src="./assets/plane.svg"
-                        className="w-[22.5px] h-[17.25px]"
-                        />
-                        <p className="text-[16px] text-bgGreen font-bold">12,000 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
-                      </div>
-                      
-                      <div>
-                        <Separator className="w-[1px]" orientation="vertical"/>
-                      </div>
-  
-                      <div className="flex flex-row space-x-1 items-center">
-                        <img
-                        src="./assets/carGreen.svg"
-                        className="w-[22.5px] h-[17.25px]"
-                        />
-                        <p className="text-[16px] text-bgGreen font-bold">500 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
-                      </div>
-  
-                      <div>
-                        <Separator className="w-[1px]" orientation="vertical"/>
-                      </div>
-  
-                      <div className="flex flex-row space-x-1 items-center">
-                        <img
-                        src="./assets/carGreen.svg"
-                        className="w-[22.5px] h-[17.25px] opacity-30"
-                        />
-                        <p className="opacity-30 text-[16px] text-bgGreen font-bold">0 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+
+                      <div className="flex flex-row space-x-3">
+                        <div>
+                          <Separator className="w-[1px]" orientation="vertical"/>
+                        </div>
+    
+                        <div className="flex flex-row space-x-1 items-center">
+                          <img
+                          src="./assets/carGreen.svg"
+                          className="w-[22.5px] h-[17.25px]"
+                          />
+                          <p className="text-[16px] text-bgGreen font-bold">500 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+                        </div>
+    
+                        <div>
+                          <Separator className="w-[1px]" orientation="vertical"/>
+                        </div>
+    
+                        <div className="flex flex-row space-x-1 items-center">
+                          <img
+                          src="./assets/carGreen.svg"
+                          className="w-[22.5px] h-[17.25px] opacity-30"
+                          />
+                          <p className="opacity-30 text-[16px] text-bgGreen font-bold">0 <span className="text-[12px] font-normal">kgCO<span className="text-[8px] bottom-0">2</span></span></p>
+                        </div>
                       </div>
   
                     </div>
@@ -284,8 +289,8 @@ const CO2Calculator = () => {
                   <div className="py-5">
                     <Separator className="w-full"/>
                   </div>
-                  <div className="flex flex-row items-center justify-between ">
-                    <div className="flex flex-row space-x-3 items-center">
+                  <div className="flex flex-row max-sm:flex-col items-center justify-between ">
+                    <div className="flex flex-row max-sm:flex-col max-sm:space-y-2 mb-2 md:space-x-3 items-center">
                       <p className="text-[16px] text-bgGreen bottom-0">To eliminate this CO2, you need to plant</p>
                       <p className="text-[24px] text-linkGreen font-bold">12,000 Trees</p>
                     </div>
