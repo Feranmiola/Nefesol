@@ -61,7 +61,7 @@ const GreeningPolicy = () => {
             </div>
 
             <div>
-                <Separator className="  bg-[#175b36] " />
+                <Separator className="  bg-[#175b36]  max-sm:hidden" orientation="vertical" />
             </div>
 
             <div className="flex flex-col items-start max-sm:ml-[-3rem] space-y-16">
@@ -101,7 +101,7 @@ const GreeningPolicy = () => {
             </div>
 
             <div>
-                <Separator className="  bg-[#175b36] "/>
+                <Separator className="  bg-[#175b36] max-sm:hidden " orientation="vertical"/>
             </div>
 
             <div className="flex flex-col items-start space-y-16">
