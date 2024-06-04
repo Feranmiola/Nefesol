@@ -31,10 +31,10 @@ const Vehicle = () => {
   return (
     <div className="flex  flex-col space-y-10 ">
 
-        <div className="flex  flex-row items-center justify-between w-full px-5">
-            <p className="text-[20px] text-bgGreen">Every 100km of use</p>
-            <div className="flex flex-row items-center justify-start w-[293px] space-x-4">
-                <div className="w-[186px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
+        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[400px] w-full px-5">
+            <p className="text-[20px] max-sm:text-[16px] text-bgGreen">Every 100km of use</p>
+            <div className="flex flex-row  items-center justify-start w-[293px] space-x-4">
+                <div className="w-[186px] max-sm:w-[150px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                     <div className="flex items-center h-full justify-between">
                         <input type="number" value={Liters} onChange={(e) => setLiters(Number(e.target.value))} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                         <div className="pr-2 space-y-1">
@@ -64,15 +64,15 @@ const Vehicle = () => {
                         </div>
                     </div>
                 </div>
-                <p className="text-[20px] text-bgGreen font-medium">Liters</p>
+                <p className="text-[20px] max-sm:text-[16px] text-bgGreen font-medium">Liters</p>
             </div>
         </div>
 
 
-        <div className="flex  flex-row items-center justify-between w-full px-5">
-            <p className="text-[20px] text-bgGreen">How many cars do you drive per year (Average)</p>
-            <div className="flex flex-row items-center justify-start w-[293px] space-x-4">
-                <div className="w-[186px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
+        <div className="flex  flex-row max-sm:flex-col max-sm:space-y-2 items-center justify-between max-sm:w-[400px] px-5">
+            <p className="text-[20px] max-sm:text-[16px] text-bgGreen">How many cars do you drive per year (Average)</p>
+            <div className="flex flex-row  items-center justify-start md:w-[293px] space-x-4">
+                <div className="w-[186px] max-sm:w-[150px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                     <div className="flex items-center h-full justify-between">
                         <input type="number" value={kilometer} onChange={(e) => setkilometer(Number(e.target.value))} className="w-[85%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
                         <div className="pr-2 space-y-1">
@@ -102,7 +102,7 @@ const Vehicle = () => {
                         </div>
                     </div>
                 </div>
-                <p className="text-[20px] text-bgGreen font-medium">Kilometer</p>
+                <p className="text-[20px] max-sm:text-[16px] text-bgGreen font-medium">Kilometer</p>
             </div>
         </div>
 
