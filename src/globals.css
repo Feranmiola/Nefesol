@@ -233,7 +233,7 @@ li{
     }
 
     .shad-select {
-      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] max-sm:w-[310px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }
   
     .shad-select-plant {

@@ -201,7 +201,7 @@ const Airplane = () => {
         </div>
 
         <div className="flex flex-col space-y-10">
-            <div className="flex flex-row items-center justify-cdnter w-full">
+            <div className="flex flex-row max-sm:flex-col items-center justify-cdnter w-full">
                 <div className="flex flex-col space-y-3">
                     <p className="text-bgGreen text-[16px]">Departure Airport</p>
                     <Select>
@@ -215,7 +215,7 @@ const Airplane = () => {
                         </SelectContent>
                     </Select>
                 </div>
-                <div className="flex items-center justify-center mt-9">
+                <div className="flex items-center justify-center max-sm:rotate-[90deg] max-sm:py-5 mt-9">
                     <img
                     src="./assets/flightLine.svg"
                     />
@@ -236,11 +236,11 @@ const Airplane = () => {
                 </div>
             </div>
 
-            <div className="flex flex-row items-center justify-between w-full">
-                <div className="flex flex-col w-[370px] space-y-2 items-start justify-start">
-                    <p className="text-[16px] text-bgGreen w-[370px] text-left">Trip Type</p>
+            <div className="flex flex-row max-sm:flex-col max-sm:ml-5 items-center max-sm:space-y-5 justify-between w-full">
+                <div className="flex flex-col w-[370px] max-sm:w-[340px]  space-y-2 items-start justify-start">
+                    <p className="text-[16px] text-bgGreen w-[370px] max-sm:w-[340px] text-left">Trip Type</p>
 
-                        <RadioGroup defaultValue="" className="flex flex-row">
+                        <RadioGroup defaultValue="" className="flex flex-row max-sm:flex-col max-sm:space-y-2">
                             <Label htmlFor="option-one" 
                             onClick={() => changeRadioValue(1)}
                             className={radioValue === 1 ? "cursor-pointer bg-white w-[197px]  h-[48px] rounded-[10px] flex items-center pl-5 border-[1px] border-linkGreen space-x-2" : "cursor-pointer bg-white w-[197px]  h-[48px] rounded-[10px] flex items-center pl-5 space-x-2"}
@@ -261,10 +261,10 @@ const Airplane = () => {
 
                 </div>
 
-                <div className="flex  flex-col items-start ml-[94px]  space-y-2  w-full">
+                <div className="flex  flex-col items-start md:ml-[94px]  space-y-2 ">
                     <p className="text-[16px] text-bgGreen">Average Number of times per year</p>
-                    <div className="flex flex-row items-center justify-start w-[370px] space-x-4">
-                        <div className="w-[370px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
+                    <div className="flex flex-row max-sm:flex-col md:items-center justify-start w-[370px] max-sm:w-[340px] space-x-4">
+                        <div className="w-[370px] max-sm:w-[340px] max-sm:w-[310px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                             <div className="flex items-center h-full justify-between w-full">
                                 <div className="flex flex-row items-center w-full">
                                     <input type="number" value={averageFlightTimes} onChange={(e) => setAverageFlightTimes(Number(e.target.value))} className="w-[95%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
@@ -305,9 +305,9 @@ const Airplane = () => {
 
         <div className="flex flex-col space-y-5">
             <p className="text-[16px] text-bgGreen">Average Calculated Distance</p>
-            <div className="flex flex-row items-center justify-between">
+            <div className="flex flex-row  max-sm:flex-col  max-sm:space-y-5 items-center justify-between">
                 <div className="flex flex-col space-y-2">
-                    <div className="bg-[#E1EAE5] w-[370px] h-[48px] px-[16px] rounded-[8px] flex items-center">
+                    <div className="bg-[#E1EAE5] w-[370px] max-sm:w-[340px] max-sm:w-[280px] h-[48px] px-[16px] rounded-[8px] flex items-center">
                         <p className="text-[16px] text-bgGreen"><span className="text-[20px] font-bold">1,024</span> KWh per year</p>
                     </div>
                     <div className="flex flex-row space-x-1">
@@ -319,19 +319,19 @@ const Airplane = () => {
                     <motion.a
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }} 
-                        className="w-[370px] h-[48px] bg-transparent ring-[1px] ring-linkGreen flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                        className="w-[370px] max-sm:w-[340px] h-[48px] max-sm:w-[280px] max-sm:h-[40px] bg-transparent ring-[1px] ring-linkGreen flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                         >
                             <img
                             src="./assets/plus.svg"
                             />
                         <p className="text-linkGreen text-[16px] font-bold">Add More Routes</p>
                     </motion.a>
-                    <div className="flex flex-row  opacity-60 space-x-1">
+                    <div className="flex flex-row  max-sm:items-center max-sm:justify-center opacity-60 space-x-1">
                         <img
                         src="./assets/infoIcon.svg"
 
                         />
-                        <p className="text-[12px] text-bgGreen">Click here to add more than one route for accurate calculation</p>
+                        <p className="text-[12px] max-sm:text-[10px] text-bgGreen">Click here to add more than one route for accurate calculation</p>
                     </div>
                 </div>
             </div>
