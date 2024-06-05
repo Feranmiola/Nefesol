@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 
@@ -11,12 +11,23 @@ const ThankYou = () => {
     }
 
     const [loading, setLoading] = useState(true);
-    useLayoutEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500); // Delay of 2 seconds
-  }, []);
-
+    const imageUrls = ['./assets/copyIcon.svg']; // Replace with your image URLs
+  
+    useEffect(() => {
+      let loadedImages = 0;
+  
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === imageUrls.length) {
+            setLoading(false);
+          }
+        };
+      });
+    }, [imageUrls]);
+    
   if(loading){
       return (
           <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>

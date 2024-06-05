@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion"
-import { useLayoutEffect, useState } from "react";
+import { useState } from "react";
 import { ThreeDots } from 'react-loader-spinner'
 
 
@@ -10,33 +10,30 @@ const Tracking = () => {
 
     const [isTracking, setIstracking] = useState(false);
 
-    const handleNext = () => {
-        setIstracking(true);
+
+    const [loading, setLoading] = useState(false);
+    const imageUrls = ['./assets/prev.svg', './assets/treeGroup.svg', './assets/greenDot.svg', './assets/minus.svg', './assets/plusIcon.svg']; // Replace with your image URLs
+
+    const handleTrack = () => {
+        setLoading(true);
+    
+        let loadedImages = 0;
+    
+        imageUrls.forEach((url) => {
+          const img = new Image();
+          img.src = url;
+          img.onload = () => {
+            loadedImages++;
+            if (loadedImages === imageUrls.length) {
+              setIstracking(true);
+              setLoading(false);
+            }
+          };
+        });
     }
-
-    const [loading, setLoading] = useState(true);
-    useLayoutEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500); // Delay of 2 seconds
-  }, []);
-
-  if(loading){
-      return (
-          <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
-            <ThreeDots
-            visible={true}
-            height="80"
-            width="80"
-            color="#0A4519"
-            radius="9"
-            ariaLabel="three-dots-loading"
-            wrapperStyle={{}}
-            wrapperClass=""
-            />
-          </div>
-        );
-  }
+  
+    
+    
     return (
         <div className="py-20 mt-10 items-center justify-center flex">
             <div className="w-[600px]  flex   bg-white rounded-[24px]">
@@ -57,7 +54,7 @@ const Tracking = () => {
                                     <motion.div
                                     whileHover={{ scale: 1.06 }}
                                     whileTap={{ scale: 0.9 }} 
-                                    onClick={handleNext}
+                                    onClick={handleTrack}
                                     className="text-[16px] text-linkGreen cursor-pointer mr-5">Track</motion.div>
                                 </div>
                             </div>
@@ -73,19 +70,35 @@ const Tracking = () => {
     
                         {isTracking && (
                             <div className="flex flex-col  w-full border-[2px] rounded-[8px]">
-                                <div className="h-[94px] trackingInfo flex w-full rounded-t-[8px]">
-                                    <div className="px-10 flex flex-row items-center justify-between w-full">
-                                        <p className="text-white text-[16px] w-[240px]">We are building an environmentally friendly future</p>
-                                        <img
-                                        src="./assets/whiteTree.svg"
-                                        />
-    
+                                    {loading ? (
+                                        <div className='w-full h-100px bg-white flex items-center justify-center'>
+                                            <ThreeDots
+                                            visible={true}
+                                            height="80"
+                                            width="80"
+                                            color="#0A4519"
+                                            radius="9"
+                                            ariaLabel="three-dots-loading"
+                                            wrapperStyle={{}}
+                                            wrapperClass=""
+                                            />
+                                        </div>
+                                        ) : null}
+
+                                <div className={loading ? 'hidden': ''}>
+                                    <div className="h-[94px] trackingInfo flex w-full rounded-t-[8px]">
+                                        <div className="px-10 flex flex-row items-center justify-between w-full">
+                                            <p className="text-white text-[16px] w-[240px]">We are building an environmentally friendly future</p>
+                                            <img
+                                            src="./assets/whiteTree.svg"
+                                            />
+        
+                                        </div>
+        
                                     </div>
-    
-                                </div>
-    
-                                <div className="flex flex-col py-5 px-5 space-y-5">
-                                    
+        
+                                    <div className="flex flex-col py-5 px-5 space-y-5">
+                                        
                                     <div className="flex flex-row space-x-3 items-center ">
                                             <img
                                             src="./assets/treesBought.svg"
@@ -154,6 +167,8 @@ const Tracking = () => {
                                         </div>
     
                                     </div>
+                                    
+                                </div>
                                 
                             </div>
                         )}

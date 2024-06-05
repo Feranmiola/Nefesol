@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react"
+import React from "react"
 import { Progress } from "@/components/ui/progress"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
@@ -38,12 +38,22 @@ const OurServicesFull = () => {
 
 
     const [loading, setLoading] = useState(true);
+    const imageUrls = ['./assets/carbonConsulatancyLogoBig.svg', './assets/certificationLogoBig.svg', './assets/digitalMarketingLogoBig.svg', './assets/carbonFootprintLogoServicesBig.svg', './assets/greenTechLogoBig.svg', './assets/technicalSupportLogoBig.svg']; // Replace with your image URLs
 
-    useLayoutEffect(() => {
-        setTimeout(() => {
-          setLoading(false);
-        }, 1500); // Delay of 2 seconds
-    }, []);
+    useEffect(() => {
+      let loadedImages = 0;
+  
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === imageUrls.length) {
+            setLoading(false);
+          }
+        };
+      });
+    }, [imageUrls]);
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
@@ -63,7 +73,7 @@ const OurServicesFull = () => {
       }, []);
 
     //   useEffect(() => {
-    //     const observer = new Inte max-sm:py-10 rmd:sectionObserver(
+    //     const observer = new Inte max-sm:py-10 rsectionObserver(
     //       entries => {
     //         entries.forEach(entry => {
     //           if (entry.isIntersecting) {
@@ -182,7 +192,7 @@ const OurServicesFull = () => {
                 <p className="text-[30px] text-bgGreen">Our Services</p>
             </div>
 
-            <div className="flex items-center justify-center max-sm:py-10  md:section" id="carbonConsultancy" >
+            <div className="flex items-center justify-center max-sm:py-10  section" id="carbonConsultancy" >
                 <div className="pb-20 w-[1101px] flex flex-col space-y-20">
                     <div className="flex flex-col space-y-10 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center">
                         <div className="flex flex-row items-start justify-start max-sm:items-center max-sm:justify-center space-x-2">
@@ -203,7 +213,7 @@ const OurServicesFull = () => {
 
                     </div>
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  md:section pt-[-350px] max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="certification">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section pt-[-350px] max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="certification">
                         <div className="flex flex-row items-start justify-start ">
                             <img
                             src="./assets/certificationLogoBig.svg"
@@ -230,7 +240,7 @@ const OurServicesFull = () => {
                     </div>
 
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="digitalMarketing">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="digitalMarketing">
                         <div className="flex flex-row items-start justify-start  space-x-2">
                             <img
                             src="./assets/digitalMarketingLogoBig.svg"
@@ -252,7 +262,7 @@ const OurServicesFull = () => {
 
                     </div>
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="carbonFootprintOptimisation">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="carbonFootprintOptimisation">
                         <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                             <img
                             src="./assets/carbonFootprintLogoServicesBig.svg"
@@ -284,7 +294,7 @@ const OurServicesFull = () => {
 
                     </div>
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="greenTechnologyInscentives">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="greenTechnologyInscentives">
                         <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                             <img
                             src="./assets/greenTechLogoBig.svg"
@@ -296,7 +306,7 @@ const OurServicesFull = () => {
                         <div className=" space-y-10 max-sm:w-[350px]">
                             <div className="space-y-5">
                                 <p className="text-bgGreen text-[24px]">Green Technology Incentives and Benefits</p>
-                                <ul className="ml-6 space-y-10 max-sm:w-[350px]">
+                                <ul className="ml-6 space-y-10 max-sm:w-[310px]">
                                     <li className="text-[20px] max-sm:text-[16px]">Financial Advantages: Green technology incentives provide various financial advantages to businesses. These include incentives such as grant and incentive programs, tax breaks, low-interest loans, and savings on energy costs. These incentives encourage the adoption of green technologies while helping businesses reduce their costs.</li>
                                     <li className="text-[20px] max-sm:text-[16px]">Competitive Advantage: Green technologies enable businesses to gain competitive advantage. Commitments to sustainability and the use of green technologies are positively perceived by customers and stakeholders. This increases brand reputation and enables you to be the business of choice for customers.</li>
                                     <li className="text-[20px] max-sm:text-[16px]">Reducing Environmental Impacts: Green technologies help businesses reduce their environmental impact by increasing energy efficiency and using environmentally friendly resources. These technologies provide innovation in areas such as utilizing renewable energy sources, waste management, water conservation and recycling. Thus, it contributes to the protection of natural resources and reduction of carbon emissions.</li>
@@ -309,7 +319,7 @@ const OurServicesFull = () => {
                     </div>
 
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="techSupport">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="techSupport">
                         <div className="flex flex-row items-start justify-start space-x-2">
                             <img
                             src="./assets/technicalSupportLogoBig.svg"

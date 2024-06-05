@@ -5,16 +5,42 @@ import PlantTreesSection from "./HomeComponents/PlantTreesSection"
 import Services from "./HomeComponents/Services"
 import Testimonials from "./HomeComponents/Testimonials"
 import TrustedSection from "./HomeComponents/TrustedSection"
-import { useLayoutEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  useLayoutEffect(() => {
-    setTimeout(() => {
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+
+  useEffect(() => {
+    const handleImageLoad = () => {
+      setImagesLoaded((prev) => prev + 1);
+    };
+
+    const images = document.querySelectorAll("img");
+    images.forEach((img) => {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.addEventListener("load", handleImageLoad);
+      }
+    });
+
+    return () => {
+      images.forEach((img) => {
+        img.removeEventListener("load", handleImageLoad);
+      });
+    };
+  }, []); // Empty dependency array so the hook only runs once
+
+  // Check if all images are already loaded
+  useEffect(() => {
+    if (imagesLoaded > 7) {
       setLoading(false);
-    }, 500); // Delay of 2 seconds
-}, []);
+    }
+  }, [imagesLoaded]);
+
+
 
 if(loading){
     return (

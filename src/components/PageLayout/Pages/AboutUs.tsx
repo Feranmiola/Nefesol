@@ -1,16 +1,26 @@
 import Testimonials from './HomeComponents/Testimonials'
 import TrestedGroup from './HomeComponents/TrestedGroup'
 import { ThreeDots } from 'react-loader-spinner'
-import { useLayoutEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const AboutUs = () => {
     const [loading, setLoading] = useState(true);
+    const imageUrls = ['./assets/whiteTree.svg', './assets/aboutUsTree.svg', './assets/gardenImageVertical.svg', './assets/dotBackground.svg', './assets/karbonCoin.svg', './assets/userImage.svg']; // Replace with your image URLs
 
-    useLayoutEffect(() => {
-        setTimeout(() => {
-          setLoading(false);
-        }, 1500); // Delay of 2 seconds
-    }, []);
+    useEffect(() => {
+      let loadedImages = 0;
+  
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === imageUrls.length) {
+            setLoading(false);
+          }
+        };
+      });
+    }, [imageUrls]);
 
 
     if(loading){

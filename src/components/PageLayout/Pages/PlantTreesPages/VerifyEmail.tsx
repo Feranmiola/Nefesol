@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input"
 import { motion } from "framer-motion"
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ThreeDots } from 'react-loader-spinner'
 
 const VerifyEmail = () => {
@@ -12,13 +12,24 @@ const VerifyEmail = () => {
         navigate('/plant-trees-thankyou')
     }
 
-
     const [loading, setLoading] = useState(true);
-    useLayoutEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500); // Delay of 2 seconds
-  }, []);
+    const imageUrls = ['./assets/prev.svg', './assets/treeGroup.svg', './assets/greenDot.svg', './assets/minus.svg', './assets/plusIcon.svg']; // Replace with your image URLs
+  
+    useEffect(() => {
+      let loadedImages = 0;
+  
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === imageUrls.length) {
+            setLoading(false);
+          }
+        };
+      });
+    }, [imageUrls]);
+    
 
   if(loading){
       return (

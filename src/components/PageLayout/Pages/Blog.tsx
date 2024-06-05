@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import { ThreeDots } from 'react-loader-spinner'
 
@@ -11,13 +11,7 @@ interface BlogPost {
 
 const Blog = () => {
 
-  const [loading, setLoading] = useState(true);
-
-  useLayoutEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1500); // Delay of 1.5 seconds
-  }, []);
+  
 
   const blogPosts: BlogPost[] = [
     {
@@ -58,6 +52,25 @@ const Blog = () => {
     },
   ];
 
+  const [loading, setLoading] = useState(true);
+  const imageUrls = ['./assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg']; // Replace with your image URLs
+
+  useEffect(() => {
+    let loadedImages = 0;
+
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === imageUrls.length) {
+          setLoading(false);
+        }
+      };
+    });
+  }, [imageUrls]);
+
+
   if (loading) {
     return (
       <div className='w-screen h-screen bg-white flex items-center justify-center min-h-[100vh]'>
@@ -76,22 +89,23 @@ const Blog = () => {
   }
   return (
     <div className="pt-40 md:pb-20">
-      <p className="lg:ml-[159px] text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
-      <div className="flex items-center justify-center py-10">
-        <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-center md:px-5">
-          {blogPosts.map((post, index) => (
-            <div className="w-full sm:w-1/2 md:w-1/3 pb-10 md:mx-2.5 flex justify-center" key={index}>
-              <BlogCard
-                imageUrl={post.imageUrl}
-                title={post.title}
-                description={post.description}
-                readMoreUrl={post.readMoreUrl}
-              />
-            </div>
-          ))}
-        </div>
+    <p className="lg:ml-[159px] text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
+    <div className="flex items-center justify-center py-10">
+      <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-between md:px-5">
+        {blogPosts.map((post, index) => (
+          <div className="w-full max-sm:w-1/2 md:w-1/3 pb-10 flex justify-center" key={index}>
+            <BlogCard
+              imageUrl={post.imageUrl}
+              title={post.title}
+              description={post.description}
+              readMoreUrl={post.readMoreUrl}
+            />
+          </div>
+        ))}
       </div>
     </div>
+  </div>
+  
   )
 }
 

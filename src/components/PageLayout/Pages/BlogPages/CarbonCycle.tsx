@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react"
+import React, { useState } from "react"
 import { Progress } from "@/components/ui/progress"
 import { useEffect } from "react"
 import { ThreeDots } from 'react-loader-spinner'
@@ -26,12 +26,23 @@ const CarbonCycle = () => {
 
       
       const [loading, setLoading] = useState(true);
-      useLayoutEffect(() => {
-        setTimeout(() => {
-          setLoading(false);
-        }, 1500); // Delay of 2 seconds
-    }, []);
-
+    const imageUrls = ['./assets/carbonImageBig.svg']; // Replace with your image URLs
+  
+    useEffect(() => {
+      let loadedImages = 0;
+  
+      imageUrls.forEach((url) => {
+        const img = new Image();
+        img.src = url;
+        img.onload = () => {
+          loadedImages++;
+          if (loadedImages === imageUrls.length) {
+            setLoading(false);
+          }
+        };
+      });
+    }, [imageUrls]);
+    
     if(loading){
         return (
             <div className='w-screen h-screen bg-white flex items-center transition ease-in-out justify-center minw-[100vh]'>
