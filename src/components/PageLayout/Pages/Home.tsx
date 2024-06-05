@@ -10,35 +10,21 @@ import { useEffect, useState } from "react"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const [imagesLoaded, setImagesLoaded] = useState(0);
+  const imageUrls = ['./assets/treeBackground.svg', './assets/greeningImage.svg', './assets/dotBackground.svg', './assets/smallTrees.svg', './assets/mediumTrees.svg', './assets/largeTrees.svg', './assets/gardenImageVertical.svg'];
+    useEffect(() => {
+        let loadedImages = 0;
 
-  useEffect(() => {
-    const handleImageLoad = () => {
-      setImagesLoaded((prev) => prev + 1);
-    };
-
-    const images = document.querySelectorAll("img");
-    images.forEach((img) => {
-      if (img.complete) {
-        handleImageLoad();
-      } else {
-        img.addEventListener("load", handleImageLoad);
-      }
-    });
-
-    return () => {
-      images.forEach((img) => {
-        img.removeEventListener("load", handleImageLoad);
-      });
-    };
-  }, []); // Empty dependency array so the hook only runs once
-
-  // Check if all images are already loaded
-  useEffect(() => {
-    if (imagesLoaded > 7) {
-      setLoading(false);
-    }
-  }, [imagesLoaded]);
+        imageUrls.forEach((url) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === imageUrls.length) {
+                    setLoading(false);
+                }
+            };
+        });
+    }, [imageUrls]);
 
 
 
