@@ -513,12 +513,16 @@ const TopBar = () => {
           <div className="w-[300px] bg-white mobileIndex fixed right-0 pr-6 pt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
             <div className="flex flex-col space-y-5 py-5 px-7 w-full">
               <div className="flex flex-row justify-between items-center">
+                <a
+                href="/"
+                onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+                >
                 <img
                   src="./assets/greenTree.svg"
                   alt="logo"
                   className="cursor-pointer"
-                  onClick={() => { handleNavigate('/'); setobileDropdown(false); setshowsubdropdown(false); }}
                 />
+                </a>
                 <img
                   src="./assets/close.svg"
                   className="cursor-pointer"
