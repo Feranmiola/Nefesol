@@ -10,9 +10,6 @@ interface BlogPost {
 }
 
 const Blog = () => {
-
-  
-
   const blogPosts: BlogPost[] = [
     {
       imageUrl: './assets/blogImage.svg',
@@ -71,6 +68,7 @@ const Blog = () => {
   }, [imageUrls]);
 
 
+
   if (loading) {
     return (
       <div className='w-screen h-screen bg-white flex items-center justify-center min-h-[100vh]'>
@@ -93,7 +91,7 @@ const Blog = () => {
     <div className="flex items-center justify-center py-10">
       <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-between md:px-5">
         {blogPosts.map((post, index) => (
-          <div className="w-full max-sm:w-1/2 md:w-1/3 pb-10 flex justify-center" key={index}>
+          <div className="w-full max-sm:w-1/1 md:w-1/3 pb-10 flex justify-center" key={index}>
             <BlogCard
               imageUrl={post.imageUrl}
               title={post.title}
@@ -105,7 +103,6 @@ const Blog = () => {
       </div>
     </div>
   </div>
-  
   )
 }
 
