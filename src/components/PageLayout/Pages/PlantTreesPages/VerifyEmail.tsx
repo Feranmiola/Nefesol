@@ -68,8 +68,9 @@ const VerifyEmail = () => {
                         <div className="flex flex-col space-y-1">
                             <div className="flex flex-row py-6 space-x-5 items-center justify-center">
                                 <img src="./assets/treeGroup.svg" />
-                                <div className="flex flex-col">
-                                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">12,000</span> Trees</p>
+                                <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:justify-center">
+                                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">12,000</span></p>
+                                    <p className="text-bgGreen text-[32px]">Trees</p>
                                 </div>
                             </div>
                             <div className="flex flex-row space-x-2 items-center justify-center opacity-60">

@@ -68,12 +68,12 @@ const House = () => {
                 <div className="flex flex-row items-center justify-start md:w-[370px] space-x-4">
                     <div className="w-[370px] max-sm:w-[280px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
-                            <div className="flex flex-row items-center">
-                                <input type="number" value={houseSize} onChange={(e) => setHouseSize(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
-                                <div className="h-[20px] flex flex-row ml-2">
+                            <div className="flex flex-row items-center w-full">
+                                <input type="number" id="housesize" value={houseSize} onChange={(e) => setHouseSize(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <label htmlFor="housesize" className="w-[80%] flex flex-row ml-2">
                                     <p className=" text-[16px] text-bgGreen ">m</p>
                                     <span className="text-[10px] text-bgGreen top-0">2</span>
-                                </div>
+                                </label>
                             </div>
                             <div className="pr-2 space-y-1">
                                 <motion.div
@@ -109,9 +109,12 @@ const House = () => {
                 <p className="text-[16px] text-bgGreen">How many bedrooms are in your house?</p>
                 <div className="flex flex-row items-center justify-start max-sm:w-[280px] w-[370px] space-x-4">
                     <div className="w-[370px] max-sm:w-[280px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
-                        <div className="flex items-center h-full justify-between">
-                            <div className="flex flex-row items-center">
-                                <input type="number" value={bedroomNumber} onChange={(e) => setBedroomNumber(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                        <div className="flex items-center h-full justify-between ">
+                            <div className="flex flex-row items-center w-full">
+                                <input type="number" id="bedroomNumber" value={bedroomNumber} onChange={(e) => setBedroomNumber(Number(e.target.value))} className="w-[20%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <label htmlFor="bedroomNumber" className="w-[75%] ">
+                                <p className=" text-[16px] text-white ">KWh per year</p>
+                                </label>
                             </div>
                             <div className="pr-2 space-y-1">
                                 <motion.div
@@ -154,11 +157,11 @@ const House = () => {
                 <div className="flex flex-row items-center justify-start max-sm:w-[280px] w-[370px] space-x-4">
                     <div className="w-[370px] max-sm:w-[280px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
-                            <div className="flex flex-row items-center">
-                                <input type="number" value={electricity} onChange={(e) => setElectricity(Number(e.target.value))} className="w-[15%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
-                                <div className="h-[20px] flex flex-row ml-2">
+                            <div className="flex flex-row items-center w-full">
+                                <input type="number" id="electricityInput" value={electricity} onChange={(e) => setElectricity(Number(e.target.value))} className="w-[15%] h-full rounded-[8px] text-right  text-bgGreen bg-white text-[20px]"/>
+                                <label htmlFor="electricityInput" className="h-[20px] w-[80%] flex flex-row ml-2">
                                     <p className=" text-[16px] text-bgGreen ">KWh per year</p>
-                                </div>
+                                </label>
                             </div>
                             <div className="pr-2 space-y-1">
                                 <motion.div

@@ -55,8 +55,8 @@ const Payment = () => {
     }
 
     return (
-        <div className="py-10 md:py-20 flex items-center justify-center">
-        <div className="w-full max-w-md lg:max-w-xl bg-white rounded-[24px]">
+        <div className="py-10 md:py-20 mt-10 flex items-center justify-center">
+        <div className=" max-w-md lg:max-w-2xl lg:flex lg:items-center lg:justify-between bg-white rounded-[24px]">
             <div className="flex flex-col">
                 <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
                     <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">Plant Trees</p>
@@ -75,8 +75,9 @@ const Payment = () => {
                     <div className="flex flex-col space-y-1">
                         <div className="flex flex-row py-6 space-x-5 items-center justify-center">
                             <img src="./assets/treeGroup.svg" />
-                            <div className="flex flex-col">
-                                <p className="text-bgGreen text-[32px]"><span className="text-[48px]">12,000</span> Trees</p>
+                            <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:justify-center">
+                                <p className="text-bgGreen text-[32px]"><span className="text-[48px]">12,000</span></p>
+                                <p className="text-bgGreen text-[32px]">Trees</p>
                             </div>
                         </div>
                         <div className="flex flex-row space-x-2 items-center justify-center opacity-60">
