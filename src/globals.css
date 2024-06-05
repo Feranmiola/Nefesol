@@ -96,6 +96,10 @@ html {
   z-index: 8000;
 }
 
+.mobileIndex{
+  z-index: 9999;
+}
+
 .progressindex{
   z-index: 1;
 }

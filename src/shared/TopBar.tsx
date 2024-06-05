@@ -483,7 +483,7 @@ const TopBar = () => {
         )}
       </div>
 
-      <div className="flex flex-col navbar w-screen">
+      <div className="flex navbar h-full w-screen">
         <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
           <div className="w-full items-center flex flex-row justify-between">
             <div onClick={() => handleNavigate('/')} className="cursor-pointer">
@@ -502,80 +502,76 @@ const TopBar = () => {
             </div>
           </div>
         </div>
-      </div>
-
-
-      <motion.div
+        <motion.div
          initial={{ x: '100%' }}
          animate={showMobileDropdown ? { x: 0 } : { x: '100%' }}
          transition={{ duration: 0.3, ease: 'easeInOut' }}
-      >
-
-      
-      <div className={!showMobileDropdown ? 'hidden' : ''} onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}>
-        <div className="w-[300px] bg-white md:hidden fixed z-[9999] right-0 mr-6 mt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
-          <div className="flex flex-col space-y-5 py-5 px-7 w-full">
-            <div className="flex flex-row justify-between items-center">
-              <img
-                src="./assets/greenTree.svg"
-                alt="logo"
-                className="cursor-pointer"
-                onClick={() => { handleNavigate('/'); setobileDropdown(false); setshowsubdropdown(false); }}
-              />
-              <img
-                src="./assets/close.svg"
-                className="cursor-pointer"
-                onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
-              />
-            </div>
-            <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
-              <p className="text-[16px]">Breath Pack</p>
-              <img
-                src="./assets/down.svg"
-                className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
-              />
-            </div>
-
-            <motion.div 
-            initial={{ y: '100%' }}
-            animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
-            transition={{ duration: 0.3, ease: 'easeInOut' }}
-
-            className={!showSubDropdown ? 'hidden' : ''}>
-              <div className={"ml-5 space-y-5"}>
-                <div onClick={() => { handleNavigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                  <p className="text-[14px]">C02 Calculation</p>
-                </div>
-
-                <div onClick={() => { handleNavigate('/carbon-footprint'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                  <p className="text-[14px]">Carbon footprint</p>
-                </div>
-
-                <div onClick={() => { handleNavigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                  <p className="text-[14px]">Tree Packs</p>
-                </div>
-
-                <div onClick={() => { handleNavigate('/plant-trees-tracking'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                  <p className="text-[14px]">Tree Tracking and Verification</p>
-                </div>
+      > 
+        <div className={!showMobileDropdown ? 'hidden' : 'fixed mobileIndex'} onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}>
+          <div className="w-[300px] bg-white mobileIndex fixed right-0 pr-6 pt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
+            <div className="flex flex-col space-y-5 py-5 px-7 w-full">
+              <div className="flex flex-row justify-between items-center">
+                <img
+                  src="./assets/greenTree.svg"
+                  alt="logo"
+                  className="cursor-pointer"
+                  onClick={() => { handleNavigate('/'); setobileDropdown(false); setshowsubdropdown(false); }}
+                />
+                <img
+                  src="./assets/close.svg"
+                  className="cursor-pointer"
+                  onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+                />
               </div>
-            </motion.div>
+              <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
+                <p className="text-[16px]">Breath Pack</p>
+                <img
+                  src="./assets/down.svg"
+                  className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
+                />
+              </div>
 
-            <div onClick={() => { handleNavigate('/about-us'); setobileDropdown(false); setshowsubdropdown(false); }}>
-              <p className="text-[16px]">About Us</p>
-            </div>
+              <motion.div 
+              initial={{ y: '100%' }}
+              animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
 
-            <div onClick={() => { handleNavigate('/blog'); setobileDropdown(false); setshowsubdropdown(false); }}>
-              <p className="text-[16px]">Blog</p>
-            </div>
+              className={!showSubDropdown ? 'hidden' : ''}>
+                <div className={"ml-5 space-y-5"}>
+                  <div onClick={() => { handleNavigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className="text-[14px]">C02 Calculation</p>
+                  </div>
 
-            <div onClick={() => { handleNavigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
-              <p className="text-[16px]">Our Services</p>
+                  <div onClick={() => { handleNavigate('/carbon-footprint'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className="text-[14px]">Carbon footprint</p>
+                  </div>
+
+                  <div onClick={() => { handleNavigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className="text-[14px]">Tree Packs</p>
+                  </div>
+
+                  <div onClick={() => { handleNavigate('/plant-trees-tracking'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className="text-[14px]">Tree Tracking and Verification</p>
+                  </div>
+                </div>
+              </motion.div>
+
+              <div onClick={() => { handleNavigate('/about-us'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                <p className="text-[16px]">About Us</p>
+              </div>
+
+              <div onClick={() => { handleNavigate('/blog'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                <p className="text-[16px]">Blog</p>
+              </div>
+
+              <div onClick={() => { handleNavigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                <p className="text-[16px]">Our Services</p>
+              </div>
             </div>
           </div>
         </div>
+        </motion.div>
       </div>
-      </motion.div>
     </div>
   );
 };
