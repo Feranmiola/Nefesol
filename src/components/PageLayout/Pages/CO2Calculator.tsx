@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect } from "react";
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Progress } from "@/components/ui/progress";
@@ -52,11 +52,22 @@ const CO2Calculator = () => {
 
   const [loading, setLoading] = useState(true);
 
-  useLayoutEffect(() => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1500); // Delay of 2 seconds
-  }, []);
+  const imageUrls = ['./assets/planeWhite.svg', './assets/carGreen.svg', './assets/planeWhite.svg', './assets/plane.svg', './assets/houseWhite.svg', './assets/home.svg', './assets/foodWhite.svg', './assets/food.svg', './assets/plant.svg']; 
+  
+    useEffect(() => {
+        let loadedImages = 0;
+
+        imageUrls.forEach((url) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = () => {
+                loadedImages++;
+                if (loadedImages === imageUrls.length) {
+                    setLoading(false);
+                }
+            };
+        });
+    }, [imageUrls]);
 
   if (loading) {
     return (
