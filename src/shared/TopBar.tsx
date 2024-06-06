@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import {  useLocation } from "react-router-dom";
 
 const TopBar = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [showDropdown, setShowDropdown] = useState(false);
   const [showCo2, setshowCo2] = useState(false);
@@ -16,10 +15,6 @@ const TopBar = () => {
   const [hoverFootprint, setHoverFootprint] = useState(false);
   const [hoverTreePacks, setHoverTreePacks] = useState(false);
   const [hoverTracking, setHoverTracking] = useState(false);
-
-  const handleNavigate = (link:string) => {
-    navigate(link);
-  };
 
   const dropdownVariants = {
     hidden: { opacity: 0, scale: 0.8, y: "-20%" },
@@ -99,13 +94,13 @@ const TopBar = () => {
     <div>
       <div className="navbar max-lg:hidden w-screen" onMouseLeave={() => setShowDropdown(false)}>
         <div className={`bg-transparent h-[73px] px-10 justify-between items-center transition ease-in-out flex navbar ${color ? 'bg-white border-b-[1px]' : ''}`}>
-          <div className="cursor-pointer" onClick={() => handleNavigate('/')}>
+          <a href="/" className="cursor-pointer">
             {color ? (
               <img src="./assets/topBarLogo.svg" alt="logo" />
             ) : (
               <img src="./assets/logoWhite.svg" alt="logo" className="pt-2" />
             )}
-          </div>
+          </a>
           <div className="flex flex--row space-x-14">
             <div className="flex flex-col">
               <motion.div
@@ -123,35 +118,35 @@ const TopBar = () => {
               </motion.div>
             </div>
             
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => handleNavigate('/about-us')}
+              href="/about-us"
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/about-us') ? 'text-[#25B567]' : ''}`}
             >
               About Us
-            </motion.div>
+            </motion.a>
             
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => handleNavigate('/blog')}
+              href="/blog"
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/blog') ? 'text-[#25B567]' : ''}`}
             >
               Blog
-            </motion.div>
+            </motion.a>
             
-            <motion.div
+            <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              onClick={() => handleNavigate('/ourservices')}
+              href="/ourservices"
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/ourservices') ? 'text-[#25B567]' : ''}`}
             >
               Our Services
-            </motion.div>
+            </motion.a>
             
             <motion.div
               whileHover={{ scale: 1.1 }}
@@ -164,7 +159,7 @@ const TopBar = () => {
           </div>
           <motion.a
             whileTap={{ scale: 0.9 }}
-            onClick={() => handleNavigate('/co2-calculator')}
+            href="/co2-calculator"
             className={`w-[163px] h-[48px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer ${!color ? 'bg-transparent ring-[1px] ring-white hover:ring-transparent' : 'text-[#1F2721]'} hover:text-linkGreen `}
           >
             <p className="text-white text-[16px] font-medium">Breathe Now</p>
@@ -202,7 +197,7 @@ const TopBar = () => {
                 </motion.div>
 
                 <div className="flex items-center justify-center w-full flex-col space-y-2">
-                  <div
+                  <a
                     className="w-full px-5"
                     onMouseEnter={() => {
                       setShowTracking(false);
@@ -215,16 +210,17 @@ const TopBar = () => {
                       setHoverCO2(true);
                     }}
                     onMouseLeave={() => { setshowCo2(false); setHoverCO2(false); }}
-                    onClick={() => { handleNavigate('/co2-calculator'); setShowDropdown(false); }}
+                    onClick={() => { setShowDropdown(false); }}
+                    href="/co2-calculator"
                   >
                     <motion.div
                       className={`flex items-center text-[16px] text-bgGreen cursor-pointer pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverC02 || isActiveLink('/co2-calculator') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
                     >
                       CO2 Calculation
                     </motion.div>
-                  </div>
+                  </a>
 
-                  <div
+                  <a
                     className="w-full px-5"
                     onMouseEnter={() => {
                       setShowTracking(false);
@@ -237,7 +233,9 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setshowFootPrint(false); setHoverFootprint(false); }}
-                    onClick={() => { handleNavigate('/carbon-footprint'); setShowDropdown(false); }}
+                    onClick={() => {  setShowDropdown(false); }}
+                    href="/carbon-footprint"
+
                   >
                     <motion.div
                       variants={itemVariants}
@@ -249,9 +247,9 @@ const TopBar = () => {
                     >
                       Carbon Footprint
                     </motion.div>
-                  </div>
+                  </a>
 
-                  <div
+                  <a
                     className="w-full px-5"
                     onMouseEnter={() => {
                       setShowTracking(false);
@@ -264,7 +262,8 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTreePacks(false); setHoverTreePacks(false); }}
-                    onClick={() => { handleNavigate('/treePacks'); setShowDropdown(false); }}
+                    onClick={() => {  setShowDropdown(false); }}
+                    href="/treePacks"
                   >
                     <motion.div
                       variants={itemVariants}
@@ -276,9 +275,9 @@ const TopBar = () => {
                     >
                       Tree Packs
                     </motion.div>
-                  </div>
+                  </a>
 
-                  <div
+                  <a
                     className="w-full px-5"
                     onMouseEnter={() => {
                       setShowTracking(true);
@@ -291,7 +290,8 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTracking(false); setHoverTracking(false); }}
-                    onClick={() => { handleNavigate('/plant-trees-tracking'); setShowDropdown(false); }}
+                    onClick={() => {  setShowDropdown(false); }}
+                    href="/plant-trees-tracking"
                   >
                     <motion.div
                       variants={itemVariants}
@@ -303,7 +303,7 @@ const TopBar = () => {
                     >
                       Trees Tracking and Verification
                     </motion.div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </motion.div>
@@ -488,13 +488,13 @@ const TopBar = () => {
       <div className="flex navbar w-screen">
         <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
           <div className="w-full items-center flex flex-row justify-between">
-            <div onClick={() => handleNavigate('/')} className="cursor-pointer">
+            <a href="/"  className="cursor-pointer">
               {color ? (
                 <img src="./assets/greenTree.svg" alt="logo" />
               ) : (
                 <img src="./assets/whiteTree.svg" alt="logo" />
               )}
-            </div>
+            </a>
             <div className="cursor-pointer" onClick={() => setobileDropdown(true)}>
               {color ? (
                 <img src="./assets/menu.svg" />
@@ -544,35 +544,35 @@ const TopBar = () => {
 
               className={!showSubDropdown ? 'hidden' : ''}>
                 <div className={"ml-5 space-y-5"}>
-                  <div onClick={() => { handleNavigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className="text-[14px]">C02 Calculation</p>
-                  </div>
+                  </a>
 
-                  <div onClick={() => { handleNavigate('/carbon-footprint'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className="text-[14px]">Carbon footprint</p>
-                  </div>
+                  </a>
 
-                  <div onClick={() => { handleNavigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className="text-[14px]">Tree Packs</p>
-                  </div>
+                  </a>
 
-                  <div onClick={() => { handleNavigate('/plant-trees-tracking'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className="text-[14px]">Tree Tracking and Verification</p>
-                  </div>
+                  </a>
                 </div>
               </motion.div>
 
-              <div onClick={() => { handleNavigate('/about-us'); setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className="text-[16px]">About Us</p>
-              </div>
+              </a>
 
-              <div onClick={() => { handleNavigate('/blog'); setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className="text-[16px]">Blog</p>
-              </div>
+              </a>
 
-              <div onClick={() => { handleNavigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className="text-[16px]">Our Services</p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
