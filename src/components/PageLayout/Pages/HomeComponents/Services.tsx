@@ -1,12 +1,7 @@
 import { motion } from "framer-motion"
-import { useNavigate } from "react-router-dom"
 
 const Services = () => {
-    const navigate = useNavigate()
-
-    const handleServices = () =>{
-        navigate('/ourservices');
-    }
+    
   return (
     <div className="py-20 max-sm:flex max-sm:flex-col max-sm:space-y-5 max-sm:items-center max-sm:justify-center">
         <p className="md:ml-[168px] pb-20 font-medium text-bgGreen text-[40px] max-sm:text-[30px]">Our Services</p>
@@ -22,7 +17,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -36,7 +31,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -50,7 +45,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
 
@@ -66,7 +61,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -79,7 +74,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
                 
@@ -92,7 +87,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    onClick = {handleServices} 
+                    href="/ourservices"
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">Learn More</motion.a>
                 </div>
 

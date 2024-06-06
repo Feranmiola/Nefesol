@@ -1,15 +1,9 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 
 const ThankYou = () => {
-    const navigate = useNavigate();
-
-    const handleNext = () => {
-        navigate('/plant-trees-tracking')
-    }
-
+    
     const [loading, setLoading] = useState(true);
     const imageUrls = ['./assets/copyIcon.svg']; // Replace with your image URLs
   
@@ -67,7 +61,7 @@ const ThankYou = () => {
                     <motion.a
                         whileHover={{ scale: 1.3 }}
                         whileTap={{ scale: 0.9 }}
-                        onClick={handleNext}
+                        href="/plant-trees-tracking"
                         className="text-linkGreen text-[14px] md:text-[16px] hover:underline cursor-pointer"
                     >
                         Track Progress

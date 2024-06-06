@@ -8,16 +8,12 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
-import { useNavigate } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { ThreeDots } from "react-loader-spinner"
 
 const Payment = () => {
-    const navigate = useNavigate();
     
-    const handleNext = () => {
-        navigate('/plant-trees-verifyemail')
-    }
+    
 
     const [loading, setLoading] = useState(true);
     const imageUrls = ['./assets/prev.svg', './assets/treeGroup.svg', './assets/greenDot.svg', './assets/minus.svg', './assets/plusIcon.svg']; // Replace with your image URLs
@@ -75,7 +71,7 @@ const Payment = () => {
                     <div className="flex flex-col space-y-1">
                         <div className="flex flex-row py-6 space-x-5 items-center justify-center">
                             <img src="./assets/treeGroup.svg" />
-                            <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:justify-center">
+                            <div className="flex flex-row max-sm:flex-col items-center max-sm:justify-center">
                                 <p className="text-bgGreen text-[32px]"><span className="text-[48px]">12,000</span></p>
                                 <p className="text-bgGreen text-[32px]">Trees</p>
                             </div>
@@ -171,7 +167,7 @@ const Payment = () => {
 
                     <div className="flex flex-col space-y-3 w-full">
                         <p className="text-bgGreen text-[16px]">Email</p>
-                        <Input placeholder="Enter Email" type="email" className="shad-input-plant w-full md:w-[936px]"/>
+                        <Input placeholder="Enter Email" type="email" className="shad-input-plant-width"/>
                     </div>
                 </div>
 
@@ -188,7 +184,7 @@ const Payment = () => {
                     <div className="flex items-center justify-center pb-5">
                         <motion.a
                             whileTap={{ scale: 0.9 }}
-                            onClick={handleNext}
+                            href="/plant-trees-verifyemail"
                             className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                         >
                             <p className="text-white text-[16px] font-medium">Next</p>
