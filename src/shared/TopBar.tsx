@@ -53,6 +53,14 @@ const TopBar = () => {
     exit: { opacity: 0, y: "10%" },
   };
 
+  const mobineContainer = {
+    hidden: { opacity: 0, scale: 1, x: "-100%" },
+    visible: { opacity: 1, scale: 1, x: "0%" },
+    exit: { opacity: 0, scale: 1, x: "-100%" }
+  }
+
+  
+
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
   const [showSubDropdown, setshowsubdropdown] = useState(false);
 
@@ -505,19 +513,21 @@ const TopBar = () => {
           </div>
         </div>
         <motion.div
-         initial={{ x: '100%' }}
-         animate={showMobileDropdown ? { x: 0 } : { x: '100%' }}
-         transition={{ duration: 0.3, ease: 'easeInOut' }}
+         variants={mobineContainer}
+         initial="hidden"
+         animate="visible"
+         exit="exit"
+         transition={{ duration: 10, ease: "easeInOut" }}
       > 
         <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 
         // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
         >
-          <div className="w-screen bg-bgGreen mobileIndex py-10 fixed right-0 top-0 h-screen rounded-[8px]">
-            <div className="flex flex-col space-y-5 py-5 px-7 w-full">
+          <div className="w-screen bg-bgGreen mobileIndex py-10 fixed right-0 top-0 h-full rounded-[8px]">
+            <div className="flex flex-col space-y-5 px-7 w-full">
               <div className="flex flex-col items-start justify-start">
                 <img
                   src="./assets/closeWhite.svg"
-                  className="cursor-pointer"
+                  className="w-[30px] h-[30px] cursor-pointer"
                   onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
                 />
 
@@ -570,7 +580,7 @@ const TopBar = () => {
                 <p className=" text-white text-[16px]">Our Services</p>
               </a>
               
-              <div className="py-20 flex flex-col space-y-5">
+              <div className="py-10 flex flex-col space-y-5">
                 <div>
                   <p className="text-white text-[28px] font-medium pt-5">Legal</p>
                 </div>
