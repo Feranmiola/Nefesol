@@ -19,7 +19,7 @@ const LandingSection = () => {
         <div>
           <p className="text-[24px] max-sm:text-[10px] text-white takeAction">TAKE ACTION FOR A GREEN FUTURE</p>
         </div>
-        <div className="flex md:flex-row max-sm:flex-col max-sm:space-y-4 smd:pace-x-4">
+        <div className="flex flex-row max-sm:flex-col max-sm:space-y-4 md:space-x-4">
           <motion.a
           whileTap={{ scale: 0.9 }} 
           onClick={()=> handleNext('/co2-calculator')}
