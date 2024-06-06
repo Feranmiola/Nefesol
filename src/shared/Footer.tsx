@@ -159,7 +159,7 @@ const Footer = () => {
             </motion.a>
             <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
               <img
-              src="./assets/facebook.svg"
+              src="./assets/tiktok.svg"
               />
             </motion.a>
           </div>

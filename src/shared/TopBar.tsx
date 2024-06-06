@@ -509,30 +509,26 @@ const TopBar = () => {
          animate={showMobileDropdown ? { x: 0 } : { x: '100%' }}
          transition={{ duration: 0.3, ease: 'easeInOut' }}
       > 
-        <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-[500px]'} onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}>
-          <div className="w-[300px] bg-white mobileIndex fixed right-0 pr-6 pt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
+        <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 
+        // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
+        >
+          <div className="w-screen bg-bgGreen mobileIndex py-10 fixed right-0 top-0 h-screen rounded-[8px]">
             <div className="flex flex-col space-y-5 py-5 px-7 w-full">
-              <div className="flex flex-row justify-between items-center">
-                <a
-                href="/"
-                onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
-                >
+              <div className="flex flex-col items-start justify-start">
                 <img
-                  src="./assets/greenTree.svg"
-                  alt="logo"
-                  className="cursor-pointer"
-                />
-                </a>
-                <img
-                  src="./assets/close.svg"
+                  src="./assets/closeWhite.svg"
                   className="cursor-pointer"
                   onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
                 />
+
+                <div>
+                  <p className="text-white text-[28px] font-medium pt-5">Menu</p>
+                </div>
               </div>
               <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
-                <p className="text-[16px]">Breath Pack</p>
+                <p className=" text-white text-[16px]">Breath Pack</p>
                 <img
-                  src="./assets/down.svg"
+                  src="./assets/downWhite.svg"
                   className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
                 />
               </div>
@@ -543,36 +539,92 @@ const TopBar = () => {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
 
               className={!showSubDropdown ? 'hidden' : ''}>
-                <div className={"ml-5 space-y-5"}>
+                <div className={"ml-5 flex flex-col space-y-5"}>
                   <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className="text-[14px]">C02 Calculation</p>
+                    <p className=" text-white text-[14px]">C02 Calculation</p>
                   </a>
 
                   <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className="text-[14px]">Carbon footprint</p>
+                    <p className=" text-white text-[14px]">Carbon footprint</p>
                   </a>
 
                   <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className="text-[14px]">Tree Packs</p>
+                    <p className=" text-white text-[14px]">Tree Packs</p>
                   </a>
 
                   <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className="text-[14px]">Tree Tracking and Verification</p>
+                    <p className=" text-white text-[14px]">Tree Tracking and Verification</p>
                   </a>
                 </div>
               </motion.div>
 
               <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className="text-[16px]">About Us</p>
+                <p className=" text-white text-[16px]">About Us</p>
               </a>
 
               <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className="text-[16px]">Blog</p>
+                <p className=" text-white text-[16px]">Blog</p>
               </a>
 
               <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className="text-[16px]">Our Services</p>
+                <p className=" text-white text-[16px]">Our Services</p>
               </a>
+              
+              <div className="py-20 flex flex-col space-y-5">
+                <div>
+                  <p className="text-white text-[28px] font-medium pt-5">Legal</p>
+                </div>
+
+                <div className="flex flex-col space-y-5">
+                  <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className=" text-white text-[16px]">Personal Data Protection Authority</p>
+                  </a>
+
+                  <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                    <p className=" text-white text-[16px]">General Terms and Conditions</p>
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-row space-x-7 items-center justify-center">
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/facebookWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  />
+                </motion.a>
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/xWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  
+                  />
+                </motion.a>
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/instagramWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  />
+                </motion.a>
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/linkedInWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  />
+                </motion.a>
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/youtubeWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  />
+                </motion.a>
+                <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                  <img
+                  src="./assets/tiktokWhite.svg"
+                  className="w-[30px] h-[30px]"
+                  />
+                </motion.a>
+              </div>
             </div>
           </div>
         </div>
@@ -583,3 +635,78 @@ const TopBar = () => {
 };
 
 export default TopBar;
+
+// oldMenu
+// <motion.div
+// initial={{ x: '100%' }}
+// animate={showMobileDropdown ? { x: 0 } : { x: '100%' }}
+// transition={{ duration: 0.3, ease: 'easeInOut' }}
+// > 
+// <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-[500px]'} onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}>
+//  <div className="w-[300px] bg-white mobileIndex fixed right-0 pr-6 pt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
+//    <div className="flex flex-col space-y-5 py-5 px-7 w-full">
+//      <div className="flex flex-row justify-between items-center">
+//        <a
+//        href="/"
+//        onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+//        >
+//        <img
+//          src="./assets/greenTree.svg"
+//          alt="logo"
+//          className="cursor-pointer"
+//        />
+//        </a>
+//        <img
+//          src="./assets/close.svg"
+//          className="cursor-pointer"
+//          onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+//        />
+//      </div>
+//      <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
+//        <p className="text-[16px]">Breath Pack</p>
+//        <img
+//          src="./assets/down.svg"
+//          className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
+//        />
+//      </div>
+
+//      <motion.div 
+//      initial={{ y: '100%' }}
+//      animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
+//      transition={{ duration: 0.3, ease: 'easeInOut' }}
+
+//      className={!showSubDropdown ? 'hidden' : ''}>
+//        <div className={"ml-5 space-y-5"}>
+//          <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//            <p className="text-[14px]">C02 Calculation</p>
+//          </a>
+
+//          <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//            <p className="text-[14px]">Carbon footprint</p>
+//          </a>
+
+//          <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//            <p className="text-[14px]">Tree Packs</p>
+//          </a>
+
+//          <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//            <p className="text-[14px]">Tree Tracking and Verification</p>
+//          </a>
+//        </div>
+//      </motion.div>
+
+//      <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//        <p className="text-[16px]">About Us</p>
+//      </a>
+
+//      <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//        <p className="text-[16px]">Blog</p>
+//      </a>
+
+//      <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//        <p className="text-[16px]">Our Services</p>
+//      </a>
+//    </div>
+//  </div>
+// </div>
+// </motion.div>
