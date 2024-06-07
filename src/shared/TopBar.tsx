@@ -586,9 +586,9 @@ const TopBar = () => {
                 <p className=" text-white text-[16px]">Our Services</p>
               </a>
               
-              <div className="py-10 flex flex-col space-y-5">
+              <div className="py-5 flex flex-col space-y-5">
                 <div>
-                  <p className="text-white text-[28px] font-medium pt-5">Legal</p>
+                  <p className="text-white text-[28px] font-medium">Legal</p>
                 </div>
 
                 <div className="flex flex-col space-y-5">
