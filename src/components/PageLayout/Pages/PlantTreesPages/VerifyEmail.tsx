@@ -53,7 +53,7 @@ const VerifyEmail = () => {
                             className="flex flex-row space-x-2"
                         >
                             <img src="./assets/prev.svg" />
-                            <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to calculator</p>
+                            <a href="/co2-calculator" className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to calculator</a>
                         </motion.div>
                     </div>
                     
