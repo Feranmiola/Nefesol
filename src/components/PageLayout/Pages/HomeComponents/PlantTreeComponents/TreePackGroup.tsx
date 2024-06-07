@@ -31,6 +31,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
+              href="/co2-calculator"
               className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
             </div>
           </div>
@@ -61,6 +62,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
+              href="/co2-calculator"
               className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
             </div>
           </div>
@@ -92,6 +94,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
+              href="/co2-calculator"
               className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
             </div>
           </div>
