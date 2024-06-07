@@ -522,14 +522,20 @@ const TopBar = () => {
         <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 
         // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
         >
-          <div className="w-screen bg-bgGreen mobileIndex py-10 fixed right-0 top-0 h-full rounded-[8px]">
+          <div className="w-screen bg-bgGreen mobileIndex fixed right-0 top-0 h-full rounded-[8px]">
             <div className="flex flex-col space-y-5 px-7 w-full">
-              <div className="flex flex-col items-start justify-start">
-                <img
-                  src="./assets/closeWhite.svg"
-                  className="w-[30px] h-[30px] cursor-pointer"
-                  onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
-                />
+              <div className="flex flex-col mt-5 items-start justify-start">
+                <div className="flex flex-row items-center justify-between w-full">
+                  <img
+                  src="./assets/whiteTree.svg"
+                  />
+                  
+                  <img
+                    src="./assets/closeWhite.svg"
+                    className="w-[30px] h-[30px] cursor-pointer"
+                    onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+                  />
+                </div>
 
                 <div>
                   <p className="text-white text-[28px] font-medium pt-5">Menu</p>
