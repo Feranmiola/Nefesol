@@ -1,25 +1,20 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
-import { useNavigate } from "react-router-dom"
+
 
 
 const Footer = () => {
-  const navigate = useNavigate();
-
-  const handleNavigate = (link:string) =>{
-    navigate(link)
-  }
-
+  
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:w-[334px] max-sm:space-y-5 justify-between md:w-[1179.5px] ">
         <div className="flex flex-col max-sm:w-[334px] space-y-10">
-          <div className=" cursor-pointer" onClick={()=> handleNavigate('/')}>
+          <a className=" cursor-pointer" href="/">
             <img
             src="./assets/topBarLogo.svg"
             alt="logo"
             />
-          </div>
+          </a>
           <div className="flex flex-col">
             <p className="w-[267px] text-bgGreen text-[14px] leading-tight">Gaziantep Üniversitesi Teknopark Çamtepe Mah. Mahmut Tevfik Atay Bul. A Blok No:4</p>
             <p className="w-[267px] text-bgGreen text-[14px] leading-tight">Gaziantep/Türkiye</p>
@@ -42,21 +37,21 @@ const Footer = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/carbon-footprint')}
+              href="/carbon-footprint"
               >Carbon Footprint</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/co2-calculator')}
+              href="/co2-calculator"
               >CO2 Calculation</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/treePacks')}
+              href="/treePacks"
               >Tree Packs</motion.a>
 
             </div>
@@ -67,21 +62,21 @@ const Footer = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/about-us')}
+              href="/about-us"
               >About Us</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/blog')}
+              href="/blog"
               >Blog</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              onClick={()=> handleNavigate('/ourservices')}
+              href="/ourservices"
               >Our Services</motion.a>
 
             </div>

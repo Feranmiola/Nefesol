@@ -7,11 +7,9 @@ import Vehicle from "./C02Calculator Components/Vehicle";
 import Food from "./C02Calculator Components/Food";
 import House from "./C02Calculator Components/House";
 import Airplane from "./C02Calculator Components/Airplane";
-import { useNavigate } from "react-router-dom";
 import { ThreeDots } from 'react-loader-spinner'
 
 const CO2Calculator = () => {
-  const navigate = useNavigate();
   const [tabIndex, setTabIndex] = useState(1);
   const [progress, setProgress] = React.useState(13)
   const [initial, setInitial] = useState(25)
@@ -44,9 +42,7 @@ const CO2Calculator = () => {
 
 
 
-  const toPayment = () =>{
-    navigate('/plant-trees-payment');
-  }
+
   
 
 
@@ -305,10 +301,9 @@ const CO2Calculator = () => {
                       <p className="text-[16px] text-bgGreen bottom-0">To eliminate this CO2, you need to plant</p>
                       <p className="text-[24px] text-linkGreen font-bold">12,000 Trees</p>
                     </div>
-                    <motion.div
-                    
+                    <motion.a
                     whileTap={{ scale: 0.9 }} 
-                    onClick={toPayment}
+                    href="/plant-trees-payment"
                     className="w-[254px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                     >
                       <img
@@ -316,7 +311,7 @@ const CO2Calculator = () => {
                       alt="plant"
                       />
                       <p className="text-white text-[16px] font-medium">Proceed to Plant Trees</p>
-                    </motion.div>
+                    </motion.a>
   
                   </div>
   

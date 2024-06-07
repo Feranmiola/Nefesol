@@ -460,7 +460,7 @@ const TopBar = () => {
               variants={contentVariants}
               initial="hidden"
               animate={showTracking ? "visible" : "hidden"}
-              transition={{ duration: 0.2, ease: "easeOut" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <div className="w-[620px] bg-[#F7F9F8] p-8 h-full rounded-r-[4px]">
                 <div className="flex flex-row justify-between h-full">
