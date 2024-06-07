@@ -56,7 +56,7 @@ const TopBar = () => {
   const mobineContainer = {
     hidden: { opacity: 0, scale: 1, x: "-100%" },
     visible: { opacity: 1, scale: 1, x: "0%" },
-    exit: { opacity: 0, scale: 1, x: "-100%" }
+    exit: { opacity: 0, scale: 1, x: "-100%" },
   }
 
   
@@ -517,7 +517,7 @@ const TopBar = () => {
          initial="hidden"
          animate="visible"
          exit="exit"
-         transition={{ duration: 10, ease: "easeInOut" }}
+         transition={{ duration: 0.3, ease: "easeInOut" }}
       > 
         <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 
         // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
