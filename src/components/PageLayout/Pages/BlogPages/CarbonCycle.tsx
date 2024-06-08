@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Progress } from "@/components/ui/progress";
-import { ThreeDots } from "react-loader-spinner";
+import BeatLoader from "react-spinners/BeatLoader";
+
 
 const CarbonCycle = () => {
   const [progress, setProgress] = useState(100);
@@ -42,16 +43,7 @@ const CarbonCycle = () => {
   if (loading) {
     return (
       <div className="w-screen h-screen bg-white flex items-center transition ease-in-out justify-center min-h-[100vh]">
-        <ThreeDots
-          visible={true}
-          height="80"
-          width="80"
-          color="#0A4519"
-          radius="9"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
+       <BeatLoader color="#0A4519" />
       </div>
     );
   }

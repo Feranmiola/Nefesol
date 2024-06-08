@@ -180,14 +180,14 @@ const TopBar = () => {
           variants={dropdownVariants}
               initial="hidden"
               animate="visible"
-              exit="exit"
+              
               transition={{ duration: 0.2, ease: "easeInOut" }}
           className="fixed pt-[10.6srem] top-[4.55rem] h-[340px] ml-[28rem] flex shadow-2xl flex-row rounded-[4px]">
             <motion.div
               variants={dropdownVariants}
               initial="hidden"
                 animate="visible"
-                exit="exit"
+                
                 transition={{ duration: 0.1, ease: "easeOut" }}
               className="w-[298px] h-[340px] bg-white rounded-l-[4px] transition ease-in-out"
             >
@@ -195,7 +195,7 @@ const TopBar = () => {
                 <motion.div
                   variants={itemVariants}
                   initial="hidden"
-                  exit="exit"
+                  
                   animate={showDropdown ? "visible" : "hidden"}
                   custom={0}
                   className="flex px-10 flex-row items-center justify-center space-x-2"
@@ -248,7 +248,7 @@ const TopBar = () => {
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      exit="exit"
+                      
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={2}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 cursor-pointer transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverFootprint || isActiveLink('/carbon-footprint') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -276,7 +276,7 @@ const TopBar = () => {
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      exit="exit"
+                      
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={3}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTreePacks || isActiveLink('/treePacks') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -304,7 +304,7 @@ const TopBar = () => {
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      exit="exit"
+                      
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={4}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTracking || isActiveLink('/plant-trees-tracking') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -338,7 +338,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    exit="exit"
+                    
                     animate={showCo2 ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -350,7 +350,7 @@ const TopBar = () => {
                     <div className="flex">
                       <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
                     </div>
-                  exit="exit"</motion.div>
+                  </motion.div>
 
                   <motion.div variants={itemVariantsX} initial="hidden" animate={showCo2 ? "visible" : "hidden"} custom={1}>
                     <img src="./assets/C02calculation.svg" className="rounded-[12px]" />
@@ -381,7 +381,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    exit="exit"
+                    
                     animate={showFootprint ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -393,7 +393,7 @@ const TopBar = () => {
                     <div className="flex">
                       <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
                     </div>
-                  exit="exit"</motion.div>
+                  </motion.div>
 
                   <motion.div variants={itemVariantsX} initial="hidden" animate={showFootprint ? "visible" : "hidden"} custom={1}>
                     <img src="./assets/carbonFootprintImage.svg" className="rounded-[12px]" />
@@ -424,7 +424,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    exit="exit"
+                    
                     animate={showTreePacks ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -436,7 +436,7 @@ const TopBar = () => {
                     <div className="flex">
                       <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
                     </div>
-                  exit="exit"</motion.div>
+                  </motion.div>
 
                   <motion.div variants={itemVariantsX} initial="hidden" animate={showTreePacks ? "visible" : "hidden"} custom={1}>
                     <img src="./assets/treePacksImage.svg" className="rounded-[12px]" />
@@ -467,7 +467,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    exit="exit"
+                    
                     animate={showTracking ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -479,7 +479,7 @@ const TopBar = () => {
                     <div className="flex">
                       <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
                     </div>
-                  exit="exit"</motion.div>
+                  </motion.div>
 
                   <motion.div variants={itemVariantsX} initial="hidden" animate={showTracking ? "visible" : "hidden"} custom={1}>
                     <img src="./assets/treeTrackingImage.svg" className="rounded-[12px]" />
@@ -516,7 +516,7 @@ const TopBar = () => {
          variants={mobineContainer}
          initial="hidden"
          animate="visible"
-         exit="exit"
+         
          transition={{ duration: 0.3, ease: "easeInOut" }}
       > 
         <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 

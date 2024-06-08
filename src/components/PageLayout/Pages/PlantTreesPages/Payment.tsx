@@ -9,7 +9,8 @@ import {
 import { Input } from "@/components/ui/input"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useEffect, useState } from "react"
-import { ThreeDots } from "react-loader-spinner"
+import BeatLoader from "react-spinners/BeatLoader"
+
 
 const Payment = () => {
     
@@ -36,16 +37,7 @@ const Payment = () => {
     if (loading) {
         return (
             <div className='w-screen h-screen bg-white flex items-center justify-center'>
-                <ThreeDots
-                    visible={true}
-                    height="80"
-                    width="80"
-                    color="#0A4519"
-                    radius="9"
-                    ariaLabel="three-dots-loading"
-                    wrapperStyle={{}}
-                    wrapperClass=""
-                />
+                <BeatLoader color="#0A4519" />
             </div>
         );
     }

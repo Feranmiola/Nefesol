@@ -1,6 +1,6 @@
+import BeatLoader from 'react-spinners/BeatLoader';
 import Testimonials from './HomeComponents/Testimonials'
 import TrestedGroup from './HomeComponents/TrestedGroup'
-import { ThreeDots } from 'react-loader-spinner'
 import { useEffect, useState } from 'react';
 
 const AboutUs = () => {
@@ -26,16 +26,7 @@ const AboutUs = () => {
     if(loading){
         return (
             <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
-              <ThreeDots
-              visible={true}
-              height="80"
-              width="80"
-              color="#0A4519"
-              radius="9"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-              />
+            <BeatLoader color="#0A4519" />
             </div>
           );
     }

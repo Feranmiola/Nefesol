@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
-import { ThreeDots } from 'react-loader-spinner'
+import BeatLoader from "react-spinners/BeatLoader";
+
 
 interface BlogPost {
   imageUrl: string;
@@ -72,16 +73,7 @@ const Blog = () => {
   if (loading) {
     return (
       <div className='w-screen h-screen bg-white flex items-center justify-center min-h-[100vh]'>
-        <ThreeDots
-          visible={true}
-          height="80"
-          width="80"
-          color="#0A4519"
-          radius="9"
-          ariaLabel="three-dots-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-        />
+        <BeatLoader color="#0A4519" />
       </div>
     );
   }

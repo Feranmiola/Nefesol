@@ -16,8 +16,8 @@ import Tracking from './components/PageLayout/Pages/PlantTreesPages/Tracking'
 import CarbonFootprint from './components/PageLayout/Pages/CarbonFootprint'
 
 
-function App() {
-  
+
+function App() {  
 
   return (
     <Routes>

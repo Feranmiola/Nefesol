@@ -2,7 +2,8 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion"
 import { useState } from "react";
-import { ThreeDots } from 'react-loader-spinner'
+import BeatLoader from "react-spinners/BeatLoader";
+
 
 
 
@@ -69,16 +70,7 @@ const Tracking = () => {
                         <div className="flex flex-col w-full border-[2px] rounded-[8px]">
                             {loading ? (
                                 <div className="w-full h-100px bg-white flex items-center justify-center">
-                                    <ThreeDots
-                                        visible={true}
-                                        height="80"
-                                        width="80"
-                                        color="#0A4519"
-                                        radius="9"
-                                        ariaLabel="three-dots-loading"
-                                        wrapperStyle={{}}
-                                        wrapperClass=""
-                                    />
+                                    <BeatLoader color="#0A4519" />
                                 </div>
                             ) : null}
     

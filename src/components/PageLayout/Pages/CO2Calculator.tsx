@@ -7,7 +7,8 @@ import Vehicle from "./C02Calculator Components/Vehicle";
 import Food from "./C02Calculator Components/Food";
 import House from "./C02Calculator Components/House";
 import Airplane from "./C02Calculator Components/Airplane";
-import { ThreeDots } from 'react-loader-spinner'
+import BeatLoader from "react-spinners/BeatLoader";
+
 
 const CO2Calculator = () => {
   const [tabIndex, setTabIndex] = useState(1);
@@ -68,16 +69,7 @@ const CO2Calculator = () => {
   if (loading) {
     return (
       <div className='w-screen h-screen bg-white flex items-center justify-center minw-[100vh]'>
-        <ThreeDots
-        visible={true}
-        height="80"
-        width="80"
-        color="#0A4519"
-        radius="9"
-        ariaLabel="three-dots-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
-        />
+        <BeatLoader color="#0A4519" />
       </div>
     );
   }
