@@ -14,6 +14,8 @@ import VerifyEmail from './components/PageLayout/Pages/PlantTreesPages/VerifyEma
 import ThankYou from './components/PageLayout/Pages/PlantTreesPages/ThankYou'
 import Tracking from './components/PageLayout/Pages/PlantTreesPages/Tracking'
 import CarbonFootprint from './components/PageLayout/Pages/CarbonFootprint'
+import BlogPage2 from './components/PageLayout/Pages/BlogPages/BlogPage2'
+import BlogPage3 from './components/PageLayout/Pages/BlogPages/BlogPage3'
 
 
 
@@ -29,6 +31,8 @@ function App() {
           <Route path="/ourservices" element={<OurServicesFull />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/carbon-cycle" element={<CarbonCycle />} />
+          <Route path="/Nefes-Ol" element={<BlogPage2 />} />
+          <Route path="/Karbon-Kredileri" element={<BlogPage3 />} />
           <Route path="/carbon-footprint" element={<CarbonFootprint />} />
 
           <Route element={<PlantTreesLayout />}>

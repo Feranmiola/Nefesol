@@ -4,7 +4,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 
 const CarbonCycle = () => {
-  const [progress, setProgress] = useState(100);
+  const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(true);
   const imageUrls = ["./assets/carbonImageBig.svg"]; // Replace with your image URLs
 
@@ -49,12 +49,12 @@ const CarbonCycle = () => {
   }
 
   return (
-    <div className="py-[4.5rem] px-4 md:px-8 lg:px-16">
-      <div className="w-full fixed top-0">
-        <Progress value={progress} id="progress-bar" className="w-full h-[4px]" />
+    <div className="py-[6.5rem]">
+      <div className="w-full fixed top-[4rem]">
+        <Progress value={progress} id="progress-bar" className="w-full h-[12px]" />
       </div>
 
-      <div className="py-10">
+      <div className="py-10 px-4 md:px-8 lg:px-16">
         <p className="text-bgGreen text-[24px] md:text-[32px] lg:text-[40px] ml-0 md:ml-[80px] lg:ml-[159px]">Carbon Cycle</p>
 
         <div className="flex py-10 items-center justify-center flex-col">

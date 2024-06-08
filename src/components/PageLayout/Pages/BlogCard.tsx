@@ -13,7 +13,7 @@ interface BlogCardProps {
     readMoreUrl,
   }) => {
     return (
-      <div className="flex flex-col h-[503.46px] w-[350px] rounded-[16px] border-[1px] border-[#9BBBAB]">
+      <div className="flex flex-col  w-[350px] rounded-[16px] border-[1px] border-[#9BBBAB]">
         <div>
           <img
             src={imageUrl}

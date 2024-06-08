@@ -19,39 +19,21 @@ const Blog = () => {
       readMoreUrl: '/carbon-cycle',
     },
     {
-      imageUrl: './assets/blogImage.svg',
-      title: 'Climate Change',
-      description: "Climate change is one of the most pressing issues of our time, with far-reaching consequences for our planet and its inhabitants...",
-      readMoreUrl: '/blog/climate-change',
+      imageUrl: './assets/blog2ImageSmall.jpg',
+      title: 'Nefes Ol: Çevresel Bilinçliliğe Katkıda Bulunmanın Adresi',
+      description: "Nefes Ol: Çevresel Bilinçliliğe Katkıda Bulunmanın Adresi Günümüzde, dünya çapında artan çevre sorunları",
+      readMoreUrl: '/Nefes-Ol',
     },
     {
-      imageUrl: './assets/blogImage.svg',
-      title: 'Sustainability',
-      description: "Sustainability is a crucial aspect of our daily lives, and it's essential that we make conscious choices to reduce our impact on the environment...",
-      readMoreUrl: '/blog/sustainability',
-    },
-    {
-      imageUrl: './assets/blogImage.svg',
-      title: 'Sustainability',
-      description: "Sustainability is a crucial aspect of our daily lives, and it's essential that we make conscious choices to reduce our impact on the environment...",
-      readMoreUrl: '/blog/sustainability',
-    },
-    {
-      imageUrl: './assets/blogImage.svg',
-      title: 'Sustainability',
-      description: "Sustainability is a crucial aspect of our daily lives, and it's essential that we make conscious choices to reduce our impact on the environment...",
-      readMoreUrl: '/blog/sustainability',
-    },
-    {
-      imageUrl: './assets/blogImage.svg',
-      title: 'Sustainability',
-      description: "Sustainability is a crucial aspect of our daily lives, and it's essential that we make conscious choices to reduce our impact on the environment...",
-      readMoreUrl: '/blog/sustainability',
+      imageUrl: './assets/blogImage3Small.jpg',
+      title: 'Karbon Kredileri ve Karbon Piyasaları Nedir?',
+      description: "Karbon Kredileri ve Karbon Piyasaları: Yatırımcılar İçin Rehber Karbon Kredileri ve Önemi Dünya genelinde iklim değişikliğiyle m&",
+      readMoreUrl: '/Karbon-Kredileri',
     },
   ];
 
   const [loading, setLoading] = useState(true);
-  const imageUrls = ['./assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg', './assets/blogImage.svg']; // Replace with your image URLs
+  const imageUrls = ['./assets/blogImage.svg', './assets/blog2ImageSmall.jpg', './assets/blogImage3Small.jpg']; // Replace with your image URLs
 
   useEffect(() => {
     let loadedImages = 0;
@@ -81,9 +63,9 @@ const Blog = () => {
     <div className="pt-40 md:pb-20">
     <p className="lg:ml-[159px] text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
     <div className="flex items-center justify-center py-10">
-      <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-between md:px-5">
+      <div className="flex flex-row flex-wrap lg:w-[1240px] justify-between md:px-5">
         {blogPosts.map((post, index) => (
-          <div className="w-full max-sm:w-1/1 md:w-1/3 pb-10 flex justify-center" key={index}>
+          <div className="w-full max-sm:w-1/1 md:w-1/3 pb-10  justify-center" key={index}>
             <BlogCard
               imageUrl={post.imageUrl}
               title={post.title}
