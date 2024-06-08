@@ -11,10 +11,8 @@ const OurServicesFull = () => {
     const [tabIndex, setTabIndex] = useState(1);
     
 
-    const handleTabs = (inital: number, current: number) =>{
-        console.log(inital)
+    const handleTabs = ( current: number) =>{
         setTabIndex(current);
-    
       }
     
     //   const handlePageChange = (index: number) =>{
@@ -36,6 +34,68 @@ const OurServicesFull = () => {
     //     const timer = setTimeout(() => setProgress(initial), (initial + 25))
     //     return () => clearTimeout(timer)
     //   }, [initial])
+
+
+
+    // const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+    // useEffect(() => {
+    //     const observer = new IntersectionObserver(
+    //       (entries) => {
+    //         entries.forEach((entry) => {
+    //           if (entry.isIntersecting) {
+    //             const sectionId = entry.target.getAttribute('id');
+    //             console.log("Intersecting:", sectionId); // Debugging line
+    //             switch (sectionId) {
+    //               case 'carbonConsultancy':
+    //                 setTabIndex(1);
+    //                 break;
+    //               case 'certification':
+    //                 setTabIndex(2);
+    //                 break;
+    //               case 'digitalMarketing':
+    //                 setTabIndex(3);
+    //                 break;
+    //               case 'carbonFootprintOptimisation':
+    //                 setTabIndex(4);
+    //                 break;
+    //               case 'greenTechnologyInscentives':
+    //                 setTabIndex(5);
+    //                 break;
+    //               case 'techSupport':
+    //                 setTabIndex(6);
+    //                 break;
+    //               default:
+    //                 break;
+    //             }
+    //           }else{
+    //             if(tabIndex == 2){
+    //                 setTabIndex(1);
+    //             }
+    //           }
+    //         });
+    //       },
+    //       { threshold: 0.1 } // Adjust this value to control when the callback is triggered
+    //     );
+
+        
+    //     sectionRefs.current.forEach((ref) => {
+    //         if (ref) {
+    //           observer.observe(ref);
+    //         }
+    //       });
+          
+    //       return () => {
+    //         if (sectionRefs.current) {
+    //           sectionRefs.current.forEach((ref) => {
+    //             if (ref) {
+    //               observer.unobserve(ref);
+    //             }
+    //           });
+    //         }
+    //       };
+    //   }, []);
+
 
 
     const [loading, setLoading] = useState(true);
@@ -72,39 +132,7 @@ const OurServicesFull = () => {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
-
-    //   useEffect(() => {
-    //     const observer = new Inte max-sm:py-10 rsectionObserver(
-    //       entries => {
-    //         entries.forEach(entry => {
-    //           if (entry.isIntersecting) {
-    //             const tabIndexMap: { [key: string]: number } = {
-    //               'carbonConsultancy': 1,
-    //               'certification': 2,
-    //               'digitalMarketing': 3,
-    //               'carbonFootprintOptimisation': 4,
-    //               'greenTechnologyInscentives': 5,
-    //               'techSupport': 6
-    //             };
-    //             handleTabs(100, tabIndexMap[entry.target.id]);
-    //           }
-    //         });
-    //       },
-    //       { threshold: 0.25 }
-    //     );
       
-    //     const elements = ['carbonConsultancy', 'certification', 'digitalMarketing', 'carbonFootprintOptimisation', 'greenTechnologyInscentives', 'techSupport'].map(id => document.getElementById(id));
-      
-    //     elements.forEach(el => {
-    //       if (el) observer.observe(el);
-    //     });
-      
-    //     return () => {
-    //       elements.forEach(el => {
-    //         if (el) observer.unobserve(el);
-    //       });
-    //     };
-    //   }, []);
       
     if(loading){
         return (
@@ -125,7 +153,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(25, 1)}
+                            onClick={( )=> handleTabs( 1)}
                             href="#carbonConsultancy"
                             className={tabIndex === 1 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center ring-[1px] ring-bgGreen cursor-pointer py-1 px-5"}>
                                 <p className={tabIndex === 1 ? "text-white" : " text-bgGreen"}>Carbon Consultancy</p>
@@ -134,7 +162,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(50, 2)}
+                            onClick={( )=> handleTabs( 2)}
                             href="#certification"
                             className={tabIndex === 2 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer ring-[1px] ring-bgGreen py-1 px-5"}>
                                 <p className={tabIndex === 2 ? "text-white" : " text-bgGreen"}>Certification</p>
@@ -143,7 +171,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(75, 3)}
+                            onClick={( )=> handleTabs( 3)}
                             href="#digitalMarketing"
                             className={tabIndex === 3 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer ring-[1px] ring-bgGreen py-1 px-5"}>
                                 <p className={tabIndex === 3 ? "text-white" : " text-bgGreen"}>HoDigital Marketing</p>
@@ -152,7 +180,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(100, 4)}
+                            onClick={( )=> handleTabs( 4)}
                             href="#carbonFootprintOptimisation"
                             className={tabIndex === 4 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer ring-[1px] ring-bgGreen py-1 px-5"}>
                                 <p className={tabIndex === 4 ? "text-white" : " text-bgGreen"}>Carbon Footprint Optimization</p>
@@ -161,7 +189,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(100, 5)}
+                            onClick={( )=> handleTabs( 5)}
                             href="#greenTechnologyInscentives"
                             className={tabIndex === 5 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer ring-[1px] ring-bgGreen py-1 px-5"}>
                                 <p className={tabIndex === 5 ? "text-white" : " text-bgGreen"}>Green Tech Initiatives</p>
@@ -170,7 +198,7 @@ const OurServicesFull = () => {
                             <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }} 
-                            onClick={( )=> handleTabs(100, 6)}
+                            onClick={( )=> handleTabs( 6)}
                             href="#techSupport"
                             className={tabIndex === 6 ? "bg-bgGreen rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer py-1 px-5" : "bg-transparent bg-white rounded-full flex items-center flex-row space-x-2 justify-center cursor-pointer ring-[1px] ring-bgGreen py-1 px-5"}>
                                 <p className={tabIndex === 6 ? "text-white" : " text-bgGreen"}>Tech Support</p>
@@ -204,35 +232,38 @@ const OurServicesFull = () => {
                         </div>
 
                     </div>
-
-                    <div className="flex flex-col space-y-10 max-sm:py-10  section pt-[-350px] max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="certification">
-                        <div className="flex flex-row items-start justify-start ">
-                            <img
-                            src="./assets/certificationLogoBig.svg"
-                            className="w-[40px] h-[40px]"
-                            />
-                            <p className="text-bgGreen text-[32px]">Certification</p>
-                        </div>
-                        <div className=" space-y-10 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center max-sm:w-[350px]">
-                            <p className="text-[20px] max-sm:text-[16px] text-bgGreen">As Nefesol , we offer our customers the opportunity to reduce their environmental impact and compensate for carbon emissions with our carbon equalization services. The verifiability and reliability of your carbon equalization efforts are important when managing your carbon footprint. Therefore, with our certification service, we certify your carbon equalization activities in accordance with international standards.</p>
-                            
-                            <div className="space-y-5 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center">
-                                <p className="text-bgGreen text-[24px]">What You Get with the Nefesol Certification Service?</p>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Accuracy and Reliability: </span>Certification is an important way to verify and prove the reliability of your carbon equalization activities. Your customers know that you are effectively managing your carbon emissions through certification, and that the carbon offset projects you carry out are verified. This is a strong statement that your business fulfills its environmental responsibilities and is committed to a sustainable future. transmits a message.</p>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Compliance with International Standards: </span>Nefesol Certification Service is carried out in accordance with internationally accepted carbon standards. This allows you to align your operations with best practices for carbon monitoring, reporting and verification.</p>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Image and Competitive Advantage: </span>Certification allows you to gain image and competitive advantage as well as proving your business commitments to environmental sustainability. Verifying your carbon footprint and supporting your equalization efforts with certificates can be an important factor in choosing you by your customers and stakeholders. You can also gain a competitive advantage by emphasizing your leadership role in sustainability in the market.</p>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Traceability and Transparency: </span>Certification ensures that your carbon equalization activities are traceable and transparent. It clearly documents the details of your projects and compensation efforts, the methods for reducing carbon emissions and contributing to nature. This allows you to gain the trust of your stakeholders, customers and society.</p>
+                    
+                    
+                    <div className="flex  max-sm:py-10  section" id="certification"  >
+                        <div className="flex flex-col space-y-10  max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" >
+                            <div className="flex flex-row items-start justify-start ">
+                                <img
+                                src="./assets/certificationLogoBig.svg"
+                                className="w-[40px] h-[40px]"
+                                />
+                                <p className="text-bgGreen text-[32px]">Certification</p>
                             </div>
-                            <div>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]">Nefesol Certification Service guides you to validate your carbon equalization efforts and take an important step in your sustainability journey. Our experts manage the certification process in accordance with international carbon standards and cooperate with you. It determines the most suitable certification path for you and ensures its successful completion.</p>
-                                <p className="text-bgGreen text-[20px] max-sm:text-[16px]">Contact us to prove your environmental commitments and step towards a sustainable future by certifying your carbon equalization activities.</p>
+                            <div className=" space-y-10 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center max-sm:w-[350px]">
+                                <p className="text-[20px] max-sm:text-[16px] text-bgGreen">As Nefesol , we offer our customers the opportunity to reduce their environmental impact and compensate for carbon emissions with our carbon equalization services. The verifiability and reliability of your carbon equalization efforts are important when managing your carbon footprint. Therefore, with our certification service, we certify your carbon equalization activities in accordance with international standards.</p>
+                                
+                                <div className="space-y-5 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center">
+                                    <p className="text-bgGreen text-[24px]">What You Get with the Nefesol Certification Service?</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Accuracy and Reliability: </span>Certification is an important way to verify and prove the reliability of your carbon equalization activities. Your customers know that you are effectively managing your carbon emissions through certification, and that the carbon offset projects you carry out are verified. This is a strong statement that your business fulfills its environmental responsibilities and is committed to a sustainable future. transmits a message.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Compliance with International Standards: </span>Nefesol Certification Service is carried out in accordance with internationally accepted carbon standards. This allows you to align your operations with best practices for carbon monitoring, reporting and verification.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Image and Competitive Advantage: </span>Certification allows you to gain image and competitive advantage as well as proving your business commitments to environmental sustainability. Verifying your carbon footprint and supporting your equalization efforts with certificates can be an important factor in choosing you by your customers and stakeholders. You can also gain a competitive advantage by emphasizing your leadership role in sustainability in the market.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Traceability and Transparency: </span>Certification ensures that your carbon equalization activities are traceable and transparent. It clearly documents the details of your projects and compensation efforts, the methods for reducing carbon emissions and contributing to nature. This allows you to gain the trust of your stakeholders, customers and society.</p>
+                                </div>
+                                <div>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]">Nefesol Certification Service guides you to validate your carbon equalization efforts and take an important step in your sustainability journey. Our experts manage the certification process in accordance with international carbon standards and cooperate with you. It determines the most suitable certification path for you and ensures its successful completion.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]">Contact us to prove your environmental commitments and step towards a sustainable future by certifying your carbon equalization activities.</p>
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
 
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="digitalMarketing">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="digitalMarketing" >
                         <div className="flex flex-row items-start justify-start  space-x-2">
                             <img
                             src="./assets/digitalMarketingLogoBig.svg"
@@ -254,7 +285,7 @@ const OurServicesFull = () => {
 
                     </div>
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="carbonFootprintOptimisation">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="carbonFootprintOptimisation" >
                         <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                             <img
                             src="./assets/carbonFootprintLogoServicesBig.svg"
@@ -286,7 +317,7 @@ const OurServicesFull = () => {
 
                     </div>
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="greenTechnologyInscentives">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="greenTechnologyInscentives" >
                         <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                             <img
                             src="./assets/greenTechLogoBig.svg"
@@ -311,7 +342,7 @@ const OurServicesFull = () => {
                     </div>
 
 
-                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="techSupport">
+                    <div className="flex flex-col space-y-10 max-sm:py-10  section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="techSupport" >
                         <div className="flex flex-row items-start justify-start space-x-2">
                             <img
                             src="./assets/technicalSupportLogoBig.svg"

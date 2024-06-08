@@ -18,6 +18,8 @@ import BlogPage2 from './components/PageLayout/Pages/BlogPages/BlogPage2'
 import BlogPage3 from './components/PageLayout/Pages/BlogPages/BlogPage3'
 import GeneralTermsAndConditions from './components/PageLayout/Pages/Legal/GeneralTermsAndConditions'
 import PersonalDataProtectionAuthority from './components/PageLayout/Pages/Legal/PersonalDataProtectionAuthority'
+import CancellationRefundPolicy from './components/PageLayout/Pages/Legal/CancellationRefundPolicy'
+// import BlogLayout from './components/PageLayout/Pages/BlogLayout'
 
 
 
@@ -39,9 +41,17 @@ function App() {
           <Route path="/Karbon-Kredileri" element={<BlogPage3 />} />
           <Route path="/carbon-footprint" element={<CarbonFootprint />} />
 
+          {/* <Route path="/blogs" element={<BlogLayout />}>
+            <Route path="carbon-cycle" element={<CarbonCycle />} />
+            <Route path="Nefes-Ol" element={<BlogPage2 />} />
+            <Route path="Karbon-Kredileri" element={<BlogPage3 />} />
+            <Route path="carbon-footprint" element={<CarbonFootprint />} />
+          </Route> */}
+
           {/* Legal */}
           <Route path="/generalTermsAndConditions" element={<GeneralTermsAndConditions />} />
           <Route path="/perssonalDataProtectionAuthority" element={<PersonalDataProtectionAuthority />} />
+          <Route path="/iptal-iade-politikasi" element={<CancellationRefundPolicy />} />
 
           <Route element={<PlantTreesLayout />}>
             <Route path="/plant-trees-payment" element={<Payment />} />
