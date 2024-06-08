@@ -60,10 +60,10 @@ const Blog = () => {
     );
   }
   return (
-    <div className="pt-40 md:pb-20">
-    <p className="lg:ml-[159px] text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
-    <div className="flex items-center justify-center py-10">
-      <div className="flex flex-row flex-wrap lg:w-[1240px] justify-between md:px-5">
+    <div className="pt-40 md:pb-20 flex flex-col lg:ml-[209px]">
+    <p className=" text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
+    <div className="flex max-sm:items-center max:sm:justify-center py-10">
+      <div className="flex flex-row flex-wrap lg:w-[1240px] justify-between ">
         {blogPosts.map((post, index) => (
           <div className="w-full max-sm:w-1/1 md:w-1/3 pb-10  justify-center" key={index}>
             <BlogCard
