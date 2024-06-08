@@ -119,11 +119,13 @@ const Footer = () => {
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
+          href="/perssonalDataProtectionAuthority"
           className="text-[14px] text-bgGreen cursor-pointer"
           >Personal Data Protection Authority</motion.a>
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
+          href="/generalTermsAndConditions"
           className="text-[14px] text-bgGreen cursor-pointer"
           >General Terms and Conditions</motion.a>
           <div className="flex flex-row items-center justify-between w-[210px]">
