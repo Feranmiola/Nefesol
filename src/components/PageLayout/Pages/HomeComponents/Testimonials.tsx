@@ -58,8 +58,8 @@ const Testimonials = () => {
                     >
                         <div className="">
                             <div className="flex items-center md:space-x-[21rem] max-sm:space-x-[8rem] flex-row">
-                                <img src={slidesData[currentIndex].quote} alt="quote" className=" max-sm:w-[40px] max-sm:h-[40px]" />
-                                <img src={slidesData[currentIndex].stars} alt="rating stars" className=" max-sm:w-[80px] max-sm:h-[80px]" />
+                                <img loading="lazy" src={slidesData[currentIndex].quote} alt="quote" className=" max-sm:w-[40px] max-sm:h-[40px]" />
+                                <img loading="lazy" src={slidesData[currentIndex].stars} alt="rating stars" className=" max-sm:w-[80px] max-sm:h-[80px]" />
                             </div>
                             <div className="flex md:mt-10 max-sm:mt-5 max-sm:items-center max-sm:justify-center">
                                 <p className="text-bgGreen text-[24px] max-sm:text-[14px] w-[534px] max-sm:w-[270px] leading-tight">{slidesData[currentIndex].text}</p>

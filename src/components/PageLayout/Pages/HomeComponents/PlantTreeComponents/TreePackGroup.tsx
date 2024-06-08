@@ -8,6 +8,7 @@ const TreePackGroup = () => {
           <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen transition ease-in-out shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
+              loading="lazy"
               src="./assets/smallTrees.svg"
               alt="smallTrees"
               />
@@ -17,6 +18,7 @@ const TreePackGroup = () => {
               <div className="flex flex-row items-center space-x-2 ">
                 <p className="text-[20px] text-[#0A4519]">50 Trees</p>
                 <img
+                loading="lazy"
                 src="./assets/greenDot.svg"
                 alt="dot"
                 />
@@ -39,6 +41,7 @@ const TreePackGroup = () => {
           <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen transition ease-in-out shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
+              loading="lazy"
               src="./assets/mediumTrees.svg"
               alt="mediumTrees"
               />
@@ -48,6 +51,7 @@ const TreePackGroup = () => {
               <div className="flex flex-row items-center space-x-2 ">
                 <p className="text-[20px] text-[#0A4519]">100 Trees</p>
                 <img
+                loading="lazy"
                 src="./assets/greenDot.svg"
                 alt="dot"
                 />
@@ -70,6 +74,7 @@ const TreePackGroup = () => {
           <div className="w-[320px] h-[371px] rounded-[24px] hover:ring-[2px] hover:ring-linkGreen transition ease-in-out shadow-md">
             <div className=" justify-center flex bg-[#E6EFEB] rounded-t-[24px] h-[180px]">
               <img
+              loading="lazy"
               src="./assets/largeTrees.svg"
               alt="largeTrees"
               className="rounded-t-[24px]"
@@ -80,6 +85,7 @@ const TreePackGroup = () => {
               <div className="flex flex-row items-center space-x-2 ">
                 <p className="text-[20px] text-[#0A4519]">150 Trees</p>
                 <img
+                loading="lazy"
                 src="./assets/greenDot.svg"
                 alt="dot"
                 />

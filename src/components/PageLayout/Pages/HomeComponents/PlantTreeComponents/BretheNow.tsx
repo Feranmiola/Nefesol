@@ -79,6 +79,7 @@ const BretheNow = () => {
                         className={co2Quantity === 1 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/co2.svg"
                                 className="w-[15px] h-[15px]"
                                 />
@@ -93,6 +94,7 @@ const BretheNow = () => {
                         className={co2Quantity === 2 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/co2.svg"
                                 className="w-[21px] h-[21px]"
                                 />
@@ -107,6 +109,7 @@ const BretheNow = () => {
                         className={co2Quantity === 3 ? 'ring-[1px] ring-[#25B567] py-1 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-1 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/co2.svg"
                                 className="w-[31px] h-[31px]"
                                 />
@@ -126,6 +129,7 @@ const BretheNow = () => {
                         className={example === 1 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/mobilityLogo.svg"
                                 />
                                 <p className="text-[14px] text-bgGreen font-medium">Mobility</p>
@@ -139,6 +143,7 @@ const BretheNow = () => {
                         className={example === 2 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/nutritionLogo.svg"
                                 
                                 />
@@ -153,6 +158,7 @@ const BretheNow = () => {
                         className={example === 3 ? 'ring-[1px] ring-[#25B567] py-1 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-1 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
                                 <img
+                                loading="lazy"
                                 src="./assets/housingLogo.svg"
                                 />
                                 <p className="text-[14px] text-bgGreen font-medium">Housing and Power</p>
@@ -165,6 +171,7 @@ const BretheNow = () => {
             </div>
             <div className="flex flex-row max-sm:flex-col py-6 md:space-x-10 max-md:space-y-4 items-center justify-center">
                 <img
+                loading="lazy"
                 src="./assets/treeGroup.svg"
                 />
                 <div className="flex flex-col ">
@@ -182,6 +189,7 @@ const BretheNow = () => {
             <div className="flex items-center justify-center flex-row max-sm:flex-col md:space-x-3 max-sm:space-y-3 pt-5 md:pb-5">
                 <div className="bg-[#0A5B361A] flex flex-row items-center justify-center px- h-[56px] w-[186px]">
                     <img
+                    loading="lazy"
                     src="./assets/field.svg"
                     />
                     <div className="flex flex-row">
@@ -191,6 +199,7 @@ const BretheNow = () => {
                 </div>
                 <div className="bg-[#0A5B361A] flex flex-row items-center justify-center  h-[56px] w-[186px]">
                     <img
+                    loading="lazy"
                     src="./assets/co2.svg"
                     />
                     <div className="flex flex-row">

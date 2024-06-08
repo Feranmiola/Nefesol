@@ -17,6 +17,7 @@ const GreeningPolicy = () => {
             <div className="w-[615px] h-[245px] max-sm:w-[315px] max-sm:h-[145px] rounded-[14.03px] greeningBG flex flex-row justify-between md:px-8 max-sm:px-2 ">
                 <p className="text-[28px] max-sm:text-[16px] max-sm:w-[200px] text-white md:w-[294px] md:mt-[108px] max-sm:mt-[3rem] leading-tight">We are building an environmentally friendly future</p>
                 <img
+                loading="lazy"
                 src="./assets/whiteTree.svg"
                 alt="white tree"
                 className="md:w-[30.07px] md:h-[28.27px] md:mt-[174.73px] max-sm:mt-[3rem]"
@@ -36,6 +37,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5 items-center justify-center">
                     <img
+                    loading="lazy"
                     src="./assets/leafLogo.svg"
                     alt="leaf logo"
                     className="max-sm:w-[40px] max-sm:h-[40px]"
@@ -47,6 +49,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5 items-center justify-center">
                     <img
+                    loading="lazy"
                     src="./assets/boolLeafLogo.svg"
                     alt="leaf logo"
                     className="max-sm:w-[40px] max-sm:h-[40px]"
@@ -76,6 +79,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5 max-sm:ml-[5px]  items-center ">
                     <img
+                    loading="lazy"
                     src="./assets/sustainableLogo.svg"
                     alt="leaf logo"
                     className="max-sm:w-[40px] max-sm:h-[40px]"
@@ -88,6 +92,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5 items-center ">
                     <img
+                    loading="lazy"
                     src="./assets/carbonFootprintLogo.svg"
                     alt="leaf logo"
                     className="max-sm:w-[40px] max-sm:h-[40px]"
@@ -108,6 +113,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5 items-center ">
                     <img
+                    loading="lazy"
                     src="./assets/circularEconomyLogo.svg"
                     alt="leaf logo"
                     className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"
@@ -120,6 +126,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5  items-center ">
                     <img
+                    loading="lazy"
                     src="./assets/developmentLogo.svg"
                     alt="leaf logo"
                     className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"
@@ -132,6 +139,7 @@ const GreeningPolicy = () => {
 
                 <div className="flex flex-row space-x-5  items-center ">
                     <img
+                    loading="lazy"
                     src="./assets/communityLogo.svg"
                     alt="leaf logo"
                     className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"

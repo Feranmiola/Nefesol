@@ -10,7 +10,13 @@ import { useEffect, useState } from "react"
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
-  const imageUrls = ['./assets/treeBackground.svg', './assets/greeningImage.svg', './assets/dotBackground.svg', './assets/smallTrees.svg', './assets/mediumTrees.svg', './assets/largeTrees.svg', './assets/gardenImageVertical.svg'];
+  const imageUrls = ['./assets/treeBackground.svg',
+     './assets/greeningImage.svg', 
+     './assets/dotBackground.svg', 
+     './assets/smallTrees.svg', 
+     './assets/mediumTrees.svg', 
+     './assets/largeTrees.svg', 
+     './assets/gardenImageVertical.svg'];
     useEffect(() => {
         let loadedImages = 0;
 

@@ -9,6 +9,7 @@ const Services = () => {
             <div className="flex flex-row max-sm:flex-col md:space-x-10 max-sm:space-y-10">
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/carbonConsulatancyLogo.svg"
                     alt="Carbon Consultancy Logo"
                     />
@@ -23,6 +24,7 @@ const Services = () => {
                 
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/certificationLogo.svg"
                     alt="certification"
                     />
@@ -37,6 +39,7 @@ const Services = () => {
                 
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/digitalMarketingLogo.svg"
                     alt="Digital Marketing"
                     />
@@ -54,6 +57,7 @@ const Services = () => {
             <div className="flex flex-row max-sm:flex-col md:space-x-10 max-sm:space-y-10">
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/carbonFootprintLogoServices.svg"
                     />
                     <p className=" text-linkTextGreen text-[28px] max-sm:text-[20px] w-[356px] max-sm:w-[300px]">Carbon Footprint Optimisation</p>
@@ -67,6 +71,7 @@ const Services = () => {
                 
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/greenTechLogo.svg"
                     />
                     <p className=" text-linkTextGreen text-[28px] max-sm:text-[20px] w-[356px] max-sm:w-[300px]">Green Technology Inscentives</p>
@@ -80,6 +85,7 @@ const Services = () => {
                 
                 <div className="flex flex-col items-start space-y-4">
                     <img
+                    loading="lazy"
                     src="./assets/technicalSupportLogo.svg"
                     />
                     <p className=" text-linkTextGreen text-[28px] max-sm:text-[20px]">Technical Support</p>

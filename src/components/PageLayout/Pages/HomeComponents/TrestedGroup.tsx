@@ -9,35 +9,42 @@ const TrestedGroup = () => {
                     <div className="flex flex-col justify-between h-full md:hidden ">
                         <div className="flex flex-row justify-between">
                             <img
+                            loading="lazy"
                             src="./assets/partner1.svg"
                             />
                             
                             <img
+                            loading="lazy"
                             src="./assets/partner2.svg"
                             />
                         </div>
 
                         <div className="flex flex-row justify-between">
                             <img
+                            loading="lazy"
                             src="./assets/partner3.svg"
                             />
                             
                             <img
+                            loading="lazy"
                             src="./assets/partner4.svg"
                             />
                         </div>
 
                         <div className="flex flex-row justify-between">
                             <img
+                            loading="lazy"
                             src="./assets/partner5.svg"
                             />
                             
                             <img
+                            loading="lazy"
                             src="./assets/partner6.svg"
                             />
                         </div>
                         <div className="flex flex-row items-start justify-start">
                             <img
+                            loading="lazy"
                             src="./assets/partner7.svg"
                             />
                         </div>
@@ -48,34 +55,41 @@ const TrestedGroup = () => {
                     <div className="flex flex-col justify-between max-sm:hidden space-y-5">
                     <div className="flex flex-row items-center justify-between">
                         <img
+                        loading="lazy"
                         src="./assets/partner1.svg"
                         />
                         
                         <img
+                        loading="lazy"
                         src="./assets/partner2.svg"
                         />
                         
                         <img
+                        loading="lazy"
                         src="./assets/partner3.svg"
                         />
                     </div>
 
                     <div className="flex flex-row items-center justify-between">
                         <img
+                        loading="lazy"
                         src="./assets/partner4.svg"
                         />
                         
                         <img
+                        loading="lazy"
                         src="./assets/partner5.svg"
                         />
                         
                         <img
+                        loading="lazy"
                         src="./assets/partner6.svg"
                         />
                     </div>
 
                     <div className="flex flex-row items-start justify-start">
                         <img
+                        loading="lazy"
                         src="./assets/partner7.svg"
                         />
                     </div>
@@ -86,6 +100,7 @@ const TrestedGroup = () => {
                 <div className="flex flex-row h-full max-sm:flex-col justify-between ">
                     <div className="flex flex-col items-start space-y-8 max-sm:space-y-3 max-sm:mt-7 pl-7 justify-center">
                         <img
+                        loading="lazy"
                         src="./assets/karbonLogo.svg"
                         alt="karbon logo"
                         />
@@ -97,6 +112,7 @@ const TrestedGroup = () => {
                             >
                             <p className="text-white text-[16px] font-medium">Learn More</p>
                             <img
+                            loading="lazy"
                             src="./assets/redirect.svg"
                             alt="redirect icon"
                             />
@@ -104,6 +120,7 @@ const TrestedGroup = () => {
                     </div>
                     <div className="flex items-end justify-end">
                         <img
+                        loading="lazy"
                         src="./assets/karbonCoin.svg"
                         alt="karbon coin"
                         />
