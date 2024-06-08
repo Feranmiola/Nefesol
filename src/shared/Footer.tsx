@@ -87,20 +87,37 @@ const Footer = () => {
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
+            href="/iptal-iade-politikasi"
             className="text-[16px] text-bgGreen cursor-pointer"
             >Iptal lade Politikasi</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
+            href="/mesafeli-satis-sozlesmesi"
             className="text-[16px] text-bgGreen cursor-pointer"
             >Mesafeli Satis Sozlesmesi</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
+            href="/uyelik-sozlesmesi"
             className="text-[16px] text-bgGreen cursor-pointer"
             >Üyelik Sözleşmesi</motion.a>
+
+            <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} 
+            href="/generalTermsAndConditions"
+            className="text-[16px] text-bgGreen cursor-pointer md:hidden"
+            >General Terms And Condition</motion.a>
+            
+            <motion.a
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }} 
+            href="/perssonalDataProtectionAuthority"
+            className="text-[16px] text-bgGreen cursor-pointer md:hidden"
+            >Personal Data Protection Authority</motion.a>
 
           </div>
         </div>

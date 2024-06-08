@@ -537,7 +537,7 @@ const TopBar = () => {
                   />
                 </div>
 
-                <div>
+                <div className="py-5">
                   <p className="text-white text-[28px] font-medium pt-5">Menu</p>
                 </div>
               </div>
@@ -585,24 +585,8 @@ const TopBar = () => {
               <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className=" text-white text-[16px]">Our Services</p>
               </a>
-              
-              <div className="py-5 flex flex-col space-y-5">
-                <div>
-                  <p className="text-white text-[28px] font-medium">Legal</p>
-                </div>
 
-                <div className="flex flex-col space-y-5">
-                  <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[16px]">Personal Data Protection Authority</p>
-                  </a>
-
-                  <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[16px]">General Terms and Conditions</p>
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex flex-row space-x-7 items-center justify-center">
+              <div className="flex flex-row py-10 space-x-7 items-center justify-center">
                 <motion.a 
                 href="https://www.facebook.com/settings/?tab=your_facebook_information"
                 target="blank"
