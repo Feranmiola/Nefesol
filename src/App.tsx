@@ -20,6 +20,7 @@ import GeneralTermsAndConditions from './components/PageLayout/Pages/Legal/Gener
 import PersonalDataProtectionAuthority from './components/PageLayout/Pages/Legal/PersonalDataProtectionAuthority'
 import CancellationRefundPolicy from './components/PageLayout/Pages/Legal/CancellationRefundPolicy'
 import DistanceSellingContract from './components/PageLayout/Pages/Legal/DistanceSellingContract'
+import MembershipAgreement from './components/PageLayout/Pages/Legal/MembershipAgreement'
 // import BlogLayout from './components/PageLayout/Pages/BlogLayout'
 
 
@@ -54,6 +55,7 @@ function App() {
           <Route path="/perssonalDataProtectionAuthority" element={<PersonalDataProtectionAuthority />} />
           <Route path="/iptal-iade-politikasi" element={<CancellationRefundPolicy />} />
           <Route path="/mesafeli-satis-sozlesmesi" element={<DistanceSellingContract />} />
+          <Route path="/uyelik-sozlesmesi" element={<MembershipAgreement />} />
 
           <Route element={<PlantTreesLayout />}>
             <Route path="/plant-trees-payment" element={<Payment />} />
