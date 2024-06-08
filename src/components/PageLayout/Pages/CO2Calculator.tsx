@@ -192,7 +192,7 @@ const CO2Calculator = () => {
                     <Food/>
                   )}
   
-                  <div className="flex flex-row space-x-4">
+                  <div className="flex flex-row w-full justify-between space-x-4">
                     <motion.div
                     whileHover={{ scale: 1.06 }}
                     whileTap={{ scale: 0.9 }} 
