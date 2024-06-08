@@ -71,7 +71,7 @@ const BretheNow = () => {
                 )}
                 
                 {tabIndex === 2 &&(
-                    <div className="w-[100%] flex items-center justify-center flex-row md:space-x-2 ">
+                    <div className="w-[100%] flex items-center justify-center flex-row max-sm: space-x-2 ">
                         <motion.div
                         whileHover={{ scale: 1.06 }}
                         whileTap={{ scale: 0.9 }} 
@@ -118,7 +118,7 @@ const BretheNow = () => {
                 )}
                 
                 {tabIndex === 3 &&(
-                    <div className="w-[100%] flex items-center justify-center flex-row space-x-2">
+                    <div className="w-[100%] flex items-center justify-center flex-row max-sm:flex-col max-sm:space-y-2 md:space-x-2">
                         <motion.div
                         whileHover={{ scale: 1.06 }}
                         whileTap={{ scale: 0.9 }} 
