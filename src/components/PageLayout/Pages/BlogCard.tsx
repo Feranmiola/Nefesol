@@ -18,7 +18,7 @@ interface BlogCardProps {
           <img
             src={imageUrl}
             alt="blogImage"
-            className="rounded-t-[16px]"
+            className="rounded-t-[16px] max-h-[212px] w-full"
           />
         </div>
         <div className="p-5 space-y-5">
