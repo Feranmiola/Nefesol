@@ -127,32 +127,51 @@ const Footer = () => {
           className="text-[14px] text-bgGreen cursor-pointer"
           >General Terms and Conditions</motion.a>
           <div className="flex flex-row items-center justify-between w-[210px]">
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://www.facebook.com/settings/?tab=your_facebook_information"
+            target="blank"
+            className="cursor-pointer" whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/facebook.svg"
               />
             </motion.a>
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://x.com/nefesolcom"
+                target="blank"
+            className="cursor-pointer" whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/x.svg"
               />
             </motion.a>
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://www.instagram.com/nefesolcom/"
+                target="blank"
+            className="cursor-pointer" whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/instagram.svg"
               />
             </motion.a>
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://www.linkedin.com/company/nefesolcom/"
+                target="blank"
+            className="cursor-pointer" whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/linkedIn.svg"
               />
             </motion.a>
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://www.youtube.com/@Nefesolcom"
+                target="blank"
+            className="cursor-pointer" whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/youtube.svg"
               />
             </motion.a>
-            <motion.a className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+            <motion.a 
+            href="https://www.tiktok.com/@nefesol.com?is_from_webapp=1&sender_device=pc"
+                target="blank"
+            className="cursor-pointer" 
+            whileHover={{ scale: 1.4 }} whileTap={{ scale: 0.9 }} >
               <img
               src="./assets/tiktokLogo.svg"
               />
