@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
 
           </div>
-          <div className="flex flex-col md:mr-[2.2rem] justify-between max-sm:justify-center  max-sm:space-y-2">
+          <div className="flex flex-col md:mr-[2.2rem] justify-between max-sm:items-center max-sm:w-full max-sm:justify-center  max-sm:space-y-2">
             <p className="text-[12px] font-bold text-linkGreen">LINKS</p>
             <motion.a
             whileHover={{ scale: 1.1 }}
