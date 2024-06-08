@@ -29,8 +29,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:w-[334px] max-sm:space-y-10 max-sm:items-start justify-between md:w-[786px]">
-          <div className="flex max-sm:flex-row max-sm:space-x-10 max-sm:items-start md:w-[390px] md:justify-between flex-row">
+        <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:w-full max-sm:space-y-10 max-sm:items-start justify-between md:w-[786px]">
+          <div className="flex max-sm:flex-row max-sm:space-x-10 max-sm:items-start md:w-[390px] max-sm:w-full justify-between flex-row">
             <div className="flex flex-col justify-between max-sm:justify-start max-sm:space-y-2">
               <p className="text-[12px] font-bold text-linkGreen">BREATH PACK</p>
               <motion.a
