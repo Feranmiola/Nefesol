@@ -169,7 +169,7 @@ const Payment = () => {
                             htmlFor="terms"
                             className="text-bgGreen text-[16px]"
                         >
-                            I have read and agree to the <span className="text-linkGreen">terms and conditions</span>
+                            I have read and agree to the <a href="/plant-trees-payment" target="blank" className="text-linkGreen">terms and conditions</a>
                         </label>
                     </div>
 
