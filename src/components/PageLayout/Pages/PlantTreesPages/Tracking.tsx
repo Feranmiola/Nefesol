@@ -53,9 +53,9 @@ const Tracking = () => {
                 <div className="flex flex-col space-y-5">
                     <div className="flex flex-col space-y-2">
                         <p className="text-bgGreen font-bold text-[24px]">Trees Tracking & Verification</p>
-                        <p className="text-[16px] text-bgGreen">Track the progress of bought trees</p>
+                        <p className="text-[16px] text-bgGreen font-bold">Track the progress of bought trees</p>
                     </div>
-                    <p className="text-bgGreen text-[16px]">Trees Tracking & Verification Code</p>
+                    <p className="text-bgGreen text-[16px]">Enter Trees Tracking & Verification Code</p>
     
                     <div className="flex flex-col space-y-2">
                         <div className="border-[1px] w-full md:w-[100%] flex rounded-[8px] h-[64px]">
@@ -97,10 +97,10 @@ const Tracking = () => {
                                                     </motion.div>
                                                 </DialogTrigger>
 
-                                                <DialogContent className=" min-w-[800px] min-h-[430px] bg-white rounded-[24px]">
+                                                <DialogContent className=" min-w-[800px] max-sm:min-w-[280px] min-h-[430px] bg-white rounded-[24px]">
                                                     <div className="flex flex-col items-center ">
                                                         <div className="bg-[#F8F9F8] h-[80px] w-full px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
-                                                            <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">Download Certificate</p>
+                                                            <p className="text-bgGreen text-[16px] md:text-[24px] font-bold">Download Certificate</p>
                                                             <DialogClose asChild>
                                                                 <motion.a
                                                                     whileHover={{ scale: 1.06 }}
@@ -108,7 +108,7 @@ const Tracking = () => {
                                                                     className="flex flex-row space-x-2"
                                                                 >
                                                                         <img src="./assets/prev.svg" />
-                                                                        <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to Details</p>
+                                                                        <p className="text-[12px] md:text-[16px] text-linkGreen font-semibold">Return to Details</p>
                                                                 </motion.a>
                                                             </DialogClose>
                                                         </div>
