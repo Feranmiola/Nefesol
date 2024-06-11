@@ -61,22 +61,25 @@ const Blog = () => {
   }
   return (
     <div className="pt-40 md:pb-20 flex flex-col items-center justify-center">
-    <p className=" text-bgGreen text-center text-[40px]">Learn more about contribution to the ecosystem</p>
-    <div className="flex max-sm:items-center max:sm:justify-center py-10">
-      <div className="flex flex-row flex-wrap lg:w-[1240px] justify-between max-sm:px-4 ">
-        {blogPosts.map((post, index) => (
-          <div className="w-full max-sm:w-1/1 md:w-1/3 pb-10  justify-center" key={index}>
-            <BlogCard
-              imageUrl={post.imageUrl}
-              title={post.title}
-              description={post.description}
-              readMoreUrl={post.readMoreUrl}
-            />
+      <p className=" text-bgGreen text-center text-[40px]">Learn more about contribution to the ecosystem</p>
+      <div className="flex items-center justify-center py-10">
+        <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-center max-sm:px-4">
+          <div className="flex flex-wrap justify-center w-full">
+            {blogPosts.map((post, index) => (
+              <div className="w-full max-sm:w-full md:w-1/3 pb-10 flex justify-center" key={index}>
+                <BlogCard
+                  imageUrl={post.imageUrl}
+                  title={post.title}
+                  description={post.description}
+                  readMoreUrl={post.readMoreUrl}
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
-  </div>
+
   )
 }
 
