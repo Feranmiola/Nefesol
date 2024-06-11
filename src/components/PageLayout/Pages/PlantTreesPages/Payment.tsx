@@ -84,6 +84,10 @@ const Payment = () => {
                 </div>
 
                 <div className="flex flex-col space-y-5 items-center justify-center px-5">
+                    <div className="flex flex-col space-y-3 w-full">
+                        <p className="text-bgGreen text-[16px]">Email</p>
+                        <Input placeholder="Enter Email" type="email" className="shad-input-plant-width"/>
+                    </div>
                     <div className="flex flex-col md:flex-row items-center justify-center space-x-0 md:space-x-5 space-y-5 md:space-y-0 w-full">
                         <div className="flex flex-col space-y-3 w-full">
                             <p className="text-bgGreen text-[16px]">Preferred Planting Location</p>
@@ -155,11 +159,6 @@ const Payment = () => {
                             <p className="text-bgGreen text-[16px]">Tax Administrator</p>
                             <Input placeholder="Enter Tax Administrator" className="shad-input-plant"/>
                         </div>
-                    </div>
-
-                    <div className="flex flex-col space-y-3 w-full">
-                        <p className="text-bgGreen text-[16px]">Email</p>
-                        <Input placeholder="Enter Email" type="email" className="shad-input-plant-width"/>
                     </div>
                 </div>
 
