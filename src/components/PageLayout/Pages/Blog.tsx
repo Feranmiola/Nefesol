@@ -60,8 +60,8 @@ const Blog = () => {
     );
   }
   return (
-    <div className="pt-40 md:pb-20 flex flex-col lg:ml-[209px]">
-    <p className=" text-bgGreen max-md:text-[26px] max-sm:text-center text-[40px]">Learn more about contribution to the ecosystem</p>
+    <div className="pt-40 md:pb-20 flex flex-col items-center justify-center">
+    <p className=" text-bgGreen text-center text-[40px]">Learn more about contribution to the ecosystem</p>
     <div className="flex max-sm:items-center max:sm:justify-center py-10">
       <div className="flex flex-row flex-wrap lg:w-[1240px] justify-between max-sm:px-4 ">
         {blogPosts.map((post, index) => (
