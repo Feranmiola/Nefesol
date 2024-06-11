@@ -38,14 +38,15 @@ const VerifyEmail = () => {
                 <div className="flex flex-col">
                     <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
                         <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">Plant Trees</p>
-                        <motion.div
+                        <motion.a
                             whileHover={{ scale: 1.06 }}
                             whileTap={{ scale: 0.9 }}
                             className="flex flex-row space-x-2"
+                            href="/plant-trees-payment"
                         >
                             <img src="./assets/prev.svg" />
-                            <a href="/co2-calculator" className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to calculator</a>
-                        </motion.div>
+                            <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to Details</p>
+                        </motion.a>
                     </div>
                     
                     <div className="flex items-center flex-col justify-center py-5">

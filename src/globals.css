@@ -228,6 +228,11 @@ li{
       @apply  bg-white placeholder:text-[#B7B7BD] focus:bg-white text-bgGreen font-medium text-[32px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px]  !important;
     }
 
+      
+    .shad-input-bareV2 {
+      @apply  bg-[#F8F9F8]  focus:bg-[#F8F9F8] text-bgGreen placeholder:text-bgGreen placeholder:opacity-50 text-[14px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px]  !important;
+    }
+
     .shad-input-plant {
       @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
     }

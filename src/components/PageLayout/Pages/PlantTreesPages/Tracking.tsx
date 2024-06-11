@@ -4,12 +4,22 @@ import { motion } from "framer-motion"
 import { useState } from "react";
 import BeatLoader from "react-spinners/BeatLoader";
 
+import {
+    Dialog,
+    DialogContent,
+    DialogClose,
+    DialogTrigger,
+  } from "@/components/ui/dialog"
+  
+
 
 
 
 const Tracking = () => {
 
     const [isTracking, setIstracking] = useState(false);
+    const [dowwnloadCertificateStep1, SetStep1] = useState(false);
+    const [dowwnloadCertificateStep2, SetStep2] = useState(false);
 
 
     const [loading, setLoading] = useState(false);
@@ -17,6 +27,7 @@ const Tracking = () => {
 
     const handleTrack = () => {
         setIstracking(true);
+        SetStep1(true);
         setLoading(true);
     
         let loadedImages = 0;
@@ -37,8 +48,8 @@ const Tracking = () => {
     
     return (
         <div className="py-20 mt-10 items-center justify-center flex">
-        <div className="w-full md:w-[600px] flex bg-white rounded-[24px]">
-            <div className="p-10">
+        <div className="w-full md:w-[736px] flex bg-white rounded-[24px]">
+            <div className="p-10 w-full">
                 <div className="flex flex-col space-y-5">
                     <div className="flex flex-col space-y-2">
                         <p className="text-bgGreen font-bold text-[24px]">Trees Tracking & Verification</p>
@@ -47,7 +58,7 @@ const Tracking = () => {
                     <p className="text-bgGreen text-[16px]">Trees Tracking & Verification Code</p>
     
                     <div className="flex flex-col space-y-2">
-                        <div className="border-[1px] w-full md:w-[536px] flex rounded-[8px] h-[64px]">
+                        <div className="border-[1px] w-full md:w-[100%] flex rounded-[8px] h-[64px]">
                             <div className="w-full flex flex-row px-2 items-center justify-between">
                                 <Input className="h-full w-[80%] shad-input-bare" />
     
@@ -55,19 +66,99 @@ const Tracking = () => {
                                     whileHover={{ scale: 1.06 }}
                                     whileTap={{ scale: 0.9 }}
                                     onClick={handleTrack}
-                                    className="text-[16px] text-linkGreen cursor-pointer mr-5">
-                                    Track
+                                    className=" cursor-pointer px-6 py-2 rounded-[5px] bg-linkGreen mr-5 ">
+                                        <p className="text-[16px] text-white">Track</p>
                                 </motion.div>
                             </div>
                         </div>
-                        <div className="flex flex-row space-x-1 opacity-40">
-                            <img src="./assets/infoIcon.svg" />
-                            <p className="text-bgGreen text-[12px]">The code issued when you bought trees.</p>
-                        </div>
+                        {dowwnloadCertificateStep1 &&(
+                            <div className="flex flex-row cursor-pointer space-x-1" onClick={() => {SetStep1(false); SetStep2(true);}}>
+                                <img src="./assets/downloadCertificateLogo.svg" />
+                                <p className="text-linkGreen font-bold text-[12px]"><u>Download Certificate.</u></p>
+                            </div>
+                        )}
+
+                        {dowwnloadCertificateStep2 && (
+                            <div className="flex border-[1px] rounded-[8px] items-center justify-center px-25 py-3 w-full">
+                                <div className=" w-full px-2 flex flex-row items-center justify-between">
+                                    <div className="w-[346px]">
+                                        <p className="text-[16px] text-bgGreen">Enter registered email to download certificate</p>
+                                    </div>
+                                    <div className=" bg-[#F8F9F8] w-[266px] flex rounded-[8px] ">
+                                        <div className=" w-[266px] flex flex-row  items-center justify-between">
+                                            <Input  type="email" className="w-[78%] shad-input-bareV2" placeholder="Enter Registered Email" />
+                                            <Dialog>
+                                                <DialogTrigger>
+                                                    <motion.div
+                                                        whileHover={{ scale: 1.06 }}
+                                                        whileTap={{ scale: 0.9 }}
+                                                        className=" cursor-pointer pr-2 ">
+                                                            <p className="text-[16px] text-linkGreen">Download</p>
+                                                    </motion.div>
+                                                </DialogTrigger>
+
+                                                <DialogContent className=" min-w-[800px] min-h-[430px] bg-white rounded-[24px]">
+                                                    <div className="flex flex-col items-center ">
+                                                        <div className="bg-[#F8F9F8] h-[80px] w-full px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
+                                                            <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">Download Certificate</p>
+                                                            <DialogClose asChild>
+                                                                <motion.a
+                                                                    whileHover={{ scale: 1.06 }}
+                                                                    whileTap={{ scale: 0.9 }}
+                                                                    className="flex flex-row space-x-2"
+                                                                >
+                                                                        <img src="./assets/prev.svg" />
+                                                                        <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">Return to Details</p>
+                                                                </motion.a>
+                                                            </DialogClose>
+                                                        </div>
+
+                                                        <div className="flex w-full flex-col mt-10 px-5 md:px-10 space-y-2 pb-5">
+                                                            <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">Verify your email</p>
+                                                            <div className="space-y-1 flex flex-col">
+                                                                <div className="flex flex-row space-x-1">
+                                                                    <p className="text-[14px] md:text-[16px] text-bgGreen">Enter verification code sent to</p>
+                                                                    <p className="text-[14px] md:text-[16px] text-bgGreen font-bold">your@email.com</p>
+                                                                </div>
+                                                                <div className="flex flex-row space-x-1">
+                                                                    <p className="text-[14px] md:text-[16px] text-bgGreen">Not your email?</p>
+                                                                    <p className="text-[14px] md:text-[16px] text-linkGreen">change email</p>
+                                                                </div>
+                                                            </div>
+
+                                                            <Input placeholder="Enter Verification Code" className="shad-input-plant-width"/>
+                                                        </div>
+
+                                                        <div className="flex w-full items-center justify-center pb-5">
+                                                            <DialogClose asChild>
+                                                                <motion.a
+                                                                    whileTap={{ scale: 0.9 }}
+                                                                    href="/plant-trees-thankyou"
+                                                                    className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                                                                >
+                                                                    <p className="text-white text-[16px] font-medium">Download</p>
+                                                                </motion.a>
+                                                            </DialogClose>
+                                                        </div>
+
+                                                        <div className="flex w-full flex-row space-x-1 items-center justify-center pb-5">
+                                                            <p className="text-bgGreen text-[14px] md:text-[16px]">Didn’t receive code?</p>
+                                                            <p className="text-[14px] md:text-[16px] text-linkGreen">Resend</p>
+                                                        </div>
+
+                                                    </div>
+                                                </DialogContent>
+                                            </Dialog>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        )}
                     </div>
     
                     {isTracking && (
-                        <div className="flex flex-col w-full border-[2px] rounded-[8px]">
+                        <div className="flex flex-col w-full border-[1px] border-bgGreen rounded-[8px]">
                             {loading ? (
                                 <div className="w-full h-100px bg-white flex items-center justify-center">
                                     <BeatLoader color="#0A4519" />
