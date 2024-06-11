@@ -158,14 +158,14 @@ const Tracking = () => {
                     </div>
     
                     {isTracking && (
-                        <div className="flex flex-col w-full border-[1px] border-bgGreen rounded-[8px]">
+                        <div className="flex flex-col w-full border-bgGreen rounded-[8px]">
                             {loading ? (
                                 <div className="w-full h-100px bg-white flex items-center justify-center">
                                     <BeatLoader color="#0A4519" />
                                 </div>
                             ) : null}
     
-                            <div className={loading ? "hidden" : ""}>
+                            <div className={loading ? "hidden" : "border-[1px]"}>
                                 <div className="h-[94px] trackingInfo flex w-full rounded-t-[8px]">
                                     <div className="px-10 flex flex-row items-center justify-between w-full">
                                         <p className="text-white text-[16px] w-[240px]">
