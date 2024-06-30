@@ -1,7 +1,9 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 const TreePackGroup = () => {
+  const {t} = useTranslation();
   return (
     <div>
       <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 items-center justify-center md:space-x-5 mt-16">
@@ -14,9 +16,9 @@ const TreePackGroup = () => {
               />
             </div>
             <div className="px-5 mt-4">
-              <p className="text-[20px] text-bgGreen font-bold">Small Trees</p>
+              <p className="text-[20px] text-bgGreen font-bold">{t('smallTrees')}</p>
               <div className="flex flex-row items-center space-x-2 ">
-                <p className="text-[20px] text-[#0A4519]">50 Trees</p>
+                <p className="text-[20px] text-[#0A4519]">50 {t('trees')}</p>
                 <img
                 loading="lazy"
                 src="./assets/greenDot.svg"
@@ -34,7 +36,7 @@ const TreePackGroup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
               href="/co2-calculator"
-              className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
+              className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>
 
@@ -47,9 +49,9 @@ const TreePackGroup = () => {
               />
             </div>
             <div className="px-5 mt-4">
-              <p className="text-[20px] text-bgGreen font-bold">Medium Trees</p>
+              <p className="text-[20px] text-bgGreen font-bold">{t('mediumTrees')}</p>
               <div className="flex flex-row items-center space-x-2 ">
-                <p className="text-[20px] text-[#0A4519]">100 Trees</p>
+                <p className="text-[20px] text-[#0A4519]">100 {t('trees')}</p>
                 <img
                 loading="lazy"
                 src="./assets/greenDot.svg"
@@ -67,7 +69,7 @@ const TreePackGroup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
               href="/co2-calculator"
-              className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
+              className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>
 
@@ -81,9 +83,9 @@ const TreePackGroup = () => {
               />
             </div>
             <div className="px-5 mt-4">
-              <p className="text-[20px] text-bgGreen font-bold">Large Trees</p>
+              <p className="text-[20px] text-bgGreen font-bold">{t('largeTrees')}</p>
               <div className="flex flex-row items-center space-x-2 ">
-                <p className="text-[20px] text-[#0A4519]">150 Trees</p>
+                <p className="text-[20px] text-[#0A4519]">150 {t('trees')}</p>
                 <img
                 loading="lazy"
                 src="./assets/greenDot.svg"
@@ -101,7 +103,7 @@ const TreePackGroup = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
               href="/co2-calculator"
-              className=" text-linkGreen cursor-pointer">BREATHE NOW</motion.a>
+              className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>
 
