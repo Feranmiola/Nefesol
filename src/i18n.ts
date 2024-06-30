@@ -522,7 +522,17 @@ i18n
         "thankYou": "Thank You!",
         "certificateAndInvoice": "Your buying certificate and invoice have been sent to your email.",
         "treesTrackingCode": "Trees Tracking Code",
-        "trackProgress": "Track Progress"
+        "trackProgress": "Track Progress",
+
+        "returnToDetails": "Return to Details",
+        "treesPlanted": "You’re about to plant",
+        "basedOnCO2Calculation": "Based on your CO2 use calculation",
+        "enterVerificationCode": "Enter verification code sent to",
+        "notYourEmail": "Not your email?",
+        "changeEmail": "change email",
+        "verifyYourEmail": "Verify your email",
+        "didntReceiveCode": "Didn’t receive code?",
+        "resend": "Resend",
 
         
     
@@ -1009,6 +1019,16 @@ i18n
         "certificateAndInvoice": "Satın alma belgeniz ve faturanız e-postanıza gönderildi.",
         "treesTrackingCode": "Ağaçlar Takip Kodu",
         "trackProgress": "İlerlemeyi Takip Et",
+
+        "returnToDetails": "Detaylara Geri Dön",
+        "treesPlanted": "Dikmeye hazırsınız",
+        "basedOnCO2Calculation": "CO2 kullanım hesabınıza göre",
+        "enterVerificationCode": "Gönderilen doğrulama kodunu girin",
+        "notYourEmail": "Sizin e-postanız değil mi?",
+        "changeEmail": "e-posta değiştir",
+        "verifyYourEmail": "E-postanızı doğrulayın",
+        "didntReceiveCode": "Kod almadınız mı?",
+        "resend": "Tekrar gönder",
 
       }
     }
