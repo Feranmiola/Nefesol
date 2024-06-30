@@ -1,6 +1,7 @@
 import { motion, } from "framer-motion"
 import { useState } from "react"
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 interface SlideData {
     quote: string;
     stars: string;
@@ -14,6 +15,8 @@ interface SlideData {
 
 const Testimonials = () => {
 
+    const {t} = useTranslation();
+
     const [currentIndex, setCurrentIndex] = useState(1);
 
     const handleTestimonialChange = (newValue: number) =>{
@@ -22,10 +25,10 @@ const Testimonials = () => {
     const slidesData: SlideData[] = new Array(5).fill({
         quote: "./assets/testimonialQuote.svg",
         stars: "./assets/ratingStars.svg",
-        text: "The products and services of Erma Group A.§ are really impressive. We are very pleased with the solutions we use to increase energy efficiency in our business. I would recommend Erma Group A.$ to anyone who wants to be environmentally friendly and reduce.",
+        text: t('ermaGroupImpressive'),
         avatar: "./assets/userImage.svg",
         name: "Vanessa N",
-        title: "Environmental Specialist"
+        title: t('environmentalSpecialist')
     });
 
     useEffect(() => {
@@ -39,7 +42,7 @@ const Testimonials = () => {
   return (
     <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 md:space-x-5 items-center justify-center py-20">
         <div className="testimonialBG flex flex-col justify-between rounded-[24px] w-[453px] h-[584px] max-sm:w-[353px] max-sm:h-[484px] py-8 px-10">
-            <p className="text-white text-[48px] max-sm:text-[40px] text-left w-[292px] leading-tight">What people have been saying about us.</p>
+            <p className="text-white text-[48px] max-sm:text-[40px] text-left w-[292px] leading-tight">{t('peopleSaying')}</p>
             <img
                 src="./assets/whiteTree.svg"
                 alt="white tree"
