@@ -76,7 +76,7 @@ i18n
         greenTechnologies: "Development of green Technologies",
         communityParticipation: "Community Participation",
 
-        
+
         carbonConsultancy: "Carbon Consultancy",
         providingEqualization: "While we are providing carbon equalization services to our individual and corporate customers",
         certification: "Certification",
@@ -94,11 +94,14 @@ i18n
         environmentalSpecialist: "Environmental Specialist",
         trustedBy: "We are trusted by",
         karbonBlockchain: "Karbon is harnessing the power of blockchain to address real-world challenges!",
+        
         aboutUsMax: "ABOUT US",
         environmentallyFriendlyFuture: "We are building an environmentally friendly future",
         ermaGroup: "Erma Group A.Ş is a software company founded in 2020 at Gaziantep University Technopark. Our Mission is to build an environmentally friendly future by offering solutions to the global warming problem with green technologies. The protection and sustainability of our environment is one of our company's core values. In 2015, our CEO's Kyoto Protocol; Inspired by the Paris Agreement and the Paris Agreement, his vision is the power of technology in the fight against global warming; is to use. This vision has become the focal point of our company and has led us to produce green technologies.",
         nefesolMission: "Our website, Nefesol.com, is a platform that shares this mission and brings together a community with high environmental awareness around the world. Our aim is to encourage people to conserve natural resources and to contribute to the stabilization of the ecosystem. Our motto is \"Every Tree\" One Breath\" and tells us the values that nature offers us. One breath of a tree is the oxygen that shapes our future. With this slogan, we emphasize the importance of respecting nature and taking responsibility for a sustainable future.",
+        
         everyTreeHope: "Each tree; a breath, every breath is a hope!",
+        
         contributeNefesol: "You too can contribute to environmental awareness and sustainability by joining  Nefesol.com. In our content, you can find informative articles about green technologies, news about environmentally friendly products and projects. At the same time, you can learn what you can do individually and switch to an eco-friendly lifestyle. Conservation of natural resources and combating climate change are the responsibility of all of us. As Nefesol.com, the power of technology for a sustainable future; We are committed to using We invite you to Nefesol.com and hope to work together for an environmentally friendly world. Take a step for a healthy and sustainable future.",
         ecosystemContribution: "Learn more about contribution to the ecosystem",
         carbonCycle: "Carbon Cycle",
