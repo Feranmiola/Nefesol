@@ -6,7 +6,7 @@ const TakeAction = () => {
   return (
     <div className="flex flex-col items-center max-sm:justify-center">
         
-        <p className="text-[#0A4519] text-[64px] max-sm:text-[24px] max-sm:text-center max-sm:font-medium md:w-[495px] md:leading-tight">Take Action for a green future</p>
+        <p className="text-[#0A4519] text-[64px] max-sm:text-[24px] max-sm:text-center max-sm:font-medium md:w-[495px] md:leading-tight">{t('takeActionGreenFuture')}</p>
 
         <div className="flex flex-col mt-10 space-y-8">
             <div className="flex flex-row space-x-4 ">

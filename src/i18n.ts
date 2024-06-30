@@ -422,7 +422,8 @@ i18n
         "reduction": "Reduction",
         "developmentGreenTechnologies": "Development of green Technologies",
          "eachTreeBreath": "Each tree; a breath,",
-        "everyBreathHope": "every breath is a hope!."
+        "everyBreathHope": "every breath is a hope!.",
+        "takeActionGreenFuture": "Take Action for a green future",
 
     
       }
@@ -808,7 +809,8 @@ i18n
         "reduction": "Azaltma",
         "developmentGreenTechnologies": "Yeşil Teknolojilerin Geliştirilmesi",
         "eachTreeBreath": "Her ağaç; bir nefes,",
-        "everyBreathHope": "her nefes bir umut!"
+        "everyBreathHope": "her nefes bir umut!",
+         "takeActionGreenFuture": "Yeşil bir gelecek için harekete geçin",
 
       }
     }
