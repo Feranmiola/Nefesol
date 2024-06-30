@@ -83,7 +83,7 @@ const BretheNow = () => {
                                 src="./assets/co2.svg"
                                 className="w-[15px] h-[15px]"
                                 />
-                                <p className="text-[16px] text-bgGreen font-medium">Mobility</p>
+                                <p className="text-[16px] text-bgGreen font-medium">Small</p>
                             </div>
                         </motion.div>
 

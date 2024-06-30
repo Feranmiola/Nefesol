@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import {  useLocation } from "react-router-dom";
+import TurkeyLogo from "./TurkeyLogo";
+import EnglishLogo from "./EnglishLogo";
+import { useTranslation } from "react-i18next";
 
 const TopBar = () => {
   const location = useLocation();
@@ -98,6 +101,40 @@ const TopBar = () => {
 
   const isActiveLink = (path:any) => location.pathname === path;
 
+  const {t} = useTranslation();
+  const {i18n} = useTranslation();
+  const [selectedLanguage, setSelectedLanguage] = useState(1);
+
+  useEffect(() => {
+    console.log(i18n.language)
+
+    // const storedLang = localStorage.getItem('lang');
+    // if (storedLang) {
+    //   i18n.changeLanguage(storedLang);
+    // }
+    
+      if(i18n.language === 'en'){
+        setSelectedLanguage(1);
+      }else{
+        setSelectedLanguage(2);
+      }
+    if(i18n.language != 'en' && i18n.language != 'tr'){
+      setSelectedLanguage(1);
+    }
+  }, []);
+
+  const handleLanguageChange = () => {
+    if(selectedLanguage === 1){
+      
+      i18n.changeLanguage('tr');
+      setSelectedLanguage(2);
+    }else{
+      i18n.changeLanguage('en');
+      setSelectedLanguage(1);
+    }
+
+  }
+
   return (
     <div>
       <div className="navbar max-lg:hidden w-screen" onMouseLeave={() => setShowDropdown(false)}>
@@ -117,7 +154,7 @@ const TopBar = () => {
                 onMouseEnter={() => setShowDropdown(true)}
                 className="flex flex-row cursor-pointer items-center space-x-1"
               >
-                <p className={`text-[14px] ${!color ? 'text-white' : 'text-[#1F2721]'} hover:text-linkGreen`}>Breath Pack</p>
+                <p className={`text-[14px] ${!color ? 'text-white' : 'text-[#1F2721]'} hover:text-linkGreen`}>{t('breathPack')}</p>
                 {color ? (
                   <img src="./assets/down.svg" />
                 ) : (
@@ -133,7 +170,7 @@ const TopBar = () => {
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/about-us') ? 'text-[#25B567]' : ''}`}
             >
-              About Us
+              {t('aboutUs')}
             </motion.a>
             
             <motion.a
@@ -143,7 +180,7 @@ const TopBar = () => {
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/blog') ? 'text-[#25B567]' : ''}`}
             >
-              Blog
+              {t('blog')}
             </motion.a>
             
             <motion.a
@@ -153,16 +190,35 @@ const TopBar = () => {
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/ourservices') ? 'text-[#25B567]' : ''}`}
             >
-              Our Services
+              {t('ourServices')}
             </motion.a>
             
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               onMouseEnter={() => setShowDropdown(false)}
-              className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
+              onClick={handleLanguageChange}
+              className={`text-[14px] flex flex-row items-center ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
             >
-              EN
+              {selectedLanguage === 1 && (
+                <>
+                  <div className="pr-1">
+                    <EnglishLogo/>
+                  </div>
+                  EN
+                </>
+              )}
+
+              {selectedLanguage === 2 && (
+                <>
+                  <div className="pr-1">
+                    <TurkeyLogo/>
+                  </div>
+
+                  TR
+                </>
+              )}
+
             </motion.div>
           </div>
           <motion.a
@@ -170,7 +226,7 @@ const TopBar = () => {
             href="/co2-calculator"
             className={`w-[163px] h-[48px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer ${!color ? 'bg-transparent ring-[1px] ring-white hover:ring-transparent' : 'text-[#1F2721]'} hover:text-linkGreen `}
           >
-            <p className="text-white text-[16px] font-medium">Breathe Now</p>
+            <p className="text-white text-[16px] font-medium">{t('breatheNow')}</p>
             <img src="./assets/ButtonArrow.svg" alt="arrow" />
           </motion.a>
         </div>
@@ -224,7 +280,7 @@ const TopBar = () => {
                     <motion.div
                       className={`flex items-center text-[16px] text-bgGreen cursor-pointer pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverC02 || isActiveLink('/co2-calculator') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
                     >
-                      CO2 Calculation
+                      {t('co2Calculation')}
                     </motion.div>
                   </a>
 
@@ -253,7 +309,7 @@ const TopBar = () => {
                       custom={2}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 cursor-pointer transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverFootprint || isActiveLink('/carbon-footprint') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
                     >
-                      Carbon Footprint
+                      {t('carbonFootprint')}
                     </motion.div>
                   </a>
 
@@ -281,7 +337,7 @@ const TopBar = () => {
                       custom={3}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTreePacks || isActiveLink('/treePacks') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
                     >
-                      Tree Packs
+                      {t('treePacks')}
                     </motion.div>
                   </a>
 
@@ -309,7 +365,7 @@ const TopBar = () => {
                       custom={4}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTracking || isActiveLink('/plant-trees-tracking') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
                     >
-                      Trees Tracking and Verification
+                      {t('treesTrackingVerification')}
                     </motion.div>
                   </a>
                 </div>
@@ -344,11 +400,11 @@ const TopBar = () => {
                     className="flex flex-col h-full justify-between"
                   >
                     <div className="flex flex-col space-y-6 mt-12">
-                      <p className="text-bgGreen text-[20px] font-bold">CO2 Calculation</p>
-                      <p className="text-bgGreen text-[16px] w-[237px]">Calculate the amount of carbon CO2 used daily.</p>
+                      <p className="text-bgGreen text-[20px] font-bold">{t('co2Calculation')}</p>
+                      <p className="text-bgGreen text-[16px] w-[237px]">{t('calculateCo2')}</p>
                     </div>
                     <div className="flex">
-                      <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
+                      <p className="text-[8px] text-bgGreen w-[237px]">{t('treesCalculationNote')}</p>
                     </div>
                   </motion.div>
 
@@ -387,11 +443,11 @@ const TopBar = () => {
                     className="flex flex-col h-full justify-between"
                   >
                     <div className="flex flex-col space-y-6 mt-12">
-                      <p className="text-bgGreen text-[20px] font-bold">Carbon Footprint</p>
-                      <p className="text-bgGreen text-[16px] w-[237px]">Calculate the amount of carbon CO2 used daily.</p>
+                      <p className="text-bgGreen text-[20px] font-bold">{t('carbonFootprint')}</p>
+                      <p className="text-bgGreen text-[16px] w-[237px]">{t('calculateCo2')}</p>
                     </div>
                     <div className="flex">
-                      <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
+                      <p className="text-[8px] text-bgGreen w-[237px]">{t('treesCalculationNote')}</p>
                     </div>
                   </motion.div>
 
@@ -430,11 +486,11 @@ const TopBar = () => {
                     className="flex flex-col h-full justify-between"
                   >
                     <div className="flex flex-col space-y-6 mt-12">
-                      <p className="text-bgGreen text-[20px] font-bold">Tree Packs</p>
-                      <p className="text-bgGreen text-[16px] w-[237px]">Calculate the amount of carbon CO2 used daily.</p>
+                      <p className="text-bgGreen text-[20px] font-bold">{t('treePacks')}</p>
+                      <p className="text-bgGreen text-[16px] w-[237px]">{t('calculateCo2')}</p>
                     </div>
                     <div className="flex">
-                      <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
+                      <p className="text-[8px] text-bgGreen w-[237px]">{t('treesCalculationNote')}</p>
                     </div>
                   </motion.div>
 
@@ -473,11 +529,11 @@ const TopBar = () => {
                     className="flex flex-col h-full justify-between"
                   >
                     <div className="flex flex-col space-y-6 mt-12">
-                      <p className="text-bgGreen text-[20px] font-bold w-[161px]">Trees Tracking & Verification</p>
-                      <p className="text-bgGreen text-[16px] w-[237px]">Calculate the amount of carbon CO2 used daily.</p>
+                      <p className="text-bgGreen text-[20px] font-bold w-[161px]">{t('treesTrackingVerification')}</p>
+                      <p className="text-bgGreen text-[16px] w-[237px]">{t('calculateCo2')}</p>
                     </div>
                     <div className="flex">
-                      <p className="text-[8px] text-bgGreen w-[237px]">The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree.</p>
+                      <p className="text-[8px] text-bgGreen w-[237px]">{t('treesCalculationNote')}</p>
                     </div>
                   </motion.div>
 
@@ -538,11 +594,11 @@ const TopBar = () => {
                 </div>
 
                 <div className="py-5">
-                  <p className="text-white text-[28px] font-medium pt-5">Menu</p>
+                  <p className="text-white text-[28px] font-medium pt-5">{t('menu')}</p>
                 </div>
               </div>
               <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
-                <p className=" text-white text-[16px]">Breath Pack</p>
+                <p className=" text-white text-[16px]">{t('breathPack')}</p>
                 <img
                   src="./assets/downWhite.svg"
                   className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
@@ -557,33 +613,33 @@ const TopBar = () => {
               className={!showSubDropdown ? 'hidden' : ''}>
                 <div className={"ml-5 flex flex-col space-y-5"}>
                   <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">C02 Calculation</p>
+                    <p className=" text-white text-[14px]">{t('co2Calculation')}</p>
                   </a>
 
                   <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">Carbon footprint</p>
+                    <p className=" text-white text-[14px]">{t('carbonFootprint')}</p>
                   </a>
 
                   <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">Tree Packs</p>
+                    <p className=" text-white text-[14px]">{t('treePacks')}</p>
                   </a>
 
                   <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">Tree Tracking and Verification</p>
+                    <p className=" text-white text-[14px]">{t('treesTrackingVerification')}</p>
                   </a>
                 </div>
               </motion.div>
 
               <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">About Us</p>
+                <p className=" text-white text-[16px]">{t('aboutUs')}</p>
               </a>
 
               <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">Blog</p>
+                <p className=" text-white text-[16px]">{t('blog')}</p>
               </a>
 
               <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">Our Services</p>
+                <p className=" text-white text-[16px]">{t('ourServices')}</p>
               </a>
 
               <div className="flex flex-row py-10 space-x-7 items-center justify-center">

@@ -153,7 +153,7 @@ const House = () => {
         <div className="flex flex-row max-sm:flex-col max-sm:space-y-5  items-center justify-between md:px-5">
 
             <div className="flex  flex-col items-start space-y-2  w-full ">
-                <p className="text-[16px] text-bgGreen">How big is your house?</p>
+                <p className="text-[16px] text-bgGreen">How much electricity do you use?</p>
                 <div className="flex flex-row items-center justify-start max-sm:w-[280px] w-[370px] space-x-4">
                     <div className="w-[370px] max-sm:w-[280px] h-[48px] rounded-[8px] ring-[1px] ring-bgGreen bg-white">
                         <div className="flex items-center h-full justify-between">
