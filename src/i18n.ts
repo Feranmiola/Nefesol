@@ -71,6 +71,7 @@ i18n
         sustainable: "Sustainable",
         production: "Production",
 
+        //fix
         carbonFootprintReduction: "Carbon Footprint Reduction",
         contributionCircularEconomy: "Contribution to the Circular Economy",
         greenTechnologies: "Development of green Technologies",
@@ -94,12 +95,12 @@ i18n
         environmentalSpecialist: "Environmental Specialist",
         trustedBy: "We are trusted by",
         karbonBlockchain: "Karbon is harnessing the power of blockchain to address real-world challenges!",
-        
         aboutUsMax: "ABOUT US",
         environmentallyFriendlyFuture: "We are building an environmentally friendly future",
         ermaGroup: "Erma Group A.Ş is a software company founded in 2020 at Gaziantep University Technopark. Our Mission is to build an environmentally friendly future by offering solutions to the global warming problem with green technologies. The protection and sustainability of our environment is one of our company's core values. In 2015, our CEO's Kyoto Protocol; Inspired by the Paris Agreement and the Paris Agreement, his vision is the power of technology in the fight against global warming; is to use. This vision has become the focal point of our company and has led us to produce green technologies.",
         nefesolMission: "Our website, Nefesol.com, is a platform that shares this mission and brings together a community with high environmental awareness around the world. Our aim is to encourage people to conserve natural resources and to contribute to the stabilization of the ecosystem. Our motto is \"Every Tree\" One Breath\" and tells us the values that nature offers us. One breath of a tree is the oxygen that shapes our future. With this slogan, we emphasize the importance of respecting nature and taking responsibility for a sustainable future.",
         
+        //fix
         everyTreeHope: "Each tree; a breath, every breath is a hope!",
         
         contributeNefesol: "You too can contribute to environmental awareness and sustainability by joining  Nefesol.com. In our content, you can find informative articles about green technologies, news about environmentally friendly products and projects. At the same time, you can learn what you can do individually and switch to an eco-friendly lifestyle. Conservation of natural resources and combating climate change are the responsibility of all of us. As Nefesol.com, the power of technology for a sustainable future; We are committed to using We invite you to Nefesol.com and hope to work together for an environmentally friendly world. Take a step for a healthy and sustainable future.",
@@ -111,6 +112,7 @@ i18n
         carbonCreditsMarkets: "Karbon Kredileri ve Karbon Piyasaları Nedir?",
         carbonCreditsGuide: "Karbon Kredileri ve Karbon Piyasaları: Yatırımcılar İçin Rehber Karbon Kredileri ve Önemi Dünya genelinde iklim değişikliğiyle m&",
         readMore: "Read More",
+
         nefesolCarbonConsulting: "As Nefesol , while providing carbon equalization services to our individual and corporate customers, we also take a solution-oriented approach with our Carbon Consulting service. Our carbon consultants guide our clients in identifying, reducing and compensating for their carbon footprints. In this way, you can effectively manage your carbon emissions and contribute to reducing your environmental impact.",
         carbonAssessment: "Carbon Footprint Assessment: In the first step, our expert consultants conduct a detailed analysis to determine the carbon footprint based on our customers' activities. By considering energy consumption, transportation, waste management and other factors, the main sources and amount of carbon emissions are determined.",
         carbonReduction: "Carbon Reduction Strategies: It is important to identify effective strategies to reduce the carbon footprint. Our consultants provide our clients with customized solutions in areas such as energy efficiency, renewable energy use, waste reduction and recycling. These strategies can be applied both to reduce environmental impact and to increase operational efficiency.",
@@ -119,36 +121,56 @@ i18n
         nefesolRoadmap: "With our carbon consultancy service, we offer our customers a comprehensive roadmap to fulfill their environmental responsibilities. As Nefesol, we are happy to help you reduce carbon emissions and contribute to a sustainable future by working together.",
         nefesolCertification: "As Nefesol , we offer our customers the opportunity to reduce their environmental impact and compensate for carbon emissions with our carbon equalization services. The verifiability and reliability of your carbon equalization efforts are important when managing your carbon footprint. Therefore, with our certification service, we certify your carbon equalization activities in accordance with international standards.",
         nefesolCertBenefits: "What You Get with the Nefesol Certification Service?",
+        
+
+        // Fix
         accuracyReliability: "Accuracy and Reliability: Certification is an important way to verify and prove the reliability of your carbon equalization activities. Your customers know that you are effectively managing your carbon emissions through certification, and that the carbon offset projects you carry out are verified. This is a strong statement that your business fulfills its environmental responsibilities and is committed to a sustainable future. transmits a message.",
         complianceStandards: "Compliance with International Standards: Nefesol Certification Service is carried out in accordance with internationally accepted carbon standards. This allows you to align your operations with best practices for carbon monitoring, reporting and verification.",
         imageAdvantage: "Image and Competitive Advantage: Certification allows you to gain image and competitive advantage as well as proving your business commitments to environmental sustainability. Verifying your carbon footprint and supporting your equalization efforts with certificates can be an important factor in choosing you by your customers and stakeholders. You can also gain a competitive advantage by emphasizing your leadership role in sustainability in the market.",
         traceabilityTransparency: "Traceability and Transparency: Certification ensures that your carbon equalization activities are traceable and transparent. It clearly documents the details of your projects and compensation efforts, the methods for reducing carbon emissions and contributing to nature. This allows you to gain the trust of your stakeholders, customers and society.",
+        
         nefesolCertify: "Nefesol Certification Service guides you to validate your carbon equalization efforts and take an important step in your sustainability journey. Our experts manage the certification process in accordance with international carbon standards and cooperate with you. It determines the most suitable certification path for you and ensures its successful completion.",
         contactUs: "Contact us to prove your environmental commitments and step towards a sustainable future by certifying your carbon equalization activities.",
+        
+        //fix
         websiteSeoOptimization: "Website and SEO Optimization: To strengthen your business's digital presence, you need an impressive website and SEO (Search Engine Optimization) strategy. As Nefesol, we offer a customized web design to your business, while we do SEO optimization to get better rankings in search engines.",
         socialMedia: "Social Media Management: Social media has the power to announce your brand to large audiences and provide interaction; is a tool. As Nefesol, we manage your social media platforms and support you in content creation, publishing, community management and advertising campaigns.",
         contentMarketing: "Content Marketing: Effective content is important to attract and impress your target audience as well as demonstrating your brand's value and expertise. As Nefesol, we create original and interesting content, and offer content in various formats such as blog posts, articles, infographics and videos.",
         emailMarketing: "Email Marketing: Email marketing is an effective way to reach potential customers and current customers directly. As Nefesol, we create impressive e-mail campaigns, send personalized e-mails and apply automation processes to increase customer loyalty.",
+        
         digitalMarketing: "Digital marketing strategies support your business to grow and achieve your goals. As Nefesol, we offer custom digital marketing solutions for your business together with our expert team.",
         environmentalImpacts: "Today, it is of great importance to manage the environmental impacts of businesses and to contribute to a sustainable future. Carbon footprint is a metric used to measure and evaluate greenhouse gas emissions from the activities of businesses. As Nefesol, we help businesses increase their environmental efficiency with our carbon footprint optimization service and help businesses maximize their environmental efficiency with our carbon footprint optimization service.",
+        
+        //fix
         carbonFootprintAssessment: "Carbon Footprint Assessment: In the first step, we analyze the activities of your business as a team of experts and make a detailed assessment to determine the carbon footprint and measure the current environmental impacts of your business. . This includes energy consumption, transportation, waste management and other factors.",
         dataCollection: "Data Collection and Analysis: We collect and analyze the data necessary to calculate the carbon footprint. This includes factors such as your business's energy consumption, transportation activities, production processes and supply chain. Using the data we have obtained, we identify the main sources that affect the carbon emissions of your business.",
         optimizationStrategies: "Optimization Strategies: As a result of analyzing the data and evaluating the current situation, we determine customized optimization strategies to reduce the carbon footprint. These strategies include topics such as increasing energy efficiency, using renewable energy, reducing waste, and green supply chain management. In addition, improvements in business processes and technological innovations are also considered.",
         implementationMonitoring: "Implementation and Monitoring: We work in cooperation with your business during the implementation of optimization strategies. We guide you and follow the process for the successful implementation of the strategies. We also provide regular reports to monitor progress and evaluate results.",
+        
+        
         carbonFootprintOptimization: "What Can You Achieve with Carbon Footprint Optimization?",
+        
+        //fix
         achieveCarbonFootprint: "You increase your environmental efficiency by reducing your carbon emissions. You save cost with energy efficiency and sustainable applications. You support your business to achieve its sustainability goals. You gain the trust and loyalty of your customers and stakeholders. You strengthen your reputation by complying with environmental regulations. As Nefesol, we are here to help you maximize your environmental efficiency by guiding your business through the carbon footprint optimization process.",
+        
         sustainabilityObjective: "Today, sustainability is among the primary objectives of businesses. Green technologies help businesses reduce their environmental impact by offering solutions that are environmentally friendly and energy efficient. As Nefesol, we provide consultancy and support services to businesses to promote the spread and use of green technologies.",
         greenTechIncentivesTitle: "Green Technology Incentives and Benefits",
+        
+        //fix
         financialAdvantages: "Financial Advantages: Green technology incentives provide various financial advantages to businesses. These include incentives such as grant and incentive programs, tax breaks, low-interest loans, and savings on energy costs. These incentives encourage the adoption of green technologies while helping businesses reduce their costs.",
         competitiveAdvantage: "Competitive Advantage: Green technologies enable businesses to gain competitive advantage. Commitments to sustainability and the use of green technologies are positively perceived by customers and stakeholders. This increases brand reputation and enables you to be the business of choice for customers.",
         reducingEnvironmental: "Reducing Environmental Impacts: Green technologies help businesses reduce their environmental impact by increasing energy efficiency and using environmentally friendly resources. These technologies provide innovation in areas such as utilizing renewable energy sources, waste management, water conservation and recycling. Thus, it contributes to the protection of natural resources and reduction of carbon emissions.",
         innovationOpportunities: "Innovation and R&D Opportunities: Green technology incentives provide support to businesses for innovation and R&D studies. These incentives facilitate the allocation of resources to develop innovative solutions and achieve sustainability goals. Businesses can play a leadership role in their sectors by realizing projects related to green technologies. They can be overtaken.",
+
         raiseAwareness: "As Nefesol, we are here to raise awareness of green technology incentives and guide businesses in this regard. Our expert team determines the appropriate incentive programs for the needs of your business and assists you in the application process. We also provide strategic advice and solutions on the adoption of green technologies. You too can benefit from green technology incentives to reduce the environmental impact of your business and contribute to sustainability.",
         technicalSupportRole: "Technology plays a critical role in increasing the efficiency of businesses and gaining competitive advantage. However, there is always the possibility of encountering technical issues or updates. As Nefesol, we provide technical support services to our customers, ensuring smooth business processes and an uninterrupted working environment.",
+        
+        //fix
         troubleshootingDebugging: "Troubleshooting and Debugging: When you encounter technical problems, our expert technical support team diagnoses the problems and provides solutions quickly. The team guides you through debugging processes and finds the most suitable solution. strives to provide.",
         updateUpgrade: "Update and Upgrade: The world of technology is constantly changing and may require updates. Our technical support service helps you keep your business's existing systems and software up to date. It also provides support during upgrade processes and guides you through the implementation of new technologies.",
         remoteOnsite: "Remote and On-Site Support: Our technical support services offer remote access tools and on-site intervention options. With remote support, you can quickly solve your technical problems and prevent your business processes from being interrupted. Additionally, with our on-site support service, our expert technical team comes to your business's location and solves problems on-site.",
         consultancyTraining: "Consultancy and Training: Our technical support service advises you in determining your business' technology-oriented strategies. We also provide training for your staff on technology use and troubleshooting. This allows you to increase the technical capabilities of your business.",
+        
         nefesolTechnicalSupport: "As Nefesol, we are here to offer solutions that meet the technical needs of your business and ensure smooth business processes. Our technical support team is always ready to assist you.",
         cancellationPolicy: "İptal İade Politikası",
         consumerRights: "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI",
