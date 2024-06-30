@@ -2,6 +2,7 @@ import { Separator } from "@/components/ui/separator"
 import { Slider } from "@/components/ui/slider"
 import { motion } from "framer-motion"
 import { useState } from "react"
+import { useTranslation } from "react-i18next"
 
 
 
@@ -28,20 +29,22 @@ const BretheNow = () => {
         setSliderValue(currentValue)
     }
 
+    const {t} = useTranslation();
+
     
 
   return (
     <div className="flex flex-col max-sm:mt-10 max-sm:items-center max-sm:justify-center">
         <div className="bg-white rounded-[24px] w-[455px] max-sm:w-[355px] shadow-md ">
             <div className="flex items-center flex-col space-y-9 justify-center bg-[#F8F9F8] p-5">
-                <p className="text-[24px] text-center text-bgGreen font-bold w-[360px]">How many trees do you want to plant in the forest?</p>
+                <p className="text-[24px] text-center text-bgGreen font-bold w-[360px]">{t('howManyTrees')}</p>
                 <div className="flex flex-row space-x-3">
                     <motion.div
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.9 }} 
                     onClick={() => {updateSliderValue([0]); handleTabs(1); handleCo2(0); handleExamples(0)}}
                     className = {tabIndex === 1 ? 'bg-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3' : 'bg-transparent ring-[1px] ring-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3'}>
-                        <p className={tabIndex === 1 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>Slider</p>
+                        <p className={tabIndex === 1 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>{t('slider')}</p>
                     </motion.div>
 
                     <motion.div
@@ -49,7 +52,7 @@ const BretheNow = () => {
                     whileTap={{ scale: 0.9 }} 
                     onClick={() => {updateSliderValue([0]); handleTabs(2); handleCo2(0);  handleExamples(0)}}
                      className = {tabIndex === 2 ? 'bg-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3' : 'bg-transparent ring-[1px] ring-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3'}>
-                        <p className={tabIndex === 2 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>CO2 Quantity</p>
+                        <p className={tabIndex === 2 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>{t('co2Quantity')}</p>
                     </motion.div>
 
                     <motion.div
@@ -57,7 +60,7 @@ const BretheNow = () => {
                     whileTap={{ scale: 0.9 }} 
                     onClick={() => {updateSliderValue([0]); handleTabs(3); handleCo2(0); handleExamples(0)}}
                      className = {tabIndex === 3 ? 'bg-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3' : 'bg-transparent ring-[1px] ring-bgGreen rounded-full flex items-center justify-center cursor-pointer py-1 md:px-5 max-sm:px-3'}>
-                        <p className={tabIndex === 3 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>Examples</p>
+                        <p className={tabIndex === 3 ? 'text-white max-sm:text-[10px]' : 'text-bgGreen max-sm:text-[10px]'}>{t('examples')}</p>
                     </motion.div>
                 </div>
                 {tabIndex === 1 &&(
@@ -83,7 +86,7 @@ const BretheNow = () => {
                                 src="./assets/co2.svg"
                                 className="w-[15px] h-[15px]"
                                 />
-                                <p className="text-[16px] text-bgGreen font-medium">Small</p>
+                                <p className="text-[16px] text-bgGreen font-medium">{t('small')}</p>
                             </div>
                         </motion.div>
 
@@ -98,7 +101,7 @@ const BretheNow = () => {
                                 src="./assets/co2.svg"
                                 className="w-[21px] h-[21px]"
                                 />
-                                <p className="text-[16px] text-bgGreen font-medium">Medium</p>
+                                <p className="text-[16px] text-bgGreen font-medium">{t('medium')}</p>
                             </div>
                         </motion.div>
 
@@ -113,7 +116,7 @@ const BretheNow = () => {
                                 src="./assets/co2.svg"
                                 className="w-[31px] h-[31px]"
                                 />
-                                <p className="text-[16px] text-bgGreen font-medium">Large</p>
+                                <p className="text-[16px] text-bgGreen font-medium">{t('large')}</p>
                             </div>
                         </motion.div>
                         
@@ -132,7 +135,7 @@ const BretheNow = () => {
                                 loading="lazy"
                                 src="./assets/mobilityLogo.svg"
                                 />
-                                <p className="text-[14px] text-bgGreen font-medium">Mobility</p>
+                                <p className="text-[14px] text-bgGreen font-medium">{t('mobility')}</p>
                             </div>
                         </motion.div>
 
@@ -147,7 +150,7 @@ const BretheNow = () => {
                                 src="./assets/nutritionLogo.svg"
                                 
                                 />
-                                <p className="text-[14px] text-bgGreen font-medium">Nutrition</p>
+                                <p className="text-[14px] text-bgGreen font-medium">{t('nutrition')}</p>
                             </div>
                         </motion.div>
 
@@ -161,7 +164,7 @@ const BretheNow = () => {
                                 loading="lazy"
                                 src="./assets/housingLogo.svg"
                                 />
-                                <p className="text-[14px] text-bgGreen font-medium">Housing and Power</p>
+                                <p className="text-[14px] text-bgGreen font-medium">{t('housingPower')}</p>
                             </div>
                         </motion.div>      
                     </div>
@@ -175,13 +178,13 @@ const BretheNow = () => {
                 src="./assets/treeGroup.svg"
                 />
                 <div className="flex flex-col ">
-                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">{sliderValue}</span>Trees</p>
+                    <p className="text-bgGreen text-[32px]"><span className="text-[48px]">{sliderValue}</span>{t('trees')}</p>
                     {(sliderValue[0] > 20 && sliderValue[0] < 70)  && (
-                        <p className=" text-bgGreen text-[12px]">You're doing great!</p>
+                        <p className=" text-bgGreen text-[12px]">{t('doingGreat')}</p>
                     )}
                     
                     {sliderValue[0] > 70 && (
-                        <p className=" text-linkGreen text-[16px]">You're Awesome</p>
+                        <p className=" text-linkGreen text-[16px]">{t('youreAwesome')}</p>
                     )}
                 </div>
 
@@ -213,19 +216,19 @@ const BretheNow = () => {
             <div className="flex items-center justify-between px-8 pb-10 flex-row max-sm:flex-col max-sm:space-y-3">
                 <div className="flex flex-col">
                     <p className="text-bgGreen text-[32px]">$220.29</p>
-                    <p className="text-[12px] text-bgGreen">Unit Price 1.20 $/m2</p>
+                    <p className="text-[12px] text-bgGreen">{t('unitPrice')} 1.20 $/m2</p>
                 </div>
                 <motion.a
                 whileTap={{ scale: 0.9 }} 
                 href="/plant-trees-payment"
                 className="w-[212px] h-[56px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex items-center justify-center rounded-[56px] cursor-pointer"
                 >
-                    <p className="text-white text-[16px] font-medium">Breathe Now</p>
+                    <p className="text-white text-[16px] font-medium">{t('breatheNow')}</p>
                 </motion.a>
             </div>
         </div>
         <div>
-            <p className="text-[10px] text-bgGreen md:w-[437px] max-sm:w-[300px]  pt-5">The figures are average values based on the binding potential of the trees. According to the latest scientific findings, the average lifespan of trees is between 30 and 50 years and can bind up to 150 kg of CO2 per year. Calculations are based on average data and may vary according to tree type and age.</p>
+            <p className="text-[10px] text-bgGreen md:w-[437px] max-sm:w-[300px]  pt-5">{t('averageValues')}</p>
         </div>
         
     </div>
