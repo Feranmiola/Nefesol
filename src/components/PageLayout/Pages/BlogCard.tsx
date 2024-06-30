@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"// BlogCard.tsx
+import { useTranslation } from "react-i18next";
 interface BlogCardProps {
     imageUrl: string;
     title: string;
@@ -12,6 +13,8 @@ interface BlogCardProps {
     description,
     readMoreUrl,
   }) => {
+
+    const {t} = useTranslation();
     return (
       <div className="flex flex-col  w-[350px] rounded-[16px] border-[1px] border-[#9BBBAB]">
         <div>
@@ -31,7 +34,7 @@ interface BlogCardProps {
               href={readMoreUrl}
               className="text-linkGreen text-bold cursor-pointer"
             >
-              Read More
+              {t('readMore')}
             </motion.a>
           </div>
         </div>
