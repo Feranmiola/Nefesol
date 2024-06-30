@@ -200,6 +200,7 @@ const TopBar = () => {
               onClick={handleLanguageChange}
               className={`text-[14px] flex flex-row items-center ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
             >
+              
               {selectedLanguage === 1 && (
                 <>
                   <div className="pr-1">
@@ -641,6 +642,35 @@ const TopBar = () => {
               <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className=" text-white text-[16px]">{t('ourServices')}</p>
               </a>
+
+              <motion.div
+              
+              whileTap={{ scale: 0.9 }}
+              onMouseEnter={() => setShowDropdown(false)}
+              onClick={handleLanguageChange}
+              className={`text-[16px] flex flex-row items-center w-max p-2  border-[1px] bg-white bg-opacity-5 rounded-lg ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
+            >
+              
+              {selectedLanguage === 1 && (
+                <>
+                  <div className="pr-1">
+                    <EnglishLogo/>
+                  </div>
+                  EN
+                </>
+              )}
+
+              {selectedLanguage === 2 && (
+                <>
+                  <div className="pr-1">
+                    <TurkeyLogo/>
+                  </div>
+
+                  TR
+                </>
+              )}
+
+            </motion.div>
 
               <div className="flex flex-row py-10 space-x-7 items-center justify-center">
                 <motion.a 
