@@ -1,21 +1,24 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 
 const GreeningPolicy = () => {
+    const {t} = useTranslation();
+
   return (
     <div className="bg-bgGreen py-28 flex flex-col space-y-20 items-center justify-center">
         <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 items-center justify-center md:space-x-10">
             <div className="flex flex-col max-sm:items-center max-sm:justify-center space-y-4">
-                <p className="text-white text-[40px] max-sm:text-[30px]">Our Greening Policy</p>
-                <p className="text-white text-[16px] md:w-[386px] max-sm:w-[300px] max-sm:text-center">Our aim is to encourage people to conserve natural resources and to contribute to the stabilization of the ecosystem.</p>
+                <p className="text-white text-[40px] max-sm:text-[30px]">{t('greeningPolicy')}</p>
+                <p className="text-white text-[16px] md:w-[386px] max-sm:w-[300px] max-sm:text-center">{t('encourageConservation')}</p>
                 <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.9 }} 
-                 className=" text-linkGreen cursor-pointer w-[87px] text-[16px]">Learn More</motion.a>
+                 className=" text-linkGreen cursor-pointer w-[87px] text-[16px]">{t('learnMore')}</motion.a>
             </div>
             <div className="w-[615px] h-[245px] max-sm:w-[315px] max-sm:h-[145px] rounded-[14.03px] greeningBG flex flex-row justify-between md:px-8 max-sm:px-2 ">
-                <p className="text-[28px] max-sm:text-[16px] max-sm:w-[200px] text-white md:w-[294px] md:mt-[108px] max-sm:mt-[3rem] leading-tight">We are building an environmentally friendly future</p>
+                <p className="text-[28px] max-sm:text-[16px] max-sm:w-[200px] text-white md:w-[294px] md:mt-[108px] max-sm:mt-[3rem] leading-tight">{t('buildingFuture')}</p>
                 <img
                 loading="lazy"
                 src="./assets/whiteTree.svg"
@@ -30,8 +33,8 @@ const GreeningPolicy = () => {
                 <div className="flex flex-row space-x-5 items-center justify-center">
                     <p className="text-[46px] text-linkGreen">1M</p>
                     <div className="flex  flex-col">
-                        <p className="text-[18px] text-white">million trees</p>
-                        <p className="text-[18px] text-white">per year</p>
+                        <p className="text-[18px] text-white">{t('millionTrees')}</p>
+                        <p className="text-[18px] text-white">{t('perYear')}</p>
                     </div>
                 </div>
 
@@ -43,7 +46,7 @@ const GreeningPolicy = () => {
                     className="max-sm:w-[40px] max-sm:h-[40px]"
                     />
                     
-                    <p className="text-[18px] text-white">Green collection</p>
+                    <p className="text-[18px] text-white">{t('greenCollection')}</p>
                     
                 </div>
 
@@ -56,8 +59,8 @@ const GreeningPolicy = () => {
                     />
                     
                     <div className="flex  flex-col">
-                        <p className="text-[18px] text-white">Environmental</p>
-                        <p className="text-[18px] text-white">Awareness Education</p>
+                        <p className="text-[18px] text-white">{t('environmental')}</p>
+                        <p className="text-[18px] text-white">{t('awarenessEducation')}</p>
                     </div>
                 </div>
             
@@ -73,7 +76,7 @@ const GreeningPolicy = () => {
                     <div className="flex items-center justify-center md:w-[64px] md:h-[64px] max-sm:w-[40px] max-sm:h-[40px]">
                         <p className="text-[46px] text-linkGreen ">0</p>
                     </div>
-                    <p className="text-[18px] text-white">Zero carbon</p>
+                    <p className="text-[18px] text-white">{t('zeroCarbon')}</p>
                     
                 </div>
 
@@ -85,8 +88,8 @@ const GreeningPolicy = () => {
                     className="max-sm:w-[40px] max-sm:h-[40px]"
                     />
                     <div className="flex  flex-col">
-                        <p className="text-[18px] text-white">Sustainable</p>
-                        <p className="text-[18px] text-white">Production</p>
+                        <p className="text-[18px] text-white">{t('sustainable')}</p>
+                        <p className="text-[18px] text-white">{t('production')}</p>
                     </div>
                 </div>
 

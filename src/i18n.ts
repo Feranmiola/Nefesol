@@ -70,10 +70,13 @@ i18n
         zeroCarbon: "Zero carbon",
         sustainable: "Sustainable",
         production: "Production",
+
         carbonFootprintReduction: "Carbon Footprint Reduction",
         contributionCircularEconomy: "Contribution to the Circular Economy",
         greenTechnologies: "Development of green Technologies",
         communityParticipation: "Community Participation",
+
+        
         carbonConsultancy: "Carbon Consultancy",
         providingEqualization: "While we are providing carbon equalization services to our individual and corporate customers",
         certification: "Certification",
