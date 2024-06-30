@@ -1,10 +1,11 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import BeatLoader from "react-spinners/BeatLoader";
 
 
 const ThankYou = () => {
-    
+    const {t} = useTranslation();
     const [loading, setLoading] = useState(true);
     const imageUrls = ['./assets/copyIcon.svg']; // Replace with your image URLs
   
@@ -36,13 +37,13 @@ const ThankYou = () => {
             <div className="flex flex-col space-y-4 items-center justify-center px-5">
                 <img src="./assets/plantCheck.svg" alt="Plant Check" />
                 
-                <p className="text-[32px] md:text-[40px] text-bgGreen font-medium">Thank You!</p>
+                <p className="text-[32px] md:text-[40px] text-bgGreen font-medium">{t('thankYou')}</p>
                 <p className="text-[14px] md:text-[16px] text-bgGreen text-center w-full md:w-[340px]">
-                    Your buying certificate and invoice have been sent to your email.
+                    {t('certificateAndInvoice')}
                 </p>
                 
                 <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#E1EAE5] w-full md:w-[312px] h-[72px]">
-                    <p className="text-bgGreen text-[12px]">Trees Tracking Code</p>
+                    <p className="text-bgGreen text-[12px]">{t('treesTrackingCode')}</p>
                     <div className="flex flex-row space-x-2">
                         <p className="text-bgGreen text-[24px] md:text-[32px]">64HDNJ</p>
                         <img src="./assets/copyIcon.svg" alt="Copy Icon" />
@@ -56,7 +57,7 @@ const ThankYou = () => {
                         href="/plant-trees-tracking"
                         className="text-linkGreen text-[14px] md:text-[16px] hover:underline cursor-pointer"
                     >
-                        Track Progress
+                        {t('trackProgress')}
                     </motion.a>
                 </div>
             </div>

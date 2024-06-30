@@ -488,7 +488,7 @@ i18n
         "howOftenDoYouEatFrozenFoods": "How often do you eat frozen foods?",
         "annualAverageFoodConsumption": "Annual average food consumption",
         "kgPerYear": "KG per year",
-        
+
         "plantTrees": "Plant Trees",
         "returnToCalculator": "Return to calculator",
         "youAreAboutToPlant": "You're about to plant",
@@ -518,6 +518,11 @@ i18n
         "termsAndConditions": "terms and conditions",
         "iHaveReadAndAgree": "I have read and agree to the",
         "next": "Next",
+
+        "thankYou": "Thank You!",
+        "certificateAndInvoice": "Your buying certificate and invoice have been sent to your email.",
+        "treesTrackingCode": "Trees Tracking Code",
+        "trackProgress": "Track Progress"
 
         
     
@@ -999,6 +1004,11 @@ i18n
         "termsAndConditions": "şartlar ve koşullar",
         "iHaveReadAndAgree": "Okudum ve kabul ediyorum",
         "next": "İleri",
+
+        "thankYou": "Teşekkürler!",
+        "certificateAndInvoice": "Satın alma belgeniz ve faturanız e-postanıza gönderildi.",
+        "treesTrackingCode": "Ağaçlar Takip Kodu",
+        "trackProgress": "İlerlemeyi Takip Et",
 
       }
     }
