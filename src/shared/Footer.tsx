@@ -1,10 +1,12 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 
 
 const Footer = () => {
-  
+  const {t} = useTranslation();
+
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:w-[334px] max-sm:space-y-5 justify-between md:w-[1179.5px] ">
@@ -32,93 +34,92 @@ const Footer = () => {
         <div className="flex flex-row max-sm:flex-col max-sm:justify-start max-sm:w-full max-sm:space-y-10 max-sm:items-start justify-between md:w-[786px]">
           <div className="flex max-sm:flex-row max-sm:space-x-10 max-sm:items-start md:w-[390px] max-sm:w-full justify-between flex-row">
             <div className="flex flex-col justify-between max-sm:justify-start max-sm:space-y-2">
-              <p className="text-[12px] font-bold text-linkGreen">BREATH PACK</p>
+              <p className="text-[12px] font-bold text-linkGreen">{t('BREATH PACK')}</p>
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/carbon-footprint"
-              >Carbon Footprint</motion.a>
+              >{t('carbonFootprint')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/co2-calculator"
-              >CO2 Calculation</motion.a>
+              >{t('co2Calculation')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/treePacks"
-              >Tree Packs</motion.a>
+              >{t('treePacks')}</motion.a>
 
             </div>
 
             <div className="flex flex-col md:ml-[1.5rem] justify-between max-sm:justify-center  max-sm:space-y-2">
-              <p className="text-[12px] font-bold text-linkGreen">READ</p>
+              <p className="text-[12px] font-bold text-linkGreen">{t('read')}</p>
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/about-us"
-              >About Us</motion.a>
+              >{t('aboutUs')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/blog"
-              >Blog</motion.a>
+              >{t('blog')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
               href="/ourservices"
-              >Our Services</motion.a>
+              >{t('ourServices')}</motion.a>
 
             </div>
 
           </div>
           <div className="flex flex-col md:mr-[2.2rem] justify-between max-sm:items-center max-sm:w-full max-sm:justify-center  max-sm:space-y-2">
-            <p className="text-[12px] font-bold text-linkGreen">LINKS</p>
+            <p className="text-[12px] font-bold text-linkGreen">{t('links')}</p>
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             href="/iptal-iade-politikasi"
             className="text-[16px] text-bgGreen cursor-pointer"
-            >Iptal lade Politikasi</motion.a>
+            >{t('cancellationAndReturnPolicy.title')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             href="/mesafeli-satis-sozlesmesi"
             className="text-[16px] text-bgGreen cursor-pointer"
-            >Mesafeli Satis Sozlesmesi</motion.a>
+            >{t('distanceSalesContract')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             href="/uyelik-sozlesmesi"
             className="text-[16px] text-bgGreen cursor-pointer"
-            >Üyelik Sözleşmesi</motion.a>
+            >{t('membership.agreement')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             href="/generalTermsAndConditions"
             className="text-[16px] text-bgGreen cursor-pointer md:hidden"
-            >General Terms And Condition</motion.a>
+            >{t('generalTermsAndCOnd')}</motion.a>
             
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
             href="/perssonalDataProtectionAuthority"
             className="text-[16px] text-bgGreen cursor-pointer md:hidden"
-            >Personal Data Protection Authority</motion.a>
-
+            >{t('personalDataProtectionAuthority.title')}</motion.a>
           </div>
         </div>
       
@@ -138,13 +139,13 @@ const Footer = () => {
           whileTap={{ scale: 0.9 }} 
           href="/perssonalDataProtectionAuthority"
           className="text-[14px] text-bgGreen cursor-pointer"
-          >Personal Data Protection Authority</motion.a>
+          >{t('personalDataProtectionAuthority.title')}</motion.a>
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
           href="/generalTermsAndConditions"
           className="text-[14px] text-bgGreen cursor-pointer"
-          >General Terms and Conditions</motion.a>
+          >{t('generalTermsAndCOnd')}</motion.a>
           <div className="flex flex-row items-center justify-between w-[210px]">
             <motion.a 
             href="https://www.facebook.com/settings/?tab=your_facebook_information"
