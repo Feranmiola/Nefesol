@@ -49,8 +49,8 @@ const AboutUs = () => {
                         </div>
                         <div className='aboutUsBG w-[539px] h-[432px] max-sm:w-[339px]  max-sm:h-[532px] flex flex-col px-8 rounded-[14.03px] space-y-6'>
                             <div className='md:mt-[241px] max-sm:mt-[300px] flex flex-col'>
-                                <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">Each tree; a breath,</p>
-                                <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">every breath is a hope!.</p>
+                                <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">{t('eachTreeBreath')}</p>
+                                <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">{t('everyBreathHope')}</p>
                             </div>
                             <img
                                 src="./assets/whiteTree.svg"

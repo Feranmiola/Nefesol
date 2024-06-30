@@ -421,6 +421,8 @@ i18n
 
         "reduction": "Reduction",
         "developmentGreenTechnologies": "Development of green Technologies",
+         "eachTreeBreath": "Each tree; a breath,",
+        "everyBreathHope": "every breath is a hope!."
 
     
       }
@@ -803,8 +805,10 @@ i18n
       "description": "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI"
     },
 
-    "reduction": "Azaltma",
-    "developmentGreenTechnologies": "Yeşil Teknolojilerin Geliştirilmesi",
+        "reduction": "Azaltma",
+        "developmentGreenTechnologies": "Yeşil Teknolojilerin Geliştirilmesi",
+        "eachTreeBreath": "Her ağaç; bir nefes,",
+        "everyBreathHope": "her nefes bir umut!"
 
       }
     }
