@@ -524,7 +524,7 @@ i18n
         "treesTrackingCode": "Trees Tracking Code",
         "trackProgress": "Track Progress",
 
-        "returnToDetails": "Return to Details",
+        "": "Return to Details",
         "treesPlanted": "You’re about to plant",
         "basedOnCO2Calculation": "Based on your CO2 use calculation",
         "enterVerificationCode": "Enter verification code sent to",
@@ -533,6 +533,26 @@ i18n
         "verifyYourEmail": "Verify your email",
         "didntReceiveCode": "Didn’t receive code?",
         "resend": "Resend",
+
+        "Trees Tracking & Verification": "Trees Tracking & Verification",
+        "Track the progress of bought trees": "Track the progress of bought trees",
+        "Enter Trees Tracking & Verification Code": "Enter Trees Tracking & Verification Code",
+        "Track": "Track",
+        
+        "Enter registered email to download certificate": "Enter registered email to download certificate",
+        "Download": "Download",
+        "Download Certificate": "Download Certificate",
+        "We are building an environmentally friendly future": "We are building an environmentally friendly future",
+        "Trees Bought": "Trees Bought",
+        "Location": "Location",
+        "Status": "Status",
+        "Planted": "Planted",
+        "Date Bought:": "Date Bought:",
+        "Date Planted:": "Date Planted:",
+        "Bought By:": "Bought By:",
+        "Certificate": "Certificate:",
+        "Enter Verification Code": "Enter Verification Code",
+        "Enter Registered Email": "Enter Registered Email"
 
         
     
@@ -1030,6 +1050,27 @@ i18n
         "didntReceiveCode": "Kod almadınız mı?",
         "resend": "Tekrar gönder",
 
+
+        "Trees Tracking & Verification": "Ağaç Takibi ve Doğrulama",
+        "Track the progress of bought trees": "Satın alınan ağaçların ilerleyişini takip edin",
+        "Enter Trees Tracking & Verification Code": "Ağaç Takip ve Doğrulama Kodunu Girin",
+        "Track": "Takip",
+        
+        "Enter registered email to download certificate": "Sertifika indirmek için kayıtlı e-postayı girin",
+        "Download": "İndir",
+        "Download Certificate": "Sertifikayı İndir",
+        "We are building an environmentally friendly future": "Çevre dostu bir gelecek inşa ediyoruz",
+        "Trees Bought": "Satın Alınan Ağaçlar",
+        "Location": "Konum",
+        "Status": "Durum",
+        "Planted": "Dikildi",
+        "Date Bought:": "Satın Alınma Tarihi:",
+        "Date Planted:": "Dikilme Tarihi:",
+        "Bought By:": "Satın Alan:",
+        "Certificate": "Sertifika:",
+
+        "Enter Verification Code": "Doğrulama Kodunu Girin",
+        "Enter Registered Email": "Kayıtlı E-postayı Girin"
       }
     }
   }
