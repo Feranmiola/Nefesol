@@ -173,21 +173,6 @@ i18n
         
         nefesolTechnicalSupport: "As Nefesol, we are here to offer solutions that meet the technical needs of your business and ensure smooth business processes. Our technical support team is always ready to assist you.",
 
-        cancellationPolicy: "İptal İade Politikası",
-        consumerRights: "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI",
-        general: "GENEL: Kullanmakta olduğunuz web sitesi üzerinden elektronik ortamda sipariş verdiğiniz takdirde, size sunulan ön bilgilendirme formunu ve mesafeli satış sözleşmesini kabul etmiş sayılırsınız. Alıcılar, satın aldıkları ürünün satış ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği (RG:27.11.2014/29188) hükümleri ile yürürlükteki diğer yasalara tabidir. Ürün sevkiyat masrafı olan kargo ücretleri alıcılar tarafından ödenecektir. Satın alınan her bir ürün, 30 günlük yasal süreyi aşmamak kaydı ile alıcının gösterdiği adresteki kişi ve/veya kuruluşa teslim edilir. Bu süre içinde ürün teslim edilmez ise, Alıcılar sözleşmeyi sona erdirebilir. Satın alınan ürün, eksiksiz ve siparişte belirtilen niteliklere uygun ve varsa garanti belgesi, kullanım klavuzu gibi belgelerle teslim edilmek zorundadır. Satın alınan ürünün satılmasının imkansızlaşması durumunda, satıcı bu durumu öğrendiğinden itibaren 3 gün içinde yazılı olarak alıcıya bu durumu bildirmek zorundadır. 14 gün içinde de toplam bedel Alıcı’ya iade edilmek zorundadır.",
-        productPaymentNotMade: "SATIN ALINAN ÜRÜN BEDELİ ÖDENMEZ İSE: Alıcı, satın aldığı ürün veya hizmetin bedelini ödemez veya banka kayıtlarında iptal ederse, Satıcının ürünü veya hizmeti teslim yükümlülüğü sona erer.",
-        unauthorizedUse: "KREDİ KARTININ YETKİSİZ KULLANIMI İLE YAPILAN ALIŞVERİŞLER: Ürün teslim edildikten sonra, alıcının ödeme yaptığı kredi kartının yetkisiz kişiler tarafından haksız olarak kullanıldığı tespit edilirse ve satılan ürün veya hizmet bedeli ilgili banka veya finans kuruluşu tarafından Satıcı'ya ödenmez ise, Alıcı, sözleşme konusu ürünü 3 gün içerisinde nakliye gideri SATICI’ya ait olacak şekilde SATICI’ya iade etmek zorundadır.",
-        unforeseenReasons: "ÖNGÖRÜLEMEYEN SEBEPLERLE ÜRÜN SÜRESİNDE TESLİM EDİLEMEZ İSE: Satıcı’nın öngöremeyeceği mücbir sebepler oluşursa ve ürün süresinde teslim edilemez ise, durum Alıcı’ya bildirilir. Alıcı, siparişin iptalini, ürünün benzeri ile değiştirilmesini veya engel ortadan kalkana dek teslimatın ertelenmesini talep edebilir. Alıcı siparişi iptal ederse; ödemeyi nakit ile yapmış ise iptalinden itibaren 14 gün içinde kendisine nakden bu ücret ödenir. Alıcı, ödemeyi kredi kartı ile yapmış ise ve iptal ederse, bu iptalden itibaren yine 14 gün içinde ürün bedeli bankaya iade edilir, ancak bankanın alıcının hesabına 2-3 hafta içerisinde aktarması olasıdır.",
-        buyerInspection: "ALICININ ÜRÜNÜ KONTROL ETME YÜKÜMLÜLÜĞÜ: Alıcı, sözleşme konusu mal/hizmeti teslim almadan önce muayene edecek; ezik, kırık, ambalajı yırtılmış vb. hasarlı ve ayıplı mal/hizmeti kargo şirketinden teslim almayacaktır. Teslim alınan mal/hizmetin hasarsız ve sağlam olduğu kabul edilecektir. ALICI , Teslimden sonra mal/hizmeti özenle korunmak zorundadır. Cayma hakkı kullanılacaksa mal/hizmet kullanılmamalıdır. Ürünle birlikte Fatura da iade edilmelidir.",
-        rightOfWithdrawal: "CAYMA HAKKI: ALICI; satın aldığı ürünün kendisine veya gösterdiği adresteki kişi/kuruluşa teslim tarihinden itibaren 14 (on dört) gün içerisinde, SATICI’ya aşağıdaki iletişim bilgileri üzerinden bildirmek şartıyla hiçbir hukuki ve cezai sorumluluk üstlenmeksizin ve hiçbir gerekçe göstermeksizin malı reddederek sözleşmeden cayma hakkını kullanabilir.",
-        sellerContactInfo: "SATICININ CAYMA HAKKI BİLDİRİMİ YAPILACAK İLETİŞİM BİLGİLERİ: ŞİRKET ADI/UNVANI:ERMA GROUP TURİZM SANAYİ TİCARET ANONİM ŞİRKETİ ADRES:ÇAMTEPE MAH. MAHMUT TEVFİK ATAY BULV. GAZİANTEP TEKNOPARK NO:4-A İÇ KAPO NO:1 ŞEHİTKAMİL GAZİANTEP EPOSTA: info@nefesol.com TEL:0850 309 8804",
-        withdrawalPeriod: "CAYMA HAKKININ SÜRESİ: Alıcı, satın aldığı eğer bir hizmet ise, bu 14 günlük süre sözleşmenin imzalandığı tarihten itibaren başlar. Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile hizmetin ifasına başlanan hizmet sözleşmelerinde cayma hakkı kullanılamaz. Cayma hakkının kullanımından kaynaklanan masraflar SATICI’ ya aittir. Cayma hakkının kullanılması için 14 (ondört) günlük süre içinde SATICI' ya iadeli taahhütlü posta, faks veya eposta ile yazılı bildirimde bulunulması ve ürünün işbu sözleşmede düzenlenen \"Cayma Hakkı Kullanılamayacak Ürünler\" hükümleri çerçevesinde kullanılmamış olması şarttır.",
-        withdrawalUsage: "CAYMA HAKKININ KULLANIMI: 3. kişiye veya ALICI’ ya teslim edilen ürünün faturası, (İade edilmek istenen ürünün faturası kurumsal ise, iade ederken kurumun düzenlemiş olduğu iade faturası ile birlikte gönderilmesi gerekmektedir. Faturası kurumlar adına düzenlenen sipariş iadeleri İADE FATURASI kesilmediği takdirde tamamlanamayacaktır.) İade formu, İade edilecek ürünlerin kutusu, ambalajı, varsa standart aksesuarları ile birlikte eksiksiz ve hasarsız olarak teslim edilmesi gerekmektedir.",
-        refundConditions: "İADE KOŞULLARI: SATICI, cayma bildiriminin kendisine ulaşmasından itibaren en geç 10 günlük süre içerisinde toplam bedeli ve ALICI’yı borç altına sokan belgeleri ALICI’ ya iade etmek ve 20 günlük süre içerisinde malı iade almakla yükümlüdür. ALICI’ nın kusurundan kaynaklanan bir nedenle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa ALICI kusuru oranında SATICI’ nın zararlarını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde malın veya ürünün usulüne uygun kullanılması sebebiyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir. Cayma hakkının kullanılması nedeniyle SATICI tarafından düzenlenen kampanya limit tutarının altına düşülmesi halinde kampanya kapsamında faydalanılan indirim miktarı iptal edilir.",
-        nonReturnableProducts: "CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER: ALICI’nın isteği veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve geri gönderilmeye müsait olmayan, iç giyim alt parçaları, mayo ve bikini altları, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme ihtimali olan mallar, ALICI’ya teslim edilmesinin ardından ALICI tarafından ambalajı açıldığı takdirde iade edilmesi sağlık ve hijyen açısından uygun olmayan ürünler, teslim edildikten sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler, Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi süreli yayınlara ilişkin mallar, Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar, ile ses veya görüntü kayıtlarının, kitap, dijital içerik, yazılım programlarının, veri kaydedebilme ve veri depolama cihazlarının, bilgisayar sarf malzemelerinin, ambalajının ALICI tarafından açılmış olması halinde iadesi Yönetmelik gereği mümkün değildir. Kişiye özel dikimi yapılan ağaçlar, bitkiler, firma veya kişiye özel yapılmış yazılımlar, Ayrıca Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin cayma hakkının kullanılması da Yönetmelik gereği mümkün değildir. Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemeleri (toner, kartuş, şerit vb.) iade edilebilmesi için ambalajlarının açılmamış, denenmemiş, bozulmamış ve kullanılmamış olmaları gerekir.",
-        defaultLegalConsequences: "TEMERRÜT HALİ VE HUKUKİ SONUÇLARI ALICI, ödeme işlemlerini kredi kartı ile yaptığı durumda temerrüde düştüğü takdirde, kart sahibi banka ile arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka hukuki yollara başvurabilir; doğacak masrafları ve vekâlet ücretini ALICI’dan talep edebilir ve her koşulda ALICI’nın borcundan dolayı temerrüde düşmesi halinde, ALICI, borcun gecikmeli ifasından dolayı SATICI’nın uğradığı zarar ve ziyanını ödeyeceğini kabul eder.",
-        paymentDelivery: "ÖDEME VE TESLİMAT Banka Havalesi veya EFT (Elektronik Fon Transferi) yaparak,Iban: TR79 0001 2009 3710 0010 2618 55 Halk bankası bankası (TL) hesabımıza yapabilirsiniz. Sitemiz üzerinden kredi kartlarınız ile, Her türlü kredi kartınıza online tek ödeme ya da online taksit imkânlarından yararlanabilirsiniz. Online ödemelerinizde siparişiniz sonunda kredi kartınızdan tutar çekim işlemi gerçekleşecektir.",
 
               distanceSalesContract: "Distance Sales Contract",
               distanceSalesContractTitle: "DISTANCE SALES CONTRACT",
@@ -315,8 +300,125 @@ i18n
                 "legalBasisDescription": "Erma Group processes your personal data mentioned above through its websites and mobile applications based on legal grounds for compliance specified in Articles 5, 8, and 9 of the KVKK, as listed below: compliance with laws and regulations applicable to our company, including Law No. 6563 on the Regulation of Electronic Commerce, Turkish Commercial Code No. 6102, Turkish Penal Code No. 5237, and Law No. 6502 on Consumer Protection; ensuring the security of operations on the company platform; conducting information security activities; ensuring compliance with legislative obligations, especially those arising from related legislation; fulfilling obligations directly related to the establishment or performance of contracts concluded on our platform under the relevant articles of the Law on Protection of Consumers, such as distance sales contracts; conducting activities related to the realization of your purchase transactions; conducting business activities of the company; supervising delivery processes; evaluating your requests, complaints, and suggestions regarding our products and services; conducting finance and accounting processes; conducting communication activities; fulfilling legal obligations; providing information to authorized persons, public institutions, and organizations; ensuring compliance with legislation; following up and executing legal affairs; conducting information security activities; ensuring the security of operations as Erma Group; ensuring compliance with legislation; providing information to authorized persons, institutions, and organizations; and ensuring the establishment and exercise of rights.",
                 "dataTransfer": "To whom and for what purposes does Erma Group transfer your personal data?",
                 "dataTransferDescription": "Erma Group operates on the principles of 'need to know' and 'need to use' regarding your personal data, striving to comply with data minimization requirements and implementing necessary technical and administrative security measures. Due to the nature of conducting or controlling business activities, ensuring business continuity, and operating digital infrastructures, continuous data flow with various stakeholders is necessary for certain purposes related to personal data processed by us. Therefore, we are obliged to transfer your personal data to third parties. Furthermore, it is crucial that your personal data is accurate and up-to-date to fully and properly fulfill our contractual and legal obligations. Therefore, we collaborate with various business partners and service providers. Your personal data may be shared with third parties such as sellers of products purchased, courier companies delivering products on behalf of Erma Group, and service providers providing support for business operations, activities to enhance your experience and satisfaction, development and improvement of products and services offered by our company, and better shopping experiences. Specifically, your personal data may be shared with sellers of products, service providers, business partners, banks, financial advisors, business partners providing call center services for sales and after-sales support services, quality control service providers, business partners providing complaints management and risk analysis services, business partners providing financial and accounting services, risk management and financial reporting service providers, IT infrastructure service providers, business partners providing private integration, independent audit, customs, and financial advisor/accounting services, officials of the Ministry of Treasury and Finance for invoicing and collection receipts, and business partners and service providers in Turkey or abroad, such as our domestic and/or foreign affiliates and suppliers, business partners, contracted banks, and third parties from whom products or services are purchased."
-              }
-            
+              },
+
+              
+        "generalInfo": {
+        "title": "GENERAL:",
+        "content": [
+            "By placing an electronic order through the website you are using, you are deemed to have accepted the preliminary information form and the distance sales contract offered to you.",
+            "Buyers are subject to the provisions of Law No. 6502 on Consumer Protection and the Regulation on Distance Contracts (Official Gazette: 27.11.2014/29188) and other applicable laws regarding the sale and delivery of the purchased product.",
+            "Buyers are responsible for shipping costs associated with the product delivery.",
+            "Each purchased product will be delivered to the person and/or organization at the address provided by the buyer within the legal period of 30 days. If the product is not delivered within this period, Buyers may terminate the contract.",
+            "The purchased product must be delivered complete and in accordance with the specified qualities in the order, along with any warranty certificate, user manual, or similar documents.",
+            "In case the sale of the purchased product becomes impossible, the seller must notify the buyer in writing within 3 days of learning about this situation. The total amount must be refunded to the Buyer within 14 days."
+        ]
+        },
+
+        "additionalInfo": {
+            "unpaidProductPrice": {
+              "title": "IF THE PURCHASED PRODUCT PRICE IS NOT PAID:",
+              "content": "If the Buyer does not pay for the purchased product or service or cancels it in the bank records, the Seller's obligation to deliver the product or service ends."
+            },
+            "unauthorizedCreditCardUsage": {
+              "title": "PURCHASES MADE WITH UNAUTHORIZED USE OF CREDIT CARD:",
+              "content": "After the product is delivered, if it is determined that the credit card used for payment by the Buyer has been fraudulently used by unauthorized persons and the sold product or service fee is not paid to the Seller by the relevant bank or financial institution, the Buyer must return the contract subject product to the SELLER within 3 days, with shipping costs paid by the SELLER."
+            },
+            "undeliverableProductDueToUnforeseenReasons": {
+              "title": "IF THE PRODUCT CANNOT BE DELIVERED ON TIME DUE TO UNFORESEEN REASONS:",
+              "content": "If unforeseen force majeure events occur for the Seller and the product cannot be delivered on time, the situation will be notified to the Buyer. The Buyer may request cancellation of the order, replacement of the product with a similar one, or postponement of the delivery until the obstacle is removed. If the Buyer cancels the order; if payment is made in cash, the amount will be refunded within 14 days from the cancellation. If payment is made by credit card and canceled, the product price will be refunded to the bank within 14 days from the cancellation, but it may take 2-3 weeks for the bank to transfer it to the Buyer's account."
+            },
+            "buyerResponsibilityToInspectProduct": {
+              "title": "BUYER'S RESPONSIBILITY TO INSPECT THE PRODUCT:",
+              "content": "The Buyer will inspect the subject goods/services before receiving them; damaged or defective goods/services such as dented, broken, torn packaging, etc., will not be accepted from the courier company. The received goods/services will be deemed undamaged and intact. The BUYER must carefully protect the goods/services after delivery. If the right of withdrawal is to be exercised, the goods/services must not be used. The invoice must also be returned with the product."
+            }
+          },
+
+          "withdrawalRight": {
+            "title": "RIGHT OF WITHDRAWAL:",
+            "content": "The BUYER may exercise the right of withdrawal from the contract by refusing the goods without assuming any legal or criminal liability and without any justification within 14 (fourteen) days from the delivery date to himself or the person/organization at the address provided."
+        },
+        "sellerWithdrawalContact": {
+            "title": "COMMUNICATION DETAILS FOR SELLER'S RIGHT OF WITHDRAWAL NOTIFICATION:",
+            "company": "COMPANY NAME: ERMA GROUP TOURISM INDUSTRY TRADE JOINT STOCK COMPANY",
+            "address": "ADDRESS: ÇAMTEPE NEIGHBORHOOD, MAHMUT TEVFİK ATAY BOULEVARD, GAZIANTEP TECHNOPARK NO:4-A, INNER DOOR NO:1 ŞEHİTKAMİL GAZİANTEP",
+            "email": "EMAIL: info@nefesol.com",
+            "phone": "TEL: 0850 309 8804"
+        },
+        "withdrawalPeriod": {
+            "title": "DURATION OF WITHDRAWAL RIGHT:",
+            "content": [
+            "If the product purchased is a service, the 14-day period starts from the date the contract is signed. In service contracts where the service performance has started with the consumer's consent before the end of the withdrawal right period, the right of withdrawal cannot be exercised.",
+            "Expenses arising from the exercise of the right of withdrawal shall be borne by the SELLER.",
+            "In order to exercise the right of withdrawal, written notification must be sent to the SELLER by registered mail, fax or email within 14 (fourteen) days, and the product must not have been used within the framework of the 'Products for Which the Right of Withdrawal Cannot be Used' provisions regulated in this contract."
+            ]
+        },
+        "useOfWithdrawalRight": {
+            "title": "USE OF WITHDRAWAL RIGHT:",
+            "content": "If the product delivered to a third party or the BUYER's is invoiced, (If the invoice of the product to be returned is corporate, it must be sent together with the return invoice issued by the institution. Return transactions for orders issued on behalf of institutions cannot be completed if the RETURN INVOICE is not issued.) The invoice of the product delivered, Return form, The boxes, packaging, and standard accessories of the products to be returned must be delivered complete and undamaged."
+        },
+
+        // "returnConditions": {
+        //     "title": "RETURN CONDITIONS:",
+        //     "content": [
+        //       "The SELLER is obliged to refund the total amount and return the documents that commit the BUYER within 10 days at the latest from the date the withdrawal notification reaches them.",
+        //       "If there is a decrease in the value of the goods due to the BUYER's fault or if it becomes impossible to return the goods, the BUYER is obliged to compensate for the damages of the SELLER in proportion to the fault. However, the BUYER is not responsible for changes and deteriorations that occur due to the proper use of the goods or product within the withdrawal period.",
+        //       "If the campaign limit amount set by the SELLER is exceeded due to the exercise of the right of withdrawal, the amount of discount benefited from within the scope of the campaign is canceled."
+        //     ]
+        //   },
+        //   "nonReturnableProducts": {
+        //     "title": "PRODUCTS FOR WHICH THE RIGHT OF WITHDRAWAL CANNOT BE USED:",
+        //     "content": [
+        //       "Goods prepared in line with the consumer's request or explicitly for personal needs and not suitable for return, underwear bottoms, swimsuits and bikinis, makeup products, disposable products, goods with a risk of rapid deterioration or a possibility of expiration date passing after delivery to the BUYER, products unsuitable for return due to health and hygiene reasons once their packaging is opened by the BUYER, products mixed with other goods after delivery and inherently inseparable, Goods related to periodicals such as newspapers and magazines, except those provided under a subscription agreement, non-material goods delivered instantly via electronic means or instantly to the consumer, and audio or video recordings, books, digital content, software programs, data storage and data recording devices, computer consumables, whose packaging has been opened by the BUYER, cannot be returned as required by the Regulation. Trees, plants customized for individuals or companies, and specially customized software also cannot be returned. In addition, the right of withdrawal cannot be exercised for services for which the performance has started with the consumer's consent before the end of the withdrawal period as required by the Regulation."
+        //     ]
+        //   },
+        //   "defaultAndLegalConsequences": {
+        //     "title": "DEFAULT AND LEGAL CONSEQUENCES",
+        //     "content": [
+        //       "If the BUYER defaults on payment transactions made by credit card, the BUYER accepts, declares, and undertakes that he/she will pay interest in accordance with the credit card agreement between the cardholder bank and himself/herself, and be liable to the bank. In this case, the relevant bank may apply legal remedies; may request expenses and attorney's fees from the BUYER, and in any case, the BUYER accepts to compensate for the damages incurred by the SELLER due to the delayed performance of the debt."
+        //     ]
+        //   },
+        //   "paymentAndDelivery": {
+        //     "title": "PAYMENT AND DELIVERY",
+        //     "content": [
+        //       "You can make a Bank Transfer or EFT (Electronic Fund Transfer) to our account with Iban: TR79 0001 2009 3710 0010 2618 55 Halk Bank (TL) through our website.",
+        //       "Through our website with your credit cards, you can take advantage of online single payment or online installment options for all kinds of credit cards. In your online payments, the amount will be debited from your credit card at the end of your order."
+        //     ]
+        //   },
+
+          "returnConditions": {
+            "title": "RETURN CONDITIONS:",
+            "content": [
+              "The SELLER is obliged to refund the total amount and return the documents that commit the BUYER within 10 days at the latest from the date the withdrawal notification reaches them.",
+              "If there is a decrease in the value of the goods due to the BUYER's fault or if it becomes impossible to return the goods, the BUYER is obliged to compensate for the damages of the SELLER in proportion to the fault. However, the BUYER is not responsible for changes and deteriorations that occur due to the proper use of the goods or product within the withdrawal period.",
+              "If the campaign limit amount set by the SELLER is exceeded due to the exercise of the right of withdrawal, the amount of discount benefited from within the scope of the campaign is canceled."
+            ]
+          },
+          "nonReturnableProducts": {
+            "title": "PRODUCTS FOR WHICH THE RIGHT OF WITHDRAWAL CANNOT BE USED:",
+            "content": [
+              "Goods prepared in line with the consumer's request or explicitly for personal needs and not suitable for return, underwear bottoms, swimsuits and bikinis, makeup products, disposable products, goods with a risk of rapid deterioration or a possibility of expiration date passing after delivery to the BUYER, products unsuitable for return due to health and hygiene reasons once their packaging is opened by the BUYER, products mixed with other goods after delivery and inherently inseparable, Goods related to periodicals such as newspapers and magazines, except those provided under a subscription agreement, non-material goods delivered instantly via electronic means or instantly to the consumer, and audio or video recordings, books, digital content, software programs, data storage and data recording devices, computer consumables, whose packaging has been opened by the BUYER, cannot be returned as required by the Regulation. Trees, plants customized for individuals or companies, and specially customized software also cannot be returned. In addition, the right of withdrawal cannot be exercised for services for which the performance has started with the consumer's consent before the end of the withdrawal period as required by the Regulation."
+            ]
+          },
+          "defaultAndLegalConsequences": {
+            "title": "DEFAULT AND LEGAL CONSEQUENCES",
+            "content": [
+              "If the BUYER defaults on payment transactions made by credit card, the BUYER accepts, declares, and undertakes that he/she will pay interest in accordance with the credit card agreement between the cardholder bank and himself/herself, and be liable to the bank. In this case, the relevant bank may apply legal remedies; may request expenses and attorney's fees from the BUYER, and in any case, the BUYER accepts to compensate for the damages incurred by the SELLER due to the delayed performance of the debt."
+            ]
+          },
+          "paymentAndDelivery": {
+            "title": "PAYMENT AND DELIVERY",
+            "content": [
+              "You can make a Bank Transfer or EFT (Electronic Fund Transfer) to our account with Iban: TR79 0001 2009 3710 0010 2618 55 Halk Bank (TL) through our website.",
+              "Through our website with your credit cards, you can take advantage of online single payment or online installment options for all kinds of credit cards. In your online payments, the amount will be debited from your credit card at the end of your order."
+            ]
+          },
+
+          "cancellationAndReturnPolicy": {
+            "title": "Cancellation and Return Policy",
+            "description": "CONSUMER RIGHTS – WITHDRAWAL – CANCELLATION AND RETURN CONDITIONS"
+          }
+    
       }
     },
     tr: {
@@ -447,22 +549,8 @@ i18n
         remoteOnsite: "Uzaktan ve Yerinde Destek: Teknik destek hizmetlerimiz, uzaktan erişim araçları ve yerinde müdahale seçenekleri sunar. Uzaktan destek ile teknik sorunlarınızı hızlı bir şekilde çözebilir ve iş süreçlerinizin kesintiye uğramasını önleyebilirsiniz. Ayrıca, yerinde destek hizmetimizle uzman teknik ekibimiz işletmenizin bulunduğu yere gelerek sorunları yerinde çözer.",
         consultancyTraining: "Danışmanlık ve Eğitim: Teknik destek hizmetimiz, işletmenizin teknoloji odaklı stratejilerini belirlemenize danışmanlık yapar. Ayrıca, personelinize teknoloji kullanımı ve sorun giderme konularında eğitim veririz. Bu, işletmenizin teknik yeteneklerini artırmanızı sağlar.",
         nefesolTechnicalSupport: "Nefesol olarak, işletmenizin teknik ihtiyaçlarına uygun çözümler sunmak ve iş süreçlerinin sorunsuz işlemesini sağlamak için buradayız. Teknik destek ekibimiz, her zaman size yardımcı olmaya hazırdır.",
-        cancellationPolicy: "İptal İade Politikası",
-        consumerRights: "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI",
-        general: "GENEL: Kullanmakta olduğunuz web sitesi üzerinden elektronik ortamda sipariş verdiğiniz takdirde, size sunulan ön bilgilendirme formunu ve mesafeli satış sözleşmesini kabul etmiş sayılırsınız. Alıcılar, satın aldıkları ürünün satış ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği (RG:27.11.2014/29188) hükümleri ile yürürlükteki diğer yasalara tabidir. Ürün sevkiyat masrafı olan kargo ücretleri alıcılar tarafından ödenecektir. Satın alınan her bir ürün, 30 günlük yasal süreyi aşmamak kaydı ile alıcının gösterdiği adresteki kişi ve/veya kuruluşa teslim edilir. Bu süre içinde ürün teslim edilmez ise, Alıcılar sözleşmeyi sona erdirebilir. Satın alınan ürün, eksiksiz ve siparişte belirtilen niteliklere uygun ve varsa garanti belgesi, kullanım klavuzu gibi belgelerle teslim edilmek zorundadır. Satın alınan ürünün satılmasının imkansızlaşması durumunda, satıcı bu durumu öğrendiğinden itibaren 3 gün içinde yazılı olarak alıcıya bu durumu bildirmek zorundadır. 14 gün içinde de toplam bedel Alıcı’ya iade edilmek zorundadır.",
-        productPaymentNotMade: "SATIN ALINAN ÜRÜN BEDELİ ÖDENMEZ İSE: Alıcı, satın aldığı ürün veya hizmetin bedelini ödemez veya banka kayıtlarında iptal ederse, Satıcının ürünü veya hizmeti teslim yükümlülüğü sona erer.",
-        unauthorizedUse: "KREDİ KARTININ YETKİSİZ KULLANIMI İLE YAPILAN ALIŞVERİŞLER: Ürün teslim edildikten sonra, alıcının ödeme yaptığı kredi kartının yetkisiz kişiler tarafından haksız olarak kullanıldığı tespit edilirse ve satılan ürün veya hizmet bedeli ilgili banka veya finans kuruluşu tarafından Satıcı'ya ödenmez ise, Alıcı, sözleşme konusu ürünü 3 gün içerisinde nakliye gideri SATICI’ya ait olacak şekilde SATICI’ya iade etmek zorundadır.",
-        unforeseenReasons: "ÖNGÖRÜLEMEYEN SEBEPLERLE ÜRÜN SÜRESİNDE TESLİM EDİLEMEZ İSE: Satıcı’nın öngöremeyeceği mücbir sebepler oluşursa ve ürün süresinde teslim edilemez ise, durum Alıcı’ya bildirilir. Alıcı, siparişin iptalini, ürünün benzeri ile değiştirilmesini veya engel ortadan kalkana dek teslimatın ertelenmesini talep edebilir. Alıcı siparişi iptal ederse; ödemeyi nakit ile yapmış ise iptalinden itibaren 14 gün içinde kendisine nakden bu ücret ödenir. Alıcı, ödemeyi kredi kartı ile yapmış ise ve iptal ederse, bu iptalden itibaren yine 14 gün içinde ürün bedeli bankaya iade edilir, ancak bankanın alıcının hesabına 2-3 hafta içerisinde aktarması olasıdır.",
-        buyerInspection: "ALICININ ÜRÜNÜ KONTROL ETME YÜKÜMLÜLÜĞÜ: Alıcı, sözleşme konusu mal/hizmeti teslim almadan önce muayene edecek; ezik, kırık, ambalajı yırtılmış vb. hasarlı ve ayıplı mal/hizmeti kargo şirketinden teslim almayacaktır. Teslim alınan mal/hizmetin hasarsız ve sağlam olduğu kabul edilecektir. ALICI , Teslimden sonra mal/hizmeti özenle korunmak zorundadır. Cayma hakkı kullanılacaksa mal/hizmet kullanılmamalıdır. Ürünle birlikte Fatura da iade edilmelidir.",
-        rightOfWithdrawal: "CAYMA HAKKI: ALICI; satın aldığı ürünün kendisine veya gösterdiği adresteki kişi/kuruluşa teslim tarihinden itibaren 14 (on dört) gün içerisinde, SATICI’ya aşağıdaki iletişim bilgileri üzerinden bildirmek şartıyla hiçbir hukuki ve cezai sorumluluk üstlenmeksizin ve hiçbir gerekçe göstermeksizin malı reddederek sözleşmeden cayma hakkını kullanabilir.",
-        sellerContactInfo: "SATICININ CAYMA HAKKI BİLDİRİMİ YAPILACAK İLETİŞİM BİLGİLERİ: ŞİRKET ADI/UNVANI:ERMA GROUP TURİZM SANAYİ TİCARET ANONİM ŞİRKETİ ADRES:ÇAMTEPE MAH. MAHMUT TEVFİK ATAY BULV. GAZİANTEP TEKNOPARK NO:4-A İÇ KAPO NO:1 ŞEHİTKAMİL GAZİANTEP EPOSTA: info@nefesol.com TEL:0850 309 8804",
-        withdrawalPeriod: "CAYMA HAKKININ SÜRESİ: Alıcı, satın aldığı eğer bir hizmet ise, bu 14 günlük süre sözleşmenin imzalandığı tarihten itibaren başlar. Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile hizmetin ifasına başlanan hizmet sözleşmelerinde cayma hakkı kullanılamaz. Cayma hakkının kullanımından kaynaklanan masraflar SATICI’ ya aittir. Cayma hakkının kullanılması için 14 (ondört) günlük süre içinde SATICI' ya iadeli taahhütlü posta, faks veya eposta ile yazılı bildirimde bulunulması ve ürünün işbu sözleşmede düzenlenen \"Cayma Hakkı Kullanılamayacak Ürünler\" hükümleri çerçevesinde kullanılmamış olması şarttır.",
-        withdrawalUsage: "CAYMA HAKKININ KULLANIMI: 3. kişiye veya ALICI’ ya teslim edilen ürünün faturası, (İade edilmek istenen ürünün faturası kurumsal ise, iade ederken kurumun düzenlemiş olduğu iade faturası ile birlikte gönderilmesi gerekmektedir. Faturası kurumlar adına düzenlenen sipariş iadeleri İADE FATURASI kesilmediği takdirde tamamlanamayacaktır.) İade formu, İade edilecek ürünlerin kutusu, ambalajı, varsa standart aksesuarları ile birlikte eksiksiz ve hasarsız olarak teslim edilmesi gerekmektedir.",
-        refundConditions: "İADE KOŞULLARI: SATICI, cayma bildiriminin kendisine ulaşmasından itibaren en geç 10 günlük süre içerisinde toplam bedeli ve ALICI’yı borç altına sokan belgeleri ALICI’ ya iade etmek ve 20 günlük süre içerisinde malı iade almakla yükümlüdür. ALICI’ nın kusurundan kaynaklanan bir nedenle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa ALICI kusuru oranında SATICI’ nın zararlarını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde malın veya ürünün usulüne uygun kullanılması sebebiyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir. Cayma hakkının kullanılması nedeniyle SATICI tarafından düzenlenen kampanya limit tutarının altına düşülmesi halinde kampanya kapsamında faydalanılan indirim miktarı iptal edilir.",
-        nonReturnableProducts: "CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER: ALICI’nın isteği veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve geri gönderilmeye müsait olmayan, iç giyim alt parçaları, mayo ve bikini altları, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme ihtimali olan mallar, ALICI’ya teslim edilmesinin ardından ALICI tarafından ambalajı açıldığı takdirde iade edilmesi sağlık ve hijyen açısından uygun olmayan ürünler, teslim edildikten sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler, Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi süreli yayınlara ilişkin mallar, Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar, ile ses veya görüntü kayıtlarının, kitap, dijital içerik, yazılım programlarının, veri kaydedebilme ve veri depolama cihazlarının, bilgisayar sarf malzemelerinin, ambalajının ALICI tarafından açılmış olması halinde iadesi Yönetmelik gereği mümkün değildir. Kişiye özel dikimi yapılan ağaçlar, bitkiler, firma veya kişiye özel yapılmış yazılımlar, Ayrıca Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin cayma hakkının kullanılması da Yönetmelik gereği mümkün değildir. Kozmetik ve kişisel bakım ürünleri, iç giyim ürünleri, mayo, bikini, kitap, kopyalanabilir yazılım ve programlar, DVD, VCD, CD ve kasetler ile kırtasiye sarf malzemeleri (toner, kartuş, şerit vb.) iade edilebilmesi için ambalajlarının açılmamış, denenmemiş, bozulmamış ve kullanılmamış olmaları gerekir.",
-        defaultLegalConsequences: "TEMERRÜT HALİ VE HUKUKİ SONUÇLARI ALICI, ödeme işlemlerini kredi kartı ile yaptığı durumda temerrüde düştüğü takdirde, kart sahibi banka ile arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka hukuki yollara başvurabilir; doğacak masrafları ve vekâlet ücretini ALICI’dan talep edebilir ve her koşulda ALICI’nın borcundan dolayı temerrüde düşmesi halinde, ALICI, borcun gecikmeli ifasından dolayı SATICI’nın uğradığı zarar ve ziyanını ödeyeceğini kabul eder.",
-        paymentDelivery: "ÖDEME VE TESLİMAT Banka Havalesi veya EFT (Elektronik Fon Transferi) yaparak,Iban: TR79 0001 2009 3710 0010 2618 55 Halk bankası bankası (TL) hesabımıza yapabilirsiniz. Sitemiz üzerinden kredi kartlarınız ile, Her türlü kredi kartınıza online tek ödeme ya da online taksit imkânlarından yararlanabilirsiniz. Online ödemelerinizde siparişiniz sonunda kredi kartınızdan tutar çekim işlemi gerçekleşecektir.",
-
+        
+    
 
 
         distanceSalesContract: "Uzaktan Satış Sözleşmesi",
@@ -592,7 +680,125 @@ i18n
         "legalBasisDescription": "Erma Group, web siteleri ve mobil uygulamaları üzerinden yukarıda belirtilen kişisel verilerinizi KVKK'nın 5, 8 ve 9. maddelerinde belirtilen uyumluluk için yasal gerekçeler doğrultusunda işler: Erma Group'un faaliyet gösterdiği elektronik ticaret düzenlemesi hakkında 6563 sayılı Kanun, Türk Ticaret Kanunu 6102, Türk Ceza Kanunu 5237 ve 6502 sayılı Tüketicinin Korunması Hakkında Kanun da dahil olmak üzere şirketimize uygulanan yasalar ve düzenlemelere uyum; platform üzerinde operasyonların güvenliğini sağlamak; bilgi güvenliği faaliyetleri yürütmek; ilgili mevzuattan kaynaklanan yasal yükümlülüklerin yerine getirilmesi, özellikle tüketici koruma konusundaki ilgili yasalar ve uzak satış sözleşmeleri gibi platformumuzda yapılan sözleşmelerin ilgili maddeleri altında sözleşme kurma işlemlerinin yerine getirilmesi; satın alma işlemleri ile ilgili faaliyetlerin gerçekleştirilmesi; şirket iş faaliyetlerini yürütmek; teslimat süreçlerini denetlemek; ürün ve hizmetlerimizin geliştirilmesi ve iyileştirilmesi için faaliyetlerde bulunmak; alışveriş deneyimlerini geliştirme ve memnuniyeti artırma; müşteri ortam analizinde kullanma ve platformda alışveriş yapan müşterilerimizi tanıma; şirketimizin sunduğu ürün ve hizmetlerin geliştirilmesi ve iyileştirilmesi; stratejik analiz çalışmaları yapma; iletişim faaliyetleri yürütme; ilgi alanlarınıza göre size uygun ürünleri sunma; uzaktan satış yapma; Erma Group platformumuzda yapılan sözleşmeler hakkında koşulları, mevcut durumu ve güncellemeleri size bildirme; tüketici hakları ve korunması yasasının ilgili maddeleri gereğince uzak satış sözleşmeleri gibi sözleşmelerle ilgili koşulları, mevcut durumu ve güncellemeleri size bildirme; gelişmeler, fırsatlar ve yenilikler hakkında size bilgi verme; Erma Group'taki işlemlerle ilgili gelişmeler, fırsatlar ve yenilikler hakkında bilgi verme; web sitesi üzerinden ve/veya mobil uygulamalar üzerinden elektronik ve/veya fiziksel olarak anketler yapma; ürünlerimiz hakkında bilgi verme; satış sonrası destek hizmetleri sağlama; iş süreçlerinin yürütülmesi; bilgi güvenliği faaliyetlerinin yürütülmesi; Erma Group olarak operasyon güvenliğinin sağlanması; mevzuata uyumun sağlanması; yetkili kişilere, kamu kurum ve kuruluşlarına bilgi sağlama.",
         "dataTransfer": "Erma Group, kişisel verilerinizi kime ve hangi amaçlarla aktarır?",
         "dataTransferDescription": "Erma Group, kişisel verilerinizle ilgili olarak 'bilmeye' ve 'kullanmaya' yönelik ilkeler üzerinde işlem yapar, veri minimalizasyon gereksinimlerine uyum sağlamaya çalışır ve gerekli teknik ve idari güvenlik önlemlerini uygular. İşletme veya kontrol etme faaliyetlerinin doğası gereği, iş sürekliliğini sağlama ve dijital altyapıları işletme ile ilgili belirli amaçlar için sürekli veri akışı gereklidir. Bu nedenle, sizin tarafınızdan işlenen kişisel verilerle ilgili olarak üçüncü şahıslara aktarmak zorundayız. Ayrıca, kişisel verilerinizin tam ve doğru bir şekilde işleme ve yasal yükümlülüklerimizi tam ve doğru bir şekilde yerine getirmeniz gerekmektedir. Bu nedenle, çeşitli iş ortakları ve hizmet sağlayıcılarla iş birliği yaparız. Kişisel verileriniz, satın alınan ürünlerin satıcıları, Erma Group adına ürün teslimatı yapan kurye şirketleri ve iş süreçlerine destek sağlayan hizmet sağlayıcılar gibi üçüncü taraflarla paylaşılabilir. Özellikle, kişisel verileriniz, ürün satıcıları, hizmet sağlayıcıları, iş ortakları, bankalar, finansal danışmanlar, satış sonrası destek hizmetleri için çağrı merkezi hizmetleri sağlayan iş ortakları, kalite kontrol hizmet sağlayıcıları, şikayet yönetimi ve risk analizi hizmetleri sağlayan iş ortakları, finans ve muhasebe hizmetleri sağlayıcıları, risk yönetimi ve finansal raporlama hizmet sağlayıcıları, IT altyapı hizmet sağlayıcıları, özel entegrasyon, bağımsız denetim, gümrük ve finansal danışman/muhasebe hizmet sağlayıcıları, Hazine ve Maliye Bakanlığı yetkililerine fatura ve tahsilat makbuzu için bilgi sağlamak ve Türkiye veya yurtdışında yer alan iş ortaklarımız ve tedarikçilerimiz gibi üçüncü taraflarla paylaşılabilir."
-      }
+      },
+
+      
+      "generalInfo": {
+        "title": "GENEL:",
+        "content": [
+          "Kullanmakta olduğunuz web sitesi üzerinden elektronik ortamda sipariş verdiğiniz takdirde, size sunulan ön bilgilendirme formunu ve mesafeli satış sözleşmesini kabul etmiş sayılırsınız.",
+          "Alıcılar, satın aldıkları ürünün satış ve teslimi ile ilgili olarak 6502 sayılı Tüketicinin Korunması Hakkında Kanun ve Mesafeli Sözleşmeler Yönetmeliği (RG:27.11.2014/29188) hükümleri ile yürürlükteki diğer yasalara tabidir.",
+          "Ürün sevkiyat masrafı olan kargo ücretleri alıcılar tarafından ödenecektir.",
+          "Satın alınan her bir ürün, 30 günlük yasal süreyi aşmamak kaydı ile alıcının gösterdiği adresteki kişi ve/veya kuruluşa teslim edilir. Bu süre içinde ürün teslim edilmez ise, Alıcılar sözleşmeyi sona erdirebilir.",
+          "Satın alınan ürün, eksiksiz ve siparişte belirtilen niteliklere uygun ve varsa garanti belgesi, kullanım klavuzu gibi belgelerle teslim edilmek zorundadır.",
+          "Satın alınan ürünün satılmasının imkansızlaşması durumunda, satıcı bu durumu öğrendiğinden itibaren 3 gün içinde yazılı olarak alıcıya bu durumu bildirmek zorundadır. 14 gün içinde de toplam bedel Alıcı’ya iade edilmek zorundadır."
+        ]
+      },
+
+      "additionalInfo": {
+        "unpaidProductPrice": {
+          "title": "SATIN ALINAN ÜRÜN BEDELİ ÖDENMEZ İSE:",
+          "content": "Alıcı, satın aldığı ürün veya hizmetin bedelini ödemez veya banka kayıtlarında iptal ederse, Satıcının ürünü veya hizmeti teslim yükümlülüğü sona erer."
+        },
+        "unauthorizedCreditCardUsage": {
+          "title": "KREDİ KARTININ YETKİSİZ KULLANIMI İLE YAPILAN ALIŞVERİŞLER:",
+          "content": "Ürün teslim edildikten sonra, alıcının ödeme yaptığı kredi kartının yetkisiz kişiler tarafından haksız olarak kullanıldığı tespit edilirse ve satılan ürün veya hizmet bedeli ilgili banka veya finans kuruluşu tarafından Satıcı'ya ödenmez ise, Alıcı, sözleşme konusu ürünü 3 gün içerisinde nakliye gideri SATICI’ya ait olacak şekilde SATICI’ya iade etmek zorundadır."
+        },
+        "undeliverableProductDueToUnforeseenReasons": {
+          "title": "ÖNGÖRÜLEMEYEN SEBEPLERLE ÜRÜN SÜRESİNDE TESLİM EDİLEMEZ İSE:",
+          "content": "Satıcı’nın öngöremeyeceği mücbir sebepler oluşursa ve ürün süresinde teslim edilemez ise, durum Alıcı’ya bildirilir. Alıcı, siparişin iptalini, ürünün benzeri ile değiştirilmesini veya engel ortadan kalkana dek teslimatın ertelenmesini talep edebilir. Alıcı siparişi iptal ederse; ödemeyi nakit ile yapmış ise iptalinden itibaren 14 gün içinde kendisine nakden bu ücret ödenir. Alıcı, ödemeyi kredi kartı ile yapmış ise ve iptal ederse, bu iptalden itibaren yine 14 gün içinde ürün bedeli bankaya iade edilir, ancak bankanın alıcının hesabına 2-3 hafta içerisinde aktarması olasıdır."
+        },
+        "buyerResponsibilityToInspectProduct": {
+          "title": "ALICININ ÜRÜNÜ KONTROL ETME YÜKÜMLÜLÜĞÜ:",
+          "content": "Alıcı, sözleşme konusu mal/hizmeti teslim almadan önce muayene edecek; ezik, kırık, ambalajı yırtılmış vb. hasarlı ve ayıplı mal/hizmeti kargo şirketinden teslim almayacaktır. Teslim alınan mal/hizmetin hasarsız ve sağlam olduğu kabul edilecektir. ALICI , Teslimden sonra mal/hizmeti özenle korunmak zorundadır. Cayma hakkı kullanılacaksa mal/hizmet kullanılmamalıdır. Ürünle birlikte Fatura da iade edilmelidir."
+        }
+      },
+
+      "withdrawalRight": {
+        "title": "CAYMA HAKKI:",
+        "content": "ALICI; satın aldığı ürünün kendisine veya gösterdiği adresteki kişi/kuruluşa teslim tarihinden itibaren 14 (on dört) gün içerisinde, SATICI’ya aşağıdaki iletişim bilgileri üzerinden bildirmek şartıyla hiçbir hukuki ve cezai sorumluluk üstlenmeksizin ve hiçbir gerekçe göstermeksizin malı reddederek sözleşmeden cayma hakkını kullanabilir."
+      },
+      "sellerWithdrawalContact": {
+        "title": "SATICININ CAYMA HAKKI BİLDİRİMİ YAPILACAK İLETİŞİM BİLGİLERİ:",
+        "company": "ŞİRKET ADI/UNVANI: ERMA GROUP TURİZM SANAYİ TİCARET ANONİM ŞİRKETİ",
+        "address": "ADRES: ÇAMTEPE MAH. MAHMUT TEVFİK ATAY BULV. GAZİANTEP TEKNOPARK NO:4-A İÇ KAPO NO:1 ŞEHİTKAMİL GAZİANTEP",
+        "email": "EPOSTA: info@nefesol.com",
+        "phone": "TEL: 0850 309 8804"
+      },
+      "withdrawalPeriod": {
+        "title": "CAYMA HAKKININ SÜRESİ:",
+        "content": [
+          "Alıcı, satın aldığı eğer bir hizmet ise, bu 14 günlük süre sözleşmenin imzalandığı tarihten itibaren başlar. Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile hizmetin ifasına başlanan hizmet sözleşmelerinde cayma hakkı kullanılamaz.",
+          "Cayma hakkının kullanımından kaynaklanan masraflar SATICI’ ya aittir.",
+          "Cayma hakkının kullanılması için 14 (ondört) günlük süre içinde SATICI' ya iadeli taahhütlü posta, faks veya eposta ile yazılı bildirimde bulunulması ve ürünün işbu sözleşmede düzenlenen 'Cayma Hakkı Kullanılamayacak Ürünler' hükümleri çerçevesinde kullanılmamış olması şarttır."
+        ]
+      },
+      "useOfWithdrawalRight": {
+        "title": "CAYMA HAKKININ KULLANIMI:",
+        "content": "3. kişiye veya ALICI’ ya teslim edilen ürünün faturası, (İade edilmek istenen ürünün faturası kurumsal ise, iade ederken kurumun düzenlemiş olduğu iade faturası ile birlikte gönderilmesi gerekmektedir. Faturası kurumlar adına düzenlenen sipariş iadeleri İADE FATURASI kesilmediği takdirde tamamlanamayacaktır.) İade formu, İade edilecek ürünlerin kutusu, ambalajı, varsa standart aksesuarları ile birlikte eksiksiz ve hasarsız olarak teslim edilmesi gerekmektedir."
+      },
+
+    //   "returnConditions": {
+    //     "title": "İADE KOŞULLARI:",
+    //     "content": [
+    //       "SATICI, cayma bildiriminin kendisine ulaşmasından itibaren en geç 10 günlük süre içerisinde toplam bedeli ve ALICI’yı borç altına sokan belgeleri ALICI’ya iade etmek ve 20 günlük süre içerisinde malı iade almakla yükümlüdür.",
+    //       "ALICI’nın kusurundan kaynaklanan bir nedenle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa, ALICI kusuru oranında SATICI’nın zararlarını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde malın veya ürünün usulüne uygun kullanılması sebebiyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir.",
+    //       "Cayma hakkının kullanılması nedeniyle SATICI tarafından düzenlenen kampanya limit tutarının altına düşülmesi halinde, kampanya kapsamında faydalanılan indirim miktarı iptal edilir."
+    //     ]
+    //   },
+    //   "nonReturnableProducts": {
+    //     "title": "CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER:",
+    //     "content": [
+    //       "ALICI’nın isteği veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve geri gönderilmeye müsait olmayan, iç giyim alt parçaları, mayo ve bikini altları, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme ihtimali olan mallar, ALICI’ya teslim edilmesinin ardından ALICI tarafından ambalajı açıldığı takdirde iade edilmesi sağlık ve hijyen açısından uygun olmayan ürünler, teslim edildikten sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler, Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi süreli yayınlara ilişkin mallar, Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar, ile ses veya görüntü kayıtlarının, kitap, dijital içerik, yazılım programlarının, veri kaydedebilme ve veri depolama cihazlarının, bilgisayar sarf malzemelerinin, ambalajının ALICI tarafından açılmış olması halinde iadesi Yönetmelik gereği mümkün değildir. Kişiye özel dikimi yapılan ağaçlar, bitkiler, firma veya kişiye özel yapılmış yazılımlar, Ayrıca Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin cayma hakkının kullanılması da Yönetmelik gereği mümkün değildir."
+    //     ]
+    //   },
+    //   "defaultAndLegalConsequences": {
+    //     "title": "TEMERRÜT HALİ VE HUKUKİ SONUÇLARI",
+    //     "content": [
+    //       "ALICI, ödeme işlemlerini kredi kartı ile yaptığı durumda temerrüde düştüğü takdirde, kart sahibi banka ile arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka hukuki yollara başvurabilir; doğacak masrafları ve vekâlet ücretini ALICI’dan talep edebilir ve her koşulda ALICI’nın borcundan dolayı temerrüde düşmesi halinde, ALICI, borcun gecikmeli ifasından dolayı SATICI’nın uğradığı zarar ve ziyanını ödeyeceğini kabul eder."
+    //     ]
+    //   },
+    //   "paymentAndDelivery": {
+    //     "title": "ÖDEME VE TESLİMAT",
+    //     "content": [
+    //       "Web sitemiz üzerinden Halk bankası hesabımıza Iban numaramız:TR79 0001 2009 3710 0010 2618 55 nolu hesabımıza yatırma işlemi gerçekleştirebilirsiniz.",
+    //       "Sitemiz üzerinden kredi kartlarınız ile, Her türlü kredi kartınıza online tek ödeme ya da online taksit imkânlarından yararlanabilirsiniz. Online ödemelerinizde siparişiniz sonunda kredi kartınızdan tutar çekim işlemi gerçekleşecektir."
+    //     ]
+    //   },
+
+      "returnConditions": {
+        "title": "İADE KOŞULLARI:",
+        "content": [
+          "SATICI, cayma bildiriminin kendisine ulaşmasından itibaren en geç 10 günlük süre içerisinde toplam bedeli ve ALICI’yı borç altına sokan belgeleri ALICI’ya iade etmek ve 20 günlük süre içerisinde malı iade almakla yükümlüdür.",
+          "ALICI’nın kusurundan kaynaklanan bir nedenle malın değerinde bir azalma olursa veya iade imkânsızlaşırsa, ALICI kusuru oranında SATICI’nın zararlarını tazmin etmekle yükümlüdür. Ancak cayma hakkı süresi içinde malın veya ürünün usulüne uygun kullanılması sebebiyle meydana gelen değişiklik ve bozulmalardan ALICI sorumlu değildir.",
+          "Cayma hakkının kullanılması nedeniyle SATICI tarafından düzenlenen kampanya limit tutarının altına düşülmesi halinde, kampanya kapsamında faydalanılan indirim miktarı iptal edilir."
+        ]
+      },
+      "nonReturnableProducts": {
+        "title": "CAYMA HAKKI KULLANILAMAYACAK ÜRÜNLER:",
+        "content": [
+          "ALICI’nın isteği veya açıkça kişisel ihtiyaçları doğrultusunda hazırlanan ve geri gönderilmeye müsait olmayan, iç giyim alt parçaları, mayo ve bikini altları, makyaj malzemeleri, tek kullanımlık ürünler, çabuk bozulma tehlikesi olan veya son kullanma tarihi geçme ihtimali olan mallar, ALICI’ya teslim edilmesinin ardından ALICI tarafından ambalajı açıldığı takdirde iade edilmesi sağlık ve hijyen açısından uygun olmayan ürünler, teslim edildikten sonra başka ürünlerle karışan ve doğası gereği ayrıştırılması mümkün olmayan ürünler, Abonelik sözleşmesi kapsamında sağlananlar dışında, gazete ve dergi gibi süreli yayınlara ilişkin mallar, Elektronik ortamda anında ifa edilen hizmetler veya tüketiciye anında teslim edilen gayrimaddi mallar, ile ses veya görüntü kayıtlarının, kitap, dijital içerik, yazılım programlarının, veri kaydedebilme ve veri depolama cihazlarının, bilgisayar sarf malzemelerinin, ambalajının ALICI tarafından açılmış olması halinde iadesi Yönetmelik gereği mümkün değildir. Kişiye özel dikimi yapılan ağaçlar, bitkiler, firma veya kişiye özel yapılmış yazılımlar, Ayrıca Cayma hakkı süresi sona ermeden önce, tüketicinin onayı ile ifasına başlanan hizmetlere ilişkin cayma hakkının kullanılması da Yönetmelik gereği mümkün değildir."
+        ]
+      },
+      "defaultAndLegalConsequences": {
+        "title": "TEMERRÜT HALİ VE HUKUKİ SONUÇLARI",
+        "content": [
+          "ALICI, ödeme işlemlerini kredi kartı ile yaptığı durumda temerrüde düştüğü takdirde, kart sahibi banka ile arasındaki kredi kartı sözleşmesi çerçevesinde faiz ödeyeceğini ve bankaya karşı sorumlu olacağını kabul, beyan ve taahhüt eder. Bu durumda ilgili banka hukuki yollara başvurabilir; doğacak masrafları ve vekâlet ücretini ALICI’dan talep edebilir ve her koşulda ALICI’nın borcundan dolayı temerrüde düşmesi halinde, ALICI, borcun gecikmeli ifasından dolayı SATICI’nın uğradığı zarar ve ziyanını ödeyeceğini kabul eder."
+        ]
+      },
+      "paymentAndDelivery": {
+        "title": "ÖDEME VE TESLİMAT",
+        "content": [
+          "Web sitemiz üzerinden Halk bankası hesabımıza Iban numaramız:TR79 0001 2009 3710 0010 2618 55 nolu hesabımıza yatırma işlemi gerçekleştirebilirsiniz.",
+          "Sitemiz üzerinden kredi kartlarınız ile, Her türlü kredi kartınıza online tek ödeme ya da online taksit imkânlarından yararlanabilirsiniz. Online ödemelerinizde siparişiniz sonunda kredi kartınızdan tutar çekim işlemi gerçekleşecektir."
+        ]
+      },
+
+      "cancellationAndReturnPolicy": {
+      "title": "İptal İade Politikası",
+      "description": "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI"
+    }
+
       }
     }
   }
