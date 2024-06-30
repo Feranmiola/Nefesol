@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next"
 
 
 const TakeAction = () => {
+    const {t} = useTranslation();
   return (
     <div className="flex flex-col items-center max-sm:justify-center">
         
@@ -12,8 +14,8 @@ const TakeAction = () => {
                     <p className="text-[24px] max-sm:text-[20px] text-[#009444]">1</p>
                 </div>
                 <div className="flex flex-col space-y-4">
-                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">Choose Forest</p>
-                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">We plant across various forests in Turkey, you can select any of the forest of your choice.</p>
+                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">{t('chooseForest')}</p>
+                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">{t('wePlantInTurkey')}</p>
                 </div>
             </div>
 
@@ -22,8 +24,8 @@ const TakeAction = () => {
                     <p className="text-[24px] max-sm:text-[20px] text-[#009444]">2</p>
                 </div>
                 <div className="flex flex-col space-y-4">
-                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">Determine preferred quantity</p>
-                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">If you are not sure, take a look at our information on CO2 emissions. There are also packages that correspond to the typical annual CO2 emissions of consumers in </p>
+                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">{t('determineQuantity')}</p>
+                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">{t('co2Info')} </p>
                 </div>
             </div>
 
@@ -32,8 +34,8 @@ const TakeAction = () => {
                     <p className="text-[24px] max-sm:text-[20px] text-[#009444]">3</p>
                 </div>
                 <div className="flex flex-col space-y-4">
-                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">We Plant</p>
-                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">If you are not sure, take a look at our information on CO2 emissions. There are also packages that correspond to the typical annual CO2 emissions of consumers in </p>
+                    <p className="text-[28px] max-sm:text-[20px] text-bgGreen">{t('wePlant')}</p>
+                    <p className="text-[16px] max-sm:text-[14px] text-bgGreen md:w-[437px] max-sm:w-[250px]">{t('co2Info')} </p>
                 </div>
             </div>
 
