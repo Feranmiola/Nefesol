@@ -462,6 +462,24 @@ i18n
         "clickToAddRoutes": "Click to add more routes",
 
 
+        "howBigIsYourHouse": "How big is your house?",
+        
+        "howManyBedrooms": "How many bedrooms are in your house?",
+        "howMuchElectricity": "How much electricity do you use?",
+        "low": "Low",
+        "normal": "Normal",
+        "high": "High",
+        "defineElectricityUse": "How would you define your electricity use?",
+        "energySource" : "Where does your energy come from?",
+        "ecoPower": "Eco Power",
+        "power": "Power",
+        "naturalGas": "Natural Gas",
+        "oil": "Oil",
+        "regionalHeating": "Regional Heating",
+        "wood": "Wood",
+        "annualAveragePowerConsumption": "Annual Average Power Consumption",
+        "kWhPerYearValue": "KWh per year"
+
     
       }
     },
@@ -884,6 +902,24 @@ i18n
          "averageAnnualFlights": "Ortalama Yıllık Uçuşlar",
          "addMoreRoutes": "Daha Fazla Rota Ekle",
          "clickToAddRoutes": "Daha fazla rota eklemek için tıklayın",
+
+         "howBigIsYourHouse": "Ev ne kadar büyük?",
+         
+         "howManyBedrooms": "Evde kaç yatak odası var?",
+         "howMuchElectricity": "Ne kadar elektrik kullanıyorsunuz?",
+         "low": "Düşük",
+         "normal": "Normal",
+         "high": "Yüksek",
+         "defineElectricityUse": "Elektrik kullanımınızı nasıl tanımlarsınız?",
+         "energySource" : "Enerjiniz nereden geliyor?",
+         "ecoPower": "Eko Güç",
+         "power": "Güç",
+         "naturalGas": "Doğal Gaz",
+         "oil": "Yağ",
+         "regionalHeating": "Bölgesel Isıtma",
+         "wood": "Odun",
+         "annualAveragePowerConsumption": "Yıllık Ortalama Enerji Tüketimi",
+         "kWhPerYearValue": "Yılda KWh"
       }
     }
   }
