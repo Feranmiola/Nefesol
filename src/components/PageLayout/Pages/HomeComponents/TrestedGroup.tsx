@@ -1,7 +1,8 @@
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 const TrestedGroup = () => {
-
+    const {t} = useTranslation();
   return (
     <div>
         <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 md:space-x-5 items-center mt-10 justify-center">
@@ -104,13 +105,13 @@ const TrestedGroup = () => {
                         src="./assets/karbonLogo.svg"
                         alt="karbon logo"
                         />
-                        <p className="text-white text-[20px] w-[307px] leading-none font-light">Karbon is harnessing the power of blockchain to address real-world challenges!</p>
+                        <p className="text-white text-[20px] w-[307px] leading-none font-light">{t('karbonBlockchain')}</p>
 
                         <motion.a
                             whileTap={{ scale: 0.9 }} 
-                            className="w-[159px] h-[48px] bg-transparent hover:bg-slate-800 hover:bg-opacity-20 hover:ring-1 hover:ring-linkGreen transition ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                            className=" px-5 h-[48px] bg-transparent hover:bg-slate-800 hover:bg-opacity-20 hover:ring-1 hover:ring-linkGreen transition ease-in-out ring-[1px] ring-white flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                             >
-                            <p className="text-white text-[16px] font-medium">Learn More</p>
+                            <p className="text-white text-[16px] font-medium">{t('learnMore')}</p>
                             <img
                             loading="lazy"
                             src="./assets/redirect.svg"
