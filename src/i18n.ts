@@ -478,7 +478,16 @@ i18n
         "regionalHeating": "Regional Heating",
         "wood": "Wood",
         "annualAveragePowerConsumption": "Annual Average Power Consumption",
-        "kWhPerYearValue": "KWh per year"
+        "kWhPerYearValue": "KWh per year",
+
+        "whatIsYourFoodLike": "What is your food like?",
+        "selectFoodType": "Select",
+        "whatFoodProductsDoYouMainlyBuy": "What food products do you mainly buy?",
+        "doYouExercise": "Do you exercise?",
+        "doYouBuyOrganicFood": "Do you buy organic food?",
+        "howOftenDoYouEatFrozenFoods": "How often do you eat frozen foods?",
+        "annualAverageFoodConsumption": "Annual average food consumption",
+        "kgPerYear": "KG per year",
 
     
       }
@@ -919,7 +928,16 @@ i18n
          "regionalHeating": "Bölgesel Isıtma",
          "wood": "Odun",
          "annualAveragePowerConsumption": "Yıllık Ortalama Enerji Tüketimi",
-         "kWhPerYearValue": "Yılda KWh"
+         "kWhPerYearValue": "Yılda KWh",
+
+         "whatIsYourFoodLike": "Yemeğiniz nasıl?",
+         "selectFoodType": "Seçiniz",
+         "whatFoodProductsDoYouMainlyBuy": "Hangi gıda ürünlerini genellikle satın alıyorsunuz?",
+         "doYouExercise": "Egzersiz yapıyor musunuz?",
+         "doYouBuyOrganicFood": "Organik gıda alıyor musunuz?",
+         "howOftenDoYouEatFrozenFoods": "Ne sıklıkta dondurulmuş gıdalar tüketirsiniz?",
+         "annualAverageFoodConsumption": "Yıllık ortalama gıda tüketimi",
+         "kgPerYear": "KG yılda"
       }
     }
   }
