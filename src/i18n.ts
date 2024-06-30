@@ -425,6 +425,28 @@ i18n
         "everyBreathHope": "every breath is a hope!.",
         "takeActionGreenFuture": "Take Action for a green future",
 
+        "co2Calculator": "Calculator",
+        "vehicles": "Vehicles",
+        "airplane": "Airplane",
+        "home": "Home",
+        "food": "Food",
+        "clearAll": "Clear All",
+        "prev": "Prev",
+        "nextCategory": "Next Category",
+        "totalCO2": "Total CO2 you produce across your usage",
+        "eliminateCO2": "To eliminate this CO2, you need to plant",
+        "proceedToPlant": "Proceed to Plant Trees",
+
+        "every100km": "Every 100km of use",
+        "liters": "Liters",
+        "carsPerYear": "How many cars do you drive per year (Average)",
+        "kilometers": "Kilometer",
+        "yearlyUsage": "Therefore every year, you use",
+        "litersPerYear": "Litre per year",
+        "calculationNote": "The calculated data was made according to personal carbon calculation. Personal accounts must be balanced according to the tree account. The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree. This balancing is within the scope of the Afforestation Offset Project.",
+
+
+
     
       }
     },
@@ -811,6 +833,27 @@ i18n
         "eachTreeBreath": "Her ağaç; bir nefes,",
         "everyBreathHope": "her nefes bir umut!",
          "takeActionGreenFuture": "Yeşil bir gelecek için harekete geçin",
+
+         "co2Calculator": "Hesaplayıcı",
+         "vehicles": "Araçlar",
+         "airplane": "Uçak",
+         "home": "Ev",
+         "food": "Yiyecek",
+         "clearAll": "Hepsini Temizle",
+         "prev": "Önceki",
+         "nextCategory": "Sonraki Kategori",
+         "totalCO2": "Kullanımınız boyunca ürettiğiniz toplam CO2",
+         "eliminateCO2": "Bu CO2'yi ortadan kaldırmak için",
+         "proceedToPlant": "Ağaç Dikmeye Devam Edin",
+
+         "every100km": "Her 100 km kullanımda",
+         "liters": "Litre",
+         "carsPerYear": "Yılda ortalama kaç araba kullanıyorsunuz",
+         "kilometers": "Kilometre",
+         "yearlyUsage": "Bu nedenle her yıl şunları kullanıyorsunuz",
+         "litersPerYear": "Litre yılda",
+         "calculationNote": "Hesaplanan veriler kişisel karbon hesaplamasına göre yapılmıştır. Kişisel hesaplar ağaç hesabına göre dengelemelidir. Ünite başına hesaplanan ağaçlar, Avrupa Birliği CTS sistemindeki verilere göre hesaplanır ve ağacın türüne ve yaşına bağlı olarak değişebilir. Bu dengeleme Ağaçlandırma Telafi Projesi kapsamındadır.",
+         
 
       }
     }

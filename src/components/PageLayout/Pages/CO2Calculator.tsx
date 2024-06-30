@@ -8,9 +8,11 @@ import Food from "./C02Calculator Components/Food";
 import House from "./C02Calculator Components/House";
 import Airplane from "./C02Calculator Components/Airplane";
 import BeatLoader from "react-spinners/BeatLoader";
+import { useTranslation } from "react-i18next";
 
 
 const CO2Calculator = () => {
+  const {t} = useTranslation();
   const [tabIndex, setTabIndex] = useState(1);
   const [progress, setProgress] = React.useState(13)
   const [initial, setInitial] = useState(25)
@@ -76,7 +78,7 @@ const CO2Calculator = () => {
 
     return (
       <div className="mt-32" onLoad={() => setLoading(false)}>
-        <p className="text-[40px] text-bgGreen md:ml-[206px] max-sm:text-center max-sm:text-[28px]">CO<span className=" bottom-0 text-[25px] max-sm:text-[20px] font-medium">2</span>  <span className="">Calculator</span></p>
+        <p className="text-[40px] text-bgGreen md:ml-[206px] max-sm:text-center max-sm:text-[28px]">CO<span className=" bottom-0 text-[25px] max-sm:text-[20px] font-medium">2</span>  <span className="">{t('co2Calculator')}</span></p>
         
         <div className="flex mt-[-70px] justify-center">
           <div className="w-[939px] max-sm:w-[380px] mt-20 flex rounded-[24px] ">
@@ -100,7 +102,7 @@ const CO2Calculator = () => {
                               alt="car"
                               />
                             )}
-                            <p className={tabIndex === 1 ? "text-white" : " text-bgGreen max-sm:hidden"}>Vehicles</p>
+                            <p className={tabIndex === 1 ? "text-white" : " text-bgGreen max-sm:hidden"}>{t('vehicles')}</p>
                         </motion.div>
   
                         <motion.div
@@ -120,7 +122,7 @@ const CO2Calculator = () => {
                               alt="plane"
                               />
                             )}
-                            <p className={tabIndex === 2 ? "text-white" : " text-bgGreen max-sm:hidden"}>Airplane</p>
+                            <p className={tabIndex === 2 ? "text-white" : " text-bgGreen max-sm:hidden"}>{t('airplane')}</p>
                         </motion.div>
   
                         <motion.div
@@ -139,7 +141,7 @@ const CO2Calculator = () => {
                               alt="Home"
                               />
                             )}
-                            <p className={tabIndex === 3 ? "text-white" : " text-bgGreen max-sm:hidden"}>Home</p>
+                            <p className={tabIndex === 3 ? "text-white" : " text-bgGreen max-sm:hidden"}>{t('home')}</p>
                         </motion.div>
   
                         <motion.div
@@ -159,7 +161,7 @@ const CO2Calculator = () => {
                               />
                             )}
                             
-                            <p className={tabIndex === 4 ? "text-white" : " text-bgGreen max-sm:hidden"}>Food</p>
+                            <p className={tabIndex === 4 ? "text-white" : " text-bgGreen max-sm:hidden"}>{t('food')}</p>
                         </motion.div>
                     </div>
                     <motion.div
@@ -167,7 +169,7 @@ const CO2Calculator = () => {
                     whileTap={{ scale: 0.9 }} 
                     className="cursor-pointer"
                     >
-                      <p className="text-bgGreen text-[16px] font-semibold cursor-pointer"><u>Clear All</u></p>
+                      <p className="text-bgGreen text-[16px] font-semibold cursor-pointer"><u>{t('clearAll')}</u></p>
                     </motion.div>
                 </div>
   
@@ -202,7 +204,7 @@ const CO2Calculator = () => {
                       <img
                       src="./assets/prev.svg"
                       />
-                      <p className="text-[16px] text-linkGreen font-semibold">Prev</p>
+                      <p className="text-[16px] text-linkGreen font-semibold">{t('prev')}</p>
   
                     </motion.div>
   
@@ -213,7 +215,7 @@ const CO2Calculator = () => {
                     className={tabIndex === 4 ? 'cursor-not-allowed opacity-25 flex flex-row items-center space-x-1' : "cursor-pointer flex flex-row items-center space-x-1"}
                     >
                       
-                      <p className="text-[16px] text-linkGreen font-semibold">Next Category</p>
+                      <p className="text-[16px] text-linkGreen font-semibold">{t('nextCategory')}</p>
   
                       <img
                       src="./assets/next.svg"
@@ -228,7 +230,7 @@ const CO2Calculator = () => {
               </div>
               <div className="w-full bg-white border-t-[1px] border-b-[1px] rounded-b-[24px] flex flex-col py-5 px-10 ">
                 <div className="flex flex-col space-y-3">
-                  <p className="text-[16px] text-bgGreen">Total CO2 you produce across your usage</p>
+                  <p className="text-[16px] text-bgGreen">{t('totalCO2')}</p>
                   <div className="  flex flex-row max-sm:flex-col max-sm:justify-center items-center">
                     <div>
                       <p className="text-bgGreen text-[24px] max-sm:text-[16px] font-bold">12,000 KgCO<span className="bottom-0 text-[16px] max-sm:text-[12px]">2</span></p>
@@ -290,7 +292,7 @@ const CO2Calculator = () => {
                   </div>
                   <div className="flex flex-row max-sm:flex-col items-center justify-between ">
                     <div className="flex flex-row max-sm:flex-col max-sm:space-y-2 mb-2 md:space-x-3 items-center">
-                      <p className="text-[16px] text-bgGreen bottom-0">To eliminate this CO2, you need to plant</p>
+                      <p className="text-[16px] text-bgGreen bottom-0">{t('eliminateCO2')}</p>
                       <p className="text-[24px] text-linkGreen font-bold">12,000 Trees</p>
                     </div>
                     <motion.a
@@ -302,7 +304,7 @@ const CO2Calculator = () => {
                       src="./assets/plant.svg"
                       alt="plant"
                       />
-                      <p className="text-white text-[16px] font-medium">Proceed to Plant Trees</p>
+                      <p className="text-white text-[16px] font-medium">{t('proceedToPlant')}</p>
                     </motion.a>
   
                   </div>
