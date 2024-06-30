@@ -417,7 +417,11 @@ i18n
           "cancellationAndReturnPolicy": {
             "title": "Cancellation and Return Policy",
             "description": "CONSUMER RIGHTS – WITHDRAWAL – CANCELLATION AND RETURN CONDITIONS"
-          }
+          },
+
+        "reduction": "Reduction",
+        "developmentGreenTechnologies": "Development of green Technologies",
+
     
       }
     },
@@ -797,7 +801,10 @@ i18n
       "cancellationAndReturnPolicy": {
       "title": "İptal İade Politikası",
       "description": "TÜKETİCİ HAKLARI – CAYMA – İPTAL İADE KOŞULLARI"
-    }
+    },
+
+    "reduction": "Azaltma",
+    "developmentGreenTechnologies": "Yeşil Teknolojilerin Geliştirilmesi",
 
       }
     }
