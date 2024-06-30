@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import BeatLoader from "react-spinners/BeatLoader";
+import { useTranslation } from "react-i18next";
 
 
 interface BlogPost {
@@ -11,23 +12,24 @@ interface BlogPost {
 }
 
 const Blog = () => {
+  const {t} = useTranslation();
   const blogPosts: BlogPost[] = [
     {
       imageUrl: './assets/blogImage.svg',
-      title: 'Carbon Cycle',
-      description: "The carbon cycle, located at the heart of our planet's environmental processes, is the biogeochemical world that provides carbon exchange between biosphere, pedosphere (earth), geosphere (earth)...",
+      title: t('carbonCycle'),
+      description: t('carbonCycleDetail'),
       readMoreUrl: '/carbon-cycle',
     },
     {
       imageUrl: './assets/blog2ImageSmall.jpg',
-      title: 'Nefes Ol: Çevresel Bilinçliliğe Katkıda Bulunmanın Adresi',
-      description: "Nefes Ol: Çevresel Bilinçliliğe Katkıda Bulunmanın Adresi Günümüzde, dünya çapında artan çevre sorunları",
+      title: t('nefesOlAwareness'),
+      description: t('nefesOlEnvironmental'),
       readMoreUrl: '/Nefes-Ol',
     },
     {
       imageUrl: './assets/blogImage3Small.jpg',
-      title: 'Karbon Kredileri ve Karbon Piyasaları Nedir?',
-      description: "Karbon Kredileri ve Karbon Piyasaları: Yatırımcılar İçin Rehber Karbon Kredileri ve Önemi Dünya genelinde iklim değişikliğiyle m&",
+      title: t('carbonCreditsMarkets'),
+      description: t('carbonCreditsGuide'),
       readMoreUrl: '/Karbon-Kredileri',
     },
   ];
@@ -61,7 +63,7 @@ const Blog = () => {
   }
   return (
     <div className="pt-40 md:pb-20 flex flex-col items-center justify-center">
-      <p className=" text-bgGreen text-center text-[40px]">Learn more about contribution to the ecosystem</p>
+      <p className=" text-bgGreen text-center text-[40px]">{t('ecosystemContribution')}</p>
       <div className="flex items-center justify-center py-10">
         <div className="flex flex-row flex-wrap items-center lg:w-[1240px] justify-center max-sm:px-4">
           <div className="flex flex-wrap justify-center w-full">
