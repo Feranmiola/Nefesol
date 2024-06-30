@@ -445,6 +445,21 @@ i18n
         "litersPerYear": "Litre per year",
         "calculationNote": "The calculated data was made according to personal carbon calculation. Personal accounts must be balanced according to the tree account. The trees calculated per unit are calculated according to the data in the EU CTS system and may vary depending on the species and age of the tree. This balancing is within the scope of the Afforestation Offset Project.",
 
+        "edit": "Edit",
+        "delete": "Delete",
+        "routeDescription": "Sample route description",
+        "departureAirport": "Departure Airport",
+        "selectAirport": "Select an airport",
+        "arrivalAirport": "Arrival Airport",
+        "tripType": "Trip Type",
+        "roundTrip": "Round Trip",
+        "oneWayTrip": "One Way Trip",
+        "averageFlightTimes": "Average Flight Times",
+        "averageCalculatedDistance": "Average Calculated Distance",
+        "kWhPerYear": "kWh per year",
+        "averageAnnualFlights": "Average Annual Flights",
+        "addMoreRoutes": "Add More Routes",
+        "clickToAddRoutes": "Click to add more routes",
 
 
     
@@ -854,7 +869,21 @@ i18n
          "litersPerYear": "Litre yılda",
          "calculationNote": "Hesaplanan veriler kişisel karbon hesaplamasına göre yapılmıştır. Kişisel hesaplar ağaç hesabına göre dengelemelidir. Ünite başına hesaplanan ağaçlar, Avrupa Birliği CTS sistemindeki verilere göre hesaplanır ve ağacın türüne ve yaşına bağlı olarak değişebilir. Bu dengeleme Ağaçlandırma Telafi Projesi kapsamındadır.",
          
-
+         "edit": "Düzenle",
+         "delete": "Sil",
+         "routeDescription": "Örnek rota açıklaması",
+         "departureAirport": "Kalkış Havalimanı",
+         "selectAirport": "Havalimanı seçin",
+         "arrivalAirport": "Varış Havalimanı",
+         "tripType": "Seyahat Türü",
+         "roundTrip": "Gidiş Dönüş",
+         "oneWayTrip": "Tek Yön",
+         "averageFlightTimes": "Ortalama Uçuş Süreleri",
+         "averageCalculatedDistance": "Ortalama Hesaplanan Mesafe",
+         "kWhPerYear": "kWh yılda",
+         "averageAnnualFlights": "Ortalama Yıllık Uçuşlar",
+         "addMoreRoutes": "Daha Fazla Rota Ekle",
+         "clickToAddRoutes": "Daha fazla rota eklemek için tıklayın",
       }
     }
   }
