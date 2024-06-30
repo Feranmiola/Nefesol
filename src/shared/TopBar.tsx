@@ -257,7 +257,7 @@ const TopBar = () => {
                   className="flex px-10 flex-row items-center justify-center space-x-2"
                 >
                   <img src="./assets/greenTree.svg" />
-                  <p className="text-[#1F2721] text-[14px] font-bold tracking-wider">BREATH PACK</p>
+                  <p className="text-[#1F2721] text-[14px] font-bold tracking-wider">{t('BREATH PACK')}</p>
                 </motion.div>
 
                 <div className="flex items-center justify-center w-full flex-col space-y-2">

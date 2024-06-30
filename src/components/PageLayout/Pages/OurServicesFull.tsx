@@ -250,10 +250,22 @@ const OurServicesFull = () => {
                                 
                                 <div className="space-y-5 max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center">
                                     <p className="text-bgGreen text-[24px]">{t('nefesolCertBenefits')}</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Accuracy and Reliability: </span>Certification is an important way to verify and prove the reliability of your carbon equalization activities. Your customers know that you are effectively managing your carbon emissions through certification, and that the carbon offset projects you carry out are verified. This is a strong statement that your business fulfills its environmental responsibilities and is committed to a sustainable future. transmits a message.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Compliance with International Standards: </span>Nefesol Certification Service is carried out in accordance with internationally accepted carbon standards. This allows you to align your operations with best practices for carbon monitoring, reporting and verification.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Image and Competitive Advantage: </span>Certification allows you to gain image and competitive advantage as well as proving your business commitments to environmental sustainability. Verifying your carbon footprint and supporting your equalization efforts with certificates can be an important factor in choosing you by your customers and stakeholders. You can also gain a competitive advantage by emphasizing your leadership role in sustainability in the market.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Traceability and Transparency: </span>Certification ensures that your carbon equalization activities are traceable and transparent. It clearly documents the details of your projects and compensation efforts, the methods for reducing carbon emissions and contributing to nature. This allows you to gain the trust of your stakeholders, customers and society.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('accuracyReliability')} </span>
+                                      {t('certificationDescription')}
+                                      </p>
+                                      <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                          <span className="font-bold">{t('complianceStandards2')} </span>
+                                          {t('complianceStandards2')}
+                                      </p>
+                                      <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                          <span className="font-bold">{t('imageAdvantage')} </span>
+                                          {t('competitiveAdvantage')}
+                                      </p>
+                                      <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                          <span className="font-bold">{t('traceabilityTransparency22')} </span>
+                                          {t('traceabilityDescription')}
+                                      </p>
                                 </div>
                                 <div>
                                     <p className="text-bgGreen text-[20px] max-sm:text-[16px]">{t('nefesolCertify')}</p>
@@ -274,10 +286,18 @@ const OurServicesFull = () => {
                             </div>
                             <div className=" space-y-10 max-sm:w-[350px]">
                                 <div className="space-y-5 ">
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Website and SEO Optimization: </span>To strengthen your business's digital presence, you need an impressive website and SEO (Search Engine Optimization) strategy. As Nefesol, we offer a customized web design to your business, while we do SEO optimization to get better rankings in search engines.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Social Media Management: </span>Social media has the power to announce your brand to large audiences and provide interaction; is a tool. As Nefesol, we manage your social media platforms and support you in content creation, publishing, community management and advertising campaigns.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Content Marketing: </span>Effective content is important to attract and impress your target audience as well as demonstrating your brand's value and expertise. As Nefesol, we create original and interesting content, and offer content in various formats such as blog posts, articles, infographics and videos.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Email Marketing: </span>Email marketing is an effective way to reach potential customers and current customers directly. As Nefesol, we create impressive e-mail campaigns, send personalized e-mails and apply automation processes to increase customer loyalty.</p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('websiteSeoOptimization')}</span> {t('websiteSeoOptimizationText')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('socialMediaManagement')}</span> {t('socialMediaManagementText')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('contentMarketing')}</span> {t('contentMarketingText')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('emailMarketing')}</span> {t('emailMarketingText')}
+                                  </p>
                                 </div>
                                 <div>
                                     <p className="text-bgGreen text-[20px] max-sm:text-[16px]">{t('digitalMarketing')}</p>
@@ -297,22 +317,34 @@ const OurServicesFull = () => {
                             <p className="text-bgGreen text-[20px] max-sm:w-[350px] max-sm:text-[16px]">{t('environmentalImpacts')}</p>
                             <div className=" space-y-10 max-sm:w-[350px]">
                                 <div className="space-y-5">
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Carbon Footprint Assessment: </span>In the first step, we analyze the activities of your business as a team of experts and make a detailed assessment to determine the carbon footprint and measure the current environmental impacts of your business. . This includes energy consumption, transportation, waste management and other factors.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Data Collection and Analysis: </span>We collect and analyze the data necessary to calculate the carbon footprint. This includes factors such as your business's energy consumption, transportation activities, production processes and supply chain. Using the data we have obtained, we identify the main sources that affect the carbon emissions of your business.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Optimization Strategies: </span>As a result of analyzing the data and evaluating the current situation, we determine customized optimization strategies to reduce the carbon footprint. These strategies include topics such as increasing energy efficiency, using renewable energy, reducing waste, and green supply chain management. In addition, improvements in business processes and technological innovations are also considered.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Implementation and Monitoring: </span>We work in cooperation with your business during the implementation of optimization strategies. We guide you and follow the process for the successful implementation of the strategies. We also provide regular reports to monitor progress and evaluate results.</p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('carbonFootprintAssessment').split(':')[0]}: </span>
+                                      {t('carbonFootprintAssessment').split(':')[1]}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('dataCollectionAnalysis').split(':')[0]}: </span>
+                                      {t('dataCollectionAnalysis').split(':')[1]}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('optimizationStrategies').split(':')[0]}: </span>
+                                      {t('optimizationStrategies').split(':')[1]}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                      <span className="font-bold">{t('implementationMonitoring').split(':')[0]}: </span>
+                                      {t('implementationMonitoring').split(':')[1]}
+                                  </p>
                                 </div>
                                 <div className="space-y-5">
                                     <p className="text-bgGreen text-[24px]">{t('carbonFootprintOptimization')}</p>
 
-                                    <ul className="ml-6">
-                                        <li className="text-[20px] max-sm:text-[16px]">You increase your environmental efficiency by reducing your carbon emissions.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">You save cost with energy efficiency and sustainable applications.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">You support your business to achieve its sustainability goals.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">You gain the trust and loyalty of your customers and stakeholders.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">You strengthen your reputation by complying with environmental regulations.</li>
+                                      <ul className="ml-6">
+                                        <li className="text-[20px] max-sm:text-[16px]">{t('increaseEfficiency')}</li>
+                                        <li className="text-[20px] max-sm:text-[16px]">{t('saveCost')}</li>
+                                        <li className="text-[20px] max-sm:text-[16px]">{t('supportBusiness')}</li>
+                                        <li className="text-[20px] max-sm:text-[16px]">{t('gainTrust')}</li>
+                                        <li className="text-[20px] max-sm:text-[16px]">{t('strengthenReputation')}</li>
                                     </ul>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]">As Nefesol, we are here to help you maximize your environmental efficiency by guiding your business through the carbon footprint optimization process.</p>
+                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px] mt-6">{t('nefesolSupport')}</p>
                                 </div>
                             </div>
 
@@ -331,11 +363,11 @@ const OurServicesFull = () => {
                                 <div className="space-y-5">
                                     <p className="text-bgGreen text-[24px]">{t('greenTechIncentivesTitle')}</p>
                                     <ul className="ml-6 space-y-10 max-sm:w-[310px]">
-                                        <li className="text-[20px] max-sm:text-[16px]">Financial Advantages: Green technology incentives provide various financial advantages to businesses. These include incentives such as grant and incentive programs, tax breaks, low-interest loans, and savings on energy costs. These incentives encourage the adoption of green technologies while helping businesses reduce their costs.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">Competitive Advantage: Green technologies enable businesses to gain competitive advantage. Commitments to sustainability and the use of green technologies are positively perceived by customers and stakeholders. This increases brand reputation and enables you to be the business of choice for customers.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">Reducing Environmental Impacts: Green technologies help businesses reduce their environmental impact by increasing energy efficiency and using environmentally friendly resources. These technologies provide innovation in areas such as utilizing renewable energy sources, waste management, water conservation and recycling. Thus, it contributes to the protection of natural resources and reduction of carbon emissions.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">Innovation and R&D Opportunities: Green technology incentives provide support to businesses for innovation and R&D studies. These incentives facilitate the allocation of resources to develop innovative solutions and achieve sustainability goals. Businesses can play a leadership role in their sectors by realizing projects related to green technologies. They can be overtaken.</li>
-                                        <li className="text-[20px] max-sm:text-[16px]">{t('raiseAwareness')}</li>
+                                      <li className="text-[20px] max-sm:text-[16px]">{t('financialAdvantages')}</li>
+                                      <li className="text-[20px] max-sm:text-[16px]">{t('competitiveAdvantage2')}</li>
+                                      <li className="text-[20px] max-sm:text-[16px]">{t('reducingEnvironmentalImpacts')}</li>
+                                      <li className="text-[20px] max-sm:text-[16px]">{t('innovationAndR&D')}</li>
+                                      <li className="text-[20px] max-sm:text-[16px]">{t('raiseAwareness')}</li>
                                     </ul>
                                 </div>
                             </div>
@@ -354,10 +386,22 @@ const OurServicesFull = () => {
                             <p className="text-bgGreen text-[20px] max-sm:w-[350px] max-sm:text-[16px]">{t('technicalSupportRole')}</p>
                             <div className=" space-y-10 max-sm:w-[350px]">
                                 <div className="space-y-5">
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Troubleshooting and Debugging: </span>When you encounter technical problems, our expert technical support team diagnoses the problems and provides solutions quickly. The team guides you through debugging processes and finds the most suitable solution. strives to provide.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Update and Upgrade: </span>The world of technology is constantly changing and may require updates. Our technical support service helps you keep your business's existing systems and software up to date. It also provides support during upgrade processes and guides you through the implementation of new technologies.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Remote and On-Site Support: </span>Our technical support services offer remote access tools and on-site intervention options. With remote support, you can quickly solve your technical problems and prevent your business processes from being interrupted. Additionally, with our on-site support service, our expert technical team comes to your business's location and solves problems on-site.</p>
-                                    <p className="text-bgGreen text-[20px] max-sm:text-[16px]"><span className="font-bold">Consultancy and Training: </span>Our technical support service advises you in determining your business' technology-oriented strategies. We also provide training for your staff on technology use and troubleshooting. This allows you to increase the technical capabilities of your business.</p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                    <span className="font-bold">{t('troubleshootingAndDebugging.title')}</span>
+                                    {t('troubleshootingAndDebugging.content')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                    <span className="font-bold">{t('updateAndUpgrade.title')}</span>
+                                    {t('updateAndUpgrade.content')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                    <span className="font-bold">{t('remoteAndOnSiteSupport.title')}</span>
+                                    {t('remoteAndOnSiteSupport.content')}
+                                  </p>
+                                  <p className="text-bgGreen text-[20px] max-sm:text-[16px]">
+                                    <span className="font-bold">{t('consultancyAndTraining.title')}</span>
+                                    {t('consultancyAndTraining.content')}
+                                  </p>
                                 </div>
                                 <div>
                                     <p className="text-bgGreen max-sm:w-[350px] text-[20px] max-sm:text-[16px]">{t('nefesolTechnicalSupport')}</p>
