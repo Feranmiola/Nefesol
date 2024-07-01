@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next"
 const OurServicesFull = () => {
 
   const {t} = useTranslation();
-    const [progress, setProgress] = React.useState(100)
+    const [progress, setProgress] = React.useState(0)
     const [tabIndex, setTabIndex] = useState(1);
     
 
@@ -76,7 +76,7 @@ const OurServicesFull = () => {
               }
             });
           },
-          { threshold: 0.15 } // Adjust this value to control when the callback is triggered
+          { threshold: 0.01 } // Adjust this value to control when the callback is triggered
         );
 
         
