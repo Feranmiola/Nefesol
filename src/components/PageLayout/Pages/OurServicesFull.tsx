@@ -71,8 +71,6 @@ const OurServicesFull = () => {
                     setTabIndex(1);
                     break;
                 }
-              }else{
-                
               }
             });
           },
