@@ -11,6 +11,9 @@ import {
     DialogTrigger,
   } from "@/components/ui/dialog"
 import { useTranslation } from "react-i18next";
+
+import { Img } from "react-image";
+import VisibilitySensor from 'react-visibility-sensor'
   
 
 
@@ -25,7 +28,7 @@ const Tracking = () => {
 
 
     const [loading, setLoading] = useState(false);
-    const imageUrls = ['./assets/trackingPlantBg.svg', './assets/whiteTree.svg', './assets/treesBought.svg', './assets/locationLogo.svg', './assets/status.svg']; // Replace with your image URLs
+    const imageUrls = ['./assets/trackingPlantBg.svg']; // Replace with your image URLs
 
     const handleTrack = () => {
         setIstracking(true);
@@ -35,9 +38,15 @@ const Tracking = () => {
         let loadedImages = 0;
     
         imageUrls.forEach((url) => {
-          const img = new Image();
+          
+            const img = new Image();
+
+          
           img.src = url;
+
+          
           img.onload = () => {
+
             loadedImages++;
             if (loadedImages === imageUrls.length) {
               setLoading(false);
@@ -75,7 +84,12 @@ const Tracking = () => {
                         </div>
                         {dowwnloadCertificateStep1 &&(
                             <div className="flex flex-row cursor-pointer space-x-1" onClick={() => {SetStep1(false); SetStep2(true);}}>
-                                <img src="./assets/downloadCertificateLogo.svg" />
+                                
+                                <VisibilitySensor>
+                                    <Img src={"./assets/downloadCertificateLogo.svg"} />
+                                </VisibilitySensor>
+                                
+
                                 <p className="text-linkGreen font-bold text-[12px]"><u>{t('Download Certificate')}</u></p>
                             </div>
                         )}
@@ -109,7 +123,10 @@ const Tracking = () => {
                                                                     whileTap={{ scale: 0.9 }}
                                                                     className="flex flex-row space-x-2"
                                                                 >
-                                                                        <img src="./assets/prev.svg" />
+                                                                        <VisibilitySensor>
+                                                                            <Img src={"./assets/prev.svg"} />
+                                                                        </VisibilitySensor>
+
                                                                         <p className="text-[12px] md:text-[16px] text-linkGreen font-semibold">{t('returnToDetails')}</p>
                                                                 </motion.a>
                                                             </DialogClose>
@@ -173,13 +190,20 @@ const Tracking = () => {
                                         <p className="text-white text-[16px] w-[240px]">
                                             {t('We are building an environmentally friendly future')}
                                         </p>
-                                        <img src="./assets/whiteTree.svg" />
+                                        <VisibilitySensor>
+                                            <Img src={"./assets/whiteTree.svg"} />
+                                        </VisibilitySensor>
+
                                     </div>
                                 </div>
     
                                 <div className="flex flex-col py-5 px-5 space-y-5">
                                     <div className="flex flex-row space-x-3 items-center">
-                                        <img src="./assets/treesBought.svg" />
+                                        
+                                        <VisibilitySensor>
+                                            <Img src={"./assets/treesBought.svg"} />
+                                        </VisibilitySensor>
+
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[12px]">{t('Trees Bought')}</p>
                                             <p className="text-bgGreen font-medium text-[24px]">12,000 {t('trees')}</p>
@@ -187,7 +211,11 @@ const Tracking = () => {
                                     </div>
     
                                     <div className="flex flex-row space-x-[1.5rem] items-center">
-                                        <img src="./assets/locationLogo.svg" />
+                                        
+                                        <VisibilitySensor>
+                                            <Img src={"./assets/locationLogo.svg"} />
+                                        </VisibilitySensor>
+
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[12px]">{t('Location')}</p>
                                             <p className="text-bgGreen font-medium text-[24px]">Lagos, Nigeria</p>
@@ -195,7 +223,10 @@ const Tracking = () => {
                                     </div>
     
                                     <div className="flex flex-row space-x-[1.20rem] items-center">
-                                        <img src="./assets/status.svg" />
+                                        <VisibilitySensor>
+                                            <Img src={"./assets/status.svg"} />
+                                        </VisibilitySensor>
+
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[12px]">{t('Status')}</p>
                                             <p className="text-bgGreen font-medium text-[24px]">{t('Planted')}</p>

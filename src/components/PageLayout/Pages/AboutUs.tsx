@@ -3,11 +3,12 @@ import Testimonials from './HomeComponents/Testimonials'
 import TrestedGroup from './HomeComponents/TrestedGroup'
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Img } from 'react-image';
 
 const AboutUs = () => {
     const {t} = useTranslation();
     const [loading, setLoading] = useState(true);
-    const imageUrls = ['./assets/whiteTree.svg', './assets/aboutUsTree.svg', './assets/gardenImageVertical.svg', './assets/dotBackground.svg', './assets/karbonCoin.svg', './assets/userImage.svg']; // Replace with your image URLs
+    const imageUrls = ['./assets/whiteTree.svg', './assets/aboutUsTree.svg']; // Replace with your image URLs
 
     useEffect(() => {
       let loadedImages = 0;
@@ -52,7 +53,7 @@ const AboutUs = () => {
                                 <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">{t('eachTreeBreath')}</p>
                                 <p className="text-white text-[40px] max-sm:text-[30px]  leading-tight">{t('everyBreathHope')}</p>
                             </div>
-                            <img
+                            <Img
                                 src="./assets/whiteTree.svg"
                                 alt="white tree"
                                 className="w-[30.07px] h-[28.27px]"
