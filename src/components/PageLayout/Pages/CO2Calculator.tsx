@@ -293,7 +293,7 @@ const CO2Calculator = () => {
                   <div className="flex flex-row max-sm:flex-col items-center justify-between ">
                     <div className="flex flex-row max-sm:flex-col max-sm:space-y-2 mb-2 md:space-x-3 items-center">
                       <p className="text-[16px] text-bgGreen bottom-0">{t('eliminateCO2')}</p>
-                      <p className="text-[24px] text-linkGreen font-bold">12,000 Trees</p>
+                      <p className="text-[24px] text-linkGreen font-bold">12,000 {t('trees')}</p>
                     </div>
                     <motion.a
                     whileTap={{ scale: 0.9 }} 
