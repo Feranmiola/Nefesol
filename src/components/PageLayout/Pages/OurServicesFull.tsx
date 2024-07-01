@@ -1,4 +1,3 @@
-import React from "react"
 import { Progress } from "@/components/ui/progress"
 import { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
@@ -7,130 +6,106 @@ import { useTranslation } from "react-i18next"
 
 
 const OurServicesFull = () => {
+  const { t } = useTranslation();
+  const [progress, setProgress] = useState(0);
+  const [tabIndex, setTabIndex] = useState(1);
+  const [loading, setLoading] = useState(true);
 
-  const {t} = useTranslation();
-    const [progress, setProgress] = React.useState(0)
-    const [tabIndex, setTabIndex] = useState(1);
-    
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const imageUrls = [
+    './assets/carbonConsulatancyLogoBig.svg',
+    './assets/certificationLogoBig.svg',
+    './assets/digitalMarketingLogoBig.svg',
+    './assets/carbonFootprintLogoServicesBig.svg',
+    './assets/greenTechLogoBig.svg',
+    './assets/technicalSupportLogoBig.svg',
+  ];
 
-    const handleTabs = ( current: number) =>{
-        setTabIndex(current);
-      }
-    
-    //   const handlePageChange = (index: number) =>{
-    //     if(index === 0){
-    //       console.log("0 hit")
-    //     }else{
-    //       if(index === 5){
-    //         console.log("5 hit")
-    //       }else{
-    //         setInitial(25 * index);
-    //         setTabIndex(index);
-    //       }
-    //     }
-    //   }
-    
-      
-    
-    //   React.useEffect(() => {
-    //     const timer = setTimeout(() => setProgress(initial), (initial + 25))
-    //     return () => clearTimeout(timer)
-    //   }, [initial])
-
-
-
-    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const sectionId = entry.target.getAttribute('id');
-                console.log("Intersecting:", sectionId); // Debugging line
-                switch (sectionId) {
-                  case 'carbonConsultancy':
-                    setTabIndex(1);
-                    break;
-                  case 'certification':
-                    setTabIndex(2);
-                    break;
-                  case 'digitalMarketing':
-                    setTabIndex(3);
-                    break;
-                  case 'carbonFootprintOptimisation':
-                    setTabIndex(4);
-                    break;
-                  case 'greenTechnologyInscentives':
-                    setTabIndex(5);
-                    break;
-                  case 'techSupport':
-                    setTabIndex(6);
-                    break;
-                  default:
-                    setTabIndex(1);
-                    break;
-                }
-              }
-            });
-          },
-          { threshold: 0.01 } // Adjust this value to control when the callback is triggered
-        );
-
-        
-        sectionRefs.current.forEach((ref) => {
-            if (ref) {
-              observer.observe(ref);
-            }
-          });
-          
-          return () => {
-            if (sectionRefs.current) {
-              sectionRefs.current.forEach((ref) => {
-                if (ref) {
-                  observer.unobserve(ref);
-                }
-              });
-            }
-          };
-      }, []);
-
-
-
-    const [loading, setLoading] = useState(true);
-    const imageUrls = ['./assets/carbonConsulatancyLogoBig.svg', './assets/certificationLogoBig.svg', './assets/digitalMarketingLogoBig.svg', './assets/carbonFootprintLogoServicesBig.svg', './assets/greenTechLogoBig.svg', './assets/technicalSupportLogoBig.svg']; // Replace with your image URLs
-
-    useEffect(() => {
-      let loadedImages = 0;
-  
-      imageUrls.forEach((url) => {
-        const img = new Image();
-        img.src = url;
-        img.onload = () => {
-          loadedImages++;
-          if (loadedImages === imageUrls.length) {
-            setLoading(false);
-          }
-        };
-      });
-    }, [imageUrls]);
-
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const totalHeight = document.body.scrollHeight - window.innerHeight;
-        
-        if (totalHeight > 0) {
-          const progressPercentage = (scrollPosition / totalHeight) * 100;
-          setProgress(progressPercentage);
+  useEffect(() => {
+    let loadedImages = 0;
+    imageUrls.forEach((url) => {
+      const img = new Image();
+      img.src = url;
+      img.onload = () => {
+        loadedImages++;
+        if (loadedImages === imageUrls.length) {
+          setLoading(false);
         }
       };
-      
-      useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+    });
+  }, [imageUrls]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.getAttribute('id');
+            switch (sectionId) {
+              case 'carbonConsultancy':
+                setTabIndex(1);
+                break;
+              case 'certification':
+                setTabIndex(2);
+                break;
+              case 'digitalMarketing':
+                setTabIndex(3);
+                break;
+              case 'carbonFootprintOptimisation':
+                setTabIndex(4);
+                break;
+              case 'greenTechnologyInscentives':
+                setTabIndex(5);
+                break;
+              case 'techSupport':
+                setTabIndex(6);
+                break;
+              default:
+                setTabIndex(1);
+                break;
+            }
+          }
+        });
+      },
+      { threshold: 0.01 }
+    );
+
+    sectionRefs.current.forEach((ref) => {
+      if (ref) {
+        observer.observe(ref);
+      }
+    });
+
+    return () => {
+      sectionRefs.current.forEach((ref) => {
+        if (ref) {
+          observer.unobserve(ref);
+        }
+      });
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    if (totalHeight > 0) {
+      const progressPercentage = (scrollPosition / totalHeight) * 100;
+      setProgress(progressPercentage);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleTabs = (current: number) => {
+    setTabIndex(current);
+    sectionRefs.current[current - 1]?.scrollIntoView({ behavior: 'smooth' });
+  };
+
       
       
     if(loading){
