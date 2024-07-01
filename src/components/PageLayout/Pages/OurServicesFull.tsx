@@ -76,7 +76,7 @@ const OurServicesFull = () => {
               }
             });
           },
-          { threshold: 0.5 } // Adjust this value to control when the callback is triggered
+          { threshold: 0.1 } // Adjust this value to control when the callback is triggered
         );
 
         
@@ -218,7 +218,7 @@ const OurServicesFull = () => {
             
                 <div className="  flex items-center justify-center max-sm:py-10">
                     <div className="pb-20 w-[1101px] flex flex-col space-y-20" >
-                        <div className="flex flex-col space-y-10 max-sm:flex max-sm:items-center md:pt-[230px] max-sm:flex-col max-sm:justify-center" id="carbonConsultancy" ref={(el) => (sectionRefs.current[1] = el)}>
+                        <div className="flex flex-col space-y-10 max-sm:flex max-sm:items-center md:pt-[230px] max-sm:flex-col max-sm:justify-center section" id="carbonConsultancy" ref={(el) => (sectionRefs.current[1] = el)}>
                             <div className="flex flex-row items-start justify-start max-sm:items-center max-sm:justify-center space-x-2">
                                 <img
                                 src="./assets/carbonConsulatancyLogoBig.svg"
@@ -237,7 +237,7 @@ const OurServicesFull = () => {
 
                         </div>
 
-                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="certification" ref={(el) => (sectionRefs.current[2] = el)}>
+                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center section" id="certification" ref={(el) => (sectionRefs.current[2] = el)}>
                             <div className="flex flex-row items-start justify-start ">
                                 <img
                                 src="./assets/certificationLogoBig.svg"
@@ -276,7 +276,7 @@ const OurServicesFull = () => {
                         </div>
 
 
-                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="digitalMarketing" ref={(el) => (sectionRefs.current[3] = el)}>
+                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center section" id="digitalMarketing" ref={(el) => (sectionRefs.current[3] = el)}>
                             <div className="flex flex-row items-start justify-start  space-x-2">
                                 <img
                                 src="./assets/digitalMarketingLogoBig.svg"
@@ -306,7 +306,7 @@ const OurServicesFull = () => {
 
                         </div>
 
-                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="carbonFootprintOptimisation" ref={(el) => (sectionRefs.current[4] = el)}>
+                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center section" id="carbonFootprintOptimisation" ref={(el) => (sectionRefs.current[4] = el)}>
                             <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                                 <img
                                 src="./assets/carbonFootprintLogoServicesBig.svg"
@@ -350,7 +350,7 @@ const OurServicesFull = () => {
 
                         </div>
 
-                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="greenTechnologyInscentives" ref={(el) => (sectionRefs.current[5] = el)}>
+                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center section" id="greenTechnologyInscentives" ref={(el) => (sectionRefs.current[5] = el)}>
                             <div className="flex flex-row items-start max-sm:w-[350px] justify-start space-x-2">
                                 <img
                                 src="./assets/greenTechLogoBig.svg"
@@ -375,7 +375,7 @@ const OurServicesFull = () => {
                         </div>
 
 
-                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center" id="techSupport" ref={(el) => (sectionRefs.current[6] = el)}>
+                        <div className="  flex flex-col space-y-10 max-sm:py-10  md:section max-sm:flex max-sm:items-center max-sm:flex-col max-sm:justify-center section" id="techSupport" ref={(el) => (sectionRefs.current[6] = el)}>
                             <div className="flex flex-row items-start justify-start space-x-2">
                                 <img
                                 src="./assets/technicalSupportLogoBig.svg"
