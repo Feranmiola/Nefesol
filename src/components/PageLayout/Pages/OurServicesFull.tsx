@@ -76,7 +76,7 @@ const OurServicesFull = () => {
               }
             });
           },
-          { threshold: 0.1 } // Adjust this value to control when the callback is triggered
+          { threshold: 0.15 } // Adjust this value to control when the callback is triggered
         );
 
         
