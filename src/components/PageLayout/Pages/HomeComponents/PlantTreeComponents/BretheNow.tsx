@@ -3,6 +3,8 @@ import { Slider } from "@/components/ui/slider"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
+import VisibilitySensor from 'react-visibility-sensor'
+import {Img} from 'react-image'
 
 
 
@@ -81,11 +83,14 @@ const BretheNow = () => {
                         onClick={() => {handleCo2(1); updateSliderValue([35])}}
                         className={co2Quantity === 1 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
+                                <VisibilitySensor>
+
+                                <Img
                                 loading="lazy"
-                                src="./assets/co2.svg"
+                                src={"./assets/co2.svg"}
                                 className="w-[15px] h-[15px]"
                                 />
+                                </VisibilitySensor>
                                 <p className="text-[16px] text-bgGreen font-medium">{t('small')}</p>
                             </div>
                         </motion.div>
@@ -96,11 +101,13 @@ const BretheNow = () => {
                         onClick={() => {handleCo2(2); updateSliderValue([60])}}
                         className={co2Quantity === 2 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
+                                <VisibilitySensor>
+                                <Img
                                 loading="lazy"
-                                src="./assets/co2.svg"
+                                src={"./assets/co2.svg"}
                                 className="w-[21px] h-[21px]"
                                 />
+                                </VisibilitySensor>
                                 <p className="text-[16px] text-bgGreen font-medium">{t('medium')}</p>
                             </div>
                         </motion.div>
@@ -111,11 +118,14 @@ const BretheNow = () => {
                         onClick={() => {handleCo2(3); updateSliderValue([120])}}
                         className={co2Quantity === 3 ? 'ring-[1px] ring-[#25B567] py-1 px-2 bg-[#25b5664f] rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-1 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
-                                loading="lazy"
-                                src="./assets/co2.svg"
-                                className="w-[31px] h-[31px]"
-                                />
+                                <VisibilitySensor>
+                                    <Img
+                                    loading="lazy"
+                                    src={"./assets/co2.svg"}
+                                    className="w-[31px] h-[31px]"
+                                    />
+                                </VisibilitySensor>
+                              
                                 <p className="text-[16px] text-bgGreen font-medium">{t('large')}</p>
                             </div>
                         </motion.div>
@@ -131,10 +141,12 @@ const BretheNow = () => {
                         onClick={() => {handleExamples(1); updateSliderValue([35])}}
                         className={example === 1 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
+                                <VisibilitySensor>
+                                <Img
                                 loading="lazy"
-                                src="./assets/mobilityLogo.svg"
+                                src={"./assets/mobilityLogo.svg"}
                                 />
+                                </VisibilitySensor>
                                 <p className="text-[14px] text-bgGreen font-medium">{t('mobility')}</p>
                             </div>
                         </motion.div>
@@ -145,11 +157,12 @@ const BretheNow = () => {
                         onClick={() => {handleExamples(2); updateSliderValue([60])}}
                         className={example === 2 ? 'ring-[1px] ring-[#25B567] py-2 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-2 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
+                                <VisibilitySensor>
+                                <Img
                                 loading="lazy"
-                                src="./assets/nutritionLogo.svg"
-                                
+                                src={"./assets/nutritionLogo.svg"}
                                 />
+                                </VisibilitySensor>
                                 <p className="text-[14px] text-bgGreen font-medium">{t('nutrition')}</p>
                             </div>
                         </motion.div>
@@ -160,10 +173,12 @@ const BretheNow = () => {
                         onClick={() => {handleExamples(3); updateSliderValue([120])}}
                         className={example === 3 ? 'ring-[1px] ring-[#25B567] py-1 px-2 bg-white rounded-[8px]' : 'ring-[1px] ring-[#25b56614] py-1 px-2 bg-white rounded-[8px]'}>
                             <div className="flex flex-row space-x-1 items-center justify-center">
-                                <img
+                                <VisibilitySensor>
+                                <Img
                                 loading="lazy"
-                                src="./assets/housingLogo.svg"
+                                src={"./assets/housingLogo.svg"}
                                 />
+                                </VisibilitySensor>
                                 <p className="text-[14px] text-bgGreen font-medium">{t('housingPower')}</p>
                             </div>
                         </motion.div>      
@@ -173,9 +188,10 @@ const BretheNow = () => {
                 
             </div>
             <div className="flex flex-row max-sm:flex-col py-6 md:space-x-10 max-md:space-y-4 items-center justify-center">
-                <img
+                
+                <Img
                 loading="lazy"
-                src="./assets/treeGroup.svg"
+                src={"./assets/treeGroup.svg"}
                 />
                 <div className="flex flex-col ">
                     <p className="text-bgGreen text-[32px]"><span className="text-[48px]">{sliderValue}</span>{t('trees')}</p>
@@ -191,9 +207,10 @@ const BretheNow = () => {
             </div>
             <div className="flex items-center justify-center flex-row max-sm:flex-col md:space-x-3 max-sm:space-y-3 pt-5 md:pb-5">
                 <div className="bg-[#0A5B361A] flex flex-row items-center justify-center px- h-[56px] w-[186px]">
-                    <img
+                    
+                    <Img
                     loading="lazy"
-                    src="./assets/field.svg"
+                    src={"./assets/field.svg"}
                     />
                     <div className="flex flex-row">
                         <p className="text-[24px] text-bgGreen">262 m</p>
@@ -201,10 +218,12 @@ const BretheNow = () => {
                     </div>
                 </div>
                 <div className="bg-[#0A5B361A] flex flex-row items-center justify-center  h-[56px] w-[186px]">
-                    <img
+                    <VisibilitySensor>
+                    <Img
                     loading="lazy"
-                    src="./assets/co2.svg"
+                    src={"./assets/co2.svg"}
                     />
+                    </VisibilitySensor>
                     <div className="flex flex-row">
                         <p className="text-[24px] text-bgGreen">12t</p>
                     </div>

@@ -1,5 +1,7 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
+import VisibilitySensor from "react-visibility-sensor"
+import { Img } from "react-image"
 import { useTranslation } from "react-i18next"
 
 const GreeningPolicy = () => {
@@ -22,12 +24,14 @@ const GreeningPolicy = () => {
                     <p className="text-[28px] max-sm:text-[16px] max-sm:w-[200px] text-white md:w-[294px] md:mt-[108px] max-sm:mt-[3rem] leading-tight">
                         {t('buildingFuture')}
                     </p>
-                    <img
+                    <VisibilitySensor>
+                    <Img
                         loading="lazy"
-                        src="./assets/whiteTree.svg"
+                        src={"./assets/whiteTree.svg"}
                         alt="white tree"
                         className="md:w-[30.07px] md:h-[28.27px] md:mt-[174.73px] max-sm:mt-[3rem]"
                     />
+                    </VisibilitySensor>
                 </div>
             </div>
             <div className="flex flex-row max-sm:flex-col max-sm:space-y-5 max-sm:items-center max-sm:justify-center md:space-x-20">
@@ -40,21 +44,25 @@ const GreeningPolicy = () => {
                         </div>
                     </div>
                     <div className="flex flex-row space-x-5 items-center justify-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/leafLogo.svg"
+                            src={"./assets/leafLogo.svg"}
                             alt="leaf logo"
                             className="max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <p className="text-[18px] text-white">{t('greenCollection')}</p>
                     </div>
                     <div className="flex flex-row space-x-5 items-center justify-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/boolLeafLogo.svg"
+                            src={"./assets/boolLeafLogo.svg"}
                             alt="leaf logo"
                             className="max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('environmental')}</p>
                             <p className="text-[18px] text-white">{t('awarenessEducation')}</p>
@@ -72,24 +80,28 @@ const GreeningPolicy = () => {
                         <p className="text-[18px] text-white">{t('zeroCarbon')}</p>
                     </div>
                     <div className="flex flex-row space-x-5 max-sm:ml-[5px] items-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/sustainableLogo.svg"
+                            src={"./assets/sustainableLogo.svg"}
                             alt="leaf logo"
                             className="max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('sustainable')}</p>
                             <p className="text-[18px] text-white">{t('production')}</p>
                         </div>
                     </div>
                     <div className="flex flex-row space-x-5 items-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/carbonFootprintLogo.svg"
+                            src={"./assets/carbonFootprintLogo.svg"}
                             alt="leaf logo"
                             className="max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('carbonFootprint')}</p>
                             <p className="text-[18px] text-white">{t('reduction')}</p>
@@ -101,34 +113,40 @@ const GreeningPolicy = () => {
                 </div>
                 <div className="flex flex-col items-start space-y-16">
                     <div className="flex flex-row space-x-5 items-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/circularEconomyLogo.svg"
+                            src={"./assets/circularEconomyLogo.svg"}
                             alt="leaf logo"
                             className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('contributionCircularEconomy')}</p>
                         </div>
                     </div>
                     <div className="flex flex-row space-x-5 items-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/developmentLogo.svg"
+                            src={"./assets/developmentLogo.svg"}
                             alt="leaf logo"
                             className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('developmentGreenTechnologies')}</p>
                         </div>
                     </div>
                     <div className="flex flex-row space-x-5 items-center">
-                        <img
+                        <VisibilitySensor>
+                        <Img
                             loading="lazy"
-                            src="./assets/communityLogo.svg"
+                            src={"./assets/communityLogo.svg"}
                             alt="leaf logo"
                             className="w-[64px] h-[64px] max-sm:w-[40px] max-sm:h-[40px]"
                         />
+                        </VisibilitySensor>
                         <div className="flex flex-col">
                             <p className="text-[18px] text-white">{t('communityParticipation')}</p>
                         </div>
