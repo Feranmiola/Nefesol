@@ -67,7 +67,7 @@ const OurServicesFull = () => {
           }
         });
       },
-      { threshold: 0.01 }
+      { threshold: 0.06 }
     );
 
     sectionRefs.current.forEach((ref) => {
