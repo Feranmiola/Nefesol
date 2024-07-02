@@ -11,9 +11,13 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { useEffect, useState } from "react"
 import BeatLoader from "react-spinners/BeatLoader"
 import { useTranslation } from "react-i18next"
+import useScrollToTop from "@/hooks/ScrollToTop"
+import { useNavigate } from "react-router-dom"
 
 
 const Payment = () => {
+    useScrollToTop();
+    const navigate = useNavigate();
     
     const {t} = useTranslation();
 
@@ -55,7 +59,7 @@ const Payment = () => {
                         className="flex flex-row space-x-2"
                     >
                         <img src="./assets/prev.svg" />
-                        <a href="/co2-calculator" className="text-[14px] md:text-[16px] text-linkGreen font-semibold">{t('returnToCalculator')}</a>
+                        <a onClick={() => navigate('/co2-calculator')} className="text-[14px] md:text-[16px] text-linkGreen font-semibold">{t('returnToCalculator')}</a>
                     </motion.div>
                 </div>
                 
@@ -169,14 +173,14 @@ const Payment = () => {
                             htmlFor="terms"
                             className="text-bgGreen text-[16px]"
                         >
-                            {t('iHaveReadAndAgree')} <a href="/plant-trees-payment" target="blank" className="text-linkGreen">{t('termsAndConditions')}</a>
+                            {t('iHaveReadAndAgree')} <a onClick={() => navigate("/plant-trees-payment")} target="blank" className="text-linkGreen">{t('termsAndConditions')}</a>
                         </label>
                     </div>
 
                     <div className="flex items-center justify-center pb-5">
                         <motion.a
                             whileTap={{ scale: 0.9 }}
-                            href="/plant-trees-verifyemail"
+                            onClick={() => navigate("/plant-trees-verifyemail")}
                             className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                         >
                             <p className="text-white text-[16px] font-medium">{t('next')}</p>

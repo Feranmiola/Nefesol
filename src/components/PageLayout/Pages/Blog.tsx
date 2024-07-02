@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BlogCard from "./BlogCard";
 import BeatLoader from "react-spinners/BeatLoader";
 import { useTranslation } from "react-i18next";
+import useScrollToTop from "@/hooks/ScrollToTop";
 
 
 interface BlogPost {
@@ -12,6 +13,7 @@ interface BlogPost {
 }
 
 const Blog = () => {
+  useScrollToTop()
   const {t} = useTranslation();
   const blogPosts: BlogPost[] = [
     {

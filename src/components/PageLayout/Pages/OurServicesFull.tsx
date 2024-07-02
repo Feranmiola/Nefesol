@@ -3,9 +3,11 @@ import { useEffect, useState, useRef } from "react"
 import { motion } from "framer-motion"
 import BeatLoader from "react-spinners/BeatLoader"
 import { useTranslation } from "react-i18next"
+import useScrollToTop from "@/hooks/ScrollToTop"
 
 
 const OurServicesFull = () => {
+  useScrollToTop()
   const { t } = useTranslation();
   const [progress, setProgress] = useState(0);
   const [tabIndex, setTabIndex] = useState(1);

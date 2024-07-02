@@ -3,8 +3,12 @@ import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import VisibilitySensor from "react-visibility-sensor"
 import { Img } from "react-image"
+import useScrollToTop from "@/hooks/ScrollToTop"
+import { useNavigate } from "react-router-dom"
 
 const TreePackGroup = () => {
+    useScrollToTop();
+    const navigate = useNavigate();
   const {t} = useTranslation();
   return (
     <div>
@@ -41,7 +45,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
-              href="/co2-calculator"
+              onClick={() => navigate("/co2-calculator")}
               className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>
@@ -78,7 +82,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
-              href="/co2-calculator"
+              onClick={() => navigate("/co2-calculator")}
               className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>
@@ -116,7 +120,7 @@ const TreePackGroup = () => {
               <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.9 }} 
-              href="/co2-calculator"
+              onClick={() => navigate("/co2-calculator")}
               className=" text-linkGreen cursor-pointer">{t('breatheNowMax')}</motion.a>
             </div>
           </div>

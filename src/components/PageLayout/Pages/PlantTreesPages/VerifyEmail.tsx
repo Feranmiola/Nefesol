@@ -1,10 +1,14 @@
 import { Input } from "@/components/ui/input";
+import useScrollToTop from "@/hooks/ScrollToTop";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
 
 const VerifyEmail = () => {
+  useScrollToTop()
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const imageUrls = [
@@ -50,7 +54,7 @@ const VerifyEmail = () => {
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.9 }}
               className="flex flex-row space-x-2"
-              href="/plant-trees-payment"
+              onClick={() => navigate("/plant-trees-payment")}
             >
               <img src="./assets/prev.svg" />
               <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">
@@ -122,7 +126,7 @@ const VerifyEmail = () => {
           <div className="flex items-center justify-center pb-5">
             <motion.a
               whileTap={{ scale: 0.9 }}
-              href="/plant-trees-thankyou"
+              onClick={() => navigate("/plant-trees-thankyou")}
               className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
             >
               <p className="text-white text-[16px] font-medium">

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import {  useLocation } from "react-router-dom";
+import {  useLocation, useNavigate } from "react-router-dom";
 import TurkeyLogo from "./TurkeyLogo";
 import EnglishLogo from "./EnglishLogo";
 import { useTranslation } from "react-i18next";
@@ -132,14 +132,14 @@ const TopBar = () => {
       i18n.changeLanguage('en');
       setSelectedLanguage(1);
     }
-
   }
+  const navigate = useNavigate();
 
   return (
     <div>
       <div className="navbar max-lg:hidden w-screen" onMouseLeave={() => setShowDropdown(false)}>
         <div className={`bg-transparent h-[73px] px-10 justify-between items-center transition ease-in-out flex navbar ${color ? 'bg-white border-b-[1px]' : ''}`}>
-          <a href="/" className="cursor-pointer">
+          <a onClick={() => navigate('/')} className="cursor-pointer">
             {color ? (
               <img src="./assets/topBarLogo.svg" alt="logo" />
             ) : (
@@ -166,7 +166,7 @@ const TopBar = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              href="/about-us"
+              onClick={() => navigate('/about-us')}
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/about-us') ? 'text-[#25B567]' : ''}`}
             >
@@ -176,7 +176,7 @@ const TopBar = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              href="/blog"
+              onClick={() => navigate('/blog')}
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/blog') ? 'text-[#25B567]' : ''}`}
             >
@@ -186,7 +186,7 @@ const TopBar = () => {
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
-              href="/ourservices"
+              onClick={() => navigate('/ourservices')}
               onMouseEnter={() => setShowDropdown(false)}
               className={`text-[14px] ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer ${isActiveLink('/ourservices') ? 'text-[#25B567]' : ''}`}
             >
@@ -224,7 +224,7 @@ const TopBar = () => {
           </div>
           <motion.a
             whileTap={{ scale: 0.9 }}
-            href="/co2-calculator"
+            onClick={() => navigate('/co2-calculator')}
             className={`px-4 h-[48px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer ${!color ? 'bg-transparent ring-[1px] ring-white hover:ring-transparent' : 'text-[#1F2721]'} hover:text-linkGreen `}
           >
             <p className="text-white text-[16px] font-medium">{t('breatheNow')}</p>
@@ -275,8 +275,7 @@ const TopBar = () => {
                       setHoverCO2(true);
                     }}
                     onMouseLeave={() => { setshowCo2(false); setHoverCO2(false); }}
-                    onClick={() => { setShowDropdown(false); }}
-                    href="/co2-calculator"
+                    onClick={() => { setShowDropdown(false); navigate('/co2-calculator')}}
                   >
                     <motion.div
                       className={`flex items-center text-[16px] text-bgGreen cursor-pointer pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverC02 || isActiveLink('/co2-calculator') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -298,8 +297,7 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setshowFootPrint(false); setHoverFootprint(false); }}
-                    onClick={() => {  setShowDropdown(false); }}
-                    href="/carbon-footprint"
+                    onClick={() => {  setShowDropdown(false); navigate('/carbon-footprint')}}
 
                   >
                     <motion.div
@@ -327,8 +325,7 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTreePacks(false); setHoverTreePacks(false); }}
-                    onClick={() => {  setShowDropdown(false); }}
-                    href="/treePacks"
+                    onClick={() => {  setShowDropdown(false); navigate('/treePacks')}}
                   >
                     <motion.div
                       variants={itemVariants}
@@ -355,8 +352,8 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTracking(false); setHoverTracking(false); }}
-                    onClick={() => {  setShowDropdown(false); }}
-                    href="/plant-trees-tracking"
+                    onClick={() => {  setShowDropdown(false); navigate('/plant-trees-tracking')}}
+                    
                   >
                     <motion.div
                       variants={itemVariants}
@@ -553,7 +550,7 @@ const TopBar = () => {
       <div className="flex navbar w-screen">
         <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
           <div className="w-full items-center flex flex-row justify-between">
-            <a href="/"  className="cursor-pointer">
+            <a onClick={() => navigate('/')}  className="cursor-pointer">
               {color ? (
                 <img src="./assets/greenTree.svg" alt="logo" />
               ) : (
@@ -613,33 +610,33 @@ const TopBar = () => {
 
               className={!showSubDropdown ? 'hidden' : ''}>
                 <div className={"ml-5 flex flex-col space-y-5"}>
-                  <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a  onClick={() => { navigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className=" text-white text-[14px]">{t('co2Calculation')}</p>
                   </a>
 
-                  <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a  onClick={() => {navigate('/carbon-footprint');  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className=" text-white text-[14px]">{t('carbonFootprint')}</p>
                   </a>
 
-                  <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a  onClick={() => {navigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className=" text-white text-[14px]">{t('treePacks')}</p>
                   </a>
 
-                  <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <a  onClick={() => {navigate('/plant-trees-tracking');  setobileDropdown(false); setshowsubdropdown(false); }}>
                     <p className=" text-white text-[14px]">{t('treesTrackingVerification')}</p>
                   </a>
                 </div>
               </motion.div>
 
-              <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a  onClick={() => {  setobileDropdown(false); navigate('/about-us'); setshowsubdropdown(false); }}>
                 <p className=" text-white text-[16px]">{t('aboutUs')}</p>
               </a>
 
-              <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a  onClick={() => {  setobileDropdown(false); navigate('/blog'); setshowsubdropdown(false); }}>
                 <p className=" text-white text-[16px]">{t('blog')}</p>
               </a>
 
-              <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+              <a  onClick={() => { navigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
                 <p className=" text-white text-[16px]">{t('ourServices')}</p>
               </a>
 
@@ -750,7 +747,7 @@ export default TopBar;
 //    <div className="flex flex-col space-y-5 py-5 px-7 w-full">
 //      <div className="flex flex-row justify-between items-center">
 //        <a
-//        href="/"
+//        onClick={() => navigate('/')}
 //        onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
 //        >
 //        <img
@@ -780,33 +777,33 @@ export default TopBar;
 
 //      className={!showSubDropdown ? 'hidden' : ''}>
 //        <div className={"ml-5 space-y-5"}>
-//          <a href="/co2-calculator" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//          <a onClick={() => navigate('/co2-calculator')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //            <p className="text-[14px]">C02 Calculation</p>
 //          </a>
 
-//          <a href="/carbon-footprint" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//          <a onClick={() => navigate('/carbon-footprint')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //            <p className="text-[14px]">Carbon footprint</p>
 //          </a>
 
-//          <a href="/treePacks" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//          <a onClick={() => navigate('/treePacks')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //            <p className="text-[14px]">Tree Packs</p>
 //          </a>
 
-//          <a href="/plant-trees-tracking" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//          <a onClick={() => navigate('/plant-trees-tracking')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //            <p className="text-[14px]">Tree Tracking and Verification</p>
 //          </a>
 //        </div>
 //      </motion.div>
 
-//      <a href="/about-us" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//      <a onClick={() => navigate('/about-us')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //        <p className="text-[16px]">About Us</p>
 //      </a>
 
-//      <a href="/blog" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//      <a onClick={() => navigate('/blog')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //        <p className="text-[16px]">Blog</p>
 //      </a>
 
-//      <a href="/ourservices" onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
+//      <a onClick={() => navigate('/ourservices')} onClick={() => {  setobileDropdown(false); setshowsubdropdown(false); }}>
 //        <p className="text-[16px]">Our Services</p>
 //      </a>
 //    </div>

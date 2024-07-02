@@ -5,11 +5,15 @@ import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import VisibilitySensor from 'react-visibility-sensor'
 import {Img} from 'react-image'
+import { useNavigate } from "react-router-dom"
+import useScrollToTop from "@/hooks/ScrollToTop"
 
 
 
 const BretheNow = () => {
 
+    useScrollToTop();
+    const navigate = useNavigate();
     const [sliderValue, setSliderValue] = useState([0]);
     const [tabIndex, setTabIndex] = useState(1);
     const [co2Quantity, setCo2Quantitiy] = useState(0);
@@ -33,7 +37,6 @@ const BretheNow = () => {
 
     const {t} = useTranslation();
 
-    
 
   return (
     <div className="flex flex-col max-sm:mt-10 max-sm:items-center max-sm:justify-center">
@@ -237,13 +240,13 @@ const BretheNow = () => {
                     <p className="text-bgGreen text-[32px]">$220.29</p>
                     <p className="text-[12px] text-bgGreen">{t('unitPrice')} 1.20 $/m2</p>
                 </div>
-                <motion.a
+                <motion.div
                 whileTap={{ scale: 0.9 }} 
-                href="/plant-trees-payment"
+                onClick={() => navigate('/plant-trees-payment')}
                 className="w-[212px] h-[56px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex items-center justify-center rounded-[56px] cursor-pointer"
                 >
                     <p className="text-white text-[16px] font-medium">{t('breatheNow')}</p>
-                </motion.a>
+                </motion.div>
             </div>
         </div>
         <div>

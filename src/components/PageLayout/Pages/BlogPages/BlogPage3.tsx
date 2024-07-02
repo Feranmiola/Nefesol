@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Progress } from "@/components/ui/progress";
 import BeatLoader from "react-spinners/BeatLoader";
+import useScrollToTop from "@/hooks/ScrollToTop";
 
 
 const BlogPage3 = () => {
+  useScrollToTop()
   const [progress, setProgress] = useState(0);
   const [loading, setLoading] = useState(true);
   const imageUrls = ["./assets/carbonImageBig.svg"]; // Replace with your image URLs

@@ -1,17 +1,19 @@
 import { Separator } from "@/components/ui/separator"
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
+import { useNavigate } from "react-router-dom"
 
 
 
 const Footer = () => {
+  const navigate = useNavigate();
   const {t} = useTranslation();
 
   return (
     <div className="flex flex-col items-center justify-center px-10 pb-10 pt-20 ">
       <div className="flex flex-row max-sm:flex-col max-sm:items-center max-sm:w-[334px] max-sm:space-y-5 justify-between md:w-[1179.5px] ">
         <div className="flex flex-col max-sm:w-[334px] space-y-10">
-          <a className=" cursor-pointer" href="/">
+          <a className=" cursor-pointer" onClick={() => navigate('/')}>
             <img
             src="./assets/topBarLogo.svg"
             alt="logo"
@@ -39,21 +41,22 @@ const Footer = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/carbon-footprint"
+              onClick={() => navigate('/carbon-footprint')}
               >{t('carbonFootprint')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/co2-calculator"
+              onClick={() => navigate('/co2-calculator')}
+              
               >{t('co2Calculation')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/treePacks"
+              onClick={() => navigate('/treePacks')}
               >{t('treePacks')}</motion.a>
 
             </div>
@@ -64,21 +67,21 @@ const Footer = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/about-us"
+              onClick={() => navigate('/about-us')}
               >{t('aboutUs')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/blog"
+              onClick={() => navigate('/blog')}
               >{t('blog')}</motion.a>
 
               <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }} 
               className="text-[16px] text-bgGreen cursor-pointer"
-              href="/ourservices"
+              onClick={() => navigate('/ourservices')}
               >{t('ourServices')}</motion.a>
 
             </div>
@@ -89,35 +92,35 @@ const Footer = () => {
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/iptal-iade-politikasi"
+            onClick={() => navigate('/iptal-iade-politikasi')}
             className="text-[16px] text-bgGreen cursor-pointer"
             >{t('cancellationAndReturnPolicy.title')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/mesafeli-satis-sozlesmesi"
+            onClick={() => navigate('/mesafeli-satis-sozlesmesi')}
             className="text-[16px] text-bgGreen cursor-pointer"
             >{t('distanceSalesContract')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/uyelik-sozlesmesi"
+            onClick={() => navigate('/uyelik-sozlesmesi')}
             className="text-[16px] text-bgGreen cursor-pointer"
             >{t('membership.agreement')}</motion.a>
 
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/generalTermsAndConditions"
+            onClick={() => navigate('/generalTermsAndConditions')}
             className="text-[16px] text-bgGreen cursor-pointer md:hidden"
             >{t('generalTermsAndCOnd')}</motion.a>
             
             <motion.a
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }} 
-            href="/perssonalDataProtectionAuthority"
+            onClick={() => navigate('/perssonalDataProtectionAuthority')}
             className="text-[16px] text-bgGreen cursor-pointer md:hidden"
             >{t('personalDataProtectionAuthority.title')}</motion.a>
           </div>
@@ -137,13 +140,13 @@ const Footer = () => {
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
-          href="/perssonalDataProtectionAuthority"
+          onClick={() => navigate('/perssonalDataProtectionAuthority')}
           className="text-[14px] text-bgGreen cursor-pointer"
           >{t('personalDataProtectionAuthority.title')}</motion.a>
           <motion.a
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }} 
-          href="/generalTermsAndConditions"
+          onClick={() => navigate('/generalTermsAndConditions')}
           className="text-[14px] text-bgGreen cursor-pointer"
           >{t('generalTermsAndCOnd')}</motion.a>
           <div className="flex flex-row items-center justify-between w-[210px]">

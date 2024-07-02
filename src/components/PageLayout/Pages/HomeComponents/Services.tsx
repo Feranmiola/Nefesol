@@ -2,9 +2,12 @@ import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import VisibilitySensor from "react-visibility-sensor"
 import { Img } from "react-image"
+import useScrollToTop from "@/hooks/ScrollToTop"
+import { useNavigate } from "react-router-dom"
 
 const Services = () => {
-
+    useScrollToTop();
+    const navigate = useNavigate();
     const {t} = useTranslation();
   return (
     <div className="py-20 max-sm:flex max-sm:flex-col max-sm:space-y-5 max-sm:items-center max-sm:justify-center">
@@ -24,7 +27,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
                 
@@ -41,7 +44,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
                 
@@ -58,7 +61,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
 
@@ -77,7 +80,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
                 
@@ -93,7 +96,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
                 
@@ -109,7 +112,7 @@ const Services = () => {
                     <motion.a
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
-                    href="/ourservices"
+                    onClick={() => navigate("/ourservices")}
                     className=" text-linkGreen text-[16px] max-sm:text-[14px] cursor-pointer">{t('learnMore')}</motion.a>
                 </div>
 

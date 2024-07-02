@@ -1,10 +1,14 @@
+import useScrollToTop from "@/hooks/ScrollToTop";
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
 
 
 const ThankYou = () => {
+  useScrollToTop();
+    const navigate = useNavigate();
     const {t} = useTranslation();
     const [loading, setLoading] = useState(true);
     const imageUrls = ['./assets/copyIcon.svg']; // Replace with your image URLs
@@ -54,7 +58,7 @@ const ThankYou = () => {
                     <motion.a
                         whileHover={{ scale: 1.3 }}
                         whileTap={{ scale: 0.9 }}
-                        href="/plant-trees-tracking"
+                        onClick={() => navigate("/plant-trees-tracking")}
                         className="text-linkGreen text-[14px] md:text-[16px] hover:underline cursor-pointer"
                     >
                         {t('trackProgress')}

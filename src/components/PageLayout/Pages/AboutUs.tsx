@@ -4,8 +4,10 @@ import TrestedGroup from './HomeComponents/TrestedGroup'
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Img } from 'react-image';
+import useScrollToTop from '@/hooks/ScrollToTop';
 
 const AboutUs = () => {
+    useScrollToTop();
     const {t} = useTranslation();
     const [loading, setLoading] = useState(true);
     const imageUrls = ['./assets/whiteTree.svg', './assets/aboutUsTree.svg']; // Replace with your image URLs

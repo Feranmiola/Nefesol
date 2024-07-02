@@ -1,5 +1,7 @@
+import useScrollToTop from "@/hooks/ScrollToTop";
 import { motion } from "framer-motion"// BlogCard.tsx
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 interface BlogCardProps {
     imageUrl: string;
     title: string;
@@ -13,7 +15,8 @@ interface BlogCardProps {
     description,
     readMoreUrl,
   }) => {
-
+    useScrollToTop();
+    const navigate = useNavigate();
     const {t} = useTranslation();
     return (
       <div className="flex flex-col  w-[350px] rounded-[16px] border-[1px] border-[#9BBBAB]">
@@ -31,7 +34,7 @@ interface BlogCardProps {
             <motion.a
               whileHover={{ scale: 1.13 }}
               whileTap={{ scale: 0.9 }}
-              href={readMoreUrl}
+              onClick={() => navigate(readMoreUrl)}
               className="text-linkGreen text-bold cursor-pointer"
             >
               {t('readMore')}

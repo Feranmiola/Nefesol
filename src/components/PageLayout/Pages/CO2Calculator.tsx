@@ -9,9 +9,13 @@ import House from "./C02Calculator Components/House";
 import Airplane from "./C02Calculator Components/Airplane";
 import BeatLoader from "react-spinners/BeatLoader";
 import { useTranslation } from "react-i18next";
+import useScrollToTop from "@/hooks/ScrollToTop";
+import { useNavigate } from "react-router-dom";
 
 
 const CO2Calculator = () => {
+  useScrollToTop();
+    const navigate = useNavigate();
   const {t} = useTranslation();
   const [tabIndex, setTabIndex] = useState(1);
   const [progress, setProgress] = React.useState(13)
@@ -297,7 +301,7 @@ const CO2Calculator = () => {
                     </div>
                     <motion.a
                     whileTap={{ scale: 0.9 }} 
-                    href="/plant-trees-payment"
+                    onClick={() => navigate('/plant-trees-payment')}
                     className="w-[254px] h-[48px] bg-[#25B567] hover:bg-[#1a8249]  transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                     >
                       <img

@@ -1,4 +1,5 @@
 
+import useScrollToTop from "@/hooks/ScrollToTop";
 import GreeningPolicy from "./GreeningPolicy"
 import TreePackGroup from "./HomeComponents/PlantTreeComponents/TreePackGroup"
 import { useEffect, useState } from "react";
@@ -6,6 +7,7 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 
 const TreePacksPage = () => {
+  useScrollToTop();
   const [loading, setLoading] = useState(true);
   const imageUrls = ['./assets/smallTrees.svg', './assets/greeningImage.svg', './assets/mediumTrees.svg', './assets/largeTrees.svg'];
     useEffect(() => {

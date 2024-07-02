@@ -6,10 +6,12 @@ import Services from "./HomeComponents/Services"
 import Testimonials from "./HomeComponents/Testimonials"
 import TrustedSection from "./HomeComponents/TrustedSection"
 import { useEffect, useState } from "react"
+import useScrollToTop from "@/hooks/ScrollToTop";
 
 
 
 const Home = () => {
+  useScrollToTop()
   const [loading, setLoading] = useState(true);
   const imageUrls = ['./assets/treeBackground.svg'];
     useEffect(() => {

@@ -1,7 +1,9 @@
+import useScrollToTop from "@/hooks/ScrollToTop";
 import { useTranslation } from "react-i18next";
 
 const GeneralTermsAndConditions = () => {
   const { t } = useTranslation();
+  useScrollToTop()
 
   return (
     <div className="py-10 md:py-20 mt-5 md:mt-10 w-full">

@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import BretheNow from "./HomeComponents/PlantTreeComponents/BretheNow"
 import TakeAction from "./HomeComponents/PlantTreeComponents/TakeAction"
 import BeatLoader from "react-spinners/BeatLoader";
+import useScrollToTop from "@/hooks/ScrollToTop";
 
 
 const CarbonFootprint = () => {
+    useScrollToTop()
   const [loading, setLoading] = useState(true);
   const imageUrls = ['./assets/treeGroup.svg', './assets/field.svg', './assets/co2.svg'];
   useEffect(() => {

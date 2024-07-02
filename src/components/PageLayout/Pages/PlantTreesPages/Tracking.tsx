@@ -14,6 +14,8 @@ import { useTranslation } from "react-i18next";
 
 import { Img } from "react-image";
 import VisibilitySensor from 'react-visibility-sensor'
+import useScrollToTop from "@/hooks/ScrollToTop";
+import { useNavigate } from "react-router-dom";
   
 
 
@@ -21,6 +23,8 @@ import VisibilitySensor from 'react-visibility-sensor'
 
 const Tracking = () => {
     const {t} = useTranslation('')
+    useScrollToTop();
+    const navigate = useNavigate();
 
     const [isTracking, setIstracking] = useState(false);
     const [dowwnloadCertificateStep1, SetStep1] = useState(false);
@@ -152,7 +156,7 @@ const Tracking = () => {
                                                             <DialogClose asChild>
                                                                 <motion.a
                                                                     whileTap={{ scale: 0.9 }}
-                                                                    href="/plant-trees-thankyou"
+                                                                    onClick={() => navigate('/plant-trees-thankyou')}
                                                                     className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                                                                 >
                                                                     <p className="text-white text-[16px] font-medium">{t('Download')}</p>
