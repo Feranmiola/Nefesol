@@ -3,11 +3,11 @@ import { Outlet } from "react-router-dom"
 
 const PlantTreesLayout = () => {
   useScrollToTop();
-    return (
-      <div className="homeBackground">
-          <Outlet/>        
-      </div>
-    )
+  return (
+    <div className="homeBackground">
+      <Outlet />
+    </div>
+  )
 }
 
 export default PlantTreesLayout
