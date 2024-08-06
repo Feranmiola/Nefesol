@@ -1,5 +1,7 @@
 import { Input } from "@/components/ui/input";
+import { useOrder } from "@/Context/OrderContext";
 import useScrollToTop from "@/hooks/ScrollToTop";
+import { useVerifyOTP } from "@/hooks/UseAuthMutation";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -8,7 +10,32 @@ import BeatLoader from "react-spinners/BeatLoader";
 
 const VerifyEmail = () => {
   useScrollToTop()
+
+  const { email } = useOrder();
+
+  const [otp, setOtp] = useState("");
+
+  const verifyMutate = useVerifyOTP();
   const navigate = useNavigate();
+
+  const handleLogin = () => {
+    verifyMutate.mutate(
+      { email, otp },
+      {
+        onSuccess: () => {
+          navigate("/plant-trees-thankyou")
+        },
+        onError: (error: any) => {
+          console.log(error)
+        }
+      }
+    );
+  }
+
+  const handleSetOTP = (event: any) => {
+    setOtp(event?.target.value);
+  }
+
   const { t } = useTranslation();
   const [loading, setLoading] = useState(true);
   const imageUrls = [
@@ -118,6 +145,7 @@ const VerifyEmail = () => {
             </div>
 
             <Input
+              onChange={handleSetOTP}
               placeholder={t("enterVerificationCode")}
               className="shad-input-plant-width"
             />
@@ -126,7 +154,7 @@ const VerifyEmail = () => {
           <div className="flex items-center justify-center pb-5">
             <motion.a
               whileTap={{ scale: 0.9 }}
-              onClick={() => navigate("/plant-trees-thankyou")}
+              onClick={handleLogin}
               className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
             >
               <p className="text-white text-[16px] font-medium">
