@@ -24,6 +24,8 @@ interface OrderContextType {
   setTaxNumber: (taxNumber: string) => void;
   taxAdministrator: string;
   setTaxAdministrator: (taxAdministrator: string) => void;
+  orderID: string;
+  setOrderID: (orderID: string) => void;
 }
 
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
@@ -40,6 +42,7 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   const [postCode, setPostCode] = useState(localStorage.getItem('postCode') || "");
   const [taxNumber, setTaxNumber] = useState(localStorage.getItem('taxNumber') || "");
   const [taxAdministrator, setTaxAdministrator] = useState(localStorage.getItem('taxAdministrator') || "");
+  const [orderID, setOrderID] = useState(localStorage.getItem('orderid') || "");
 
 
   useEffect(() => {
@@ -86,6 +89,10 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('taxAdministrator', taxAdministrator);
   }, [taxAdministrator]);
 
+  useEffect(() => {
+    localStorage.setItem('orderid', orderID);
+  }, [orderID]);
+
   return (
     <OrderContext.Provider
       value={{
@@ -111,6 +118,8 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
         setTaxNumber,
         taxAdministrator,
         setTaxAdministrator,
+        orderID,
+        setOrderID
       }}
     >
       {children}

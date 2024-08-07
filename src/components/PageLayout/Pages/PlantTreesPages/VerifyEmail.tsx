@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 const VerifyEmail = () => {
   useScrollToTop()
@@ -14,6 +16,9 @@ const VerifyEmail = () => {
   const { email } = useOrder();
 
   const [otp, setOtp] = useState("");
+  const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
+  const [isFailureAlertOpen, setIsFailureAlertOpen] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const verifyMutate = useVerifyOTP();
   const navigate = useNavigate();
@@ -23,10 +28,13 @@ const VerifyEmail = () => {
       { email, otp },
       {
         onSuccess: () => {
-          navigate("/plant-trees-thankyou")
+          setIsSuccessAlertOpen(true);
+          navigate("/plant-trees-thankyou");
+
         },
         onError: (error: any) => {
-          console.log(error)
+          setIsFailureAlertOpen(true);
+          setErrorMessage(error.message || "Verification failed. Please try again.");
         }
       }
     );
@@ -44,7 +52,7 @@ const VerifyEmail = () => {
     "./assets/greenDot.svg",
     "./assets/minus.svg",
     "./assets/plusIcon.svg"
-  ]; // Replace with your image URLs
+  ];
 
   useEffect(() => {
     let loadedImages = 0;
@@ -71,6 +79,26 @@ const VerifyEmail = () => {
 
   return (
     <div className="py-28 flex items-center justify-center">
+      <Snackbar open={isSuccessAlertOpen} autoHideDuration={3000} onClose={() => setIsSuccessAlertOpen(false)}>
+        <Alert
+          onClose={() => setIsSuccessAlertOpen(false)}
+          severity="success"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          Email verified successfully!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={isFailureAlertOpen} autoHideDuration={3000} onClose={() => setIsFailureAlertOpen(false)}>
+        <Alert
+          onClose={() => setIsFailureAlertOpen(false)}
+          severity="error"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {errorMessage}
+        </Alert>
+      </Snackbar>
       <div className="w-full max-w-md lg:max-w-xl bg-white rounded-[24px]">
         <div className="flex flex-col">
           <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
