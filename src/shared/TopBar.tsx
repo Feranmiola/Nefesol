@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import {  useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import TurkeyLogo from "./TurkeyLogo";
 import EnglishLogo from "./EnglishLogo";
 import { useTranslation } from "react-i18next";
@@ -32,8 +32,9 @@ const TopBar = () => {
   };
 
   const itemVariantsX = {
-    hidden: { 
-      opacity: 1, x: "-5%" },
+    hidden: {
+      opacity: 1, x: "-5%"
+    },
     visible: (custom: any) => ({
       opacity: 1,
       x: "0%",
@@ -62,7 +63,7 @@ const TopBar = () => {
     exit: { opacity: 0, scale: 1, x: "-100%" },
   }
 
-  
+
 
   const [showMobileDropdown, setShowMobileDropdown] = useState(false);
   const [showSubDropdown, setshowsubdropdown] = useState(false);
@@ -71,7 +72,7 @@ const TopBar = () => {
     setshowsubdropdown(!showSubDropdown);
   };
 
-  const setobileDropdown = (newStatus:boolean) => {
+  const setobileDropdown = (newStatus: boolean) => {
     setShowMobileDropdown(newStatus);
   };
 
@@ -99,10 +100,10 @@ const TopBar = () => {
     };
   }, [location, window.scrollY, window.location]);
 
-  const isActiveLink = (path:any) => location.pathname === path;
+  const isActiveLink = (path: any) => location.pathname === path;
 
-  const {t} = useTranslation();
-  const {i18n} = useTranslation();
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState(1);
 
   useEffect(() => {
@@ -112,23 +113,23 @@ const TopBar = () => {
     // if (storedLang) {
     //   i18n.changeLanguage(storedLang);
     // }
-    
-      if(i18n.language === 'en'){
-        setSelectedLanguage(1);
-      }else{
-        setSelectedLanguage(2);
-      }
-    if(i18n.language != 'en' && i18n.language != 'tr'){
+
+    if (i18n.language === 'en') {
+      setSelectedLanguage(1);
+    } else {
+      setSelectedLanguage(2);
+    }
+    if (i18n.language != 'en' && i18n.language != 'tr') {
       setSelectedLanguage(1);
     }
   }, []);
 
   const handleLanguageChange = () => {
-    if(selectedLanguage === 1){
-      
+    if (selectedLanguage === 1) {
+
       i18n.changeLanguage('tr');
       setSelectedLanguage(2);
-    }else{
+    } else {
       i18n.changeLanguage('en');
       setSelectedLanguage(1);
     }
@@ -162,7 +163,7 @@ const TopBar = () => {
                 )}
               </motion.div>
             </div>
-            
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -172,7 +173,7 @@ const TopBar = () => {
             >
               {t('aboutUs')}
             </motion.a>
-            
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -182,7 +183,7 @@ const TopBar = () => {
             >
               {t('blog')}
             </motion.a>
-            
+
             <motion.a
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -192,7 +193,7 @@ const TopBar = () => {
             >
               {t('ourServices')}
             </motion.a>
-            
+
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -200,11 +201,11 @@ const TopBar = () => {
               onClick={handleLanguageChange}
               className={`text-[14px] flex flex-row items-center ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
             >
-              
+
               {selectedLanguage === 1 && (
                 <>
                   <div className="pr-1">
-                    <EnglishLogo/>
+                    <EnglishLogo />
                   </div>
                   EN
                 </>
@@ -213,7 +214,7 @@ const TopBar = () => {
               {selectedLanguage === 2 && (
                 <>
                   <div className="pr-1">
-                    <TurkeyLogo/>
+                    <TurkeyLogo />
                   </div>
 
                   TR
@@ -233,26 +234,26 @@ const TopBar = () => {
         </div>
 
         {showDropdown && (
-          <motion.div 
-          variants={dropdownVariants}
-              initial="hidden"
-              animate="visible"
-              
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="fixed pt-[10.6srem] top-[4.55rem] h-[340px] ml-[28rem] flex shadow-2xl flex-row rounded-[4px]">
+          <motion.div
+            variants={dropdownVariants}
+            initial="hidden"
+            animate="visible"
+
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            className="fixed pt-[10.6srem] top-[4.55rem] h-[340px] ml-[28rem] flex shadow-2xl flex-row rounded-[4px]">
             <motion.div
               variants={dropdownVariants}
               initial="hidden"
-                animate="visible"
-                
-                transition={{ duration: 0.1, ease: "easeOut" }}
+              animate="visible"
+
+              transition={{ duration: 0.1, ease: "easeOut" }}
               className="w-[298px] h-[340px] bg-white rounded-l-[4px] transition ease-in-out"
             >
               <div className="py-10 flex flex-col space-y-3">
                 <motion.div
                   variants={itemVariants}
                   initial="hidden"
-                  
+
                   animate={showDropdown ? "visible" : "hidden"}
                   custom={0}
                   className="flex px-10 flex-row items-center justify-center space-x-2"
@@ -275,7 +276,7 @@ const TopBar = () => {
                       setHoverCO2(true);
                     }}
                     onMouseLeave={() => { setshowCo2(false); setHoverCO2(false); }}
-                    onClick={() => { setShowDropdown(false); navigate('/co2-calculator')}}
+                    onClick={() => { setShowDropdown(false); navigate('/co2-calculator') }}
                   >
                     <motion.div
                       className={`flex items-center text-[16px] text-bgGreen cursor-pointer pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverC02 || isActiveLink('/co2-calculator') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -297,13 +298,13 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setshowFootPrint(false); setHoverFootprint(false); }}
-                    onClick={() => {  setShowDropdown(false); navigate('/carbon-footprint')}}
+                    onClick={() => { setShowDropdown(false); navigate('/carbon-footprint') }}
 
                   >
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      
+
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={2}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 cursor-pointer transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverFootprint || isActiveLink('/carbon-footprint') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -325,12 +326,12 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTreePacks(false); setHoverTreePacks(false); }}
-                    onClick={() => {  setShowDropdown(false); navigate('/treePacks')}}
+                    onClick={() => { setShowDropdown(false); navigate('/treePacks') }}
                   >
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      
+
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={3}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTreePacks || isActiveLink('/treePacks') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -352,13 +353,13 @@ const TopBar = () => {
                       setHoverCO2(false);
                     }}
                     onMouseLeave={() => { setShowTracking(false); setHoverTracking(false); }}
-                    onClick={() => {  setShowDropdown(false); navigate('/plant-trees-tracking')}}
-                    
+                    onClick={() => { setShowDropdown(false); navigate('/plant-trees-tracking') }}
+
                   >
                     <motion.div
                       variants={itemVariants}
                       initial="hidden"
-                      
+
                       animate={showDropdown ? "visible" : "hidden"}
                       custom={4}
                       className={`flex items-center text-[16px] text-bgGreen pl-3 transition ease-in-out navDropdownBreathPack rounded-[8px] h-[54px] w-[266px] ${hoverTracking || isActiveLink('/plant-trees-tracking') ? 'bg-[#25B567] font-semibold text-white' : ''}`}
@@ -392,7 +393,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    
+
                     animate={showCo2 ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -435,7 +436,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    
+
                     animate={showFootprint ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -478,7 +479,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    
+
                     animate={showTreePacks ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -521,7 +522,7 @@ const TopBar = () => {
                   <motion.div
                     variants={itemVariantsX}
                     initial="hidden"
-                    
+
                     animate={showTracking ? "visible" : "hidden"}
                     custom={0}
                     className="flex flex-col h-full justify-between"
@@ -545,12 +546,12 @@ const TopBar = () => {
         )}
       </div>
       <div>
-        
+
       </div>
       <div className="flex navbar w-screen">
         <div className={`bg-transparent lg:hidden w-screen h-[50px] px-8 transition ease-in-out py-3 ${color ? 'bg-white h-[55px] border-b-[1px]' : ''}`}>
           <div className="w-full items-center flex flex-row justify-between">
-            <a onClick={() => navigate('/')}  className="cursor-pointer">
+            <a onClick={() => navigate('/')} className="cursor-pointer">
               {color ? (
                 <img src="./assets/greenTree.svg" alt="logo" />
               ) : (
@@ -567,167 +568,167 @@ const TopBar = () => {
           </div>
         </div>
         <motion.div
-         variants={mobineContainer}
-         initial="hidden"
-         animate="visible"
-         
-         transition={{ duration: 0.3, ease: "easeInOut" }}
-      > 
-        <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'} 
-        // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
+          variants={mobineContainer}
+          initial="hidden"
+          animate="visible"
+
+          transition={{ duration: 0.3, ease: "easeInOut" }}
         >
-          <div className="w-screen bg-bgGreen mobileIndex fixed right-0 top-0 h-full rounded-[8px]">
-            <div className="flex flex-col space-y-5 px-7 w-full">
-              <div className="flex flex-col mt-5 items-start justify-start">
-                <div className="flex flex-row items-center justify-between w-full">
-                  <img
-                  src="./assets/whiteTree.svg"
-                  />
-                  
-                  <img
-                    src="./assets/closeWhite.svg"
-                    className="w-[30px] h-[30px] cursor-pointer"
-                    onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
-                  />
-                </div>
+          <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-screen'}
+          // onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}
+          >
+            <div className="w-screen bg-bgGreen mobileIndex fixed right-0 top-0 h-full rounded-[8px]">
+              <div className="flex flex-col space-y-5 px-7 w-full">
+                <div className="flex flex-col mt-5 items-start justify-start">
+                  <div className="flex flex-row items-center justify-between w-full">
+                    <img
+                      src="./assets/whiteTree.svg"
+                    />
 
-                <div className="py-5">
-                  <p className="text-white text-[28px] font-medium pt-5">{t('menu')}</p>
-                </div>
-              </div>
-              <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
-                <p className=" text-white text-[16px]">{t('breathPack')}</p>
-                <img
-                  src="./assets/downWhite.svg"
-                  className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
-                />
-              </div>
-
-              <motion.div 
-              initial={{ y: '100%' }}
-              animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-
-              className={!showSubDropdown ? 'hidden' : ''}>
-                <div className={"ml-5 flex flex-col space-y-5"}>
-                  <a  onClick={() => { navigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">{t('co2Calculation')}</p>
-                  </a>
-
-                  <a  onClick={() => {navigate('/carbon-footprint');  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">{t('carbonFootprint')}</p>
-                  </a>
-
-                  <a  onClick={() => {navigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">{t('treePacks')}</p>
-                  </a>
-
-                  <a  onClick={() => {navigate('/plant-trees-tracking');  setobileDropdown(false); setshowsubdropdown(false); }}>
-                    <p className=" text-white text-[14px]">{t('treesTrackingVerification')}</p>
-                  </a>
-                </div>
-              </motion.div>
-
-              <a  onClick={() => {  setobileDropdown(false); navigate('/about-us'); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">{t('aboutUs')}</p>
-              </a>
-
-              <a  onClick={() => {  setobileDropdown(false); navigate('/blog'); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">{t('blog')}</p>
-              </a>
-
-              <a  onClick={() => { navigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
-                <p className=" text-white text-[16px]">{t('ourServices')}</p>
-              </a>
-
-              <motion.div
-              
-              whileTap={{ scale: 0.9 }}
-              onMouseEnter={() => setShowDropdown(false)}
-              onClick={handleLanguageChange}
-              className={`text-[16px] flex flex-row items-center w-max p-2  border-[1px] bg-white bg-opacity-5 rounded-lg ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
-            >
-              
-              {selectedLanguage === 1 && (
-                <>
-                  <div className="pr-1">
-                    <EnglishLogo/>
-                  </div>
-                  EN
-                </>
-              )}
-
-              {selectedLanguage === 2 && (
-                <>
-                  <div className="pr-1">
-                    <TurkeyLogo/>
+                    <img
+                      src="./assets/closeWhite.svg"
+                      className="w-[30px] h-[30px] cursor-pointer"
+                      onClick={() => { setobileDropdown(false); setshowsubdropdown(false); }}
+                    />
                   </div>
 
-                  TR
-                </>
-              )}
+                  <div className="py-5">
+                    <p className="text-white text-[28px] font-medium pt-5">{t('menu')}</p>
+                  </div>
+                </div>
+                <div className="flex flex-row space-x-2 cursor-pointer" onClick={toggleMobileDropdown}>
+                  <p className=" text-white text-[16px]">{t('breathPack')}</p>
+                  <img
+                    src="./assets/downWhite.svg"
+                    className={showSubDropdown ? 'rotate-[180deg] transition ease-in-out' : 'transition ease-in-out'}
+                  />
+                </div>
 
-            </motion.div>
+                <motion.div
+                  initial={{ y: '100%' }}
+                  animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
 
-              <div className="flex flex-row py-10 space-x-7 items-center justify-center">
-                <motion.a 
-                href="https://www.facebook.com/settings/?tab=your_facebook_information"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/facebookWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
-                <motion.a 
-                href="https://x.com/nefesolcom"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/xWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
-                <motion.a 
-                href="https://www.instagram.com/nefesolcom/"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/instagramWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
-                <motion.a 
-                href="https://www.linkedin.com/company/nefesolcom/"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/linkedInWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
-                <motion.a 
-                href="https://www.youtube.com/@Nefesolcom"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/youtubeWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
-                <motion.a 
-                href="https://www.tiktok.com/@nefesol.com?is_from_webapp=1&sender_device=pc"
-                target="blank"
-                className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
-                  <img
-                  src="./assets/tiktokWhite.svg"
-                  className="w-[30px] h-[30px]"
-                  />
-                </motion.a>
+                  className={!showSubDropdown ? 'hidden' : ''}>
+                  <div className={"ml-5 flex flex-col space-y-5"}>
+                    <a onClick={() => { navigate('/co2-calculator'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                      <p className=" text-white text-[14px]">{t('co2Calculation')}</p>
+                    </a>
+
+                    <a onClick={() => { navigate('/carbon-footprint'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                      <p className=" text-white text-[14px]">{t('carbonFootprint')}</p>
+                    </a>
+
+                    <a onClick={() => { navigate('/treePacks'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                      <p className=" text-white text-[14px]">{t('treePacks')}</p>
+                    </a>
+
+                    <a onClick={() => { navigate('/plant-trees-tracking'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                      <p className=" text-white text-[14px]">{t('treesTrackingVerification')}</p>
+                    </a>
+                  </div>
+                </motion.div>
+
+                <a onClick={() => { setobileDropdown(false); navigate('/about-us'); setshowsubdropdown(false); }}>
+                  <p className=" text-white text-[16px]">{t('aboutUs')}</p>
+                </a>
+
+                <a onClick={() => { setobileDropdown(false); navigate('/blog'); setshowsubdropdown(false); }}>
+                  <p className=" text-white text-[16px]">{t('blog')}</p>
+                </a>
+
+                <a onClick={() => { navigate('/ourservices'); setobileDropdown(false); setshowsubdropdown(false); }}>
+                  <p className=" text-white text-[16px]">{t('ourServices')}</p>
+                </a>
+
+                <motion.div
+
+                  whileTap={{ scale: 0.9 }}
+                  onMouseEnter={() => setShowDropdown(false)}
+                  onClick={handleLanguageChange}
+                  className={`text-[16px] flex flex-row items-center w-max p-2  border-[1px] bg-white bg-opacity-5 rounded-lg ${!color ? 'text-white cursor-pointer' : 'text-[#1F2721]'} hover:text-linkGreen cursor-pointer`}
+                >
+
+                  {selectedLanguage === 1 && (
+                    <>
+                      <div className="pr-1">
+                        <EnglishLogo />
+                      </div>
+                      EN
+                    </>
+                  )}
+
+                  {selectedLanguage === 2 && (
+                    <>
+                      <div className="pr-1">
+                        <TurkeyLogo />
+                      </div>
+
+                      TR
+                    </>
+                  )}
+
+                </motion.div>
+
+                <div className="flex flex-row py-10 space-x-7 items-center justify-center">
+                  <motion.a
+                    href="https://www.facebook.com/settings/?tab=your_facebook_information"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/facebookWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                  <motion.a
+                    href="https://x.com/nefesolcom"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/xWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.instagram.com/nefesolcom/"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/instagramWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.linkedin.com/company/nefesolcom/"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/linkedInWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.youtube.com/@Nefesolcom"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/youtubeWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.tiktok.com/@nefesol.com?is_from_webapp=1&sender_device=pc"
+                    target="blank"
+                    className="cursor-pointer" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} >
+                    <img
+                      src="./assets/tiktokWhite.svg"
+                      className="w-[30px] h-[30px]"
+                    />
+                  </motion.a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </motion.div>
       </div>
     </div>
@@ -741,7 +742,7 @@ export default TopBar;
 // initial={{ x: '100%' }}
 // animate={showMobileDropdown ? { x: 0 } : { x: '100%' }}
 // transition={{ duration: 0.3, ease: 'easeInOut' }}
-// > 
+// >
 // <div className={!showMobileDropdown ? 'hidden' : ' mobileIndex h-[500px]'} onMouseLeave={() => { setshowsubdropdown(false); setShowMobileDropdown(false); }}>
 //  <div className="w-[300px] bg-white mobileIndex fixed right-0 pr-6 pt-5 rounded-[8px] shadow-2xl border-t-[2px] border-l-[2px] border-r-[2px]">
 //    <div className="flex flex-col space-y-5 py-5 px-7 w-full">
@@ -770,7 +771,7 @@ export default TopBar;
 //        />
 //      </div>
 
-//      <motion.div 
+//      <motion.div
 //      initial={{ y: '100%' }}
 //      animate={showSubDropdown ? { y: 0 } : { y: '-20%' }}
 //      transition={{ duration: 0.3, ease: 'easeInOut' }}
