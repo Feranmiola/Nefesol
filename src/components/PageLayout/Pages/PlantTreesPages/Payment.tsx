@@ -15,6 +15,8 @@ import useScrollToTop from "@/hooks/ScrollToTop"
 import { useNavigate } from "react-router-dom"
 import { useOrder } from "@/Context/OrderContext"
 import { useLoginMutation } from "@/hooks/UseAuthMutation"
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
 
 
 const Payment = () => {
@@ -24,6 +26,9 @@ const Payment = () => {
 
     const loginMutate = useLoginMutation();
 
+    const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
+    const [isFailureAlertOpen, setisFailureAlertOpen] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     const {
         email, setEmail,
@@ -69,16 +74,17 @@ const Payment = () => {
         setter(event.target.value);
     };
 
-
     const handleLogin = () => {
         loginMutate.mutate(
             { email },
             {
                 onSuccess: () => {
+                    setIsSuccessAlertOpen(true);
                     navigate("/plant-trees-verifyemail")
                 },
                 onError: (error: any) => {
-                    console.log(error)
+                    setisFailureAlertOpen(true)
+                    setErrorMessage(error.message || "An error occurred");
                 }
             }
         );
@@ -86,6 +92,27 @@ const Payment = () => {
 
     return (
         <div className="py-10 md:py-20 mt-10 flex items-center justify-center">
+            <Snackbar open={isSuccessAlertOpen} autoHideDuration={3000} onClose={() => setIsSuccessAlertOpen(false)}>
+                <Alert
+                    onClose={() => setIsSuccessAlertOpen(false)}
+                    severity="success"
+                    variant="filled"
+                    sx={{ width: '100%' }}
+                >
+                    This is a success Alert inside a Snackbar!
+                </Alert>
+            </Snackbar>
+            <Snackbar open={isFailureAlertOpen} autoHideDuration={3000} onClose={() => setisFailureAlertOpen(false)}>
+                <Alert
+                    onClose={() => setisFailureAlertOpen(false)}
+                    severity="error"
+                    variant="filled"
+                    sx={{ width: '100%' }}
+                >
+                    {errorMessage}
+                </Alert>
+            </Snackbar>
+
             <div className="max-w-md lg:max-w-2xl lg:flex lg:items-center lg:justify-between bg-white rounded-[24px]">
                 <div className="flex flex-col">
                     <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
