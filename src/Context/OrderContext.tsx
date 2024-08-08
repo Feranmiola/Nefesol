@@ -1,3 +1,4 @@
+// src/components/shared/Contexts/OrderContext.tsx
 import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 interface OrderContextType {
@@ -35,6 +36,12 @@ interface OrderContextType {
   setTreeAmount: (treeAmount: string) => void;
   totalAmountInDollars: string;
   setTotalAmountInDollars: (totalAmountInDollars: string) => void;
+  isVerified: boolean;
+  setIsVerified: (isVerified: boolean) => void;
+  lastLoggedIn: string;
+  setLastLoggedIn: (lastLoggedIn: string) => void;
+  role: string;
+  setRole: (role: string) => void;
 }
 
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
@@ -57,6 +64,9 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   const [orderID, setOrderID] = useState(localStorage.getItem('orderid') || "");
   const [treeAmount, setTreeAmount] = useState(localStorage.getItem('treeAmount') || "");
   const [totalAmountInDollars, setTotalAmountInDollars] = useState(localStorage.getItem('totalAmountInDollars') || "");
+  const [isVerified, setIsVerified] = useState(JSON.parse(localStorage.getItem('isVerified') || "false"));
+  const [lastLoggedIn, setLastLoggedIn] = useState(localStorage.getItem('lastLoggedIn') || "");
+  const [role, setRole] = useState(localStorage.getItem('role') || "");
 
   useEffect(() => {
     localStorage.setItem('email', email);
@@ -126,6 +136,18 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('totalAmountInDollars', totalAmountInDollars);
   }, [totalAmountInDollars]);
 
+  useEffect(() => {
+    localStorage.setItem('isVerified', JSON.stringify(isVerified));
+  }, [isVerified]);
+
+  useEffect(() => {
+    localStorage.setItem('lastLoggedIn', lastLoggedIn);
+  }, [lastLoggedIn]);
+
+  useEffect(() => {
+    localStorage.setItem('role', role);
+  }, [role]);
+
   return (
     <OrderContext.Provider
       value={{
@@ -163,6 +185,12 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
         setTreeAmount,
         totalAmountInDollars,
         setTotalAmountInDollars,
+        isVerified,
+        setIsVerified,
+        lastLoggedIn,
+        setLastLoggedIn,
+        role,
+        setRole,
       }}
     >
       {children}

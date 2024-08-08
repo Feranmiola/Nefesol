@@ -32,6 +32,9 @@ type orderData = {
         plantingLocation: string,
         treeAmount: string,
         datePlanted: string
+        buyerFirstName: string,
+        buyerLastName: string,
+        certificateStatus: string,
     }
 };
 

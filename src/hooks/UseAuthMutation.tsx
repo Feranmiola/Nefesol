@@ -28,3 +28,25 @@ export const useVerifyOTP = (): UseMutationResult<AxiosResponse<any>, Error, ver
         },
     });
 };
+
+
+type updateUserData = {
+    email: string;
+    first_name: string,
+    last_name: string,
+    city: string,
+    town: string,
+    tax: number,
+    street: string,
+    is_verified: boolean,
+    last_logged_in: string,
+    role: string
+};
+
+export const useUpdateUserInfo = (id: any): UseMutationResult<AxiosResponse<any>, Error, updateUserData> => {
+    return useMutation<AxiosResponse<any>, Error, updateUserData>({
+        mutationFn: (data: updateUserData) => {
+            return axios.patch(`${import.meta.env.VITE_BACKEND_API_URL}users/${id}`, data);
+        },
+    });
+};

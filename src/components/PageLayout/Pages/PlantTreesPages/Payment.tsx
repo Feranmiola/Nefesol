@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next"
 import useScrollToTop from "@/hooks/ScrollToTop"
 import { useNavigate } from "react-router-dom"
 import { useOrder } from "@/Context/OrderContext"
-import { useLoginMutation } from "@/hooks/UseAuthMutation"
+import { useLoginMutation, useUpdateUserInfo } from "@/hooks/UseAuthMutation"
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
@@ -41,7 +41,7 @@ const Payment = () => {
         street, setStreet,
         postCode, setPostCode,
         taxNumber, setTaxNumber,
-        taxAdministrator, setTaxAdministrator,
+        taxAdministrator, setTaxAdministrator
     } = useOrder();
 
     const [loading, setLoading] = useState(true);
@@ -165,9 +165,9 @@ const Payment = () => {
                                         <SelectValue placeholder={t('select')} />
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="light">Light</SelectItem>
-                                        <SelectItem value="dark">Dark</SelectItem>
-                                        <SelectItem value="system">System</SelectItem>
+                                        <SelectItem value="Lagos, Nigeria">Lagos Nigeria</SelectItem>
+                                        {/* <SelectItem value="dark">Dark</SelectItem>
+                                        <SelectItem value="system">System</SelectItem> */}
                                     </SelectContent>
                                 </Select>
                             </div>
@@ -178,9 +178,9 @@ const Payment = () => {
                                         <SelectValue placeholder={t('select')} />
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="creditCard">Credit Card</SelectItem>
+                                        {/* <SelectItem value="creditCard">Credit Card</SelectItem> */}
                                         <SelectItem value="paypal">PayPal</SelectItem>
-                                        <SelectItem value="crypto">Crypto</SelectItem>
+                                        {/* <SelectItem value="crypto">Crypto</SelectItem> */}
                                     </SelectContent>
                                 </Select>
                             </div>

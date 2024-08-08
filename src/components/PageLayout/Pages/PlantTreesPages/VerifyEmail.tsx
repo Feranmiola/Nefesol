@@ -1,7 +1,7 @@
 import { Input } from "@/components/ui/input";
 import { useOrder } from "@/Context/OrderContext";
 import useScrollToTop from "@/hooks/ScrollToTop";
-import { useVerifyOTP } from "@/hooks/UseAuthMutation";
+import { useUpdateUserInfo, useVerifyOTP } from "@/hooks/UseAuthMutation";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -14,7 +14,7 @@ import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
 const VerifyEmail = () => {
   useScrollToTop()
 
-  const { email, setAccessToken, setUserID, setOrderID, city, town, street, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
+  const { email, setAccessToken, setUserID, setOrderID, setIsVerified, firstName, lastName, setRole, setLastLoggedIn, city, town, street, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
 
   const [otp, setOtp] = useState("");
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
@@ -23,6 +23,7 @@ const VerifyEmail = () => {
 
   const verifyMutate = useVerifyOTP();
   const createOrderMutate = useCreateOrderMutation();
+  const updateMutate = useUpdateUserInfo(userID);
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -32,52 +33,83 @@ const VerifyEmail = () => {
         onSuccess: (response) => {
           setAccessToken(response.data.access_token);
           setUserID(response.data.user.id);
-          handelContextOTP(otp)
-          createOrderMutate.mutate(
+          setIsVerified(response.data.user.is_verified);
+          setLastLoggedIn(response.data.user.last_logged_in);
+          setRole(response.data.user.role);
+
+          updateMutate.mutate(
             {
-              userId: userID,
-              coupon_discount_amount: 0,
-              coupon_discount_title: "",
-              payment_status: "unpaid",
-              order_status: "pending",
-              total_tax_amount: 0,
-              payment_method: "Paypal",
-              transaction_reference: "",
-              coupon_code: "",
-              order_note: "",
-              order_type: "delivery",
-              callback: "",
-              delivery_address: preferredLocation,
-              free_delivery_by: "",
-              transaction_id: "",
-              cancellation_reason: "",
-              canceled_by: "",
-              tracking_number: "",
-              customer_contact: email,
-              status: "Created",
-              sales_tax: 0,
-              shipping_address: (city + ", " + town + ", " + street),
-              billing_address: (city + ", " + town + ", " + street),
-              logistics_provider: 0,
-              total: Number(totalAmountInDollars) || 0,
-              orderItems: {
-                plantingLocation: preferredLocation,
-                treeAmount,
-                datePlanted: ""
-              }
+              email,
+              first_name: firstName,
+              last_name: lastName,
+              city,
+              town,
+              tax: 0,
+              street,
+              is_verified: response.data.user.is_verified,
+              last_logged_in: response.data.user.last_logged_in,
+              role: response.data.user.role
+
             },
             {
-              onSuccess: (response) => {
-                setIsSuccessAlertOpen(true);
-                setOrderID(response.data.id)
-                navigate("/plant-trees-thankyou");
+              onSuccess: () => {
+                createOrderMutate.mutate(
+                  {
+                    userId: userID,
+                    coupon_discount_amount: 0,
+                    coupon_discount_title: "",
+                    payment_status: "unpaid",
+                    order_status: "pending",
+                    total_tax_amount: 0,
+                    payment_method: "Paypal",
+                    transaction_reference: "",
+                    coupon_code: "",
+                    order_note: "",
+                    order_type: "delivery",
+                    callback: "",
+                    delivery_address: preferredLocation,
+                    free_delivery_by: "",
+                    transaction_id: "",
+                    cancellation_reason: "",
+                    canceled_by: "",
+                    tracking_number: "",
+                    customer_contact: email,
+                    status: "Created",
+                    sales_tax: 0,
+                    shipping_address: (city + ", " + town + ", " + street),
+                    billing_address: (city + ", " + town + ", " + street),
+                    logistics_provider: 0,
+                    total: Number(totalAmountInDollars) || 0,
+                    orderItems: {
+                      plantingLocation: preferredLocation,
+                      treeAmount,
+                      datePlanted: "",
+                      buyerFirstName: firstName,
+                      buyerLastName: lastName,
+                      certificateStatus: "Issued"
+                    }
+                  },
+                  {
+                    onSuccess: (response) => {
+                      setIsSuccessAlertOpen(true);
+                      setOrderID(response.data.id);
+                      navigate("/plant-trees-thankyou");
+                    },
+                    onError: (error: any) => {
+                      setIsFailureAlertOpen(true);
+                      setErrorMessage(error.message || "Verification failed. Please try again.");
+                    }
+                  }
+                );
               },
               onError: (error: any) => {
-                setIsFailureAlertOpen(true);
-                setErrorMessage(error.message || "Verification failed. Please try again.");
+                setErrorMessage(error.message || "An error occurred");
               }
             }
           );
+
+
+          handelContextOTP(otp)
         },
         onError: (error: any) => {
           setIsFailureAlertOpen(true);

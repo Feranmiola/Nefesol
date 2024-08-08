@@ -33,7 +33,11 @@ const Tracking = () => {
     const [TreeAmount, setTreeAmount] = useState("")
     const [status, setStatus] = useState("");
     const [dateBought, setDateBought] = useState("");
-    const [datePlanted, setDatePlanted] = useState("")
+    const [datePlanted, setDatePlanted] = useState("");
+    const [firstName, setFirstNam] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [certificate, setCertificate] = useState("");
+    // const [buyerEmail, setBuyerEmail] = useState("");
     const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: '', severity: 'success' });
 
     const formatDate = (dateString: string): string => {
@@ -68,6 +72,10 @@ const Tracking = () => {
                     response.data.status);
             setDateBought(formatDate(response.data.createdAt));
             setDatePlanted(response.data.orderItems.datePlanted);
+            setCertificate(response.data.orderItems.certificateStatus);
+            setFirstNam(response.data.orderItems.buyerFirstName);
+            setLastName(response.data.orderItems.buyerLastName);
+            // setBuyerEmail(response.data.customer_contact);
             // setUserID(response.data.userId)
 
             setSnackbar({ open: true, message: t('orderDetailsFound'), severity: 'success' });
@@ -255,15 +263,15 @@ const Tracking = () => {
                                         </div>
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Date Planted:')}</p>
-                                            <p className="text-bgGreen text-[12px] font-medium">{datePlanted ? datePlanted : "1, Jan, 2024"}</p>
+                                            <p className="text-bgGreen text-[12px] font-medium">{datePlanted ? datePlanted : "Not Planted"}</p>
                                         </div>
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Bought By:')}</p>
-                                            <p className="text-bgGreen text-[12px] font-medium">James John</p>
+                                            <p className="text-bgGreen text-[12px] font-medium">{lastName}, {firstName}</p>
                                         </div>
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Certificate')}</p>
-                                            <p className="text-bgGreen text-[12px] font-medium">Issued</p>
+                                            <p className="text-bgGreen text-[12px] font-medium">{certificate}</p>
                                         </div>
                                     </div>
                                 </div>
