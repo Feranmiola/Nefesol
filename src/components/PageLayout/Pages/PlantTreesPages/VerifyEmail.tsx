@@ -37,73 +37,76 @@ const VerifyEmail = () => {
           setLastLoggedIn(response.data.user.last_logged_in);
           setRole(response.data.user.role);
 
-          updateMutate.mutate(
-            {
-              email,
-              first_name: firstName,
-              last_name: lastName,
-              city,
-              town,
-              tax: 0,
-              street,
-              is_verified: response.data.user.is_verified,
-              last_logged_in: response.data.user.last_logged_in,
-              role: response.data.user.role
+          if (response.data.user.first_name === null) {
+            updateMutate.mutate(
+              {
+                email,
+                first_name: firstName,
+                last_name: lastName,
+                city,
+                town,
+                tax: 0,
+                street,
+                is_verified: response.data.user.is_verified,
+                last_logged_in: response.data.user.last_logged_in,
+                role: response.data.user.role
 
+              },
+              {
+                onSuccess: () => {
+                },
+                onError: (error: any) => {
+                  setErrorMessage(error.message || "An error occurred");
+                }
+              }
+            );
+          }
+
+          createOrderMutate.mutate(
+            {
+              userId: userID,
+              coupon_discount_amount: 0,
+              coupon_discount_title: "",
+              payment_status: "unpaid",
+              order_status: "pending",
+              total_tax_amount: 0,
+              payment_method: "Paypal",
+              transaction_reference: "",
+              coupon_code: "",
+              order_note: "",
+              order_type: "delivery",
+              callback: "",
+              delivery_address: preferredLocation,
+              free_delivery_by: "",
+              transaction_id: "",
+              cancellation_reason: "",
+              canceled_by: "",
+              tracking_number: "",
+              customer_contact: email,
+              status: "Created",
+              sales_tax: 0,
+              shipping_address: (city + ", " + town + ", " + street),
+              billing_address: (city + ", " + town + ", " + street),
+              logistics_provider: 0,
+              total: Number(totalAmountInDollars) || 0,
+              orderItems: {
+                plantingLocation: preferredLocation,
+                treeAmount,
+                datePlanted: "",
+                buyerFirstName: firstName,
+                buyerLastName: lastName,
+                certificateStatus: "Issued"
+              }
             },
             {
-              onSuccess: () => {
-                createOrderMutate.mutate(
-                  {
-                    userId: userID,
-                    coupon_discount_amount: 0,
-                    coupon_discount_title: "",
-                    payment_status: "unpaid",
-                    order_status: "pending",
-                    total_tax_amount: 0,
-                    payment_method: "Paypal",
-                    transaction_reference: "",
-                    coupon_code: "",
-                    order_note: "",
-                    order_type: "delivery",
-                    callback: "",
-                    delivery_address: preferredLocation,
-                    free_delivery_by: "",
-                    transaction_id: "",
-                    cancellation_reason: "",
-                    canceled_by: "",
-                    tracking_number: "",
-                    customer_contact: email,
-                    status: "Created",
-                    sales_tax: 0,
-                    shipping_address: (city + ", " + town + ", " + street),
-                    billing_address: (city + ", " + town + ", " + street),
-                    logistics_provider: 0,
-                    total: Number(totalAmountInDollars) || 0,
-                    orderItems: {
-                      plantingLocation: preferredLocation,
-                      treeAmount,
-                      datePlanted: "",
-                      buyerFirstName: firstName,
-                      buyerLastName: lastName,
-                      certificateStatus: "Issued"
-                    }
-                  },
-                  {
-                    onSuccess: (response) => {
-                      setIsSuccessAlertOpen(true);
-                      setOrderID(response.data.id);
-                      navigate("/plant-trees-thankyou");
-                    },
-                    onError: (error: any) => {
-                      setIsFailureAlertOpen(true);
-                      setErrorMessage(error.message || "Verification failed. Please try again.");
-                    }
-                  }
-                );
+              onSuccess: (response) => {
+                setIsSuccessAlertOpen(true);
+                setOrderID(response.data.id);
+                navigate("/plant-trees-thankyou");
               },
               onError: (error: any) => {
-                setErrorMessage(error.message || "An error occurred");
+                setIsFailureAlertOpen(true);
+                setErrorMessage(error.message || "Verification failed. Please try again.");
               }
             }
           );
