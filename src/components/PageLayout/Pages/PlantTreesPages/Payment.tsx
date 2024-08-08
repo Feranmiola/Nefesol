@@ -80,7 +80,7 @@ const Payment = () => {
             {
                 onSuccess: () => {
                     setIsSuccessAlertOpen(true);
-                    navigate("/plant-trees-verifyemail")
+                    navigate("/plant-trees-verifyemail");
                 },
                 onError: (error: any) => {
                     setisFailureAlertOpen(true)

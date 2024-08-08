@@ -28,7 +28,11 @@ type orderData = {
     billing_address: string,
     logistics_provider: number,
     total: number,
-    orderItems: {}
+    orderItems: {
+        plantingLocation: string,
+        treeAmount: string,
+        datePlanted: string
+    }
 };
 
 export const useCreateOrderMutation = (): UseMutationResult<AxiosResponse<any>, Error, orderData> => {

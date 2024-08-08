@@ -1,13 +1,12 @@
-// src/components/shared/Contexts/OrderContext.tsx
 import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 interface OrderContextType {
   accessToken: string;
-  setAccessToken: (email: string) => void;
+  setAccessToken: (accessToken: string) => void;
   otp: string;
-  setOtp: (email: string) => void;
+  setOtp: (otp: string) => void;
   userID: string;
-  setUserID: (email: string) => void;
+  setUserID: (userID: string) => void;
   email: string;
   setEmail: (email: string) => void;
   preferredLocation: string;
@@ -32,6 +31,10 @@ interface OrderContextType {
   setTaxAdministrator: (taxAdministrator: string) => void;
   orderID: string;
   setOrderID: (orderID: string) => void;
+  treeAmount: string;
+  setTreeAmount: (treeAmount: string) => void;
+  totalAmountInDollars: string;
+  setTotalAmountInDollars: (totalAmountInDollars: string) => void;
 }
 
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
@@ -52,7 +55,8 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   const [taxNumber, setTaxNumber] = useState(localStorage.getItem('taxNumber') || "");
   const [taxAdministrator, setTaxAdministrator] = useState(localStorage.getItem('taxAdministrator') || "");
   const [orderID, setOrderID] = useState(localStorage.getItem('orderid') || "");
-
+  const [treeAmount, setTreeAmount] = useState(localStorage.getItem('treeAmount') || "");
+  const [totalAmountInDollars, setTotalAmountInDollars] = useState(localStorage.getItem('totalAmountInDollars') || "");
 
   useEffect(() => {
     localStorage.setItem('email', email);
@@ -114,6 +118,14 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('otp', otp);
   }, [otp]);
 
+  useEffect(() => {
+    localStorage.setItem('treeAmount', treeAmount);
+  }, [treeAmount]);
+
+  useEffect(() => {
+    localStorage.setItem('totalAmountInDollars', totalAmountInDollars);
+  }, [totalAmountInDollars]);
+
   return (
     <OrderContext.Provider
       value={{
@@ -146,7 +158,11 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
         orderID,
         setOrderID,
         otp,
-        setOtp
+        setOtp,
+        treeAmount,
+        setTreeAmount,
+        totalAmountInDollars,
+        setTotalAmountInDollars,
       }}
     >
       {children}

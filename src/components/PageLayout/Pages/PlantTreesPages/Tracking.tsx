@@ -24,11 +24,16 @@ const Tracking = () => {
     const navigate = useNavigate();
 
     const [orderId, setOrderId] = useState('');
-    const [orderDetails, setOrderDetails] = useState<any>(null);
     const [isTracking, setIsTracking] = useState(false);
     const [loading, setLoading] = useState(false);
     const [dowwnloadCertificateStep1, SetStep1] = useState(false);
     const [dowwnloadCertificateStep2, SetStep2] = useState(false);
+    // const [userID, setUserID] = useState("");
+    const [location, setLocaation] = useState("");
+    const [TreeAmount, setTreeAmount] = useState("")
+    const [status, setStatus] = useState("");
+    const [dateBought, setDateBought] = useState("");
+    const [datePlanted, setDatePlanted] = useState("")
     const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: '', severity: 'success' });
 
     const handleInputChange = (event: any) => {
@@ -44,7 +49,14 @@ const Tracking = () => {
             if (response === 'Failed') {
                 throw new Error('Failed to fetch order details');
             }
-            setOrderDetails(response.data);
+            SetStep1(true)
+            setLocaation(response.data.orderItems.plantingLocation);
+            setTreeAmount(response.data.orderItems.treeAmount);
+            setStatus(response.data.status);
+            setDateBought(response.data.createdAt)
+            setDatePlanted(response.data.orderItems.datePlanted);
+            // setUserID(response.data.userId)
+
             setSnackbar({ open: true, message: t('orderDetailsFound'), severity: 'success' });
         } catch (error) {
             console.error('Error fetching order details:', error);
@@ -53,7 +65,7 @@ const Tracking = () => {
             setLoading(false);
         }
 
-        console.log(orderDetails);
+
     };
 
     return (
@@ -198,7 +210,7 @@ const Tracking = () => {
                                             </VisibilitySensor>
                                             <div className="flex flex-col">
                                                 <p className="text-bgGreen opacity-60 text-[12px]">{t('Trees Bought')}</p>
-                                                <p className="text-bgGreen font-medium text-[24px]">12,000 {t('trees')}</p>
+                                                <p className="text-bgGreen font-medium text-[24px]">{TreeAmount ? TreeAmount : 0} {t('trees')}</p>
                                             </div>
                                         </div>
                                         <div className="flex flex-row space-x-[1.5rem] items-center">
@@ -207,7 +219,7 @@ const Tracking = () => {
                                             </VisibilitySensor>
                                             <div className="flex flex-col">
                                                 <p className="text-bgGreen opacity-60 text-[12px]">{t('Location')}</p>
-                                                <p className="text-bgGreen font-medium text-[24px]">Lagos, Nigeria</p>
+                                                <p className="text-bgGreen font-medium text-[24px]">{location ? location : "No Location Set"}</p>
                                             </div>
                                         </div>
                                         <div className="flex flex-row space-x-[1.20rem] items-center">
@@ -216,7 +228,7 @@ const Tracking = () => {
                                             </VisibilitySensor>
                                             <div className="flex flex-col">
                                                 <p className="text-bgGreen opacity-60 text-[12px]">{t('Status')}</p>
-                                                <p className="text-bgGreen font-medium text-[24px]">{t('Planted')}</p>
+                                                <p className="text-bgGreen font-medium text-[24px]">{status ? status : "Status Unknown"}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -226,11 +238,11 @@ const Tracking = () => {
                                     <div className="flex flex-row items-center justify-between px-5 pb-5">
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Date Bought:')}</p>
-                                            <p className="text-bgGreen text-[12px] font-medium">21 June, 2024</p>
+                                            <p className="text-bgGreen text-[12px] font-medium">{dateBought ? dateBought : "1, Jan, 2024"}</p>
                                         </div>
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Date Planted:')}</p>
-                                            <p className="text-bgGreen text-[12px] font-medium">21 June, 2024</p>
+                                            <p className="text-bgGreen text-[12px] font-medium">{datePlanted ? datePlanted : "1, Jan, 2024"}</p>
                                         </div>
                                         <div className="flex flex-col">
                                             <p className="text-bgGreen opacity-60 text-[8px]">{t('Bought By:')}</p>
