@@ -18,15 +18,17 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'julius': ['Julius Sans One', 'sans-serif']
+        'julius': ['Julius Sans One', 'sans-serif'],
+        kalnia: ['Kalnia', 'sans-serif'],
+        Azeret: ['Azeret Mono', 'sans-serif'],
       },
       colors: {
-        'bgGreen' : '#0A4519',
-        'linkGreen' : '#25B567',
-        'testimonialGreen' : '#E6EFEB',
-        'linkHreaderGreen' : '#009444',
-        'linkTextGreen' : '#0A4519',
-        'ratingGreen' : '#009444',
+        'bgGreen': '#0A4519',
+        'linkGreen': '#25B567',
+        'testimonialGreen': '#E6EFEB',
+        'linkHreaderGreen': '#009444',
+        'linkTextGreen': '#0A4519',
+        'ratingGreen': '#009444',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

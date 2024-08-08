@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
-p{
+p {
   font-family: Inter;
 }
 
-h1{
+h1 {
   font-family: Julius Sans One;
   font-size: 150px;
   font-weight: 400;
@@ -16,33 +17,33 @@ h1{
 
 }
 
-.navDropdownBreathPack{
-  font-family: Inter; 
+.navDropdownBreathPack {
+  font-family: Inter;
 }
 
 
-.homeBackground{
+.homeBackground {
   background-image: url('/assets/treeBackground.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.greeningBG{
+.greeningBG {
   background-image: url('/assets/greeningImage.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.testimonialBG{
+.testimonialBG {
   background-image: url('/assets/gardenImageVertical.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.karbonBG{
+.karbonBG {
   background-color: black;
   background-image: url('/assets/dotBackground.svg');
   background-position: contain;
@@ -50,15 +51,22 @@ h1{
   background-size: cover;
 }
 
-.aboutUsBG{
+.aboutUsBG {
   background-image: url('/assets/aboutUsTree.svg');
   background-position: contain;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.trackingInfo{
+.trackingInfo {
   background-image: url('/assets/trackingPlantBg.svg');
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.certificateBG {
+  background-image: url('/assets/CertificateTopBackground.png');
   background-position: contain;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,52 +81,59 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 Input {
-  
+
   border: none;
   outline: none;
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
   @apply scroll-smooth;
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none;
+  /* For Firefox */
+  -ms-overflow-style: none;
+  /* For Internet Explorer and Edge */
 }
 
 .navbar {
   overflow: hidden;
   z-index: 9998;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed;
+  /* Set the navbar to fixed position */
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
 }
 
-.servicesIndex{
+.servicesIndex {
   z-index: 8000;
 }
 
-.mobileIndex{
+.mobileIndex {
   z-index: 9999;
 }
 
-.progressindex{
+.progressindex {
   z-index: 1;
 }
 
 .section {
-  padding-top: 230px; /* Adjust this value to match the height of your fixed elements */
+  padding-top: 230px;
+  /* Adjust this value to match the height of your fixed elements */
 }
 
-.takeAction{
+.takeAction {
   font-family: Inter;
-font-size: 24px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.27em;
-text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.27em;
+  text-align: center;
 
 }
 
-ul li{
+ul li {
   list-style-type: disc;
 }
 
@@ -126,145 +141,151 @@ li::marker {
   color: #0A4519;
 }
 
-li{
+li {
   color: #0A4519;
 }
 
 
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
 
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+    --radius: 0.5rem;
   }
 
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
 
-  @layer components {
-    /* SHADCN COMPONENTS */
-    /* Form */
-    .shad-form_label {
-      @apply text-black !important; /* Adjusted for light mode */
-    }
-  
-    .shad-form_message {
-      @apply text-red !important;
-    }
-  
-    .shad-input {
-      @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
-    }
-
-    
-    .shad-input-bare {
-      @apply  bg-white placeholder:text-[#B7B7BD] focus:bg-white text-bgGreen font-medium text-[32px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px]  !important;
-    }
-
-      
-    .shad-input-bareV2 {
-      @apply  bg-[#F8F9F8]  focus:bg-[#F8F9F8] text-bgGreen placeholder:text-bgGreen placeholder:opacity-50 text-[14px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px]  !important;
-    }
-
-    .shad-input-plant {
-      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
-    }
-
-    .shad-input-plant-width {
-      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px]  focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
-    }
-
-    .shad-select {
-      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] max-sm:w-[310px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
-    }
-  
-    .shad-select-plant {
-      @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d]  focus:ring-offset-0 rounded-[12px] text-[16px] !important;
-    }
-  
-  
-    .shad-textarea {
-      @apply h-36 bg-gray-100 rounded-xl border border-gray-300 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-300 !important;
-    }
-  
-    /* Button */
-    .shad-button_primary {
-      @apply bg-blue-500 hover:bg-blue-600 text-white flex gap-2 !important; /* Adjusted for light mode */
-    }
-  
-    .shad-button_dark_4 {
-      @apply h-12 bg-gray-400 px-5 text-white flex gap-2 !important; /* Adjusted for light mode */
-    }
-  
-    .shad-button_ghost {
-      @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-black !important; /* Adjusted for light mode */
-    }
-  
+  body {
+    @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+
+  /* SHADCN COMPONENTS */
+  /* Form */
+  .shad-form_label {
+    @apply text-black !important;
+    /* Adjusted for light mode */
+  }
+
+  .shad-form_message {
+    @apply text-red !important;
+  }
+
+  .shad-input {
+    @apply bg-[#F7F7F7] placeholder:text-[#B7B7BD] focus:bg-white h-[62px] w-[358px] focus:ring-0 focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+  }
+
+
+  .shad-input-bare {
+    @apply bg-white placeholder:text-[#B7B7BD] focus:bg-white text-bgGreen font-medium text-[32px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px] !important;
+  }
+
+
+  .shad-input-bareV2 {
+    @apply bg-[#F8F9F8] focus:bg-[#F8F9F8] text-bgGreen placeholder:text-bgGreen placeholder:opacity-50 text-[14px] focus:ring-0 focus:ring-offset-0 focus:border-0 ring-transparent border-transparent rounded-[12px] !important;
+  }
+
+  .shad-input-plant {
+    @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d] focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+  }
+
+  .shad-input-plant-width {
+    @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] focus:ring-[1px] focus:ring-[#0a45194d] focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+  }
+
+  .shad-select {
+    @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[370px] max-sm:w-[310px] focus:ring-[1px] focus:ring-[#0a45194d] focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+  }
+
+  .shad-select-plant {
+    @apply bg-white ring-[1px] ring-[#0a45194d] placeholder:text-[#B7B7BD] focus:bg-white h-[48px] w-[258px] focus:ring-[1px] focus:ring-[#0a45194d] focus:ring-offset-0 rounded-[12px] text-[16px] !important;
+  }
+
+
+  .shad-textarea {
+    @apply h-36 bg-gray-100 rounded-xl border border-gray-300 focus-visible:ring-1 focus-visible:ring-offset-1 ring-offset-gray-300 !important;
+  }
+
+  /* Button */
+  .shad-button_primary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white flex gap-2 !important;
+    /* Adjusted for light mode */
+  }
+
+  .shad-button_dark_4 {
+    @apply h-12 bg-gray-400 px-5 text-white flex gap-2 !important;
+    /* Adjusted for light mode */
+  }
+
+  .shad-button_ghost {
+    @apply flex gap-4 items-center justify-start hover:bg-transparent hover:text-black !important;
+    /* Adjusted for light mode */
+  }
+
+}

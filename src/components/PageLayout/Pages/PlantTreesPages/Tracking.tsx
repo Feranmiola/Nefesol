@@ -1,16 +1,19 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
 import BeatLoader from "react-spinners/BeatLoader";
-import { Dialog, DialogContent, DialogClose, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { useTranslation } from "react-i18next";
 import { Img } from "react-image";
 import VisibilitySensor from 'react-visibility-sensor';
 import useScrollToTop from "@/hooks/ScrollToTop";
-import { useNavigate } from "react-router-dom";
 import { getOrderDetails } from "@/hooks/UseFetchOrderDetails";
 import { Snackbar, Alert, AlertColor } from '@mui/material';
+// @ts-ignore
+import html2pdf from 'html2pdf.js';
+import { useLoginMutation, useVerifyOTP } from "@/hooks/UseAuthMutation";
+import Certificate from '@/shared/Certificate';
 
 interface SnackbarState {
     open: boolean;
@@ -21,32 +24,33 @@ interface SnackbarState {
 const Tracking = () => {
     const { t } = useTranslation('');
     useScrollToTop();
-    const navigate = useNavigate();
 
     const [orderId, setOrderId] = useState('');
     const [isTracking, setIsTracking] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [dowwnloadCertificateStep1, SetStep1] = useState(false);
-    const [dowwnloadCertificateStep2, SetStep2] = useState(false);
-    // const [userID, setUserID] = useState("");
-    const [location, setLocaation] = useState("");
-    const [TreeAmount, setTreeAmount] = useState("")
+    const [downloadCertificateStep1, SetStep1] = useState(false);
+    const [downloadCertificateStep2, SetStep2] = useState(false);
+    const [location, setLocation] = useState("");
+    const [treeAmount, setTreeAmount] = useState("")
     const [status, setStatus] = useState("");
     const [dateBought, setDateBought] = useState("");
     const [datePlanted, setDatePlanted] = useState("");
-    const [firstName, setFirstNam] = useState("");
+    const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [certificate, setCertificate] = useState("");
-    // const [buyerEmail, setBuyerEmail] = useState("");
+    const [email, setEmail] = useState('')
+    const [otp, setOTP] = useState("");
+    const [isVerificationDialogOpen, setIsVerificationDialogOpen] = useState(false);
+
     const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: '', severity: 'success' });
+
+    const certificateRef = useRef<HTMLDivElement>(null);  // Ref to the Certificate component
 
     const formatDate = (dateString: string): string => {
         const date = new Date(dateString);
-
         const day = date.getUTCDate();
         const month = date.toLocaleString('default', { month: 'short' });
         const year = date.getUTCFullYear();
-
         return `${day} ${month}, ${year}`;
     };
 
@@ -64,7 +68,7 @@ const Tracking = () => {
                 throw new Error('Failed to fetch order details');
             }
             SetStep1(true)
-            setLocaation(response.data.orderItems.plantingLocation);
+            setLocation(response.data.orderItems.plantingLocation);
             setTreeAmount(response.data.orderItems.treeAmount);
             setStatus(
                 response.data.payment_status === "unpaid" ?
@@ -73,10 +77,8 @@ const Tracking = () => {
             setDateBought(formatDate(response.data.createdAt));
             setDatePlanted(response.data.orderItems.datePlanted);
             setCertificate(response.data.orderItems.certificateStatus);
-            setFirstNam(response.data.orderItems.buyerFirstName);
+            setFirstName(response.data.orderItems.buyerFirstName);
             setLastName(response.data.orderItems.buyerLastName);
-            // setBuyerEmail(response.data.customer_contact);
-            // setUserID(response.data.userId)
 
             setSnackbar({ open: true, message: t('orderDetailsFound'), severity: 'success' });
         } catch (error) {
@@ -85,9 +87,66 @@ const Tracking = () => {
         } finally {
             setLoading(false);
         }
-
-
     };
+
+    const loginMutate = useLoginMutation();
+    const verifyMutate = useVerifyOTP();
+
+    const handleLogin = () => {
+        loginMutate.mutate(
+            { email },
+            {
+                onSuccess: () => {
+                    setIsVerificationDialogOpen(true);
+                    setSnackbar({ open: true, message: t('loginSuccessful'), severity: 'success' });
+
+                },
+                onError: (error: any) => {
+                    setSnackbar({ open: true, message: error.message || "An error occurred", severity: 'error' });
+                }
+            }
+        );
+    };
+
+    const handleOtpVerification = () => {
+        verifyMutate.mutate(
+            { email, otp },
+            {
+                onSuccess: () => {
+                    setSnackbar({ open: true, message: t('verificationSuccessful'), severity: 'success' });
+                    generatePDF();
+                },
+                onError: (error: any) => {
+                    console.log(error)
+                    setSnackbar({ open: true, message: error.message || "Verification failed", severity: 'error' });
+                }
+            }
+        );
+    };
+
+    const generatePDF = () => {
+        const input = certificateRef.current;
+        if (input) {
+            const options = {
+                margin: [0, 0],
+                filename: 'NefesolCertificate.pdf',
+                image: { type: 'jpeg', quality: 1 },
+                html2canvas: { scale: 4 },  // High scaling for better quality
+                jsPDF: { unit: 'px', format: [842, 595], orientation: 'landscape' }  // Landscape orientation, width: 842px, height: 595px
+            };
+            html2pdf().from(input).set(options).save();
+        }
+        setIsVerificationDialogOpen(false);
+    };
+
+
+    const handleEmailChange = (event: any) => {
+        setEmail(event.target.value)
+    }
+
+    const handleOTPChange = (event: any) => {
+        setOTP(event.target.value);
+    }
 
     return (
         <div className="py-20 mt-10 items-center justify-center flex">
@@ -118,7 +177,7 @@ const Tracking = () => {
                                     </motion.div>
                                 </div>
                             </div>
-                            {dowwnloadCertificateStep1 && (
+                            {downloadCertificateStep1 && (
                                 <div className="flex flex-row cursor-pointer space-x-1" onClick={() => { SetStep1(false); SetStep2(true); }}>
                                     <VisibilitySensor>
                                         <Img src={"./assets/downloadCertificateLogo.svg"} />
@@ -127,7 +186,7 @@ const Tracking = () => {
                                 </div>
                             )}
 
-                            {dowwnloadCertificateStep2 && (
+                            {downloadCertificateStep2 && (
                                 <div className="flex border-[1px] rounded-[8px] items-center justify-center px-25 py-3 w-full">
                                     <div className=" w-full px-2 flex flex-row items-center justify-between">
                                         <div className="w-[346px]">
@@ -135,32 +194,31 @@ const Tracking = () => {
                                         </div>
                                         <div className=" bg-[#F8F9F8] w-[266px] flex rounded-[8px] ">
                                             <div className=" w-[266px] flex flex-row  items-center justify-between">
-                                                <Input type="email" className="w-[78%] shad-input-bareV2" placeholder={t('Enter Registered Email')} />
-                                                <Dialog>
-                                                    <DialogTrigger>
-                                                        <motion.div
-                                                            whileHover={{ scale: 1.06 }}
-                                                            whileTap={{ scale: 0.9 }}
-                                                            className=" cursor-pointer pr-2 ">
-                                                            <p className="text-[16px] text-linkGreen">{t('Download')}</p>
-                                                        </motion.div>
-                                                    </DialogTrigger>
+                                                <Input type="email" onChange={handleEmailChange} className="w-[78%] shad-input-bareV2" placeholder={t('Enter Registered Email')} />
+                                                <motion.div
+                                                    whileHover={{ scale: 1.06 }}
+                                                    whileTap={{ scale: 0.9 }}
+                                                    onClick={handleLogin}
+                                                    className=" cursor-pointer pr-2 ">
+                                                    <p className="text-[16px] text-linkGreen">{t('Download')}</p>
+                                                </motion.div>
+                                                <Dialog open={isVerificationDialogOpen} onOpenChange={setIsVerificationDialogOpen}>
                                                     <DialogContent className=" min-w-[800px] max-sm:min-w-[280px] min-h-[430px] bg-white rounded-[24px]">
                                                         <div className="flex flex-col items-center ">
                                                             <div className="bg-[#F8F9F8] h-[80px] w-full px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
                                                                 <p className="text-bgGreen text-[16px] md:text-[24px] font-bold">{t('Download Certificate')}</p>
-                                                                <DialogClose asChild>
-                                                                    <motion.a
-                                                                        whileHover={{ scale: 1.06 }}
-                                                                        whileTap={{ scale: 0.9 }}
-                                                                        className="flex flex-row space-x-2"
-                                                                    >
-                                                                        <VisibilitySensor>
-                                                                            <Img src={"./assets/prev.svg"} />
-                                                                        </VisibilitySensor>
-                                                                        <p className="text-[12px] md:text-[16px] text-linkGreen font-semibold">{t('returnToDetails')}</p>
-                                                                    </motion.a>
-                                                                </DialogClose>
+                                                                <motion.a
+                                                                    whileHover={{ scale: 1.06 }}
+                                                                    whileTap={{ scale: 0.9 }}
+                                                                    onClick={() => setIsVerificationDialogOpen(false)}
+                                                                    className="flex flex-row space-x-2"
+                                                                >
+                                                                    <VisibilitySensor>
+                                                                        <Img src={"./assets/prev.svg"} />
+                                                                    </VisibilitySensor>
+                                                                    <p className="text-[12px] md:text-[16px] text-linkGreen font-semibold">{t('returnToDetails')}</p>
+                                                                </motion.a>
+
                                                             </div>
 
                                                             <div className="flex w-full flex-col mt-10 px-5 md:px-10 space-y-2 pb-5">
@@ -175,19 +233,18 @@ const Tracking = () => {
                                                                         <p className="text-[14px] md:text-[16px] text-linkGreen">{t('changeEmail')}</p>
                                                                     </div>
                                                                 </div>
-                                                                <Input placeholder={t('Enter Verification Code')} className="shad-input-plant-width" />
+                                                                <Input onChange={handleOTPChange} placeholder={t('Enter Verification Code')} className="shad-input-plant-width" />
                                                             </div>
 
                                                             <div className="flex w-full items-center justify-center pb-5">
-                                                                <DialogClose asChild>
-                                                                    <motion.a
-                                                                        whileTap={{ scale: 0.9 }}
-                                                                        onClick={() => navigate('/plant-trees-thankyou')}
-                                                                        className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
-                                                                    >
-                                                                        <p className="text-white text-[16px] font-medium">{t('Download')}</p>
-                                                                    </motion.a>
-                                                                </DialogClose>
+
+                                                                <motion.a
+                                                                    whileTap={{ scale: 0.9 }}
+                                                                    onClick={handleOtpVerification}
+                                                                    className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+                                                                >
+                                                                    <p className="text-white text-[16px] font-medium">{t('Download')}</p>
+                                                                </motion.a>
                                                             </div>
 
                                                             <div className="flex w-full flex-row space-x-1 items-center justify-center pb-5">
@@ -231,7 +288,7 @@ const Tracking = () => {
                                             </VisibilitySensor>
                                             <div className="flex flex-col">
                                                 <p className="text-bgGreen opacity-60 text-[12px]">{t('Trees Bought')}</p>
-                                                <p className="text-bgGreen font-medium text-[24px]">{TreeAmount ? TreeAmount : 0} {t('trees')}</p>
+                                                <p className="text-bgGreen font-medium text-[24px]">{treeAmount ? treeAmount : 0} {t('trees')}</p>
                                             </div>
                                         </div>
                                         <div className="flex flex-row space-x-[1.5rem] items-center">
@@ -277,6 +334,20 @@ const Tracking = () => {
                                 </div>
                             </div>
                         )}
+
+                        {/* Hidden Certificate component to be used for PDF generation */}
+                        <div style={{ display: 'none' }}>
+                            <div ref={certificateRef}>
+                                <Certificate
+                                    firstName={firstName}
+                                    lastName={lastName}
+                                    treeAmount={treeAmount}
+                                    location={location}
+                                    dateBought={dateBought}
+                                    orderId={orderId}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
