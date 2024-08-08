@@ -14,7 +14,7 @@ import { useTranslation } from "react-i18next"
 import useScrollToTop from "@/hooks/ScrollToTop"
 import { useNavigate } from "react-router-dom"
 import { useOrder } from "@/Context/OrderContext"
-import { useLoginMutation, useUpdateUserInfo } from "@/hooks/UseAuthMutation"
+import { useLoginMutation } from "@/hooks/UseAuthMutation"
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 
