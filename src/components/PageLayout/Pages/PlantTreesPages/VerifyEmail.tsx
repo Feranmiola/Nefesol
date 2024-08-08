@@ -9,11 +9,12 @@ import { useNavigate } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
 
 const VerifyEmail = () => {
   useScrollToTop()
 
-  const { email, setAccessToken, setUserID } = useOrder();
+  const { email, setAccessToken, setUserID, setOrderID, userID, setOtp: handelContextOTP } = useOrder();
 
   const [otp, setOtp] = useState("");
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
@@ -21,6 +22,7 @@ const VerifyEmail = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const verifyMutate = useVerifyOTP();
+  const createOrderMutate = useCreateOrderMutation();
   const navigate = useNavigate();
 
   const handleLogin = () => {
@@ -28,10 +30,50 @@ const VerifyEmail = () => {
       { email, otp },
       {
         onSuccess: (response) => {
-          setIsSuccessAlertOpen(true);
           setAccessToken(response.data.access_token);
           setUserID(response.data.user.id);
-          navigate("/plant-trees-thankyou");
+          handelContextOTP(otp)
+          createOrderMutate.mutate(
+            {
+              userId: userID,
+              coupon_discount_amount: 0,
+              coupon_discount_title: "",
+              payment_status: "unpaid",
+              order_status: "pending",
+              total_tax_amount: 0,
+              payment_method: "Paypal",
+              transaction_reference: "",
+              coupon_code: "",
+              order_note: "",
+              order_type: "delivery",
+              callback: "",
+              delivery_address: "",
+              free_delivery_by: "",
+              transaction_id: "",
+              cancellation_reason: "",
+              canceled_by: "",
+              tracking_number: "",
+              customer_contact: "",
+              status: "",
+              sales_tax: 0,
+              shipping_address: "",
+              billing_address: "",
+              logistics_provider: 0,
+              total: 0,
+              orderItems: {}
+            },
+            {
+              onSuccess: (response) => {
+                setIsSuccessAlertOpen(true);
+                setOrderID(response.data.id)
+                navigate("/plant-trees-thankyou");
+              },
+              onError: (error: any) => {
+                setIsFailureAlertOpen(true);
+                setErrorMessage(error.message || "Verification failed. Please try again.");
+              }
+            }
+          );
         },
         onError: (error: any) => {
           setIsFailureAlertOpen(true);

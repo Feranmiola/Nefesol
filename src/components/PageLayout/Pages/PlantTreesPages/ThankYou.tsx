@@ -77,10 +77,10 @@ const ThankYou = () => {
             {t('certificateAndInvoice')}
           </p>
 
-          <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#E1EAE5] w-full md:w-[312px] h-[72px]">
+          <div className="flex flex-col items-center justify-center rounded-[8px] bg-[#E1EAE5] w-full  h-[72px]">
             <p className="text-bgGreen text-[12px]">{t('treesTrackingCode')}</p>
             <div className="flex flex-row space-x-2 items-center">
-              <p className="text-bgGreen text-[24px] md:text-[32px]">{orderID}</p>
+              <p className="text-bgGreen text-[16px] md:text-[32px]">{orderID}</p>
               <motion.img
                 src="./assets/copyIcon.svg"
                 alt="Copy Icon"

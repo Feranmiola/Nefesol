@@ -4,6 +4,8 @@ import { createContext, useState, useContext, ReactNode, useEffect } from 'react
 interface OrderContextType {
   accessToken: string;
   setAccessToken: (email: string) => void;
+  otp: string;
+  setOtp: (email: string) => void;
   userID: string;
   setUserID: (email: string) => void;
   email: string;
@@ -36,6 +38,7 @@ const OrderContext = createContext<OrderContextType | undefined>(undefined);
 
 export const OrderProvider = ({ children }: { children: ReactNode }) => {
   const [accessToken, setAccessToken] = useState(localStorage.getItem('accesstoken') || "");
+  const [otp, setOtp] = useState(localStorage.getItem('otp') || "");
   const [userID, setUserID] = useState(localStorage.getItem('userid') || "");
   const [email, setEmail] = useState(localStorage.getItem('email') || "");
   const [preferredLocation, setPreferredLocation] = useState(localStorage.getItem('preferredLocation') || "");
@@ -99,6 +102,18 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('orderid', orderID);
   }, [orderID]);
 
+  useEffect(() => {
+    localStorage.setItem('accesstoken', accessToken);
+  }, [accessToken]);
+
+  useEffect(() => {
+    localStorage.setItem('userid', userID);
+  }, [userID]);
+
+  useEffect(() => {
+    localStorage.setItem('otp', otp);
+  }, [otp]);
+
   return (
     <OrderContext.Provider
       value={{
@@ -129,7 +144,9 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
         taxAdministrator,
         setTaxAdministrator,
         orderID,
-        setOrderID
+        setOrderID,
+        otp,
+        setOtp
       }}
     >
       {children}
