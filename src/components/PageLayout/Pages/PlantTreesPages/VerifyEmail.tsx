@@ -13,7 +13,7 @@ import Alert from '@mui/material/Alert';
 const VerifyEmail = () => {
   useScrollToTop()
 
-  const { email } = useOrder();
+  const { email, setAccessToken, setUserID } = useOrder();
 
   const [otp, setOtp] = useState("");
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
@@ -27,10 +27,11 @@ const VerifyEmail = () => {
     verifyMutate.mutate(
       { email, otp },
       {
-        onSuccess: () => {
+        onSuccess: (response) => {
           setIsSuccessAlertOpen(true);
+          setAccessToken(response.data.access_token);
+          setUserID(response.data.user.id);
           navigate("/plant-trees-thankyou");
-
         },
         onError: (error: any) => {
           setIsFailureAlertOpen(true);

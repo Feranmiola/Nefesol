@@ -2,6 +2,10 @@
 import { createContext, useState, useContext, ReactNode, useEffect } from 'react';
 
 interface OrderContextType {
+  accessToken: string;
+  setAccessToken: (email: string) => void;
+  userID: string;
+  setUserID: (email: string) => void;
   email: string;
   setEmail: (email: string) => void;
   preferredLocation: string;
@@ -31,6 +35,8 @@ interface OrderContextType {
 const OrderContext = createContext<OrderContextType | undefined>(undefined);
 
 export const OrderProvider = ({ children }: { children: ReactNode }) => {
+  const [accessToken, setAccessToken] = useState(localStorage.getItem('accesstoken') || "");
+  const [userID, setUserID] = useState(localStorage.getItem('userid') || "");
   const [email, setEmail] = useState(localStorage.getItem('email') || "");
   const [preferredLocation, setPreferredLocation] = useState(localStorage.getItem('preferredLocation') || "");
   const [paymentMethod, setPaymentMethod] = useState(localStorage.getItem('paymentMethod') || "");
@@ -96,6 +102,10 @@ export const OrderProvider = ({ children }: { children: ReactNode }) => {
   return (
     <OrderContext.Provider
       value={{
+        accessToken,
+        setAccessToken,
+        userID,
+        setUserID,
         email,
         setEmail,
         preferredLocation,
