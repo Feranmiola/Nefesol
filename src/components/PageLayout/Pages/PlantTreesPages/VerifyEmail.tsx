@@ -14,7 +14,7 @@ import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
 const VerifyEmail = () => {
   useScrollToTop()
 
-  const { email, setAccessToken, setUserID, setOrderID, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
+  const { email, setAccessToken, setUserID, setOrderID, city, town, street, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
 
   const [otp, setOtp] = useState("");
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
@@ -47,17 +47,17 @@ const VerifyEmail = () => {
               order_note: "",
               order_type: "delivery",
               callback: "",
-              delivery_address: "",
+              delivery_address: preferredLocation,
               free_delivery_by: "",
               transaction_id: "",
               cancellation_reason: "",
               canceled_by: "",
               tracking_number: "",
-              customer_contact: "",
-              status: "Bought",
+              customer_contact: email,
+              status: "Created",
               sales_tax: 0,
-              shipping_address: "",
-              billing_address: "",
+              shipping_address: (city + ", " + town + ", " + street),
+              billing_address: (city + ", " + town + ", " + street),
               logistics_provider: 0,
               total: Number(totalAmountInDollars) || 0,
               orderItems: {

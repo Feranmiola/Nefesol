@@ -36,6 +36,16 @@ const Tracking = () => {
     const [datePlanted, setDatePlanted] = useState("")
     const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: '', severity: 'success' });
 
+    const formatDate = (dateString: string): string => {
+        const date = new Date(dateString);
+
+        const day = date.getUTCDate();
+        const month = date.toLocaleString('default', { month: 'short' });
+        const year = date.getUTCFullYear();
+
+        return `${day} ${month}, ${year}`;
+    };
+
     const handleInputChange = (event: any) => {
         setOrderId(event.target.value);
     };
@@ -52,8 +62,11 @@ const Tracking = () => {
             SetStep1(true)
             setLocaation(response.data.orderItems.plantingLocation);
             setTreeAmount(response.data.orderItems.treeAmount);
-            setStatus(response.data.status);
-            setDateBought(response.data.createdAt)
+            setStatus(
+                response.data.payment_status === "unpaid" ?
+                    "Not Paid" :
+                    response.data.status);
+            setDateBought(formatDate(response.data.createdAt));
             setDatePlanted(response.data.orderItems.datePlanted);
             // setUserID(response.data.userId)
 
