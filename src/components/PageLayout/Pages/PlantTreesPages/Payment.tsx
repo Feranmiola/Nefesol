@@ -17,6 +17,7 @@ import { useOrder } from "@/Context/OrderContext"
 import { useLoginMutation } from "@/hooks/UseAuthMutation"
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
+import PulseLoader from "react-spinners/PulseLoader"
 
 
 const Payment = () => {
@@ -29,6 +30,7 @@ const Payment = () => {
     const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
     const [isFailureAlertOpen, setisFailureAlertOpen] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
+    const [isLoggingIn, setIsLogginIn] = useState(false);
 
     const {
         email, setEmail,
@@ -75,14 +77,17 @@ const Payment = () => {
     };
 
     const handleLogin = () => {
+        setIsLogginIn(true);
         loginMutate.mutate(
             { email },
             {
                 onSuccess: () => {
+                    setIsLogginIn(false);
                     setIsSuccessAlertOpen(true);
                     navigate("/plant-trees-verifyemail");
                 },
                 onError: (error: any) => {
+                    setIsLogginIn(false);
                     setisFailureAlertOpen(true)
                     setErrorMessage(error.message || "An error occurred");
                 }
@@ -247,12 +252,16 @@ const Payment = () => {
                             onClick={handleLogin}
                             className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
                         >
-                            <p className="text-white text-[16px] font-medium">{t('next')}</p>
+                            {isLoggingIn ? (
+                                <PulseLoader color="white" />
+                            ) : (
+                                <p className="text-white text-[16px] font-medium">{t('next')}</p>
+                            )}
                         </motion.a>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 export default Payment

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader";
+import PulseLoader from "react-spinners/PulseLoader";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
@@ -26,6 +27,7 @@ const VerifyEmail = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
   const [paying, setPaying] = useState(false);
+  const [verifying, setVeridying] = useState(false);
 
   const verifyMutate = useVerifyOTP();
   const createOrderMutate = useCreateOrderMutation();
@@ -35,6 +37,7 @@ const VerifyEmail = () => {
 
   const handleLogin = () => {
     setTotalAmountInDollars("1000")
+    setVeridying(true);
     verifyMutate.mutate(
       { email, otp },
       {
@@ -111,8 +114,10 @@ const VerifyEmail = () => {
                 setIsSuccessAlertOpen(true);
                 setOrderID(response.data.id);
                 setOpenPaymentDialog(true);
+                setVeridying(false);
               },
               onError: (error: any) => {
+                setVeridying(false);
                 setIsFailureAlertOpen(true);
                 setErrorMessage(error.message || "Verification failed. Please try again.");
               }
@@ -123,6 +128,7 @@ const VerifyEmail = () => {
           handelContextOTP(otp)
         },
         onError: (error: any) => {
+          setVeridying(false);
           setIsFailureAlertOpen(true);
           setErrorMessage(error.message || "Verification failed. Please try again.");
         }
@@ -324,7 +330,7 @@ const VerifyEmail = () => {
                     {t("enterVerificationCode")}
                   </p>
                   <p className="text-[14px] md:text-[16px] text-bgGreen font-bold">
-                    your@email.com
+                    {email}
                   </p>
                 </div>
                 <div className="flex flex-row space-x-1">
@@ -350,9 +356,13 @@ const VerifyEmail = () => {
                 onClick={handleLogin}
                 className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
               >
-                <p className="text-white text-[16px] font-medium">
-                  {t("verifyYourEmail")}
-                </p>
+                {verifying ? (
+                  <PulseLoader color="white" />
+                ) : (
+                  <p className="text-white text-[16px] font-medium">
+                    {t("verifyYourEmail")}
+                  </p>
+                )}
               </motion.a>
             </div>
 
