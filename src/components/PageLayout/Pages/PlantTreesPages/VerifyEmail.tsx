@@ -10,6 +10,9 @@ import BeatLoader from "react-spinners/BeatLoader";
 import Snackbar from '@mui/material/Snackbar';
 import Alert from '@mui/material/Alert';
 import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
+
 
 const VerifyEmail = () => {
   useScrollToTop()
@@ -20,6 +23,7 @@ const VerifyEmail = () => {
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
   const [isFailureAlertOpen, setIsFailureAlertOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [openPaymentDialog, setOpenPaymentDialog] = useState(true);
 
   const verifyMutate = useVerifyOTP();
   const createOrderMutate = useCreateOrderMutation();
@@ -159,131 +163,171 @@ const VerifyEmail = () => {
     );
   }
 
-  return (
-    <div className="py-28 flex items-center justify-center">
-      <Snackbar open={isSuccessAlertOpen} autoHideDuration={3000} onClose={() => setIsSuccessAlertOpen(false)}>
-        <Alert
-          onClose={() => setIsSuccessAlertOpen(false)}
-          severity="success"
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          Email verified successfully!
-        </Alert>
-      </Snackbar>
-      <Snackbar open={isFailureAlertOpen} autoHideDuration={3000} onClose={() => setIsFailureAlertOpen(false)}>
-        <Alert
-          onClose={() => setIsFailureAlertOpen(false)}
-          severity="error"
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          {errorMessage}
-        </Alert>
-      </Snackbar>
-      <div className="w-full max-w-md lg:max-w-xl bg-white rounded-[24px]">
-        <div className="flex flex-col">
-          <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
-            <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">
-              {t("treesPlanted")}
-            </p>
-            <motion.a
-              whileHover={{ scale: 1.06 }}
-              whileTap={{ scale: 0.9 }}
-              className="flex flex-row space-x-2"
-              onClick={() => navigate("/plant-trees-payment")}
-            >
-              <img src="./assets/prev.svg" />
-              <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">
-                {t("returnToDetails")}
-              </p>
-            </motion.a>
-          </div>
+  // @ts-ignore
+  const createOrder = (data: any, actions: any) => {
+    return actions.order.create({
+      purchase_units: [
+        {
+          amount: {
+            value: totalAmountInDollars
+          },
+        },
+      ],
+    });
+  };
 
-          <div className="flex items-center flex-col justify-center py-5">
-            <p className="text-bgGreen text-[16px]">{t("treesPlanted")}</p>
-            <div className="flex flex-col space-y-1">
-              <div className="flex flex-row py-6 space-x-5 items-center justify-center">
-                <img src="./assets/treeGroup.svg" />
-                <div className="flex flex-row max-sm:flex-col items-center max-sm:justify-center">
-                  <p className="text-bgGreen text-[32px]">
-                    <span className="text-[48px]">12,000</span>
+  // @ts-ignore
+  const onApprove = (data: any, actions: any) => {
+    // @ts-ignore
+    return actions.order.capture().then(function (details: any) {
+
+    });
+  };
+
+  return (
+    <PayPalScriptProvider options={{ "clientId": import.meta.env.VITE_PAYPAL_CLIENT_ID }}>
+      <div className="py-28 flex items-center justify-center">
+        <Dialog open={openPaymentDialog} onOpenChange={setOpenPaymentDialog}>
+          <DialogContent className="w-[350px] flex flex-col items-center outline-none justify-center p-5">
+            <p className="text-[26px] text-bgGreen font-bold">Continue with Paypal</p>
+            <p className="text-[18px] text-bgGreen">Payment of {totalAmountInDollars || "0"}</p>
+            <div className=" w-full rounded-md h-[60px]">
+              <PayPalButtons
+                createOrder={createOrder}
+                onApprove={onApprove}
+                fundingSource="paypal"
+                style={{
+                  layout: 'vertical',
+
+                }}
+              />
+            </div>
+          </DialogContent>
+        </Dialog>
+        <Snackbar open={isSuccessAlertOpen} autoHideDuration={3000} onClose={() => setIsSuccessAlertOpen(false)}>
+          <Alert
+            onClose={() => setIsSuccessAlertOpen(false)}
+            severity="success"
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            Email verified successfully!
+          </Alert>
+        </Snackbar>
+        <Snackbar open={isFailureAlertOpen} autoHideDuration={3000} onClose={() => setIsFailureAlertOpen(false)}>
+          <Alert
+            onClose={() => setIsFailureAlertOpen(false)}
+            severity="error"
+            variant="filled"
+            sx={{ width: '100%' }}
+          >
+            {errorMessage}
+          </Alert>
+        </Snackbar>
+        <div className="w-full max-w-md lg:max-w-xl bg-white rounded-[24px]">
+          <div className="flex flex-col">
+            <div className="bg-[#F8F9F8] h-[80px] px-5 md:px-10 rounded-t-[24px] flex flex-row justify-between items-center">
+              <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">
+                {t("treesPlanted")}
+              </p>
+              <motion.a
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.9 }}
+                className="flex flex-row space-x-2"
+                onClick={() => navigate("/plant-trees-payment")}
+              >
+                <img src="./assets/prev.svg" />
+                <p className="text-[14px] md:text-[16px] text-linkGreen font-semibold">
+                  {t("returnToDetails")}
+                </p>
+              </motion.a>
+            </div>
+
+            <div className="flex items-center flex-col justify-center py-5">
+              <p className="text-bgGreen text-[16px]">{t("treesPlanted")}</p>
+              <div className="flex flex-col space-y-1">
+                <div className="flex flex-row py-6 space-x-5 items-center justify-center">
+                  <img src="./assets/treeGroup.svg" />
+                  <div className="flex flex-row max-sm:flex-col items-center max-sm:justify-center">
+                    <p className="text-bgGreen text-[32px]">
+                      <span className="text-[48px]">12,000</span>
+                    </p>
+                    <p className="text-bgGreen text-[32px]">{t('trees')}</p>
+                  </div>
+                </div>
+                <div className="flex flex-row space-x-2 items-center justify-center opacity-60">
+                  <p className="text-bgGreen text-[12px]">
+                    {t("basedOnCO2Calculation")}
                   </p>
-                  <p className="text-bgGreen text-[32px]">{t('trees')}</p>
+                  <img src="./assets/greenDot.svg" />
+                  <p className="text-bgGreen text-[12px]">{t("unitPrice")}</p>
                 </div>
               </div>
-              <div className="flex flex-row space-x-2 items-center justify-center opacity-60">
-                <p className="text-bgGreen text-[12px]">
-                  {t("basedOnCO2Calculation")}
+              <div className="w-[180px] md:w-[234px] h-[52px] rounded-[8px] mt-2 flex space-x-2 items-center justify-center bg-[#E1EAE5]">
+                <p className="text-[24px] md:text-[32px] text-bgGreen font-medium">
+                  $220.29
                 </p>
-                <img src="./assets/greenDot.svg" />
-                <p className="text-bgGreen text-[12px]">{t("unitPrice")}</p>
-              </div>
-            </div>
-            <div className="w-[180px] md:w-[234px] h-[52px] rounded-[8px] mt-2 flex space-x-2 items-center justify-center bg-[#E1EAE5]">
-              <p className="text-[24px] md:text-[32px] text-bgGreen font-medium">
-                $220.29
-              </p>
-              <div className="flex flex-col items-center justify-center space-y-1">
-                <img src="./assets/plusIcon.svg" />
-                <img src="./assets/minus.svg" />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col px-5 md:px-10 space-y-2 pb-5">
-            <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">
-              {t("verifyYourEmail")}
-            </p>
-            <div className="space-y-1 flex flex-col">
-              <div className="flex flex-row space-x-1">
-                <p className="text-[14px] md:text-[16px] text-bgGreen">
-                  {t("enterVerificationCode")}
-                </p>
-                <p className="text-[14px] md:text-[16px] text-bgGreen font-bold">
-                  your@email.com
-                </p>
-              </div>
-              <div className="flex flex-row space-x-1">
-                <p className="text-[14px] md:text-[16px] text-bgGreen">
-                  {t("notYourEmail")}
-                </p>
-                <p className="text-[14px] md:text-[16px] text-linkGreen">
-                  {t("changeEmail")}
-                </p>
+                <div className="flex flex-col items-center justify-center space-y-1">
+                  <img src="./assets/plusIcon.svg" />
+                  <img src="./assets/minus.svg" />
+                </div>
               </div>
             </div>
 
-            <Input
-              onChange={handleSetOTP}
-              placeholder={t("enterVerificationCode")}
-              className="shad-input-plant-width"
-            />
-          </div>
-
-          <div className="flex items-center justify-center pb-5">
-            <motion.a
-              whileTap={{ scale: 0.9 }}
-              onClick={handleLogin}
-              className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
-            >
-              <p className="text-white text-[16px] font-medium">
+            <div className="flex flex-col px-5 md:px-10 space-y-2 pb-5">
+              <p className="text-bgGreen text-[20px] md:text-[24px] font-bold">
                 {t("verifyYourEmail")}
               </p>
-            </motion.a>
-          </div>
+              <div className="space-y-1 flex flex-col">
+                <div className="flex flex-row space-x-1">
+                  <p className="text-[14px] md:text-[16px] text-bgGreen">
+                    {t("enterVerificationCode")}
+                  </p>
+                  <p className="text-[14px] md:text-[16px] text-bgGreen font-bold">
+                    your@email.com
+                  </p>
+                </div>
+                <div className="flex flex-row space-x-1">
+                  <p className="text-[14px] md:text-[16px] text-bgGreen">
+                    {t("notYourEmail")}
+                  </p>
+                  <p className="text-[14px] md:text-[16px] text-linkGreen">
+                    {t("changeEmail")}
+                  </p>
+                </div>
+              </div>
 
-          <div className="flex flex-row space-x-1 items-center justify-center pb-5">
-            <p className="text-bgGreen text-[14px] md:text-[16px]">
-              {t("didntReceiveCode")}
-            </p>
-            <p className="text-[14px] md:text-[16px] text-linkGreen">
-              {t("resend")}
-            </p>
+              <Input
+                onChange={handleSetOTP}
+                placeholder={t("enterVerificationCode")}
+                className="shad-input-plant-width"
+              />
+            </div>
+
+            <div className="flex items-center justify-center pb-5">
+              <motion.a
+                whileTap={{ scale: 0.9 }}
+                onClick={handleLogin}
+                className="w-[85%] h-[56px] bg-[#25B567] hover:bg-[#1a8249] transition ease-in-out flex flex-row space-x-2 items-center justify-center rounded-[56px] cursor-pointer"
+              >
+                <p className="text-white text-[16px] font-medium">
+                  {t("verifyYourEmail")}
+                </p>
+              </motion.a>
+            </div>
+
+            <div className="flex flex-row space-x-1 items-center justify-center pb-5">
+              <p className="text-bgGreen text-[14px] md:text-[16px]">
+                {t("didntReceiveCode")}
+              </p>
+              <p className="text-[14px] md:text-[16px] text-linkGreen">
+                {t("resend")}
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </PayPalScriptProvider >
   );
 };
 
