@@ -12,25 +12,29 @@ import Alert from '@mui/material/Alert';
 import { useCreateOrderMutation } from "@/hooks/UseOrderMutation";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { useVerifyPaymentMutation } from "@/hooks/UseVerifyPayment";
 
 
 const VerifyEmail = () => {
   useScrollToTop()
 
-  const { email, setAccessToken, setUserID, setOrderID, setIsVerified, firstName, lastName, setRole, setLastLoggedIn, city, town, street, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
+  const { email, setAccessToken, setUserID, setOrderID, setTotalAmountInDollars, orderID, setIsVerified, firstName, lastName, setRole, setLastLoggedIn, city, town, street, preferredLocation, totalAmountInDollars, treeAmount, userID, setOtp: handelContextOTP } = useOrder();
 
   const [otp, setOtp] = useState("");
   const [isSuccessAlertOpen, setIsSuccessAlertOpen] = useState(false);
   const [isFailureAlertOpen, setIsFailureAlertOpen] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const [openPaymentDialog, setOpenPaymentDialog] = useState(true);
+  const [openPaymentDialog, setOpenPaymentDialog] = useState(false);
+  const [paying, setPaying] = useState(false);
 
   const verifyMutate = useVerifyOTP();
   const createOrderMutate = useCreateOrderMutation();
   const updateMutate = useUpdateUserInfo(userID);
+  const verifyPaymentMutate = useVerifyPaymentMutation();
   const navigate = useNavigate();
 
   const handleLogin = () => {
+    setTotalAmountInDollars("1000")
     verifyMutate.mutate(
       { email, otp },
       {
@@ -106,7 +110,7 @@ const VerifyEmail = () => {
               onSuccess: (response) => {
                 setIsSuccessAlertOpen(true);
                 setOrderID(response.data.id);
-                navigate("/plant-trees-thankyou");
+                setOpenPaymentDialog(true);
               },
               onError: (error: any) => {
                 setIsFailureAlertOpen(true);
@@ -165,6 +169,7 @@ const VerifyEmail = () => {
 
   // @ts-ignore
   const createOrder = (data: any, actions: any) => {
+    setPaying(true);
     return actions.order.create({
       purchase_units: [
         {
@@ -181,6 +186,25 @@ const VerifyEmail = () => {
     // @ts-ignore
     return actions.order.capture().then(function (details: any) {
 
+      verifyPaymentMutate.mutate(
+        {
+          orderID: orderID,
+          userID,
+          amount: totalAmountInDollars
+        },
+        {
+          onSuccess: () => {
+            setPaying(false);
+            setOpenPaymentDialog(false);
+            navigate("/plant-trees-thankyou");
+          },
+          onError: (error: any) => {
+            setPaying(false)
+            setErrorMessage(error.message || "An error occurred");
+          }
+        }
+      );
+
     });
   };
 
@@ -192,15 +216,31 @@ const VerifyEmail = () => {
             <p className="text-[26px] text-bgGreen font-bold">Continue with Paypal</p>
             <p className="text-[18px] text-bgGreen">Payment of {totalAmountInDollars || "0"}</p>
             <div className=" w-full rounded-md h-[60px]">
-              <PayPalButtons
-                createOrder={createOrder}
-                onApprove={onApprove}
-                fundingSource="paypal"
-                style={{
-                  layout: 'vertical',
+              {paying ? (
+                <div className='ringImage'>
+                  <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="17.5" cy="17.5636" r="15" stroke="white" stroke-opacity="0.3" stroke-width="4" stroke-linecap="round" />
+                    <path d="M17.5 32.5636C9.21573 32.5636 2.5 25.8479 2.5 17.5636C2.5 9.27933 9.21573 2.5636 17.5 2.5636" stroke="url(#paint0_linear_437_164)" stroke-width="4" stroke-linecap="round" />
+                    <defs>
+                      <linearGradient id="paint0_linear_437_164" x1="10" y1="2.5636" x2="10" y2="32.5636" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#08E04A" />
+                        <stop offset="1" stop-color="#08E04A" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
 
-                }}
-              />
+              ) : (
+                <PayPalButtons
+                  createOrder={createOrder}
+                  onApprove={onApprove}
+                  fundingSource="paypal"
+                  style={{
+                    layout: 'vertical',
+
+                  }}
+                />
+              )}
             </div>
           </DialogContent>
         </Dialog>

@@ -22,6 +22,11 @@ h1 {
 }
 
 
+.ringImage {
+  animation: spin 1s linear infinite;
+}
+
+
 .homeBackground {
   background-image: url('/assets/treeBackground.svg');
   background-position: center;
