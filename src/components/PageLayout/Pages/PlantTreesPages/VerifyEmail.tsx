@@ -191,6 +191,7 @@ const VerifyEmail = () => {
   // @ts-ignore
   const onApprove = (data: any, actions: any) => {
     setPaying(true);
+    // @ts-ignore
     return actions.order.capture().then(function (details: any) {
 
       verifyPaymentMutate.mutate(
